@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航</title>
-    <updated>2020-06-23T03:21:29.724Z</updated>
+    <updated>2020-06-23T08:11:34.082Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航</rights>
+    <entry>
+        <title type="html"><![CDATA[第一章 绪论]]></title>
+        <id>https://songdlut.github.io/post/di-yi-zhang-xu-lun/</id>
+        <link href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/">
+        </link>
+        <updated>2020-06-23T07:20:43.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>考点:</strong></p>
+<ul>
+<li>数据结构相关的概念和术语</li>
+<li>数据结构的三要素:逻辑结构,物理结构和数据运算</li>
+<li>算法时间复杂度和空间复杂度的分析与计算(重点)
+<ul>
+<li>算法设计题通常都要求分析时间,空间复杂度</li>
+<li>考查时间复杂度的选择题</li>
+</ul>
+</li>
+</ul>
+<h2 id="img-srchttpsgithubcomsongdlutpicbed_picgoblobmasterimg11png-width50"><img src="https://github.com/songdlut/Picbed_PicGo/blob/master/img/1.1.png" width="50%"><br>
+<img src="https://github.com/songdlut/Picbed_PicGo/blob/master/img/1.1.png" alt="RUNOOB 框架" loading="lazy"></h2>
+<h2 id="11-数据结构的基本概念和术语">1.1 数据结构的基本概念和术语</h2>
+<h3 id="111-概念和术语">1.1.1 概念和术语</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://songdlut.github.io/post/hello-gridea/</id>
