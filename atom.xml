@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航</title>
-    <updated>2020-06-24T15:59:54.251Z</updated>
+    <updated>2020-06-25T02:28:07.302Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -11,32 +11,56 @@
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航</rights>
     <entry>
-        <title type="html"><![CDATA[第一章 行列式]]></title>
-        <id>https://songdlut.github.io/post/di-yi-zhang-xing-lie-shi/</id>
-        <link href="https://songdlut.github.io/post/di-yi-zhang-xing-lie-shi/">
+        <title type="html"><![CDATA[背单词时遇到到意思相近的词]]></title>
+        <id>https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/</id>
+        <link href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/">
         </link>
-        <updated>2020-06-23T12:35:43.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="自己的理解">自己的理解</h2>
-<ul>
-<li>n阶行列式:就是一行挑一个出来,不能在同一列,这n个数相乘,前面的正负号按列序号的排列的逆序数来决定,逆序数是偶就取1,逆序数是奇就取-1,最后再累加(也就是代数和)</li>
-<li>逆序数:
-<ul>
-<li>由1,2,3....n组成的有序数组成为一个n阶排列,通常用j<sub>1</sub>,j<sub>2</sub>,...j<sub>n</sub>来表示n阶排列(j就是列嘛)</li>
-<li>在一次的排列中,如果大的数排在了小的前面,就称这俩数构成了一个__逆序__,一个排列的逆序的总数称为这个排列的__逆序数__</li>
-<li>偶排列:逆序数是偶数,奇排列就是奇数了</li>
-<li>例25134: 21,51,53,54,逆序数就是4了</li>
-</ul>
-</li>
-</ul>
-<h2 id="计算的技巧">计算的技巧</h2>
-<ul>
-<li>看0的情况:
-<ul>
-<li>0多的情况下,先按0多的那一行(列)展开</li>
-<li>0排列比较规则的情况下,可考虑拉普拉斯展开式</li>
-</ul>
-</li>
-</ul>
+        <updated>2020-06-24T23:49:37.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="开始着手做">开始,着手做</h2>
+<p>embark:另:上船(车飞机等)</p>
+<h2 id="抓住处理解决">抓住,处理,解决</h2>
+<p>tackle</p>
+<h2 id="国会议会代表大会">国会,议会,代表大会</h2>
+<p>congress<br>
+parliament</p>
+<h2 id="理事会委员会等">理事会,委员会等</h2>
+<p>council</p>
+<h2 id="辩护人法律顾问代理律师">辩护人,法律顾问,代理律师</h2>
+<p>counsel:另:劝告,忠告(n/v)</p>
+<h2 id="牧草地牧场">牧草地,牧场</h2>
+<p>meadow<br>
+pasture</p>
+<h2 id="使疲劳">(使)疲劳</h2>
+<p>fatigue:v/n<br>
+weary:疲倦的,令人厌烦的,(使)疲倦/厌烦</p>
+<h2 id="妨碍阻碍">妨碍,阻碍</h2>
+<p>hamper<br>
+handicap:另:(身体或智力)缺陷,不利条件</p>
+<h2 id="扩大增大">扩大,增大</h2>
+<p>magnify:另:夸张,夸大</p>
+<h2 id="古怪的">古怪的</h2>
+<p>eccentric:另:怪癖的,异乎寻常的,n:古怪的人</p>
+<h2 id="合同契约条约公约">合同,契约,条约,公约</h2>
+<p>packt</p>
+<h2 id="策划图谋">策划,图谋</h2>
+<p>hatch:另:v.孵化孵出,n.舱口,小门</p>
+<h2 id="带有微弱朦胧晦涩这种含义的">带有微弱,朦胧,晦涩这种含义的</h2>
+<p>faint:a.微弱,不明显,暗淡的,n/v.昏倒昏厥</p>
+<h1 id="尼玛总是忘掉的一些">尼玛总是忘掉的一些</h1>
+<p>vapo(u)r:汽,(水)蒸汽<br>
+rack:挂物架,搁物架,v:折磨使痛苦<br>
+racket:吵闹,喧闹<br>
+cordial:热诚,诚恳,亲切的<br>
+malignant:恶性的,致命的,恶意的,恶毒的<br>
+courtesy:n.恭谦有礼,有礼貌的举止/言辞<br>
+eloquent:雄辩有说服力的,有口才的&lt;--反--&gt;lame:a.辩解无说服力的,另:跛的<br>
+daunt:使胆怯,使气馁vt<br>
+genuine:真正的,名副其实的<br>
+hazard:n/v.危险,冒险,危害,拼命<br>
+harness:v.治理,利用,n.马具,挽具<br>
+rake:耙子,v.耙,搜索<br>
+rally:v.重整,恢复,振作,n.聚集,集会,大会,接力赛<br>
+harassment:骚扰,扰乱,烦恼,烦乱</p>
 ]]></content>
     </entry>
     <entry>
