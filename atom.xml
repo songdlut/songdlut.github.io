@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
-    <title>宋宇航</title>
-    <updated>2020-06-27T01:22:49.977Z</updated>
+    <title>宋宇航的博客</title>
+    <updated>2020-06-27T01:50:16.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
     <subtitle>学习博客</subtitle>
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 宋宇航</rights>
+    <rights>All rights reserved 2020, 宋宇航的博客</rights>
     <entry>
         <title type="html"><![CDATA[背单词时遇到到意思相近的词]]></title>
         <id>https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/</id>
