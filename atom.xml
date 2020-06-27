@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航</title>
-    <updated>2020-06-25T13:39:52.578Z</updated>
+    <updated>2020-06-27T00:38:20.152Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -69,7 +69,33 @@ harassment:骚扰,扰乱,烦恼,烦乱</p>
         <link href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/">
         </link>
         <updated>2020-06-23T07:20:43.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>考点:</strong></p>
+        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD">1.1 数据结构的基本概念和术语</a>
+<ul>
+<li><a href="#111-%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD">1.1.1 概念和术语</a></li>
+<li><a href="#112-%E4%B8%8A%E8%BF%B0%E6%9C%AF%E8%AF%AD%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB">1.1.2 上述术语的联系与区别</a></li>
+<li><a href="#113-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0%E7%9A%84%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A">1.1.3 数据结构三要素的详细解释</a></li>
+</ul>
+</li>
+<li><a href="#12-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E5%88%86%E7%90%86%E8%A7%A3%E5%92%8C%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">1.2 自己的部分理解和解题思路</a>
+<ul>
+<li><a href="#121-%E6%A6%82%E5%BF%B5">1.2.1 概念</a></li>
+</ul>
+</li>
+<li><a href="#13-%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7">1.3 算法和算法评价</a>
+<ul>
+<li><a href="#131-%E7%AE%97%E6%B3%95%E7%9A%84%E5%8F%8A%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82">1.3.1 算法的及设计要求</a></li>
+<li><a href="#132-%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F">1.3.2 算法效率的度量</a></li>
+<li><a href="#133-%E8%AE%A1%E7%AE%97">1.3.3 计算</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+(目录)<br>
+<strong>考点:</strong></p>
 <ul>
 <li>数据结构相关的概念和术语</li>
 <li>数据结构的三要素:逻辑结构,物理结构和数据运算</li>
@@ -261,10 +287,12 @@ O(1)&lt;Olog2n)&lt;O(n)&lt;O(nlogan)&lt;O(n2)&lt;O(n3)&lt;O(2)&lt;O(n!)&lt;O(n<s
 <hr>
 <ol start="2">
 <li>空间复杂度<br>
-类似于算法的时间复杂度，本书中以空间复杂度(space complexity)作为算法所需存储空间的量度，记作<center>S(n)=O(f(n))</center>其中n为问题的规模(或大小)。一个上机执行的程序除了需要存储空间来寄存本身所用指令、常数、变量和输入数据外，也需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。若输入数据所占空间只取决于问题本身，和算法无关，则只需要分析除输入和程序之外的额外空间，否则应同时考虑输入本身所需空间(和输入数据的表示形式有关)。若额外空间相对于输入数据量来说是常数，则称此算法为原地工作，第10章讨论的有些排序算法就属于这类。又如果所占空间量依赖于特定的输入，则除特别指明外，均按最坏情况来分析。</li>
+类似于算法的时间复杂度，本书中以空间复杂度(space complexity)作为算法所需存储空间的量度，记作<center>S(n)=O(f(n))</center>其中n为问题的规模(或大小)。一个上机执行的程序除了需要存储空间来寄存本身所用指令、常数、变量和输入数据外，也需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。若输入数据所占空间只取决于问题本身，和算法无关，则只需要分析除输入和程序之外的额外空间，否则应同时考虑输入本身所需空间(和输入数据的表示形式有关)。若额外空间相对于输入数据量来说是常数，则称此算法为原地工作，第10章讨论的有些排序算法就属于这类。又如果所占空间量依赖于特定的输入，则除特别指明外，均按最坏情况来分析。<br>
+<strong>算法原地工作是指算法所需要的辅助空间为常量</strong>,并非是不需要任何额外的辅助空间.<br>
+<strong>同一个算法,实现的语言的级别越高,执行效率越低</strong></li>
 </ol>
 <h3 id="133-计算">1.3.3 计算</h3>
-<p><a href="https://zhuanlan.zhihu.com/p/50479555">知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/50479555">知乎转载</a></p>
 <ol>
 <li>时间复杂度</li>
 </ol>
