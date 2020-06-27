@@ -1,688 +1,1545 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://songdlut.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://songdlut.github.io/media/css/live2d.css">
-    <meta name="description" content="学习博客" />
-    <title>宋宇航</title>
-</head>
-
-
-<body>
-    <!-- 响应式布局，针对PC端内容显示 -->
-    <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <div class="side"><html>
+<!DOCTYPE html>
+<html>
 
 <head>
-    <link rel="stylesheet" href="https://songdlut.github.io/styles/main.css">
-    <meta name="description" content="学习博客" />
-    <title>Document</title>
-</head>
-<style>
-</style>
+  <meta charset="UTF-8" />
 
-<body>
-    <div id=side>
-        <div class="avatar-border">
-            <img src="https://songdlut.github.io/images/avatar.png?v=1593219480005" class="avatar">
-        </div>
-        <div class="sitename">宋宇航</div>
-        <span class="describtion" data-text='["学习博客"]'>&nbsp;</span>
-        
-        <div class="search">
-            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
-            <div class="search-results"></div>
-        </div>
-        
-    <div class="share-button">
-        <span>社交按钮</span>
-        
-        <a href="https://github.com/songdlut" target="_blank"><i><img class="icon"
-                    src="https://songdlut.github.io/media/images/github.png" alt=""></i></a>
-        
-        
-        <a onclick="showqq()"><i><img class="icon" src="https://songdlut.github.io/media/images/QQ.png" alt=""></i></a>
-        
-        
-        
-        
-        
-    </div>
-    <div id="qq" style="display:none">1031404638</div>
-    
-    
-    <div class="mchocie describtion">
-        <a href="https://songdlut.github.io" class="menubutton">
-            首页
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="https://songdlut.github.io/archives" class="menubutton">
-            归档
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="https://songdlut.github.io/tags" class="menubutton">
-            标签
-        </a>
-    </div>
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="https://songdlut.github.io/post/about" class="menubutton">
-            关于
-        </a>
-    </div>
-    
-    
-    
-    
-    <div class="mchocie describtion">
-        <a href="https://songdlut.github.io/friends" class="menubutton">友人帐</a>
-    </div>
-    
-    <hr>
-    <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
-        href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
-    
-    <div id="sitegotimeDate">载入天数...</div>
-    <div id="sitegotimes">载入时分秒...</div>
-    <div id="cussitetime" style="display:none">23/06/2020</div>
-    
-    
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <div id="vistornum">
-        <span id="busuanzi_container_site_uv">
-            🎈总访问量:<span id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-            🙍‍访问人数:<span id="busuanzi_value_site_uv"></span>
-        </span>
-    </div>
-    
-    </div>
-</body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="学习博客">
+<meta name="theme-color" content="#000">
+<title>宋宇航</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1593220968067">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-</html>
-<script src="https://songdlut.github.io/media/js/wordshow.js"></script>
+<link href="/media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
 
-<script>
-    //----------------------站点运行时间
-    var now = new Date();
+<link rel="stylesheet" href="/styles/main.css">
 
-    function createtime() {
-        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
-        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
-        now.setTime(now.getTime() + 250);
-        days = (now - grt) / 1000 / 60 / 60 / 24;
-        dnum = Math.floor(days);
-        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-        hnum = Math.floor(hours);
-        if (String(hnum).length == 1) {
-            hnum = "0" + hnum;
-        }
-        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes);
-        if (String(mnum).length == 1) {
-            mnum = "0" + mnum;
-        }
-        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds);
-        if (String(snum).length == 1) {
-            snum = "0" + snum;
-        }
-        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
-        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-    }
-    setInterval("createtime()", 250);
-</script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
-<script>
-    //-------------------------------------------------搜索
-    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
-    var searchInput = document.querySelector('.search-input');
-    var searchResults = document.querySelector('.search-results');
 
-    // 申明保存文章的标题、链接、内容的数组变量
-    var searchValue = '',
-        arrItems = [],
-        arrLinks = [],
-        arrTitles = [],
-        arrResults = [],
-        indexItem = [],
-        itemLength = 0;
-    var tmpDiv = document.createElement('div');
-    tmpDiv.className = 'result-item';
-
-    // ajax 的兼容写法
-    var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            xml = xhr.responseXML;
-            arrItems = xml.getElementsByTagName('entry');
-            itemLength = arrItems.length;
-            // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
-            // 同时过滤掉 HTML 标签
-            for (i = 0; i < itemLength; i++) {
-                var link = arrItems[i].getElementsByTagName('link')[0];
-                arrLinks[i] = link.getAttribute("href");
-                arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
-                childNodes[0].nodeValue.replace(/<.*?>/g, '');
-            }
-        }
-    }
-
-    // 开始获取根目录下 feed.xml 文件内的数据
-    xhr.open('get', '/atom.xml', true);
-    xhr.send();
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
 
-    // 输入框内容变化后就开始匹配，可以不用点按钮
-    // 经测试，onkeydown, onchange 等方法效果不太理想，
-    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
-    // 并且可以处理中文输入法拼写的变化
-    searchInput.oninput = function () {
-        setTimeout(searchConfirm, 0);
-    }
-    searchInput.onfocus = function () {
-        searchResults.style.display = 'block';
-    }
-
-    function searchConfirm() {
-        if (searchInput.value == '') {
-            searchResults.style.display = 'none';
-        } else if (searchInput.value.search(/^\s+$/) >= 0) {
-            // 检测输入值全是空白的情况
-            searchInit();
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerText = '请输入有效内容...';
-            searchResults.appendChild(itemDiv);
-        } else {
-            // 合法输入值的情况
-            searchInit();
-            searchValue = searchInput.value;
-            // 在标题、内容中查找
-            searchMatching(arrTitles, searchValue);
-        }
-    }
-
-    // 每次搜索完成后的初始化
-    function searchInit() {
-        arrResults = [];
-        indexItem = [];
-        searchResults.innerHTML = '';
-        searchResults.style.display = 'block';
-    }
-
-    function searchMatching(arr1, input) {
-        // 忽略输入大小写
-        input = new RegExp(input, 'i');
-        // 在所有文章标题、内容中匹配查询值
-        for (i = 0; i < itemLength; i++) {
-            if (arr1[i].search(input) !== -1) {
-                var arr = arr1;
-                indexItem.push(i); // 保存匹配值的索引
-                var indexContent = arr[i].search(input);
-                // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
-                var l = input.toString().length - 3;
-                var step = 10;
-
-                // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
-                arrResults.push(arr[i].slice(indexContent - step, indexContent));
-            }
-        }
-
-        // 输出总共匹配到的数目
-        var totalDiv = tmpDiv.cloneNode(true);
-        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
-        searchResults.appendChild(totalDiv);
-
-        // 未匹配到内容的情况
-        if (indexItem.length == 0) {
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerText = '未匹配到内容...';
-            searchResults.appendChild(itemDiv);
-        }
-
-        // 将所有匹配内容进行组合
-        for (i = 0; i < arrResults.length; i++) {
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerHTML = '<b>[' + arrTitles[indexItem[i]] +
-                ']</b><p>' + arrResults[i] + "</p><hr />";
-            itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
-            searchResults.appendChild(itemDiv);
-        }
-    }
-
-    function changeHref(href) {
-        location.href = href;
-    }
-
-    function showqq() {
-        var qq = document.getElementById("qq").innerHTML;
-        if (qq != '')
-            alert("博主的QQ联系方式为：" + qq);
-        else
-            alert("博主暂未设置QQ联系方式");
-    }
-</script></div>
-                <div id="tab1" class="tab">
-                    <div class="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="close"></div>
-                </div>
-                <div id="main" class="col-xs-12 col-sm-7">
-                    <link rel="stylesheet" href="https://songdlut.github.io/media/css/font-awesome.css">
-<div id="post-container">
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            
-            <img src="\media\images\custom-postdefaultimage.jpg" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/';return false">
-            
-            <div class="posttitlebox">
-                <div class="posttitlewithoutimg" onclick="window.location.href= 'https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/';return false">
-                    背单词时遇到到意思相近的词
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-06-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/jZBTGhI0d/" class="postlink">
-                    <i class="fa fa-tag"></i> 英语
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            
-            <img src="\media\images\custom-postdefaultimage.jpg" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/di-yi-zhang-xu-lun/';return false">
-            
-            <div class="posttitlebox">
-                <div class="posttitlewithoutimg" onclick="window.location.href= 'https://songdlut.github.io/post/di-yi-zhang-xu-lun/';return false">
-                    第一章 绪论
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-06-23</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 25 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/O58BG62iF/" class="postlink">
-                    <i class="fa fa-tag"></i> 数据结构
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            <img src="https://songdlut.github.io/post-images/hello-gridea.png" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/hello-gridea/';return false">
-            <div class="posttitlebox">
-                <div class="posttitle" onclick="window.location.href= 'https://songdlut.github.io/post/hello-gridea/';return false">
-                    Hello Gridea
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/myH1Xi48W/" class="postlink">
-                    <i class="fa fa-tag"></i> Gridea
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-</div>
-                    <div>
-                        <div class="pagi">
-    <ul>
-        
-        <li><a style="width:100px">&nbsp;</a></li>
-        
-                <li><a id="page1">1</a></li>
-                <li><a id="page2" class="active">2</a></li>
-                <li><a id="page3">3</a></li>
-                
-        <li><a style="width:100px">&nbsp;</a></li>
-        
-            </ul>
-</div>
-
-<div id="pagination-prev" style="display:none"> 
-</div>
-<div id="pagination-next" style="display:none"> </div>
 
 
-<script>
-    var prevstr = document.getElementById("pagination-prev").innerHTML;
-    var nextstr = document.getElementById("pagination-next").innerHTML;
-    var page1 = document.getElementById("page1");
-    var page2 = document.getElementById("page2");
-    var page3 = document.getElementById("page3");
-    page1.innerHTML = '-';
-    page2.innerHTML = '1';
-    page3.innerHTML = '-';
-    if (prevstr.length > 5) {
-        if (prevstr.indexOf("page/") != -1) {
-            var prevnum = parseInt(prevstr.split("page/")[1]);
-            page1.innerHTML = prevnum;
-            page2.innerHTML = prevnum + 1;
-        } else {
-            page1.innerHTML = 1;
-            page2.innerHTML = 2;
-        }
-    }
-    if (nextstr.indexOf("page/") != -1) {
-        var nextnum = parseInt(nextstr.split("page/")[1]);
-        page3.innerHTML = nextnum;
-        page2.innerHTML = nextnum - 1;
-    }
-</script>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-2"></div>
-            </div>
-        </div>
-        <div id="bg">
-        </div>
-        <div id="bgchoice" style="display: none">default</div>
-        
-        <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
-            
-    </div>
-    <!-- 响应式布局，针对手机端内容显示 -->
-    <div class="nav-small">
-        <head>
-
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://songdlut.github.io/media/css/bootstrap.min.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="https://songdlut.github.io">宋宇航&nbsp;&nbsp;|</a>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>宋宇航</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://songdlut.github.io/" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://songdlut.github.io/archives/" target="_self">
+                  <i class="fa fa-globe"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://songdlut.github.io/tags/" target="_self">
+                  <i class="fa fa-globe"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://songdlut.github.io/post/about/" target="_self">
+                  <i class="fa fa-globe"></i> 关于
+                </a>
+              
+            </li>
           
           
-          <li>
-            <a href="https://songdlut.github.io">
-              首页
-            </a>
-          </li>
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
           
           
-          
-          <li>
-            <a href="https://songdlut.github.io/archives">
-              归档
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="https://songdlut.github.io/tags">
-              标签
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="https://songdlut.github.io/post/about">
-              关于
-            </a>
-          </li>
-          
-          
-          
-          
-          <li><a href="https://songdlut.github.io/friends">友链</a></li>
-
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
           
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-  <!-- 引入BootStrap核心js文件 -->
-  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-        <!-- 移动端欢迎页 -->
-<div class="welcome">
-    <div class="avatar-border">
-        <img src="https://songdlut.github.io/images/avatar.png?v=1593219480005" class="avatar">
+      </nav>
     </div>
-    <span class="mobiledescribtion"></span>
+  </header>
 </div>
 
-<div id="mobilebgurl" style="display:none">\media\images\custom-mobilebgimage.png</div>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout gemini ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">适用 Gemini,Pisces 布局,版权说明需配置</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="" />
+              <i class="fa fa-globe" title="" ></i>
+            </a>
+          
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+</div>
 <script>
-    var welcome = $('.welcome');
-    var bgurl = document.getElementById("mobilebgurl").innerHTML;
-    for (var i = 0; i < 3; i++)
-        bgurl = bgurl.replace("\\", "/");
-    welcome.css("background", "url('" + bgurl + "')");
-    var mobiledes = document.querySelector(".mobiledescribtion");
-    var text = "学习博客";
-    // 当前显示第几个字
-    var mobilecharIndex = 1;
-    // 每个字显示间隔默认是500毫秒
-    var mobiledelta = 500;
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/">
+      背单词时遇到到意思相近的词
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-06-25</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://songdlut.github.io/tag/jZBTGhI0d/">
+        <span>英语</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>353<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
 
-    // 记录动画执行开始时间
-    var mobilestart = null;
-    // 是否为删除动画
-    var mobileisDeleting = false;
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/">
+      第一章 绪论
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-06-23</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://songdlut.github.io/tag/O58BG62iF/">
+        <span>数据结构</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>25<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>6534<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
 
-    // 动画回调函数
-    function mobileLoadDes(time) {
-        window.requestAnimationFrame(mobileLoadDes);
-        // 初始化开始时间
-        if (!mobilestart) start = time;
-        // 获取时间间隔
-        var mobileprogress = time - mobilestart;
-        // 每隔一定的时间，打印出一个新的字符
-        if (mobileprogress > mobiledelta) {
-            // 如果是打字效果
-            if (!mobileisDeleting) {
-                // 给展示文字的span新增一个字符，使用innerHTML来替换，charIndex自增1，然后返回新的字符串子串
-                mobiledes.innerHTML = "&nbsp;" + text.slice(
-                    0,
-                    ++mobilecharIndex
-                );
-                mobiledelta = 500 - Math.random() * 400;
-            } else {
-                // 如果是删除效果，则把文字一个一个减掉
-                mobiledes.innerHTML = "&nbsp;" + text.slice(
-                    0,
-                    mobilecharIndex--
-                );
-            }
-            // 把star更新为当前时间，进行下一个周期
-            mobilestart = time;
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://songdlut.github.io/post/hello-gridea/">
+      Hello Gridea
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2018-12-12</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://songdlut.github.io/tag/myH1Xi48W/">
+        <span>Gridea</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>298<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-            // 如果文字已经全部打印完毕
-            if (mobilecharIndex === text.length) {
-                // 下次开始删除文字
-                mobileisDeleting = true;
-                // 删除文字的间隔为200毫秒
-                mobiledelta = 100;
-                // 额外等待1.2秒后再删除
-                mobilestart = time + 1000;
-            }
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/hello-gridea/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+</div>
+<script>
 
-            // 如果文字删除完毕
-            if (mobilecharIndex < 0) {
-                mobileisDeleting = false;
-                // 额外增加200毫秒延迟
-                mobilestart = time + 200;
-            }
-        }
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    calcuHeight();
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
     }
 
-    window.requestAnimationFrame(mobileLoadDes);
-</script>
-        <link rel="stylesheet" href="https://songdlut.github.io/media/css/font-awesome.css">
-<div id="post-container">
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            
-            <img src="\media\images\custom-postdefaultimage.jpg" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/';return false">
-            
-            <div class="posttitlebox">
-                <div class="posttitlewithoutimg" onclick="window.location.href= 'https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/';return false">
-                    背单词时遇到到意思相近的词
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-06-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/jZBTGhI0d/" class="postlink">
-                    <i class="fa fa-tag"></i> 英语
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            
-            <img src="\media\images\custom-postdefaultimage.jpg" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/di-yi-zhang-xu-lun/';return false">
-            
-            <div class="posttitlebox">
-                <div class="posttitlewithoutimg" onclick="window.location.href= 'https://songdlut.github.io/post/di-yi-zhang-xu-lun/';return false">
-                    第一章 绪论
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-06-23</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 25 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/O58BG62iF/" class="postlink">
-                    <i class="fa fa-tag"></i> 数据结构
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-    <div class="postshow">
-        
-        <div id="post" style="width:100%">
-            <img src="https://songdlut.github.io/post-images/hello-gridea.png" class="postimage"
-                onclick="window.location.href= 'https://songdlut.github.io/post/hello-gridea/';return false">
-            <div class="posttitlebox">
-                <div class="posttitle" onclick="window.location.href= 'https://songdlut.github.io/post/hello-gridea/';return false">
-                    Hello Gridea
-                </div>
-            </div>
-        </div>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a href="https://songdlut.github.io/tag/myH1Xi48W/" class="postlink">
-                    <i class="fa fa-tag"></i> Gridea
-                </a>
-                
-            </div>
-        </div>
-        
-    </div>
-    
-</div>
-        <div class="pagination-container">
-            
-            
-        </div>
-        <div style="margin-bottom:60px">&nbsp;</div>
-    </div>
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
 
-<div id="landlord">
-    <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-</div>
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
 </body>
 
-</html>
-<script src="https://songdlut.github.io/media/js/index.js"></script>
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-xian-xing-biao/"" data-c="
+          &lt;p&gt;&lt;ul class=&#34;markdownIt-TOC&#34;&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#21-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E5%8F%8A%E6%93%8D%E4%BD%9C&#34;&gt;2.1 线性表相关概念及操作&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#211-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5&#34;&gt;2.1.1 线性表相关概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#212-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C&#34;&gt;2.1.2 线性表的基本操作&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#22-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA&#34;&gt;2.2 线性表的顺序表示&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#221-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89&#34;&gt;2.2.1 顺序表的定义&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+(目录)&lt;br&gt;
+&lt;strong&gt;考点&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性表的定义和基本操作&lt;/li&gt;
+&lt;li&gt;线性表的实现
+&lt;ul&gt;
+&lt;li&gt;顺序存储&lt;/li&gt;
+&lt;li&gt;链式存储&lt;/li&gt;
+&lt;li&gt;线性表的应用&lt;br&gt;
+&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS2.1&#34; alt=&#34;2.1&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;重点&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;考研命题重点&lt;/li&gt;
+&lt;li&gt;代码量少,但是性能要求极高(时间,空间复杂度)&lt;/li&gt;
+&lt;li&gt;基于两种存储结构的各种基本操作&lt;/li&gt;
+&lt;li&gt;可执行性不强求(那肯定语法正确更好),但须尽量表达出算法的思想和步骤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;21-线性表相关概念及操作&#34;&gt;2.1 线性表相关概念及操作&lt;/h2&gt;
+&lt;h3 id=&#34;211-线性表相关概念&#34;&gt;2.1.1 线性表相关概念&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;线性结构的特点,在数据元素的非空有限集中:
+&lt;ul&gt;
+&lt;li&gt;存在惟一的一个被称做“第一个”的数据元素&lt;/li&gt;
+&lt;li&gt;存在惟一的一个被称做“最后一个”的数据元素&lt;/li&gt;
+&lt;li&gt;除第一个之外，集合中的每个数据元素均只有一个前驱&lt;/li&gt;
+&lt;li&gt;除最后一个之外，集合中每个数据元素均只有一个后继。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;线性表的定义&lt;br&gt;
+线性表是具有相同数据类型的n(n≥0)个数据元素的__有限序列__，其中__n为表长，当n=0时线性表是一个空表__。若用L命名线性表，则其一般表示为:&lt;center&gt;L=(a&lt;sub&gt;1&lt;/sub&gt;,a&lt;sub&gt;2&lt;/sub&gt;,...,a&lt;sub&gt;i+1&lt;/sub&gt;,...,a&lt;sub&gt;n&lt;/sub&gt;)&lt;/center&gt;式中:
+&lt;ul&gt;
+&lt;li&gt;a&lt;sub&gt;1&lt;/sub&gt;是唯一的“第一个”数据元素，又称表头元素；&lt;/li&gt;
+&lt;li&gt;a&lt;sub&gt;n&lt;/sub&gt;是唯一的“最后一个”数据元素，又称表尾元素。&lt;/li&gt;
+&lt;li&gt;除第一个元素外，每个元素有且仅有一个直接前驱。&lt;/li&gt;
+&lt;li&gt;除最后一个元素外，每个元素有且仅有一个直接后继。&lt;br&gt;
+以上就是线性表的逻辑特性，这种线性有序的逻辑结构正是线性表名字的由来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;线性表的特点:
+&lt;ul&gt;
+&lt;li&gt;表中元素的__个数有限__。&lt;/li&gt;
+&lt;li&gt;表中元素具有逻辑上的__顺序性__，表中元素有其先后次序。&lt;/li&gt;
+&lt;li&gt;表中元素都是数据元素，每个元素都是单个元素。&lt;/li&gt;
+&lt;li&gt;表中元素的数据类型都相同，这意味着__每个元素占有相同大小的存储空间__。&lt;/li&gt;
+&lt;li&gt;表中元素具有抽象性，即仅讨论元素间的逻辑关系，而不考虑元素究竟表示什么内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注意点
+&lt;ul&gt;
+&lt;li&gt;线性表是一种逻辑结构，表示元素之间一对一的相邻关系。&lt;/li&gt;
+&lt;li&gt;顺序表和链表是指存储结构，两者属于不同层面的概念，因此不要将其混淆。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;212-线性表的基本操作&#34;&gt;2.1.2 线性表的基本操作&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;一个数据结构的基本操作是指其最核心、最基本的操作。其他较复杂的操作可通过调用其基本操作来实现。线性表的主要操作如下:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;InitList(&amp;amp;L):初始化表。构造一个空的线性表。
+Length(L):求表长。返回线性表L的长度，即L中数据元素的个数。
+LocateElem(L，e):按值查找操作。在表L中查找具有给定关键字值的元素。返回i,无返回0(咱-1)
+GetElem(L，i):按位查找操作。获取表工中第i个位置的元素的值。
+ListInsert(&amp;amp;L，i，e):插入操作。在表L中的第i个位置上插入指定元素e。
+Listpelete(&amp;amp;L，i，&amp;amp;e):删除操作。删除表工中第i个位置的元素，并用e返回删除元素的值。
+PrintList(L):输出操作。按前后顺序输出线性表L的所有元素值。
+Empty(L):判空操作。若L为空表，则返回true，否则返回false。
+DestroyList(&amp;amp;L):销毁操作。销毁线性表，并释放线性表工所占用的内存空间。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;注意:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;基本操作的__实现取决于采用哪种存储结构__，存储结构不同，算法的实现也不同。&lt;/li&gt;
+&lt;li&gt;&amp;quot;&amp;amp;&amp;quot;表示C++中的引用调用。若传入的变量是指针型变量，且在函数体内要对传入的指针进行改变，则会用到指针变量的引用型。在C中采用指针的指针也可达到同样的效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;22-线性表的顺序表示&#34;&gt;2.2 线性表的顺序表示&lt;/h2&gt;
+&lt;h3 id=&#34;221-顺序表的定义&#34;&gt;2.2.1 顺序表的定义&lt;/h3&gt;
+">第二章 线性表</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/"" data-c="
+          &lt;h2 id=&#34;开始着手做&#34;&gt;开始,着手做&lt;/h2&gt;
+&lt;p&gt;embark:另:上船(车飞机等)&lt;/p&gt;
+&lt;h2 id=&#34;抓住处理解决&#34;&gt;抓住,处理,解决&lt;/h2&gt;
+&lt;p&gt;tackle&lt;/p&gt;
+&lt;h2 id=&#34;国会议会代表大会&#34;&gt;国会,议会,代表大会&lt;/h2&gt;
+&lt;p&gt;congress&lt;br&gt;
+parliament&lt;/p&gt;
+&lt;h2 id=&#34;理事会委员会等&#34;&gt;理事会,委员会等&lt;/h2&gt;
+&lt;p&gt;council&lt;/p&gt;
+&lt;h2 id=&#34;辩护人法律顾问代理律师&#34;&gt;辩护人,法律顾问,代理律师&lt;/h2&gt;
+&lt;p&gt;counsel:另:劝告,忠告(n/v)&lt;/p&gt;
+&lt;h2 id=&#34;牧草地牧场&#34;&gt;牧草地,牧场&lt;/h2&gt;
+&lt;p&gt;meadow&lt;br&gt;
+pasture&lt;/p&gt;
+&lt;h2 id=&#34;使疲劳&#34;&gt;(使)疲劳&lt;/h2&gt;
+&lt;p&gt;fatigue:v/n&lt;br&gt;
+weary:疲倦的,令人厌烦的,(使)疲倦/厌烦&lt;/p&gt;
+&lt;h2 id=&#34;妨碍阻碍&#34;&gt;妨碍,阻碍&lt;/h2&gt;
+&lt;p&gt;hamper&lt;br&gt;
+handicap:另:(身体或智力)缺陷,不利条件&lt;/p&gt;
+&lt;h2 id=&#34;扩大增大&#34;&gt;扩大,增大&lt;/h2&gt;
+&lt;p&gt;magnify:另:夸张,夸大&lt;/p&gt;
+&lt;h2 id=&#34;古怪的&#34;&gt;古怪的&lt;/h2&gt;
+&lt;p&gt;eccentric:另:怪癖的,异乎寻常的,n:古怪的人&lt;/p&gt;
+&lt;h2 id=&#34;合同契约条约公约&#34;&gt;合同,契约,条约,公约&lt;/h2&gt;
+&lt;p&gt;packt&lt;/p&gt;
+&lt;h2 id=&#34;策划图谋&#34;&gt;策划,图谋&lt;/h2&gt;
+&lt;p&gt;hatch:另:v.孵化孵出,n.舱口,小门&lt;/p&gt;
+&lt;h2 id=&#34;带有微弱朦胧晦涩这种含义的&#34;&gt;带有微弱,朦胧,晦涩这种含义的&lt;/h2&gt;
+&lt;p&gt;faint:a.微弱,不明显,暗淡的,n/v.昏倒昏厥&lt;/p&gt;
+&lt;h1 id=&#34;尼玛总是忘掉的一些&#34;&gt;尼玛总是忘掉的一些&lt;/h1&gt;
+&lt;p&gt;vapo(u)r:汽,(水)蒸汽&lt;br&gt;
+rack:挂物架,搁物架,v:折磨使痛苦&lt;br&gt;
+racket:吵闹,喧闹&lt;br&gt;
+cordial:热诚,诚恳,亲切的&lt;br&gt;
+malignant:恶性的,致命的,恶意的,恶毒的&lt;br&gt;
+courtesy:n.恭谦有礼,有礼貌的举止/言辞&lt;br&gt;
+eloquent:雄辩有说服力的,有口才的&amp;lt;--反--&amp;gt;lame:a.辩解无说服力的,另:跛的&lt;br&gt;
+daunt:使胆怯,使气馁vt&lt;br&gt;
+genuine:真正的,名副其实的&lt;br&gt;
+hazard:n/v.危险,冒险,危害,拼命&lt;br&gt;
+harness:v.治理,利用,n.马具,挽具&lt;br&gt;
+rake:耙子,v.耙,搜索&lt;br&gt;
+rally:v.重整,恢复,振作,n.聚集,集会,大会,接力赛&lt;br&gt;
+harassment:骚扰,扰乱,烦恼,烦乱&lt;/p&gt;
+">背单词时遇到到意思相近的词</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-xing-lie-shi/"" data-c="
+          &lt;h2 id=&#34;自己的理解&#34;&gt;自己的理解&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;n阶行列式:就是一行挑一个出来,不能在同一列,这n个数相乘,前面的正负号按列序号的排列的逆序数来决定,逆序数是偶就取1,逆序数是奇就取-1,最后再累加(也就是代数和)&lt;/li&gt;
+&lt;li&gt;逆序数:
+&lt;ul&gt;
+&lt;li&gt;由1,2,3....n组成的有序数组成为一个n阶排列,通常用j&lt;sub&gt;1&lt;/sub&gt;,j&lt;sub&gt;2&lt;/sub&gt;,...j&lt;sub&gt;n&lt;/sub&gt;来表示n阶排列(j就是列嘛)&lt;/li&gt;
+&lt;li&gt;在一次的排列中,如果大的数排在了小的前面,就称这俩数构成了一个__逆序__,一个排列的逆序的总数称为这个排列的__逆序数__&lt;/li&gt;
+&lt;li&gt;偶排列:逆序数是偶数,奇排列就是奇数了&lt;/li&gt;
+&lt;li&gt;例25134: 21,51,53,54,逆序数就是4了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计算的技巧&#34;&gt;计算的技巧&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;看0的情况:
+&lt;ul&gt;
+&lt;li&gt;0多的情况下,先按0多的那一行(列)展开&lt;/li&gt;
+&lt;li&gt;0排列比较规则的情况下,可考虑拉普拉斯展开式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+">第一章 行列式</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/"" data-c="
+          &lt;p&gt;&lt;ul class=&#34;markdownIt-TOC&#34;&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD&#34;&gt;1.1 数据结构的基本概念和术语&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#111-%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD&#34;&gt;1.1.1 概念和术语&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#112-%E4%B8%8A%E8%BF%B0%E6%9C%AF%E8%AF%AD%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB&#34;&gt;1.1.2 上述术语的联系与区别&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#113-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0%E7%9A%84%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A&#34;&gt;1.1.3 数据结构三要素的详细解释&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E5%88%86%E7%90%86%E8%A7%A3%E5%92%8C%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF&#34;&gt;1.2 自己的部分理解和解题思路&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#121-%E6%A6%82%E5%BF%B5&#34;&gt;1.2.1 概念&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13-%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7&#34;&gt;1.3 算法和算法评价&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#131-%E7%AE%97%E6%B3%95%E7%9A%84%E5%8F%8A%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82&#34;&gt;1.3.1 算法的及设计要求&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#132-%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F&#34;&gt;1.3.2 算法效率的度量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#133-%E8%AE%A1%E7%AE%97&#34;&gt;1.3.3 计算&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+(目录)&lt;br&gt;
+&lt;strong&gt;考点:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据结构相关的概念和术语&lt;/li&gt;
+&lt;li&gt;数据结构的三要素:逻辑结构,物理结构和数据运算&lt;/li&gt;
+&lt;li&gt;算法时间复杂度和空间复杂度的分析与计算(重点)
+&lt;ul&gt;
+&lt;li&gt;算法设计题通常都要求分析时间,空间复杂度&lt;/li&gt;
+&lt;li&gt;考查时间复杂度的选择题&lt;br&gt;
+&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/1.1.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;11-数据结构的基本概念和术语&#34;&gt;1.1 数据结构的基本概念和术语&lt;/h2&gt;
+&lt;h3 id=&#34;111-概念和术语&#34;&gt;1.1.1 概念和术语&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;比较好理解的例子:&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.2.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;定义&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;数据:数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。&lt;/li&gt;
+&lt;li&gt;数据元素:
+&lt;ul&gt;
+&lt;li&gt;数据元素是数据的__基本单位__，通常作为一个整体进行考虑和处理。一个数据元素可由__若干数据项(&amp;gt;=1)__组成，&lt;strong&gt;数据项是构成数据元素的不可分割的最小单位&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在不同的条件下，数据元素又可称为元素、结点、顶点、记录等。数据元素是用一组属性描述定义、标识、表示和允许值的一个数据单元。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据对象:
+&lt;ul&gt;
+&lt;li&gt;数据对象是具有__相同性质的数据元素的集合__，是数据的一个子集。例如，整数数据对象是集合N={0，土1，土2，…}&lt;/li&gt;
+&lt;li&gt;只是一个集合,元素间的关系除了是同一个集合(虽然同为集合,但是和逻辑结构中的非线性结构的集合不要混淆,它不能代表一种数据结构),别无其他&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺少关系不可以用来定义一个完整的数据结构&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据类型&lt;br&gt;
+数据类型是一个值的集合和定义在此集合上的一组操作的总称。
+&lt;ul&gt;
+&lt;li&gt;原子类型:其值不可再分的数据类型&lt;/li&gt;
+&lt;li&gt;结构类型:其值可以再分解为若干成分(分量)的数据类型
+&lt;ul&gt;
+&lt;li&gt;固定聚合类型:值由确定数目的成分按某种结构组成.如:复数是由两个实数依确定的次序关系构成的&lt;/li&gt;
+&lt;li&gt;可变聚合类型:&amp;quot;值&amp;quot;的成分的数目不确定.如:定义一个&amp;quot;有序整数序列&amp;quot;的抽象数据类型,其中序列的长度是可变的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;抽象数据类型:是指一个数学模型以及定义在该模型上的一组操作。(抽象数据组织及与之相关的操作)&lt;/li&gt;
+&lt;li&gt;数据结构:是相互之间存在一种或多种特定关系的数据元素的集合,在任何问题中，数据元素都不是孤立存在的，它们之间存在某种关系，这种数据元素相互之间的关系称为结构（Structure）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;112-上述术语的联系与区别&#34;&gt;1.1.2 上述术语的联系与区别&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;数据结构和数据类型是所属关系&lt;a href=&#34;https://www.zhihu.com/question/21165020/answer/118852959&#34;&gt;知乎&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.3.jpg&#34; alt=&#34;1.3&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+一种数据结构+定义在此种数据结构上的一组操作=结构类型&lt;br&gt;
+一种值的集合+定义在此种值的集合上的一组操作=原子类型&lt;br&gt;
+结构类型+原子类型=数据类型&lt;br&gt;
+一句话总结，数据结构是一种值的集合，这种值集＋值集上的操作就是结构类型，而结构类型是数据类型中的一种，所以数据结构属于数据类型。&lt;/li&gt;
+&lt;li&gt;数据类型和抽象数据类型的关系&lt;br&gt;
+它们的异同其实就在字面上了抽象。&lt;br&gt;
+&lt;strong&gt;抽象数据类型的定义仅取决于它的一组逻辑特性，而与其在计算机内部如何表示和实现无关&lt;/strong&gt;，即无论其内部结构如何变化，只要它的数学特性不变，都不影响其外部的使用。”抽象“的意义在于数据类型的数学抽象特性。&lt;/li&gt;
+&lt;li&gt;知乎上的理解:“数据类型”是计算机发展出来的一种重要思想，它将程序设计一分为二：实现基本数据类型和使用抽象数据类型。实现基本数据类型是指在物理层面实现数据类型的逻辑特性；使用抽象数据类型是指仅仅关注数据类型的逻辑特性，而不关注硬件实现。这样两边的人都可以更集中注意力于自己的工作范围，进行更深的钻研。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;113-数据结构三要素的详细解释&#34;&gt;1.1.3 数据结构三要素的详细解释&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;逻辑结构&lt;br&gt;
+逻辑结构是指数据元素之间的逻辑关系，即从逻辑关系上描述数据。
+&lt;ul&gt;
+&lt;li&gt;与数据的存储无关,是独立于计算机的.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据的逻辑结构独立于存储结构&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;__数据的存储结构是逻辑结构在计算机上的映射,不能独立于逻辑结构而存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;分为线性结构和非线性结构,线性表是典型的线性结构；集合、树和图是典型的非线性结构。&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.4.png&#34; alt=&#34;1.4&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;集合。结构中的数据元素之间除“同属一个集合”外，别无其他关系。&lt;/li&gt;
+&lt;li&gt;线性结构。结构中的数据元素之间只存在__一对一__的关系。&lt;/li&gt;
+&lt;li&gt;树形结构。结构中的数据元素之间存在__一对多__的关系。&lt;/li&gt;
+&lt;li&gt;图状结构或网状结构。结构中的数据元素之间存在__多对多__的关系。&lt;br&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.5.png&#34; alt=&#34;1.5&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;存储结构&lt;br&gt;
+存储结构是指数据结构在__计算机中的表示（又称映像），也称物理结构__。它包括__数据元素的表示和关系的表示__。数据的存储结构是用计算机语言实现的逻辑结构，&lt;strong&gt;它依赖于计算机语言&lt;/strong&gt;。数据的存储结构主要有顺序存储、链式存储、索引存储和散列存储。
+&lt;ul&gt;
+&lt;li&gt;1）顺序存储。把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。其优点是可以实现随机存取，每个元素占用最少的存储空间；缺点是只能使用相邻的一整块存储单元，因此可能产生较多的外部碎片。&lt;/li&gt;
+&lt;li&gt;2）链式存储。不要求逻辑上相邻的元素在物理位置上也相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。其优点是不会出现碎片现象，能充分利用所有存储单元；缺点是每个元素因存储指针而占用额外的存储空间，且只能实现顺序存取。&lt;/li&gt;
+&lt;li&gt;3）索引存储。在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是（关键字，地址）。其优点是检索速度快；缺点是附加的索引表额外占用存储空间。另外，增加和删除数据时也要修改索引表，因而会花费较多的时间。&lt;/li&gt;
+&lt;li&gt;4）散列存储。根据元素的关键字直接计算出该元素的存储地址，又称__哈希（Hash）存储__。&lt;br&gt;
+其优点是检索、增加和删除结点的操作都很快；缺点是若散列函数不好，则可能出现元素存储单元的冲突，而解决冲突会增加时间和空间开销。&lt;br&gt;
+&lt;strong&gt;注意&lt;/strong&gt;:XX表中,XX带有顺序,链,哈希之类的都代表了物理(存储)结构,XX抽象一点如有序之类的是逻辑结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据的运算&lt;br&gt;
+施加在数据上的运算包括运算的定义和实现。运算的定义是针对逻辑结构的，指出运算的功能；运算的实现是针对存储结构的，指出运算的具体操作步骤。&lt;/li&gt;
+&lt;li&gt;总结&lt;br&gt;
+数据的逻辑结构和存储结构是密不可分的两个方面，一个算法的__设计__取决于所选定的__逻辑结构__，而算法的__实现__依赖于所采用的__存储结构__。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;12-自己的部分理解和解题思路&#34;&gt;1.2 自己的部分理解和解题思路&lt;/h2&gt;
+&lt;h3 id=&#34;121-概念&#34;&gt;1.2.1 概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数据结构三要素的任意一种不同,就不是同一种数据结构
+&lt;ul&gt;
+&lt;li&gt;因而提问&amp;quot;逻辑或物理,逻辑或运算,……不同时,是不是同一种数据结构&amp;quot;的题,就可以回答这两种相同,但是另一个不一样的情况下也不是同一种数据结构.例如(王道p5)二又树和二又排序树，二叉排序树可以采用二叉树的逻辑表示和存储方式，前者通常用于表示层次关系，而后者通常用于排序和查找。虽然它们的运算都有建立树、插入结点、删除结点和查找结点等功能，但对于二叉树和二叉排序树，这些运算的定义是不同的，以查找结点为例，二叉树的时间复杂度为O(n)，而二叉排序树的时间复杂度为O(log&lt;sub&gt;2&lt;/sub&gt;n)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以用__抽象数据类型__来定义一个完整的数据结构
+&lt;ul&gt;
+&lt;li&gt;解析:抽象数据类型描述了数据的逻辑结构和抽象运算，通常用（数据对象、数据关系、基本操作集）这样的三元组来表示，从而构成一个完整的数据结构定义。&lt;/li&gt;
+&lt;li&gt;个人理解,是可以用更细节的来定义较抽象的(小定大)
+&lt;ul&gt;
+&lt;li&gt;1.数据结构可以用（数据元素的有限集、数据元素的关系）二元组定义。&lt;/li&gt;
+&lt;li&gt;2.抽象数据类型是用三元组（数据对象、数据关系、基本操作集）&lt;/li&gt;
+&lt;li&gt;3.数据对象是性质相同的数据元素的集合。所以数据结构主要是比抽象数据类型少了一个操作集，所以可以用抽象数据类型定义一个完整的数据结构。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;13-算法和算法评价&#34;&gt;1.3 算法和算法评价&lt;/h2&gt;
+&lt;h3 id=&#34;131-算法的及设计要求&#34;&gt;1.3.1 算法的及设计要求&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令表示一个或多个操作。此外，一个算法还具有下列5个重要特性：&lt;br&gt;
+1）有穷性。一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。&lt;br&gt;
+2）确定性。算法中每条指令必须有确切的含义，对于相同的输入只能得出相同的输出。&lt;br&gt;
+3）可行性。算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。&lt;br&gt;
+4）输入。一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。&lt;br&gt;
+5）输出。一个算法有一个或多个输出，这些输出是与输入有着某种特定关系的量。&lt;/li&gt;
+&lt;li&gt;通常，设计一个“好”的算法应考虑达到以下目标：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性。算法应能够正确地解决求解问题。
+&lt;ul&gt;
+&lt;li&gt;a.程序不含语法错误；&lt;/li&gt;
+&lt;li&gt;b.程序对于几组输入数据能够得出满足规格说明要求的结果；&lt;/li&gt;
+&lt;li&gt;c.程序对于精心选择的典型、苛刻而带有刁难性的几组输入数据能够得出满足规格说明要求的结果&lt;/li&gt;
+&lt;li&gt;d.程序对于一切合法的输入数据都能产生满足规格说明要求的结果。&lt;/li&gt;
+&lt;li&gt;显然，达到第d层意义下的正确是极为困难的，所有不同输入数据的数量大得惊人，逐一验证的方法是不现实的。对于大型软件需要进行专业测试，而一般情况下，通常以第c层意义的正确性作为衡量一个程序是否合格的标准&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可读性。算法应具有良好的可读性，以帮助人们理解。&lt;/li&gt;
+&lt;li&gt;健壮性。输入非法数据时，算法能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。&lt;/li&gt;
+&lt;li&gt;效率与低存储量需求。&lt;strong&gt;效率是指算法执行的时间&lt;/strong&gt;，&lt;strong&gt;存储量需求是指算法执行过程中所需要的最大存储空间&lt;/strong&gt;，这两者都与问题的规模有关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;132-算法效率的度量&#34;&gt;1.3.2 算法效率的度量&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;时间复杂度
+&lt;ul&gt;
+&lt;li&gt;一个算法是由__控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）__构成的，则算法时间取决于两者的综合效果。&lt;/li&gt;
+&lt;li&gt;语句的频度:该语句重复执行的次数&lt;/li&gt;
+&lt;li&gt;T(n)
+&lt;ul&gt;
+&lt;li&gt;王道上以及查到的一些资料称:算法中所有语句的频度之和记为T(n)&lt;/li&gt;
+&lt;li&gt;书上:执行时间/时间量度&lt;/li&gt;
+&lt;li&gt;对于这两种不用太抠字眼,就是对时间复杂度的描述或者说符号,毕竟__分析时间复杂度的时候都是分析T(n)的数量级__(但是还是王道上的好理解一些)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;算法中基本运算（最深层循环内的语句）的频度与T(n)同数量级(就挑一个基本操作)，因此通常采用算法中基本运算的频度f(n)来分析算法的时间复杂度。因此，算法的时间复杂度记为 &lt;center&gt;T(n)=O(f(n))&lt;/center&gt;式中，O的含义是T(n)的数量级，其严格的数学定义是：若T(n)和f(n)是定义在正整数集合上的两个函数，则存在正常数C和n&lt;sub&gt;0&lt;/sub&gt;，使得当n≥n&lt;sub&gt;0&lt;/sub&gt;时，都满足0≤T(n)小于等于C(n)。&lt;/li&gt;
+&lt;li&gt;渐进时间复杂度:简称是时间复杂度&lt;/li&gt;
+&lt;li&gt;一般总是考虑最坏情况下的时间复杂度(除特殊指明)
+&lt;ul&gt;
+&lt;li&gt;算法的时间复杂度不仅依赖于问题的规模n，也取决于待输入数据的性质（如输入数据元素的初始状态）。例如，在数组A[0..n-1]中，查找给定值k的算法大致如下：&lt;br&gt;
+（1）i=n-1；&lt;br&gt;
+（2）while（i&amp;gt;=0&amp;amp;&amp;amp;（A[i]！=k））&lt;br&gt;
+（3）i--；&lt;br&gt;
+（4）return i；该算法中语句3（基本运算）的频度不仅与问题规模n有关，而且与输入实例中A的各元素的取值及k的取值有关：&lt;br&gt;
+①若A中没有与k相等的元素，则语句3的频度f（n）=n。&lt;br&gt;
+②若A的最后一个元素等于k，则语句3的频度f（n）是常数0。&lt;br&gt;
+最坏时间复杂度是指在最坏情况下，算法的时间复杂度。&lt;br&gt;
+平均时间复杂度是指所有可能输入实例在等概率出现的情况下，算法的期望运行时间。&lt;br&gt;
+最好时间复杂度是指在最好情况下，算法的时间复杂度。&lt;br&gt;
+一般总是考虑在最坏情况下的时间复杂度，以保证算法的运行时间不会比它更长。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在分析一个程序的时间复杂性时，有以下两条规则：
+&lt;ul&gt;
+&lt;li&gt;a)加法规则&lt;br&gt;
+T(n)=T1(n)+T2(n)=O(f(n))+O(g(n))=O(maxf(n)，g(n)))&lt;/li&gt;
+&lt;li&gt;b)乘法规则&lt;br&gt;
+T(n)=T1(n)×T2(n)=O(f(n))×O(g(n))=O(n)xg(n)&lt;/li&gt;
+&lt;li&gt;常见的渐近时间复杂度为&lt;br&gt;
+O(1)&amp;lt;Olog2n)&amp;lt;O(n)&amp;lt;O(nlogan)&amp;lt;O(n2)&amp;lt;O(n3)&amp;lt;O(2)&amp;lt;O(n!)&amp;lt;O(n&lt;sup&gt;n&lt;/sup&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;空间复杂度&lt;br&gt;
+类似于算法的时间复杂度，本书中以空间复杂度(space complexity)作为算法所需存储空间的量度，记作&lt;center&gt;S(n)=O(f(n))&lt;/center&gt;其中n为问题的规模(或大小)。一个上机执行的程序除了需要存储空间来寄存本身所用指令、常数、变量和输入数据外，也需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。若输入数据所占空间只取决于问题本身，和算法无关，则只需要分析除输入和程序之外的额外空间，否则应同时考虑输入本身所需空间(和输入数据的表示形式有关)。若额外空间相对于输入数据量来说是常数，则称此算法为原地工作，第10章讨论的有些排序算法就属于这类。又如果所占空间量依赖于特定的输入，则除特别指明外，均按最坏情况来分析。&lt;br&gt;
+&lt;strong&gt;算法原地工作是指算法所需要的辅助空间为常量&lt;/strong&gt;,并非是不需要任何额外的辅助空间.&lt;br&gt;
+&lt;strong&gt;同一个算法,实现的语言的级别越高,执行效率越低&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;133-计算&#34;&gt;1.3.3 计算&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/50479555&#34;&gt;知乎转载&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;时间复杂度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;常数阶O(1)&lt;br&gt;
+无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)，如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性阶O(n)&lt;br&gt;
+这个在最开始的代码示例中就讲解过了，如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;for(i=1; i&amp;lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对数阶O(logN)&lt;br&gt;
+还是先来看代码：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;int i = 1;
+while(i&amp;lt;n)
+{
+    i = i * 2;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从上面代码可以看到，在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。我们试着求解一下，假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2^n&lt;br&gt;
+也就是说当循环 log2^n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(logn)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性对数阶O(nlogN)&lt;br&gt;
+线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)。&lt;br&gt;
+就拿上面的代码加一点修改来举例：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;for(m=1; m&amp;lt;n; m++)
+{
+    i = 1;
+    while(i&amp;lt;n)
+    {
+        i = i * 2;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;平方阶O(n²)&lt;br&gt;
+平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²) 了。&lt;br&gt;
+举例：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;for(x=1; i&amp;lt;=n; x++)
+{
+   for(i=1; i&amp;lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n*n)，即 O(n²)&lt;br&gt;
+如果将其中一层循环的n改成m，即：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for(x=1; i&amp;lt;=m; x++)
+{
+   for(i=1; i&amp;lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;那它的时间复杂度就变成了 O(m*n)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;立方阶O(n³)、K次方阶O(n^k)&lt;br&gt;
+参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似。&lt;/li&gt;
+&lt;li&gt;除此之外，其实还有 平均时间复杂度、均摊时间复杂度、最坏时间复杂度、最好时间复杂度 的分析方法，有点复杂，这里就不展开了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;空间复杂度&lt;br&gt;
+既然时间复杂度不是用来计算程序具体耗时的，那么我也应该明白，空间复杂度也不是用来计算程序实际占用的空间的。&lt;br&gt;
+空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度，同样反映的是一个趋势，我们用 S(n) 来定义。&lt;br&gt;
+空间复杂度比较常用的有：O(1)、O(n)、O(n²)，我们下面来看看：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;空间复杂度 O(1)&lt;br&gt;
+如果算法执行所需要的临时空间不随着某个变量n的大小而变化，即此算法空间复杂度为一个常量，可表示为 O(1),举例：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;空间复杂度 O(n)&lt;br&gt;
+我们先看一个代码：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;int[] m = new int[n]
+for(i=1; i&amp;lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这段代码中，第一行new了一个数组出来，这个数据占用的大小为n，这段代码的2-6行，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)&lt;br&gt;
+以上，就是对算法的时间复杂度与空间复杂度基础的分析，欢迎大家一起交流。&lt;br&gt;
+3. 递归算法和非递归算法在分析时间复杂度上是不同的&lt;br&gt;
+在算法分析中，当一个算法中包含递归调用时，其时间复杂度的分析会转化为一个递归方程求解。实际上，这个问题是数学上求解渐近阶的问题，而递归方程的形式多种多样，其求解方法也是不一而足，比较常用的有以下四种方法：&lt;br&gt;
+(1)代入法(Substitution Method)&lt;/p&gt;
+&lt;p&gt;代入法的基本步骤是先推测递归方程的显式解，然后用数学归纳法来验证该解是否合理。&lt;/p&gt;
+&lt;p&gt;(2)迭代法(Iteration Method)&lt;/p&gt;
+&lt;p&gt;迭代法的基本步骤是迭代地展开递归方程的右端，使之成为一个非递归的和式，然后通过对和式的估计来达到对方程左端即方程的解的估计。&lt;/p&gt;
+&lt;p&gt;(3)套用公式法(Master Method)&lt;/p&gt;
+&lt;p&gt;这个方法针对形如“T(n) = aT(n/b) + f(n)”的递归方程。这种递归方程是分治法的时间复杂性所满足的递归关系，即一个规模为n的问题被分成规模均为n/b的a个子问题，递归地求解这a个子问题，然后通过对这a个子间题的解的综合，得到原问题的解。&lt;/p&gt;
+&lt;p&gt;(4)差分方程法(Difference Formula Method)&lt;br&gt;
+可以将某些递归方程看成差分方程，通过解差分方程的方法来解递归方程，然后对解作出渐近阶估计。&lt;/p&gt;
+&lt;p&gt;下面就以上方法给出一些例子说明。&lt;/p&gt;
+&lt;p&gt;一、代入法&lt;br&gt;
+大整数乘法计算时间的递归方程为：T(n) = 4T(n/2) + O(n)，其中T(1) = O(1)，我们猜测一个解T(n) = O(n2 )，根据符号O的定义，对n&amp;gt;n0，有T(n) &amp;lt; cn2 - eO(2n)（注意，这里减去O(2n)，因其是低阶项，不会影响到n足够大时的渐近性），把这个解代入递归方程，得到：&lt;/p&gt;
+&lt;p&gt;T(n) = 4T(n/2) + O(n)&lt;br&gt;
+≤ 4c(n/2)2 - eO(2n/2)) + O(n)&lt;br&gt;
+= cn2 - eO(n) + O(n)&lt;br&gt;
+≤ cn2&lt;/p&gt;
+&lt;p&gt;其中，c为正常数，e取1，上式符合 T(n)≤cn2 的定义，则可认为O(n2 )是T(n)的一个解，再用数学归纳法加以证明。&lt;/p&gt;
+&lt;p&gt;二、迭代法&lt;br&gt;
+某算法的计算时间为：T(n) = 3T(n/4) + O(n)，其中T(1) = O(1)，迭代两次可将右端展开为：&lt;/p&gt;
+&lt;p&gt;T(n) = 3T(n/4) + O(n)&lt;br&gt;
+= O(n) + 3( O(n/4) + 3T(n/42 ) )&lt;br&gt;
+= O(n) + 3( O(n/4) + 3( O(n/42 ) + 3T(n/43 ) ) )&lt;/p&gt;
+&lt;p&gt;从上式可以看出，这是一个递归方程，我们可以写出迭代i次后的方程：&lt;/p&gt;
+&lt;p&gt;T(n) = O(n) + 3( O(n/4) + 3( O(n/42 ) + ... + 3( n/4i + 3T(n/4i+1 ) ) ) )&lt;/p&gt;
+&lt;p&gt;当n/4i+1 =1时，T(n/4i+1 )=1，则&lt;/p&gt;
+&lt;p&gt;T(n) = n + (3/4) + (32 /42 )n + ... + (3i /4i )n + (3i+1 )T(1)&lt;br&gt;
+&amp;lt; 4n + 3i+1&lt;/p&gt;
+&lt;p&gt;而由n/4i+1 =1可知，i&amp;lt;log4 n，从而&lt;/p&gt;
+&lt;p&gt;3i+1 ≤ 3log4 n+1 = 3log3 n*log4 3 +1 = 3nlog4 3&lt;/p&gt;
+&lt;p&gt;代入得：&lt;/p&gt;
+&lt;p&gt;T(n) &amp;lt; 4n + 3nlog4 3，即T(n) = O(n)。&lt;/p&gt;
+&lt;p&gt;三、套用公式法&lt;/p&gt;
+&lt;p&gt;这个方法为估计形如：&lt;br&gt;
+T(n) = aT(n/b) + f(n)&lt;br&gt;
+其中，a≥1和b≥1，均为常数，f(n)是一个确定的正函数。在f(n)的三类情况下，我们有T(n)的渐近估计式：&lt;br&gt;
+1.若对于某常数ε&amp;gt;0，有f(n) = O(nlogb a-ε )，则T(n) = O(nlogb a )&lt;/p&gt;
+&lt;p&gt;2.若f(n) = O(nlogb a )，则T(n) = O(nlogb a *logn)&lt;/p&gt;
+&lt;p&gt;3.若f(n) = O(nlogb a+ε )，且对于某常数c&amp;gt;1和所有充分大的正整数n，有af(n/b)≤cf(n)，则T(n)=O(f(n))。&lt;/p&gt;
+&lt;p&gt;设T(n) = 4T(n/2) + n，则a = 4，b = 2，f(n) = n，计算得出nlogb a = nlog2 4 = n2 ，而f(n) = n = O(n2-ε )，此时ε= 1，根据第1种情况，我们得到T(n) = O(n2 )。&lt;/p&gt;
+&lt;p&gt;这里涉及的三类情况，都是拿f(n)与nlogb a 作比较，而递归方程解的渐近阶由这两个函数中的较大者决定。在第一类情况下，函数nlogb a 较大，则T(n)=O(nlogb a )；在第三类情况下，函数f(n)较大，则T(n)=O(f (n))；在第二类情况下，两个函数一样大，则T(n)=O(nlogb a *logn)，即以n的对数作为因子乘上f(n)与T(n)的同阶。&lt;/p&gt;
+&lt;p&gt;但上述三类情况并没有覆盖所有可能的f(n)。在第一类情况和第二类情况之间有一个间隙：f(n)小于但不是多项式地小于nlogb a ，第二类与第三类之间也存在这种情况，此时公式法不适用。&lt;/p&gt;
+">第一章 绪论</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
 
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = 'http://ericam.top/'  //此处修改为你的域名，必须带斜杠
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
 </script>
-<script type="text/javascript" src="https://songdlut.github.io/media/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="https://songdlut.github.io/media/live2d/js/message.js"></script>
-<script type="text/javascript">
-    loadlive2d("live2d", "https://songdlut.github.io/media/live2d/assets/tororo.model.json");
+
+<input hidden id="copy" />
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
 </script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+
+
+</html>
