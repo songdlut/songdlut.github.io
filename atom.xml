@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-06-27T01:50:16.962Z</updated>
+    <updated>2020-06-30T11:53:53.155Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,305 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[第一章错题及重点问题整理]]></title>
+        <id>https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/</id>
+        <link href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/">
+        </link>
+        <updated>2020-06-30T08:21:43.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>高级程序设计语言的__编译器不是__操作系统关心的问题
+<ul>
+<li>用户界面并非是必须的,但却包含在操作系统范畴内</li>
+</ul>
+</li>
+<li>OS基本功能是__控制管理系统内的各种资源__
+<ul>
+<li>注意网络管理,用户界面,可视化编辑程序都不是最基本的功能</li>
+</ul>
+</li>
+<li>用户可以通过__命令接口和系统调用__来使用计算机</li>
+<li>系统调用只能通过用户程序间接使用</li>
+<li>系统调用的目的是__请求系统服务__
+<ul>
+<li>不是什么申请/释放资源,终止服务啥的</li>
+</ul>
+</li>
+<li>OS与用户通信接口通常不包括__缓存管理指令__
+<ul>
+<li>系统中的缓存全部由OS管理,对用户是透明的</li>
+<li>shell(命令解析器),命令解释器,广义指令(系统调用)都是通信接口</li>
+</ul>
+</li>
+<li><strong>库函数与系统调用的区别与联系</strong>
+<ul>
+<li>库函数是语言或应用程序的一部分,可以运行在用户空间中</li>
+<li>系统调用是操作系统的一部分,是内核为用户提供的程序接口,运行在内核空间中</li>
+<li>许多库函数会使用系统调用来实现功能</li>
+<li>未使用系统调用的库函数执行效率通常要比系统调用的高</li>
+<li>因为使用系统调用需要上下文切换以及状态的转换(由用户态转移到核心态)</li>
+</ul>
+</li>
+<li>各技术所解决的问题
+<ul>
+<li>脱机技术用于解决独占设备问题。</li>
+<li>虚拟技术与交换技术以多道程序设计技术为前提。</li>
+<li>多道程序设计技术由于同时在主存中运行多个程序，在一个程序等待时，可以去执行其他程序，因此提高了系统咨源的利用率。</li>
+</ul>
+</li>
+<li>引入多道程序后,程序的执行就失去了顺序性和封闭性,执行的程序是断续的</li>
+<li>操作系统的基本主要类型:
+<ul>
+<li>批处理OS</li>
+<li>分时OS</li>
+<li>实时OS</li>
+</ul>
+</li>
+<li>中断技术使得多道批处理系统和I/O设备可与CPU并行工作</li>
+<li>实时系统的进度调度通常采用__抢占式的优先级高者优先__算法</li>
+<li>实时OS的主要目标不包括__资源利用率__</li>
+<li>分时OS的主要目标是__比较快速响应用户__</li>
+<li>分时OS响应时间T≈QN,Q:时间片;N:用户数</li>
+<li>批处理OS,分时OS,实时OS的各自特点
+<ul>
+<li>批处理操作系统的用户脱机使用计算机，作业是成批处理的，系统内多道程序并发执行，交互能力差。</li>
+<li>分时操作系统可让多个用户同时使用计算机，人机交互性较强，具有每个用户独立使用计算机的独占性，系统响应及时</li>
+<li>实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。</li>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一章 计算机系统引论]]></title>
+        <id>https://songdlut.github.io/post/di-yi-zhang-ji-suan-ji-xi-tong-yin-lun/</id>
+        <link href="https://songdlut.github.io/post/di-yi-zhang-ji-suan-ji-xi-tong-yin-lun/">
+        </link>
+        <updated>2020-06-29T07:13:14.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>考试内容</strong></p>
+<ul>
+<li>操作系统的概念,特征,功能和提供的方服务</li>
+<li>操作系统的发展和分类</li>
+<li>操作系统的运行环境
+<ul>
+<li>内核态与用户态</li>
+<li>中断,异常</li>
+<li>系统调用</li>
+</ul>
+</li>
+<li>操作系统体系结构<br>
+<strong>知识框架</strong><br>
+<img src="https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.1.png" alt="1.1" loading="lazy"><br>
+<strong>重点</strong></li>
+<li>通常选择题的形式</li>
+<li>形成大体框架后,反复做题,完善知识体系</li>
+</ul>
+<h2 id="11-操作系统的基本概念">1.1 操作系统的基本概念</h2>
+<h3 id="111-操作系统的目标和作用">1.1.1 操作系统的目标和作用</h3>
+<ol>
+<li>目标
+<ul>
+<li>方便性
+<ul>
+<li>裸机运行程序很不方便,要用机器语言书写程序</li>
+</ul>
+</li>
+<li>有效性
+<ul>
+<li><strong>提高系统资源的利用率</strong>:在早期未配置OS的计算机系统中，诸如处理机、I/O设备等都经常处于空闲状态，各种资源无法得到充分利用，所以在当时，提高系统资源利用率是推动OS发展最主要的动力。</li>
+<li><strong>提高系统的吞吐量</strong>:OS可以通过合理地组织计算机的工作流程，加速程序的运行，缩短程序的运行周期，从而提高了系统的吞吐量</li>
+</ul>
+</li>
+<li>可扩充性
+<ul>
+<li>早期的无结构发展成模块化结构，进而又发展成层次化结构</li>
+<li>近年来OS已广泛采用了__微内核结构__。微内核结构能方便地增添新的功能和模块，以及对原有的功能和模块进行修改，具有良好的可扩充性。</li>
+</ul>
+</li>
+<li>开放性
+<ul>
+<li>所谓开放性，是指系统能遵循世界标准规范，特别是遵循开放系统互连OSI国际标准</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>作用</li>
+</ol>
+<ul>
+<li>OS作为用户与计算机硬件系统之间的接口<br>
+<img src="https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.2.png" alt="1.2" loading="lazy"></li>
+<li>OS作为计算机系统资源的管理者
+<ul>
+<li>主要分为:处理机,存储器,I/O设备,文件(数据和程序)</li>
+</ul>
+</li>
+<li>OS实现了对计算机资源的抽象<br>
+<img src="https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.3.png" alt="1.3" loading="lazy"></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第二章 线性表]]></title>
+        <id>https://songdlut.github.io/post/di-er-zhang-xian-xing-biao/</id>
+        <link href="https://songdlut.github.io/post/di-er-zhang-xian-xing-biao/">
+        </link>
+        <updated>2020-06-26T11:09:41.000Z</updated>
+        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#21-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E5%8F%8A%E6%93%8D%E4%BD%9C">2.1 线性表相关概念及操作</a>
+<ul>
+<li><a href="#211-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">2.1.1 线性表相关概念</a></li>
+<li><a href="#212-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">2.1.2 线性表的基本操作</a></li>
+</ul>
+</li>
+<li><a href="#22-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA">2.2 线性表的顺序表示</a>
+<ul>
+<li><a href="#221-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89">2.2.1 顺序表的定义</a></li>
+<li><a href="#222-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E4%B8%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%9A%84%E5%AE%9E%E7%8E%B0">2.2.2 顺序表上基本操作的实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+(目录)<br>
+<strong>考点</strong></p>
+<ul>
+<li>线性表的定义和基本操作</li>
+<li>线性表的实现
+<ul>
+<li>顺序存储</li>
+<li>链式存储</li>
+<li>线性表的应用</li>
+</ul>
+</li>
+</ul>
+<p><strong>知识框架</strong><br>
+<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS2.1" alt="2.1" loading="lazy"><br>
+<strong>重点</strong></p>
+<ul>
+<li>考研命题重点</li>
+<li>代码量少,但是性能要求极高(时间,空间复杂度)</li>
+<li>基于两种存储结构的各种基本操作</li>
+<li>可执行性不强求(那肯定语法正确更好),但须尽量表达出算法的思想和步骤</li>
+</ul>
+<h2 id="21-线性表相关概念及操作">2.1 线性表相关概念及操作</h2>
+<h3 id="211-线性表相关概念">2.1.1 线性表相关概念</h3>
+<ol>
+<li>线性结构的特点,在数据元素的非空有限集中:
+<ul>
+<li>存在惟一的一个被称做“第一个”的数据元素</li>
+<li>存在惟一的一个被称做“最后一个”的数据元素</li>
+<li>除第一个之外，集合中的每个数据元素均只有一个前驱</li>
+<li>除最后一个之外，集合中每个数据元素均只有一个后继。</li>
+</ul>
+</li>
+<li>线性表的定义<br>
+线性表是具有相同数据类型的n(n≥0)个数据元素的__有限序列__，其中__n为表长，当n=0时线性表是一个空表__。若用L命名线性表，则其一般表示为:<center>L=(a<sub>1</sub>,a<sub>2</sub>,...,a<sub>i+1</sub>,...,a<sub>n</sub>)</center>式中:
+<ul>
+<li>a<sub>1</sub>是唯一的“第一个”数据元素，又称表头元素；</li>
+<li>a<sub>n</sub>是唯一的“最后一个”数据元素，又称表尾元素。</li>
+<li>除第一个元素外，每个元素有且仅有一个直接前驱。</li>
+<li>除最后一个元素外，每个元素有且仅有一个直接后继。<br>
+以上就是线性表的逻辑特性，这种线性有序的逻辑结构正是线性表名字的由来。</li>
+</ul>
+</li>
+<li>线性表的特点:
+<ul>
+<li>表中元素的__个数有限__。</li>
+<li>表中元素具有逻辑上的__顺序性__，表中元素有其先后次序。</li>
+<li>表中元素都是数据元素，每个元素都是单个元素。</li>
+<li>表中元素的数据类型都相同，这意味着__每个元素占有相同大小的存储空间__。</li>
+<li>表中元素具有抽象性，即仅讨论元素间的逻辑关系，而不考虑元素究竟表示什么内容。</li>
+</ul>
+</li>
+<li>注意点
+<ul>
+<li>线性表是一种逻辑结构，表示元素之间一对一的相邻关系。</li>
+<li>顺序表和链表是指存储结构，两者属于不同层面的概念，因此不要将其混淆。</li>
+</ul>
+</li>
+</ol>
+<h3 id="212-线性表的基本操作">2.1.2 线性表的基本操作</h3>
+<ol>
+<li>一个数据结构的基本操作是指其最核心、最基本的操作。其他较复杂的操作可通过调用其基本操作来实现。线性表的主要操作如下:</li>
+</ol>
+<pre><code>InitList(&amp;L):初始化表。构造一个空的线性表。
+Length(L):求表长。返回线性表L的长度，即L中数据元素的个数。
+LocateElem(L，e):按值查找操作。在表L中查找具有给定关键字值的元素。返回i,无返回0(咱-1)
+GetElem(L，i):按位查找操作。获取表工中第i个位置的元素的值。
+ListInsert(&amp;L，i，e):插入操作。在表L中的第i个位置上插入指定元素e。
+Listpelete(&amp;L，i，&amp;e):删除操作。删除表工中第i个位置的元素，并用e返回删除元素的值。
+PrintList(L):输出操作。按前后顺序输出线性表L的所有元素值。
+Empty(L):判空操作。若L为空表，则返回true，否则返回false。
+DestroyList(&amp;L):销毁操作。销毁线性表，并释放线性表工所占用的内存空间。
+</code></pre>
+<ol start="2">
+<li>注意:</li>
+</ol>
+<ul>
+<li>基本操作的__实现取决于采用哪种存储结构__，存储结构不同，算法的实现也不同。</li>
+<li>&quot;&amp;&quot;表示C++中的引用调用。若传入的变量是指针型变量，且在函数体内要对传入的指针进行改变，则会用到指针变量的引用型。在C中采用指针的指针也可达到同样的效果。</li>
+</ul>
+<h2 id="22-线性表的顺序表示">2.2 线性表的顺序表示</h2>
+<h3 id="221-顺序表的定义">2.2.1 顺序表的定义</h3>
+<ol>
+<li>线性表的顺序表示是指用一组地址连续的存储单元依次存储线性表中数据元素,使得逻辑上相邻的两个元素在物理位置上也相邻.
+<ul>
+<li>线性表的顺序存储又称__顺序表__</li>
+<li>第1个元素存储在线性表的起始位置,也叫__基地址__</li>
+<li>第i个元素的存储位置后面紧接着存储的是第i+1个元素，称i为元素a<sub>i</sub>在线性表中的位序。假设线性表L存储的起始位置为LOC(A)，sizeof(ElemType)是每个数据元素所占用存储空间的大小，则表L所对应的顺序存储如图;<br>
+<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS2.2" alt="2.2" loading="lazy"></li>
+<li>线性表的这种机内表示称作__线性表的顺序存储结构或顺序映像__</li>
+<li>顺序表的特点是表中元素的逻辑顺序与其物理顺序相同</li>
+<li>线性表中元素的位序是从1开始的,而数组中的元素的下标是从0开始的</li>
+</ul>
+</li>
+<li>顺序表的描述</li>
+</ol>
+<ul>
+<li>假定线性表的元素类型为ElemType，则线性表的顺序存储类型描述为(静态)</li>
+</ul>
+<pre><code>#define MaxSize50//定义线性表的最大长度
+typedef struct{
+    ElemType data[MaxSize]；//顺序表的元素
+    int length；/顺序表的当前长度
+}SqList;
+</code></pre>
+<ul>
+<li>一维数组可以是静态分配的，也可以是动态分配的。
+<ul>
+<li>在静态分配时，由于数组的大小和空间事先已经固定，一旦空间占满，再加入新的数据将会产生溢出，进而导致程序崩溃。而在动态分配时，存储数组的空间是在程序执行过程中通过动态存储分配语句分配的，一旦数据空间占满，就另外开辟一块更大的存储空间，用以替换原来的存储空间，从而达到扩充存储数组空间的目的，而不需要为线性表一次性地划分所有空间。</li>
+</ul>
+</li>
+</ul>
+<pre><code>#define InitSize 100//表长度的初始定义
+typedef struct{
+    Elemrype*data；//指示动态分配数组的指针
+    int MaxSize，length；//数组的最大容量和当前个数
+}SeqList；/动态分配数组顺序表的类型定义
+</code></pre>
+<pre><code>    * C的初始动态分配语句:
+    L.data=(ElemType*)malloc(sizeof(ElemType)*InitSize);
+    * C++的初始动态分配语句
+    L.data=newElemType(InitSize);
+</code></pre>
+<ul>
+<li>由于高级程序语言中的数组类型也有随机存取的特性,因此通常用数组来描述数据结构中的顺序存储结构</li>
+<li><strong>注意：动态分配并不是链式存储</strong>，它同样属于顺序存储结构，物理结构没有变化，依然是随机存取方式，只是分配的空间大小可以在运行时决定。</li>
+</ul>
+<ol>
+<li>总结</li>
+</ol>
+<ul>
+<li>顺序表最主要的特点是随机访问，即通过首地址和元素序号可在时间O(1)内找到指定的元素。</li>
+<li>顺序表的存储密度高，每个结点只存储数据元素。</li>
+<li>顺序表逻辑上相邻的元素物理上也相邻，所以插入和删除操作需要移动大量元素。</li>
+</ul>
+<h3 id="222-顺序表上基本操作的实现">2.2.2 顺序表上基本操作的实现</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[背单词时遇到到意思相近的词]]></title>
         <id>https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/</id>
