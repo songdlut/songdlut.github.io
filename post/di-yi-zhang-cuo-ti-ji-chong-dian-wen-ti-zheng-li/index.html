@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>第一章错题及重点问题整理 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1593607237966">
+<link rel="shortcut icon" href="/favicon.ico?v=1593609588323">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -190,7 +190,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -247,6 +248,196 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E6%A6%82%E5%BF%B5">1.概念</a></li>
+<li><a href="#2%E4%B8%AD%E6%96%AD%E7%AD%89">2.中断等</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -362,12 +553,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
+      <span>7<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>756<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1819<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -381,7 +572,8 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <ul>
+              <h2 id="1概念">1.概念</h2>
+<ul>
 <li>高级程序设计语言的__编译器不是__操作系统关心的问题
 <ul>
 <li>用户界面并非是必须的,但却包含在操作系统范畴内</li>
@@ -441,6 +633,77 @@
 <li>实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。</li>
 </ul>
 </li>
+</ul>
+<h2 id="2中断等">2.中断等</h2>
+<ul>
+<li>进程调度可以不需要硬件支持,而时钟管理,地址映射,中断系统都需要硬件的支持</li>
+<li>用户态到核心态的转换由__硬件__完成</li>
+<li>中断处理程序一般在核心态执行,因此无法完成&quot;转换成核心态&quot;这一任务</li>
+<li>命令解释程序是运行在用户态的</li>
+<li>注意区分在__用户态执行和发生的区别__
+<ul>
+<li>例如系统调用发生在用户态,而被调用程序在核心态下执行</li>
+<li>外部中断是用户态到核心态的&quot;门&quot;,发生在用户态,但是在核心态完成中断过程</li>
+<li>进程切换术语系统调用的执行过程中的事件,只能发生在核心态</li>
+<li>缺页产生后,在用户态发生缺页中断,然后进入核心态执行缺页程序中断服务程序</li>
+</ul>
+</li>
+<li><strong>只能在核心态下执行的指令</strong>(继续补充)
+<ul>
+<li>置时钟指令</li>
+<li>广义指令</li>
+</ul>
+</li>
+<li><strong>不是只能在核心态下&quot;执行&quot;的指令</strong>(继续补充)
+<ul>
+<li>读时钟指令</li>
+<li>取数指令</li>
+<li>寄存器清零</li>
+</ul>
+</li>
+<li><strong>陷入指令是唯一一个只能在用户态下执行而不能在核心态下执行的指令</strong></li>
+<li>中断处理和子程序调用的区别(重要)
+<ul>
+<li>子程序调用只需保存程序断点，即该指令的下一条指令的地址；</li>
+<li>中断调用子程序不仅要保存断点（PC的内容），还要保存程序状态字寄存器（PSW）的内容。在中断处理中，最重要的两个寄存器是PC和PSWR。</li>
+</ul>
+</li>
+<li>关中断指令是权限非常大的指令,必须在核心态才能执行
+<ul>
+<li>trap指令,跳转指令,压栈指令均可在用户态下执行</li>
+</ul>
+</li>
+<li>有关内部异常的叙述
+<ul>
+<li>内部异常的产生与当前执行指令相关</li>
+<li>内部异常的检测由CPU内部逻辑实现</li>
+<li>内部异常的响应发生在指令执行过程中
+<ul>
+<li>内中断是指来自CPU和内存内部产生的中断，包括程序运算引起的各种错误，如地址非法、校验错、页面失效、非法指令、用户程序执行特权指令自行中断（INT）和除数为零等，以上都是在指令的执行过程中产生的，因此A正确。这种检测异常的工作肯定是由CPU（包括控制器和运算器）实现的，因此B正确。内中断不能被屏蔽，一旦出现应立即处理，C正确。</li>
+</ul>
+</li>
+<li>(<strong>错误</strong>)内部异常处理后返回到发生异常的指令继续执行
+<ul>
+<li>考虑到特殊情况，如除数为零和自行中断（INT）都会自动跳过中断指令，所以不会返回到发生异常的指令继续执行，因此错误。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>注意狭义中断和广义中断
+<ul>
+<li>广义上,异常(内中断)和外部中断都叫</li>
+</ul>
+</li>
+<li>外部中断处理过程，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存。(重要)</li>
+<li>MOV R0,addr:有可能出现缺页异常的可能</li>
+<li><strong>执行系统调用的过程如下</strong>：
+<ul>
+<li>正在运行的进程先传递系统调用参数，然后由陷入（trap）指令负责将用户态转换为内核态，并将返回地址压入堆栈以备后用，接下来CPU执行相应的内核态服务程序，最后返回用户态。所以选项C正确。</li>
+</ul>
+</li>
+<li>时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。</li>
+<li>不同的操作系统为应用程序提供的系统调用接口也不同</li>
+<li>设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)</li>
 </ul>
 
             </div>
@@ -1526,7 +1789,8 @@
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/"" data-c="
-          &lt;ul&gt;
+          &lt;h2 id=&#34;1概念&#34;&gt;1.概念&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;高级程序设计语言的__编译器不是__操作系统关心的问题
 &lt;ul&gt;
 &lt;li&gt;用户界面并非是必须的,但却包含在操作系统范畴内&lt;/li&gt;
@@ -1586,6 +1850,77 @@
 &lt;li&gt;实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2中断等&#34;&gt;2.中断等&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;进程调度可以不需要硬件支持,而时钟管理,地址映射,中断系统都需要硬件的支持&lt;/li&gt;
+&lt;li&gt;用户态到核心态的转换由__硬件__完成&lt;/li&gt;
+&lt;li&gt;中断处理程序一般在核心态执行,因此无法完成&amp;quot;转换成核心态&amp;quot;这一任务&lt;/li&gt;
+&lt;li&gt;命令解释程序是运行在用户态的&lt;/li&gt;
+&lt;li&gt;注意区分在__用户态执行和发生的区别__
+&lt;ul&gt;
+&lt;li&gt;例如系统调用发生在用户态,而被调用程序在核心态下执行&lt;/li&gt;
+&lt;li&gt;外部中断是用户态到核心态的&amp;quot;门&amp;quot;,发生在用户态,但是在核心态完成中断过程&lt;/li&gt;
+&lt;li&gt;进程切换术语系统调用的执行过程中的事件,只能发生在核心态&lt;/li&gt;
+&lt;li&gt;缺页产生后,在用户态发生缺页中断,然后进入核心态执行缺页程序中断服务程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只能在核心态下执行的指令&lt;/strong&gt;(继续补充)
+&lt;ul&gt;
+&lt;li&gt;置时钟指令&lt;/li&gt;
+&lt;li&gt;广义指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不是只能在核心态下&amp;quot;执行&amp;quot;的指令&lt;/strong&gt;(继续补充)
+&lt;ul&gt;
+&lt;li&gt;读时钟指令&lt;/li&gt;
+&lt;li&gt;取数指令&lt;/li&gt;
+&lt;li&gt;寄存器清零&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;陷入指令是唯一一个只能在用户态下执行而不能在核心态下执行的指令&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;中断处理和子程序调用的区别(重要)
+&lt;ul&gt;
+&lt;li&gt;子程序调用只需保存程序断点，即该指令的下一条指令的地址；&lt;/li&gt;
+&lt;li&gt;中断调用子程序不仅要保存断点（PC的内容），还要保存程序状态字寄存器（PSW）的内容。在中断处理中，最重要的两个寄存器是PC和PSWR。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关中断指令是权限非常大的指令,必须在核心态才能执行
+&lt;ul&gt;
+&lt;li&gt;trap指令,跳转指令,压栈指令均可在用户态下执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有关内部异常的叙述
+&lt;ul&gt;
+&lt;li&gt;内部异常的产生与当前执行指令相关&lt;/li&gt;
+&lt;li&gt;内部异常的检测由CPU内部逻辑实现&lt;/li&gt;
+&lt;li&gt;内部异常的响应发生在指令执行过程中
+&lt;ul&gt;
+&lt;li&gt;内中断是指来自CPU和内存内部产生的中断，包括程序运算引起的各种错误，如地址非法、校验错、页面失效、非法指令、用户程序执行特权指令自行中断（INT）和除数为零等，以上都是在指令的执行过程中产生的，因此A正确。这种检测异常的工作肯定是由CPU（包括控制器和运算器）实现的，因此B正确。内中断不能被屏蔽，一旦出现应立即处理，C正确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(&lt;strong&gt;错误&lt;/strong&gt;)内部异常处理后返回到发生异常的指令继续执行
+&lt;ul&gt;
+&lt;li&gt;考虑到特殊情况，如除数为零和自行中断（INT）都会自动跳过中断指令，所以不会返回到发生异常的指令继续执行，因此错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注意狭义中断和广义中断
+&lt;ul&gt;
+&lt;li&gt;广义上,异常(内中断)和外部中断都叫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;外部中断处理过程，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存。(重要)&lt;/li&gt;
+&lt;li&gt;MOV R0,addr:有可能出现缺页异常的可能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行系统调用的过程如下&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;正在运行的进程先传递系统调用参数，然后由陷入（trap）指令负责将用户态转换为内核态，并将返回地址压入堆栈以备后用，接下来CPU执行相应的内核态服务程序，最后返回用户态。所以选项C正确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。&lt;/li&gt;
+&lt;li&gt;不同的操作系统为应用程序提供的系统调用接口也不同&lt;/li&gt;
+&lt;li&gt;设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)&lt;/li&gt;
 &lt;/ul&gt;
 ">第一章错题及重点问题整理</a>
       </div>

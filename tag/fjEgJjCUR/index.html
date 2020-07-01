@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1593607237966">
+<link rel="shortcut icon" href="/favicon.ico?v=1593609588323">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1098,7 +1098,8 @@
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/"" data-c="
-          &lt;ul&gt;
+          &lt;h2 id=&#34;1概念&#34;&gt;1.概念&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;高级程序设计语言的__编译器不是__操作系统关心的问题
 &lt;ul&gt;
 &lt;li&gt;用户界面并非是必须的,但却包含在操作系统范畴内&lt;/li&gt;
@@ -1158,6 +1159,77 @@
 &lt;li&gt;实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2中断等&#34;&gt;2.中断等&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;进程调度可以不需要硬件支持,而时钟管理,地址映射,中断系统都需要硬件的支持&lt;/li&gt;
+&lt;li&gt;用户态到核心态的转换由__硬件__完成&lt;/li&gt;
+&lt;li&gt;中断处理程序一般在核心态执行,因此无法完成&amp;quot;转换成核心态&amp;quot;这一任务&lt;/li&gt;
+&lt;li&gt;命令解释程序是运行在用户态的&lt;/li&gt;
+&lt;li&gt;注意区分在__用户态执行和发生的区别__
+&lt;ul&gt;
+&lt;li&gt;例如系统调用发生在用户态,而被调用程序在核心态下执行&lt;/li&gt;
+&lt;li&gt;外部中断是用户态到核心态的&amp;quot;门&amp;quot;,发生在用户态,但是在核心态完成中断过程&lt;/li&gt;
+&lt;li&gt;进程切换术语系统调用的执行过程中的事件,只能发生在核心态&lt;/li&gt;
+&lt;li&gt;缺页产生后,在用户态发生缺页中断,然后进入核心态执行缺页程序中断服务程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只能在核心态下执行的指令&lt;/strong&gt;(继续补充)
+&lt;ul&gt;
+&lt;li&gt;置时钟指令&lt;/li&gt;
+&lt;li&gt;广义指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不是只能在核心态下&amp;quot;执行&amp;quot;的指令&lt;/strong&gt;(继续补充)
+&lt;ul&gt;
+&lt;li&gt;读时钟指令&lt;/li&gt;
+&lt;li&gt;取数指令&lt;/li&gt;
+&lt;li&gt;寄存器清零&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;陷入指令是唯一一个只能在用户态下执行而不能在核心态下执行的指令&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;中断处理和子程序调用的区别(重要)
+&lt;ul&gt;
+&lt;li&gt;子程序调用只需保存程序断点，即该指令的下一条指令的地址；&lt;/li&gt;
+&lt;li&gt;中断调用子程序不仅要保存断点（PC的内容），还要保存程序状态字寄存器（PSW）的内容。在中断处理中，最重要的两个寄存器是PC和PSWR。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关中断指令是权限非常大的指令,必须在核心态才能执行
+&lt;ul&gt;
+&lt;li&gt;trap指令,跳转指令,压栈指令均可在用户态下执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有关内部异常的叙述
+&lt;ul&gt;
+&lt;li&gt;内部异常的产生与当前执行指令相关&lt;/li&gt;
+&lt;li&gt;内部异常的检测由CPU内部逻辑实现&lt;/li&gt;
+&lt;li&gt;内部异常的响应发生在指令执行过程中
+&lt;ul&gt;
+&lt;li&gt;内中断是指来自CPU和内存内部产生的中断，包括程序运算引起的各种错误，如地址非法、校验错、页面失效、非法指令、用户程序执行特权指令自行中断（INT）和除数为零等，以上都是在指令的执行过程中产生的，因此A正确。这种检测异常的工作肯定是由CPU（包括控制器和运算器）实现的，因此B正确。内中断不能被屏蔽，一旦出现应立即处理，C正确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(&lt;strong&gt;错误&lt;/strong&gt;)内部异常处理后返回到发生异常的指令继续执行
+&lt;ul&gt;
+&lt;li&gt;考虑到特殊情况，如除数为零和自行中断（INT）都会自动跳过中断指令，所以不会返回到发生异常的指令继续执行，因此错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注意狭义中断和广义中断
+&lt;ul&gt;
+&lt;li&gt;广义上,异常(内中断)和外部中断都叫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;外部中断处理过程，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存。(重要)&lt;/li&gt;
+&lt;li&gt;MOV R0,addr:有可能出现缺页异常的可能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行系统调用的过程如下&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;正在运行的进程先传递系统调用参数，然后由陷入（trap）指令负责将用户态转换为内核态，并将返回地址压入堆栈以备后用，接下来CPU执行相应的内核态服务程序，最后返回用户态。所以选项C正确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。&lt;/li&gt;
+&lt;li&gt;不同的操作系统为应用程序提供的系统调用接口也不同&lt;/li&gt;
+&lt;li&gt;设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)&lt;/li&gt;
 &lt;/ul&gt;
 ">第一章错题及重点问题整理</a>
       </div>
