@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1593518023844">
+<link rel="shortcut icon" href="/favicon.ico?v=1593604388392">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -184,7 +184,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-count">7</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1045,6 +1045,30 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;当中断发生后,CPU立即进入__核心态__&lt;/li&gt;
+&lt;li&gt;当中断发生后,当前运行的进程暂停运行,并由操作系统内核对中断进行处理&lt;/li&gt;
+&lt;li&gt;对于不同的中断信号,会进行不同的处理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;发生了中断，就意味着需要操作系统介入，开展管理工作。由于操作系统的管理工作（比如进程切换、分配I/O设备等）需要使用特权指令，因此CPU要从用户态转为核心态。&lt;strong&gt;中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权&lt;/strong&gt;。有了中断，才能实现多道程序并发执行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户态-&amp;gt;核心态是通过中断实现的,并且中断是唯一途径&lt;/li&gt;
+&lt;li&gt;核心态-&amp;gt;用户态的切换是通过执行一个特权指令,将程序状态字(PSW)的标志位设置为&amp;quot;用户态&amp;quot;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan1.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan2.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan6.png&#34; alt=&#34;1.6&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan3.png&#34; alt=&#34;1.3&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan4.png&#34; alt=&#34;1.4&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https//raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan5.png&#34; alt=&#34;1.5&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;陷入指令是唯一一个只能在用户态下执行的指令&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">中断的概念及作用</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/"" data-c="
           &lt;ul&gt;
 &lt;li&gt;高级程序设计语言的__编译器不是__操作系统关心的问题
@@ -1104,7 +1128,6 @@
 &lt;li&gt;批处理操作系统的用户脱机使用计算机，作业是成批处理的，系统内多道程序并发执行，交互能力差。&lt;/li&gt;
 &lt;li&gt;分时操作系统可让多个用户同时使用计算机，人机交互性较强，具有每个用户独立使用计算机的独占性，系统响应及时&lt;/li&gt;
 &lt;li&gt;实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
