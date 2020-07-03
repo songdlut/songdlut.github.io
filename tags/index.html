@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1593609588323">
+<link rel="shortcut icon" href="/favicon.ico?v=1593755064638">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -184,7 +184,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-count">8</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -269,7 +269,7 @@
       
         
           
-        
+            
       
         
           
@@ -284,14 +284,22 @@
         
       
         
+          
+        
+      
+        
       
         
           
         
       
-      <a class="cloud-tag" href="https://songdlut.github.io/tag/fjEgJjCUR/" rel="3">操作系统</a>
+      <a class="cloud-tag" href="https://songdlut.github.io/tag/fjEgJjCUR/" rel="4">操作系统</a>
     
       
+      
+        
+          
+        
       
         
           
@@ -349,6 +357,10 @@
       
         
           
+        
+      
+        
+          
             
       
         
@@ -368,6 +380,10 @@
       <a class="cloud-tag" href="https://songdlut.github.io/tag/jZBTGhI0d/" rel="1">英语</a>
     
       
+      
+        
+          
+        
       
         
           
@@ -1205,6 +1221,53 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li/"" data-c="
+          &lt;p&gt;&lt;strong&gt;考试内容&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程与线程
+&lt;ul&gt;
+&lt;li&gt;进程的概念&lt;/li&gt;
+&lt;li&gt;进程的状态与转换&lt;/li&gt;
+&lt;li&gt;进程控制&lt;/li&gt;
+&lt;li&gt;进程组织&lt;/li&gt;
+&lt;li&gt;进程通信&lt;/li&gt;
+&lt;li&gt;线程概念与多线程模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理机调度
+&lt;ul&gt;
+&lt;li&gt;调度的基本概念&lt;/li&gt;
+&lt;li&gt;调度时机,切换与过程&lt;/li&gt;
+&lt;li&gt;调度的基本准则&lt;/li&gt;
+&lt;li&gt;调度方式&lt;/li&gt;
+&lt;li&gt;典型调度算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;进程同步
+&lt;ul&gt;
+&lt;li&gt;进程同步的基本概念&lt;/li&gt;
+&lt;li&gt;实现临界区互斥的基本方法&lt;/li&gt;
+&lt;li&gt;信号量&lt;/li&gt;
+&lt;li&gt;管程&lt;/li&gt;
+&lt;li&gt;经典同步问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;死锁
+&lt;ul&gt;
+&lt;li&gt;死锁的概念&lt;/li&gt;
+&lt;li&gt;死锁处理策略&lt;/li&gt;
+&lt;li&gt;死锁预防&lt;/li&gt;
+&lt;li&gt;死锁避免&lt;/li&gt;
+&lt;li&gt;死锁的检测和解除&lt;br&gt;
+&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://songdlut.github.io/post-images/1593755047577.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+">第二章 进程管理</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/"" data-c="
           &lt;ol&gt;
 &lt;li&gt;当中断发生后,CPU立即进入__核心态__&lt;/li&gt;
@@ -1362,7 +1425,31 @@
 &lt;li&gt;时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。&lt;/li&gt;
 &lt;li&gt;不同的操作系统为应用程序提供的系统调用接口也不同&lt;/li&gt;
 &lt;li&gt;设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;区分执行态的主要目的是保护系统程序&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;用户态到核心态的转换发生在中断产生时，而核心态到用户态的转换则发生在中断返回用户程序时。&lt;/li&gt;
+&lt;li&gt;为什么说直到出现中断和通道技术之后,多道程序概念才变得有用?
+&lt;ul&gt;
+&lt;li&gt;多道程序并发执行是指有的程序正在CPU上执行，而另一些程序正在I/O设备上进行传输，即通过CPU操作与外设传输在时间上的重叠必须有中断和通道技术的支持，原因如下：&lt;br&gt;
+1）通道是一种控制一台或多台外部设备的硬件机构，它一旦被启动就独立于CPU运行，因而做到了输入/输出操作与CPU并行工作。但早期CPU与通道的联络方法是由CPU向通道发出询问指令来了解通道工作是否完成的。若未完成，则主机就循环询问直到通道工作结束为止。因此，这种询问方式是无法真正做到CPU与I/O设备并行工作的。&lt;br&gt;
+2）在硬件上引入了中断技术。所谓中断，就是在输入/输出结束时，或硬件发生某种故障时，由相应的硬件（即中断机构）向CPU发出信号，这时CPU立即停下工作而转向处理中断请求，待处理完中断后再继续原来的工作。&lt;br&gt;
+因此，通道技术和中断技术结合起来就可实现CPU与I/O设备并行工作，即CPU启动通道传输数据后便去执行其他程序的计算工作，而通道则进行输入/输出操作；当通道工作结束时，再通过中断机构向CPU发出中断请求，CPU则暂停正在执行的操作，对出现的中断进行处理，处理完后再继续原来的工作。这样，就真正做到了CPU与IVO设备并行工作。此时，多道程序的概念才变为现实。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3本章疑难点&#34;&gt;3.本章疑难点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;并行性与并发性的区别和联系&lt;br&gt;
+并行性和并发性是既相似又有区别的两个概念。并行性是指两个或多个事件在同一时刻发生，并发性是指两个或多个事件在同一时间间隔内发生。&lt;br&gt;
+在多道程序环境下，并发性是指在一段时间内，宏观上有多个程序同时运行，但在单处理器系统中每个时刻却仅能有一道程序执行，因此微观上这些程序只能分时地交替执行。若在计算机系统中有多个处理器，则这些可以并发执行的程序便被分配到多个处理器上，实现并行执行，即利用每个处理器来处理一个可并发执行的程序。&lt;/li&gt;
+&lt;li&gt;特权指令与非特权指令&lt;br&gt;
+所谓特权指令，是指有特殊权限的指令，由于这类指令的权限最大，使用不当将导致整个系统崩溃，如清内存、置时钟、分配系统资源、修改虚存的段表或页表、修改用户的访问权限等。若所有程序都能使用这些指令，则系统一天死机n次就不足为奇。为保证系统安全，这类指令只能用于操作系统或其他系统软件，不直接提供给用户使用。因此，特权指令必须在核心态执行。&lt;br&gt;
+实际上，CPU在核心态下可以执行指令系统的全集。形象地说，特权指令是那些儿童不宜的东西，而非特权指令是老少皆宜的东西。&lt;br&gt;
+为了防止用户程序中使用特权指令，用户态下只能使用非特权指令，核心态下可以使用全部指令。在用户态下使用特权指令时，将产生中断以阻止用户使用特权指令。所以把用户程序放在用户态下运行，而操作系统中必须使用特权指令的那部分程序在核心态下运行，保证了计算机系统的安全可靠。从用户态转换为核心态的唯一途径是中断或异常。&lt;/li&gt;
+&lt;li&gt;访管指令与访管中断&lt;br&gt;
+访管指令是一条可以在用户态下执行的指令。在用户程序中，因要求操作系统提供服务而有意识地使用访管指令，从而产生一个中断事件（自愿中断），将操作系统转换为核心态，称为访管中断。访管中断由访管指令产生，程序员使用访管指令向操作系统请求服务。&lt;br&gt;
+为什么要在程序中引入访管指令呢？这是因为用户程序只能在用户态下运行。若用户程序想要完成在用户态下无法完成的工作，该怎么办？解决这个问题要靠访管指令。访管指令本身不是特权指令，其基本功能是让程序拥有“自愿进管”的手段，从而引起访管中断。&lt;br&gt;
+处于用户态的用户程序使用访管指令时，系统根据访管指令的操作数执行访管中断处理程序，访管中断处理程序将按系统调用的操作数和参数转到相应的例行子程序。完成服务功能后，退出中断，返回到用户程序断点继续执行。&lt;/li&gt;
+&lt;/ol&gt;
 ">第一章错题及重点问题整理</a>
       </div>
       
@@ -1609,10 +1696,14 @@ pasture&lt;/p&gt;
 &lt;p&gt;fatigue:v/n&lt;br&gt;
 weary:疲倦的,令人厌烦的,(使)疲倦/厌烦&lt;/p&gt;
 &lt;h2 id=&#34;妨碍阻碍&#34;&gt;妨碍,阻碍&lt;/h2&gt;
-&lt;p&gt;hamper&lt;br&gt;
+&lt;p&gt;hinder&lt;br&gt;
+hamper&lt;br&gt;
 handicap:另:(身体或智力)缺陷,不利条件&lt;/p&gt;
 &lt;h2 id=&#34;扩大增大&#34;&gt;扩大,增大&lt;/h2&gt;
 &lt;p&gt;magnify:另:夸张,夸大&lt;/p&gt;
+&lt;h2 id=&#34;巨大的&#34;&gt;巨大的&lt;/h2&gt;
+&lt;p&gt;enormous&lt;br&gt;
+immense&lt;/p&gt;
 &lt;h2 id=&#34;古怪的&#34;&gt;古怪的&lt;/h2&gt;
 &lt;p&gt;eccentric:另:怪癖的,异乎寻常的,n:古怪的人&lt;/p&gt;
 &lt;h2 id=&#34;合同契约条约公约&#34;&gt;合同,契约,条约,公约&lt;/h2&gt;
