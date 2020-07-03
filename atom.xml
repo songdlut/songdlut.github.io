@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-03T05:50:11.667Z</updated>
+    <updated>2020-07-03T05:50:50.211Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -53,8 +53,7 @@
 <li>死锁预防</li>
 <li>死锁避免</li>
 <li>死锁的检测和解除<br>
-<strong>知识框架</strong><br>
-<img src="https://songdlut.github.io/post-images/1593755047577.PNG" alt="" loading="lazy"></li>
+<strong>知识框架</strong></li>
 </ul>
 </li>
 </ul>
