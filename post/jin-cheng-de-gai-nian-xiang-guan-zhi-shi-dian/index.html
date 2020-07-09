@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>进程的概念相关知识点 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1594291028867">
+<link rel="shortcut icon" href="/favicon.ico?v=1594298331523">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -259,7 +259,12 @@
 <li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
 <li><a href="#%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2">状态与转换</a></li>
 <li><a href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1">进程间通信</a></li>
-<li><a href="#%E7%BA%BF%E7%A8%8B">线程</a></li>
+<li><a href="#%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%AE%9E%E7%8E%B0">线程概念及实现</a>
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5-2">概念</a></li>
+<li><a href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0">线程的实现</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -560,7 +565,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>354<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>398<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -631,11 +636,17 @@
 </ul>
 </li>
 </ul>
-<h2 id="线程">线程</h2>
+<h2 id="线程概念及实现">线程概念及实现</h2>
+<h3 id="概念-2">概念</h3>
 <figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/20200709183533.png" alt="" loading="lazy"></figure>
 <ul>
 <li>线程可以相同的代码,也可以用不同的代码</li>
-<li></li>
+<li>进程的地址空间相互独立,某进程内的线程对于其他进程不可见</li>
+</ul>
+<h3 id="线程的实现">线程的实现</h3>
+<ul>
+<li>用户级线程<br>
+<img src="https://s1.ax1x.com/2020/07/09/Un8WO1.png" alt="Un8WO1.png" loading="lazy"></li>
 </ul>
 
             </div>
@@ -1750,11 +1761,17 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;线程&#34;&gt;线程&lt;/h2&gt;
+&lt;h2 id=&#34;线程概念及实现&#34;&gt;线程概念及实现&lt;/h2&gt;
+&lt;h3 id=&#34;概念-2&#34;&gt;概念&lt;/h3&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/20200709183533.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;线程可以相同的代码,也可以用不同的代码&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;进程的地址空间相互独立,某进程内的线程对于其他进程不可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;线程的实现&#34;&gt;线程的实现&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用户级线程&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un8WO1.png&#34; alt=&#34;Un8WO1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 ">进程的概念相关知识点</a>
       </div>
