@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-09T13:54:46.266Z</updated>
+    <updated>2020-07-09T13:56:53.512Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -84,7 +84,7 @@
 <ol>
 <li>用户级线程<br>
 <img src="https://s1.ax1x.com/2020/07/09/Un8WO1.png" alt="Un8WO1.png" loading="lazy"><br>
-![<a href="https://s1.ax1x.com/2020/07/09/Unwa6S.png">Unwa6S.png</a></li>
+<img src="https://s1.ax1x.com/2020/07/09/Unwa6S.png" alt="Unwa6S.png" loading="lazy"></li>
 </ol>
 <ul>
 <li>线程的管理工作由应用程序通过线程库来完成的</li>
