@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1594298331523">
+<link rel="shortcut icon" href="/favicon.ico?v=1594302871073">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1062,8 +1062,8 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;状态与转换&#34;&gt;状态与转换&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://songdlut.github.io/post-images/1593939084468.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://songdlut.github.io/post-images/1593939146178.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UncERA.jpg&#34; alt=&#34;UncERA.jpg&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UncAGd.jpg&#34; alt=&#34;UncAGd.jpg&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;注意单核双核&lt;/li&gt;
 &lt;/ul&gt;
@@ -1111,9 +1111,60 @@
 &lt;li&gt;进程的地址空间相互独立,某进程内的线程对于其他进程不可见&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;线程的实现&#34;&gt;线程的实现&lt;/h3&gt;
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;用户级线程&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un8WO1.png&#34; alt=&#34;Un8WO1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un8WO1.png&#34; alt=&#34;Un8WO1.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+![&lt;a href=&#34;https://s1.ax1x.com/2020/07/09/Unwa6S.png&#34;&gt;Unwa6S.png&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;线程的管理工作由应用程序通过线程库来完成的&lt;/li&gt;
+&lt;li&gt;不请求系统服务,在用户态下就完成线程切换&lt;/li&gt;
+&lt;li&gt;操作系统意识不到用户级线程的存在&lt;/li&gt;
+&lt;li&gt;优缺点
+&lt;ul&gt;
+&lt;li&gt;切换在用户空间完成,不需要切换到核心态,管理的开销小&lt;/li&gt;
+&lt;li&gt;某个用户级线程被阻塞,整个进程都会阻塞,并发度不高,多个线程不可在多核处理机上并行运行
+&lt;ul&gt;
+&lt;li&gt;因为在操作系统上还是以进程运行的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;内核级线程&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UnBbLD.png&#34; alt=&#34;UnBbLD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;线程的管理由操作系统完成&lt;/li&gt;
+&lt;li&gt;线程的切换需要CPU变态,即切换到核心态&lt;/li&gt;
+&lt;li&gt;操作系统可以意识到内核级线程的存在
+&lt;ul&gt;
+&lt;li&gt;操作系统会为每个内核级线程建立相应的TCB,通过TCB对线程进行管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;优缺点
+&lt;ul&gt;
+&lt;li&gt;优点:当一个线程被阻塞的时候,别的线程还可以继续执行,并发能力强;多线程可以在多核处理机上并发执行&lt;/li&gt;
+&lt;li&gt;一个用户进程会占用多个内核级线程,线程的切换由操作系统完成,需要切换到核心态因此线程的管理成本高,开销大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;多线程模型&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UnrnNd.png&#34; alt=&#34;UnrnNd.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Unrq5d.png&#34; alt=&#34;Unrq5d.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;这种多对一的线程是无法__并行__运行的&lt;/li&gt;
+&lt;li&gt;这个进程被分配了多个内核级线程时,如果在多核情况下,这些内核级线程肯定可以__并行__运行
+&lt;ul&gt;
+&lt;li&gt;但是考试中提到多对一模型则默认一个进程只被分配一个内核级线程&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un6Fcq.png&#34; alt=&#34;Un6Fcq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;内核级线程可以运行任意一个有映射关系的用户级线程代码,只有两个内核级线程中正在运行的代码逻辑都阻塞时,这个进程才会阻塞&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un6TbT.png&#34; alt=&#34;Un6TbT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 ">进程的概念相关知识点</a>
       </div>
