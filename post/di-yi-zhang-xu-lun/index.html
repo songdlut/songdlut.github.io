@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>第一章 绪论 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1594430378348">
+<link rel="shortcut icon" href="/favicon.ico?v=1594466627858">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-count">10</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -2025,6 +2025,112 @@ T(n) = aT(n/b) + f(n)<br>
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/"" data-c="
+          &lt;ul&gt;
+&lt;li&gt;线程__没有__自己独立的地址空间,同一进程的多个线程共享其地址空间&lt;/li&gt;
+&lt;li&gt;线程包含CPU现场,是处理机调度的基本单位,可以独立执行程序&lt;/li&gt;
+&lt;li&gt;进程和程序的根本区别是__静态和动态特点__&lt;/li&gt;
+&lt;li&gt;优先级分静态和动态两种&lt;/li&gt;
+&lt;li&gt;在单处理器中,任何时刻都只有一个进程处于运行态是__错的__
+&lt;ul&gt;
+&lt;li&gt;系统死锁全部是阻塞态或者无进程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在进程的整个生命周期中,系统总是通过其PCB来对进程进行控制;
+&lt;ul&gt;
+&lt;li&gt;系统是根据PCB而非其他任何因素来感知进程存在的&lt;/li&gt;
+&lt;li&gt;PCB是进程存在的唯一标志;&lt;/li&gt;
+&lt;li&gt;PCB常驻内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;单处理机系统,n个进程,处于就绪队列的最多n-1个,还有一个肯定在运行;处于阻塞态的最多n个&lt;/li&gt;
+&lt;li&gt;并发进程失去封闭性是指并发进程共享变量,其执行结果与速度有关
+&lt;ul&gt;
+&lt;li&gt;程序的封闭性是指进程执行的结果只取决于进程本身,不受外界影响&lt;/li&gt;
+&lt;li&gt;也就是,进程在执行的过程中不管是不停顿的执行还是走走停停,进程的执行速度都不会改变他的执行结果&lt;/li&gt;
+&lt;li&gt;但是,在失去封闭性后,不同的速度下执行的结果不同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;进程之间可能是相关的,也可能是封闭的&lt;/li&gt;
+&lt;li&gt;进程是作为除CPU之外的系统资源的分配单位
+&lt;ul&gt;
+&lt;li&gt;这里注意题目中一般可能__不特地强调除CPU之外__,除非特地考查这个概念,不然默认是对的&lt;/li&gt;
+&lt;li&gt;特地强调了引入线程后,还说是资源调度和分配的基本单位就是错的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;多对一模型中,一个线程阻塞,整个进程都阻塞&lt;/li&gt;
+&lt;li&gt;对进程进行定义时,如果带有静态的概念就是错的
+&lt;ul&gt;
+&lt;li&gt;例如说进程是多道程序环境下的完整程序就是错的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;C语言编写的程序在使用内存时一般分为3段:正文段(即代码和赋值数据段),数据堆段,数据栈段
+&lt;ul&gt;
+&lt;li&gt;二进制代码和常量(#define 标识符 常量)在正文段
+&lt;ul&gt;
+&lt;li&gt;全局赋值变量&lt;/li&gt;
+&lt;li&gt;常量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;动态分配的存储区在数据堆段
+&lt;ul&gt;
+&lt;li&gt;动态内存分配&lt;/li&gt;
+&lt;li&gt;new,malloc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;临时使用的变量在数据栈段
+&lt;ul&gt;
+&lt;li&gt;未赋值的局部变量&lt;/li&gt;
+&lt;li&gt;实参传递&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;//main.cpp
+int a = 0; //全局初始化区
+int a = 0; //全局初始化区
+char *p1; //全局未初始化区
+main() {
+    int b; //栈
+    char s[] = &amp;quot;abc&amp;quot;; //栈
+    char *p2; //栈
+    char *p3 = &amp;quot;123456&amp;quot;; //123456\0在常量区，p3在栈上。
+    static int c = 0; //全局（静态）初始化区
+    p1 = (char *)malloc(10);
+    p2 = (char *)malloc(20);
+    //分配得来得10和20字节的区域就在堆区。
+    strcpy(p1, &amp;quot;123456&amp;quot;); //123456\0放在常量区，编译器可能会将它与p3所指向的&amp;quot;123456&amp;quot;优化成一个地方。
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;系统动态DLL库中的系统线程,被不同的进程调用时,任然是相同的线程&lt;/li&gt;
+&lt;li&gt;进程创建需要占用系统内存来存放PCB数据结构,所以一个系统能够创建的进程数量是有限的,最大数目取决于内存的大小&lt;/li&gt;
+&lt;li&gt;阻塞态和挂起态的区别
+&lt;ul&gt;
+&lt;li&gt;阻塞态任然处于五个转化状态中,而挂起态一般直接被操作系统在调度时忽略了,除非恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;     操作系统中睡眠、阻塞、挂起的区别形象解释：
+
+     首先这些术语都是对于线程来说的。对线程的控制就好比你控制了一个雇工为你干活。你对雇工的控制是通过编程来实现的。
+     挂起线程的意思就是你对主动对雇工说：“你睡觉去吧，用着你的时候我主动去叫你，然后接着干活&amp;quot;。
+     使线程睡眠的意思就是你主动对雇工说：“你睡觉去吧，某时某刻过来报到，然后接着干活”。
+     线程阻塞的意思就是，你突然发现，你的雇工不知道在什么时候没经过你允许，自己睡觉呢，但是你不能怪雇工，肯定你这个雇主没注意，本来你让雇工扫地，结果扫帚被偷了或被邻居家借去了，你又没让雇工继续干别的活，他就只好睡觉了。至于扫帚回来后，雇工会不会知道，会不会继续干活，你不用担心，雇工一旦发现扫帚回来了，他就会自己去干活的。因为雇工受过良好的培训。这个培训机构就是操作系统。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;一般默认进程创建完成后就进入就绪队列,除非特地考查资源未分配全进入阻塞态&lt;/li&gt;
+&lt;li&gt;就绪队列不空时,处理器的效率是不变的,和就绪进程数量无关,因为只要有在就绪队列里,就可以一直执行&lt;/li&gt;
+&lt;li&gt;对进程的管理和控制使用__原语__&lt;/li&gt;
+&lt;li&gt;I.用户登录成功后，系统要为此创建一个用户管理的进程，包括用户桌面、环境等。所有用户进程都会在该进程下创建和管理。Ⅱ.设备分配是通过在系统中设置相应的数据结构实现的，不需要创建进程，这是操作系统中/O核心子系统的内容。班.启动程序执行是引起创建进程的典型事件。&lt;/li&gt;
+&lt;li&gt;进程中的线程共享进程内的全部资源，但进程中某线程的栈指针对其他线程是透明的，不能与其他线程共享。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">第二章 进程管理错题及重要知识点</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/jin-cheng-de-gai-nian-xiang-guan-zhi-shi-dian/"" data-c="
