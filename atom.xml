@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-13T12:53:34.206Z</updated>
+    <updated>2020-07-13T12:55:04.854Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -17,8 +17,7 @@
         </link>
         <updated>2020-07-13T12:49:58.000Z</updated>
         <content type="html"><![CDATA[<p>公式1 (通项公式) ：<br>
-<img src="https://s1.ax1x.com/2020/07/13/UYhBZV.png" alt="UYhBZV.png" loading="lazy"></p>
-<p><img src="https://s1.ax1x.com/2020/07/13/UYhJPg.png" alt="UYhJPg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/07/13/UYhBZV.png" alt="UYhBZV.png" loading="lazy"><br>
 在上文提到的出栈序列的问题情景中，如果有n<br>
 个元素，在平面直角坐标系中用x坐标表示入栈数，y坐标表示出栈数，则坐标(a,b)表示目前已经进行了a次入栈和b次出栈，则再进行一次入栈就是走到(a+1,b)，再进行一次出栈就是走到(a,b+1)。并且，由于入栈数一定小于等于出栈数，所以路径不能跨越直线y=x<br>
 因此，题目相当于求从(0,0)走到(n,n)且不跨越直线y=x的方案数<br>
