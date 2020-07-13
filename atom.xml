@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-11T13:20:19.081Z</updated>
+    <updated>2020-07-13T12:53:34.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,108 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[卡特兰数的部分理解]]></title>
+        <id>https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/</id>
+        <link href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/">
+        </link>
+        <updated>2020-07-13T12:49:58.000Z</updated>
+        <content type="html"><![CDATA[<p>公式1 (通项公式) ：<br>
+<img src="https://s1.ax1x.com/2020/07/13/UYhBZV.png" alt="UYhBZV.png" loading="lazy"></p>
+<p><img src="https://s1.ax1x.com/2020/07/13/UYhJPg.png" alt="UYhJPg.png" loading="lazy"><br>
+在上文提到的出栈序列的问题情景中，如果有n<br>
+个元素，在平面直角坐标系中用x坐标表示入栈数，y坐标表示出栈数，则坐标(a,b)表示目前已经进行了a次入栈和b次出栈，则再进行一次入栈就是走到(a+1,b)，再进行一次出栈就是走到(a,b+1)。并且，由于入栈数一定小于等于出栈数，所以路径不能跨越直线y=x<br>
+因此，题目相当于求从(0,0)走到(n,n)且不跨越直线y=x的方案数<br>
+首先，如果不考虑不能跨越直线y=x的要求，相当于从2n次操作中选n次进行入栈，则方案数为Cn2n。<br>
+然后，考虑对于一种不合法的方案，一定在若干次操作后有一次出栈数比入栈数多一次，这个点在直线y=x+1 (即下图中红色的线) 上。那么把第一次碰到该直线以后的部分关于该直线对称，则最终到达的点是(n−1,n+1) (如下图) 。<br>
+<img src="https://s1.ax1x.com/2020/07/13/UYhJPg.png" alt="UYhJPg.png" loading="lazy"><br>
+图源：英文维基 (即文首网址)<br>
+显然，任何非法方案都可以通过此方式变成一条从(0,0)到(n−1,n+1)的路径，有Cn+12n种。而任何合法方案由于不接触直线y=x+1，无论从哪个点对称都不是一条连续的路径。由于合法方案数就是Catalann</p>
+<p>，所以：<br>
+<img src="https://s1.ax1x.com/2020/07/13/UY5Vcd.png" alt="UY5Vcd.png" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[链表操作]]></title>
+        <id>https://songdlut.github.io/post/lian-biao-cao-zuo/</id>
+        <link href="https://songdlut.github.io/post/lian-biao-cao-zuo/">
+        </link>
+        <updated>2020-07-13T07:56:28.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct LNode
+{
+    int data;
+    struct LNode *next;
+}LNode,*LinkList;
+LinkList list_headinsert(LinkList &amp;L)
+{
+    L=(LinkList)malloc(sizeof(LNode));
+    LNode *s;
+    int i=0;
+    L-&gt;next=NULL;
+    while(i&lt;=20)
+    {
+        s=(LNode*)malloc(sizeof(LNode));
+        s-&gt;data=i;
+        s-&gt;next=L-&gt;next;
+        L-&gt;next=s;
+    }
+}
+LinkList list_tailinsert(LinkList &amp;L)
+{
+    L=(LinkList)malloc(sizeof(LNode));
+    LNode *s,*r=L;
+    int i=0;
+    while(i&lt;=20)
+    {
+        s=(LNode*)malloc(sizeof(LNode));
+        s-&gt;data=i;
+        r-&gt;next=s;
+        r=s;
+    }
+    r-&gt;next=NULL;
+}
+void print(LinkList &amp;L)
+{
+    LNode *p=L-&gt;next;
+    while(p!=NULL)
+    {
+        printf(&quot;%d   &quot;,p-&gt;data);
+        p=p-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+void delx(LinkList &amp;l,int x)
+{
+    LNode *p;
+    if(L==NULL)
+    {
+        return;
+    }
+    if(L-&gt;data==x)
+    {
+        p=L;
+        L=L-&gt;next;
+        free(p);
+        delx(L,x);
+    }
+    else
+        delx(L-&gt;next,x);
+}
+int main()
+{
+    LinkList L;
+    list_tailinsert(L);
+    print(L);
+    printf(&quot;Hello world!\n&quot;);
+    return 0;
+}
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第二章 进程线程概念部分错题及重要知识点]]></title>
         <id>https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/</id>
@@ -829,12 +931,17 @@ typedef struct{
 <li><a href="#%E8%81%8C%E7%A7%B0%E7%A7%B0%E8%B0%93%E7%9B%B8%E5%85%B3%E7%9A%84%E5%8D%95%E8%AF%8D">职称,称谓相关的单词</a></li>
 <li><a href="#%E8%BA%AB%E4%BD%93%E9%83%A8%E4%BD%8D%E7%9A%84">身体部位的</a></li>
 <li><a href="#%E8%A7%A3%E9%9B%87">解雇</a></li>
+<li><a href="#%E5%B8%A6%E6%9C%89%E5%88%A0%E9%99%A4%E5%BF%BD%E7%95%A5%E7%95%A5%E5%8E%BB%E6%8E%92%E9%99%A4%E6%84%8F%E5%91%B3%E7%9A%84%E8%AF%8D">带有删除,忽略,略去,排除意味的词</a></li>
+<li><a href="#%E5%B8%A6%E6%9C%89%E5%8C%85%E5%90%AB%E6%84%8F%E5%91%B3%E7%9A%84%E8%AF%8D">带有包含意味的词</a></li>
 <li><a href="#%E5%B8%A6%E6%9C%89%E6%83%B3%E8%B1%A1%E5%B9%BB%E6%83%B3%E6%84%8F%E5%91%B3%E7%9A%84">带有想象,幻想意味的</a></li>
+<li><a href="#%E8%B7%9F%E9%92%B1%E6%9C%89%E5%85%B3">跟钱有关</a></li>
+<li><a href="#%E8%B7%9F%E6%94%BF%E6%B2%BB%E6%9C%89%E5%85%B3">跟政治有关</a></li>
+<li><a href="#%E6%B3%95%E5%BE%8B%E7%8A%AF%E7%BD%AA%E4%B9%8B%E7%B1%BB%E7%9A%84">法律犯罪之类的</a></li>
 <li><a href="#%E6%8E%A2%E7%B4%A2%E8%BF%BD%E6%B1%82%E4%B9%8B%E7%B1%BB%E7%9A%84">探索追求之类的</a></li>
 <li><a href="#%E5%8C%85%E8%A3%B9%E7%9B%B8%E5%85%B3">包裹相关</a></li>
+<li><a href="#%E8%A1%A5%E4%B8%81%E7%A2%8E%E7%89%87%E5%9E%83%E5%9C%BE%E7%9B%B8%E5%85%B3">补丁,碎片,垃圾相关</a></li>
 <li><a href="#%E5%92%8C%E6%95%B0%E9%87%8F%E7%9B%B8%E5%85%B3">和数量相关</a></li>
 <li><a href="#%E4%B8%80%E4%BA%9B%E6%84%8F%E6%80%9D%E5%A4%AA%E5%A4%9A%E4%BD%86%E6%98%AF%E8%A1%A8%E7%A4%BA%E5%BE%88%E7%89%9B%E6%89%B9%E7%9A%84%E9%82%A3%E7%A7%8D%E6%84%8F%E6%80%9D">一些意思太多,但是表示很牛批的那种意思</a></li>
-<li><a href="#%E7%8A%AF%E7%BD%AA%E4%B9%8B%E7%B1%BB%E7%9A%84">犯罪之类的</a></li>
 <li><a href="#%E9%9B%84%E8%BE%A9%E7%9A%84%E6%9C%89%E8%AF%B4%E6%9C%8D%E5%8A%9B%E7%9A%84">雄辩的,有说服力的</a></li>
 <li><a href="#%E5%96%98%E6%81%AF%E5%96%98%E6%B0%94%E6%B0%94%E5%96%98%E5%90%81%E5%90%81%E5%9C%B0%E8%AF%B4">喘息,喘气,气喘吁吁地说</a></li>
 <li><a href="#%E8%A1%A8%E6%98%8E%E8%AF%81%E6%98%8E">表明证明</a></li>
@@ -846,7 +953,6 @@ typedef struct{
 <li><a href="#%E6%8A%93%E4%BD%8F%E5%A4%84%E7%90%86%E8%A7%A3%E5%86%B3">抓住,处理,解决</a></li>
 <li><a href="#%E5%9B%BD%E4%BC%9A%E8%AE%AE%E4%BC%9A%E4%BB%A3%E8%A1%A8%E5%A4%A7%E4%BC%9A">国会,议会,代表大会</a></li>
 <li><a href="#%E7%90%86%E4%BA%8B%E4%BC%9A%E5%A7%94%E5%91%98%E4%BC%9A%E7%AD%89">理事会,委员会等</a></li>
-<li><a href="#%E8%BE%A9%E6%8A%A4%E4%BA%BA%E6%B3%95%E5%BE%8B%E9%A1%BE%E9%97%AE%E4%BB%A3%E7%90%86%E5%BE%8B%E5%B8%88">辩护人,法律顾问,代理律师</a></li>
 <li><a href="#%E7%89%A7%E8%8D%89%E5%9C%B0%E7%89%A7%E5%9C%BA">牧草地,牧场</a></li>
 <li><a href="#%E4%BD%BF%E7%96%B2%E5%8A%B3">(使)疲劳</a></li>
 <li><a href="#%E5%A6%A8%E7%A2%8D%E9%98%BB%E7%A2%8D">妨碍,阻碍</a></li>
@@ -869,9 +975,9 @@ typedef struct{
 <li><a href="#%E8%B7%9F%E8%8D%AF%E5%93%81%E5%8C%BB%E5%AD%A6%E6%9C%89%E5%85%B3%E7%9A%84%E8%AF%8D%E6%B1%87%E4%BB%8A%E5%B9%B4%E6%9C%89%E5%8F%AF%E8%83%BD%E8%80%83%E5%88%B0">跟药品.医学有关的词汇(今年有可能考到)</a></li>
 <li><a href="#%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3">时间相关</a></li>
 <li><a href="#%E5%8C%96%E5%B7%A5%E7%89%A9%E7%90%86%E7%A7%91%E6%8A%80">化工,物理,科技</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E8%AF%8D%E6%B1%87">数学,计算机相关词汇</a></li>
 <li><a href="#%E7%8E%8B%E5%9B%BD%E4%B9%8B%E7%B1%BB%E7%9A%84">王国之类的</a></li>
-<li><a href="#%E5%AD%A6%E8%AF%BE">学课</a></li>
-<li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E8%AF%8D%E6%B1%87">计算机相关词汇</a></li>
+<li><a href="#%E5%AD%A6%E7%A7%91">学科</a></li>
 <li><a href="#%E4%B8%8D%E5%B8%B8%E8%A7%81%E5%8A%A8%E7%89%A9%E5%8D%95%E8%AF%8D">不常见动物单词</a></li>
 <li><a href="#%E5%81%9A%E9%A2%98%E7%A7%AF%E7%B4%AF%E8%AF%8D%E6%B1%87">做题积累词汇</a></li>
 <li><a href="#%E9%98%85%E8%AF%BB%E6%80%9D%E8%B7%AF">阅读思路</a></li>
@@ -895,25 +1001,54 @@ tenant:承租人,房客,佃户;vt.租赁,承租<br>
 vegetarian:素食主义者<br>
 magistrate:(地方)行政官,法官,治安官<br>
 dealer:商人<br>
-lad:小伙子,男孩</p>
+lad:小伙子,男孩<br>
+skipper:机长</p>
 <h2 id="身体部位的">身体部位的</h2>
 <p>jaw:颚,颌<br>
 nail:指甲,爪,钉;vt.将...钉住<br>
 waist:腰部<br>
-belly:肚子,腹部</p>
+belly:肚子,腹部<br>
+elbow:肘,(衣服)肘部</p>
 <h2 id="解雇">解雇</h2>
 <p>sack:vt.解雇;n.袋,包,麻袋<br>
 axe:vt.解雇,用斧头砍;n.斧子<br>
 layoff:n.临时解雇,操作停止,活动停止期间,事业期</p>
+<h2 id="带有删除忽略略去排除意味的词">带有删除,忽略,略去,排除意味的词</h2>
+<p>omit:vt.省略,删去,遗漏疏忽<br>
+negligible:忽略的,微不足道的<br>
+eliminate:vt.删去,淘汰,(排/删/消)除,消减(人员)</p>
+<h2 id="带有包含意味的词">带有包含意味的词</h2>
+<p>embrace:拥抱,包含,包围,环绕,采用,接受</p>
 <h2 id="带有想象幻想意味的">带有想象,幻想意味的</h2>
 <p>fancy:n.爱好,迷恋;vt想像幻想;a.花式的,奇特的<br>
-fairy:幻想中,虚构,优雅的;n.仙女精灵</p>
+fairy:幻想中,虚构,优雅的;n.仙女精灵<br>
+illusion:幻想,错误观念,错觉,幻觉,假象</p>
+<h2 id="跟钱有关">跟钱有关</h2>
+<p>bankrupt:破产的,使破产,破产者<br>
+fare:车费船费,伙食,乘客,vi.过活,进展,经营</p>
+<h2 id="跟政治有关">跟政治有关</h2>
+<p>elect:选举推选,选择,做出选择<br>
+parade:n.游行,检阅;vi.参加游行,炫耀;vt.使参加游行,绕行<br>
+rebellion:n.叛乱反抗,起义<br>
+defy:(公然)违抗,反抗,蔑视</p>
+<h2 id="法律犯罪之类的">法律犯罪之类的</h2>
+<p>bail:保释,离开,三柱门上的横木<br>
+jury:陪审团<br>
+judical:司法的,法庭的,公正的,审判的<br>
+convict:vt.证明..有罪,判..有罪;n.囚犯<br>
+conviction:n.深信,确信,定罪<br>
+counsel:n.法律顾问,辩护人,劝告忠告;v.劝告,忠告<br>
+defendant:被告人<br>
+culprit:犯人,肇事者</p>
 <h2 id="探索追求之类的">探索追求之类的</h2>
 <p>quest:探寻探求追求<br>
 rake:耙子;v.耙,搜索,探索</p>
 <h2 id="包裹相关">包裹相关</h2>
 <p>packet:小包裹,小梱,一扎,邮船,班轮<br>
 parcel:n.包裹,邮包,部分;vt.打包,捆扎,分配</p>
+<h2 id="补丁碎片垃圾相关">补丁,碎片,垃圾相关</h2>
+<p>rag:抹布,破布,碎布<br>
+junk:废物</p>
 <h2 id="和数量相关">和数量相关</h2>
 <p>gang:n.一群一伙一帮<br>
 batch:n.一批一组一群</p>
@@ -923,10 +1058,6 @@ fabulous:几号的,极为巨大的,寓言中的,传说中的<br>
 magnificent:华丽的,高尚的,雄伟的<br>
 immense:&lt;口&gt;极好的,广大的,巨大的<br>
 terrific:极好的,非常的,极度的</p>
-<h2 id="犯罪之类的">犯罪之类的</h2>
-<p>convict:vt.证明..有罪,判..有罪;n.囚犯<br>
-conviction:n.深信,确信,定罪<br>
-counsel:n.法律顾问,辩护人,劝告忠告;v.劝告,忠告</p>
 <h2 id="雄辩的有说服力的">雄辩的,有说服力的</h2>
 <p>eloquent<br>
 lame:辩解论据__无__说服力的,跛的</p>
@@ -936,7 +1067,8 @@ pant</p>
 <h2 id="表明证明">表明证明</h2>
 <p>manifest:表明证明显示,明白的,显然的<br>
 testimony:证据,证词;表明,说明<br>
-testify:v.作证,证明;(to)表明,说明</p>
+testify:v.作证,证明;(to)表明,说明<br>
+warrant:正当理由,许可证,委任状;v.保证,担保</p>
 <h2 id="承认">承认</h2>
 <p>acknowledge<br>
 admit</p>
@@ -959,9 +1091,6 @@ adress oneself to :致力于,处理</p>
 parliament</p>
 <h2 id="理事会委员会等">理事会,委员会等</h2>
 <p>council</p>
-<h2 id="辩护人法律顾问代理律师">辩护人,法律顾问,代理律师</h2>
-<p>counsel:另:劝告,忠告(n/v)<br>
-defendant:被告人</p>
 <h2 id="牧草地牧场">牧草地,牧场</h2>
 <p>meadow<br>
 pasture</p>
@@ -980,7 +1109,8 @@ handicap:另:(身体或智力)缺陷,不利条件</p>
 immense<br>
 giant:巨大,巨大的</p>
 <h2 id="古怪的">古怪的</h2>
-<p>eccentric:另:怪癖的,异乎寻常的,n:古怪的人</p>
+<p>eccentric:另:怪癖的,异乎寻常的,n:古怪的人<br>
+peculiar:古怪异常,特殊,特有的</p>
 <h2 id="同意赞成答应">同意赞成答应</h2>
 <p>consent:~ to<br>
 consensus:(意见等)一致,一致同意,共识<br>
@@ -1011,7 +1141,7 @@ defect:过失,缺点,不足</p>
 <p>impetus:n.推动(力),促进<br>
 impulse:n/v推动,冲动;n.刺激</p>
 <h2 id="汇集聚集">汇集聚集</h2>
-<p>gather<br>
+<p>gather:聚集,推测推断<br>
 converge:另:会于一点<br>
 rally:v.恢复重整振作;n.聚集,集会,大会,拉力赛</p>
 <h2 id="亲切诚xx之类的">亲切,诚XX之类的</h2>
@@ -1023,12 +1153,17 @@ beloved:受爱戴的,敬爱的,爱人</p>
 <h2 id="带有微弱朦胧晦涩这种含义的">带有微弱,朦胧,晦涩这种含义的</h2>
 <p>faint:a.微弱,不明显,暗淡的,n/v.昏倒昏厥<br>
 pale:苍白灰白的,浅的,暗淡的<br>
-vague:不明确的,含糊的,暧昧的</p>
+vague:不明确的,含糊的,暧昧的<br>
+obscure:暗的,朦胧的,模糊的,晦涩的,不著名的,不重要的<br>
+opaque:难理解,不透明,晦涩的<br>
+latent:潜在的,不易察觉的,潜伏的</p>
 <h2 id="尼玛总是忘掉的一些">尼玛总是忘掉的一些</h2>
 <p>scatter:v.驱散,散开,散布,散播<br>
 vapo(u)r:汽,(水)蒸汽<br>
 rack:挂物架,搁物架,v:折磨使痛苦<br>
 racket:吵闹,喧闹<br>
+rage:愤怒,风靡一时的事物,时尚;vi.狂吹,汹涌,发怒<br>
+undermine:暗中破坏,逐渐削弱,挖....墙脚<br>
 uproar:骚动,喧嚣,鼎沸<br>
 cordial:热诚,诚恳,亲切的<br>
 malignant:恶性的,致命的,恶意的,恶毒的<br>
@@ -1088,20 +1223,32 @@ radioactive放射性的,放射引起的<br>
 radiate:v.放射,辐射,散布,传播<br>
 ultraviolet:n/a.紫外线(的)<br>
 tangle:n.纠缠,缠结,混乱;v.(使)变乱/缠绕<br>
-quartz:石英</p>
+quartz:石英<br>
+marble:云石,大理石,(pl.)弹子游戏<br>
+pebble:卵石<br>
+corrode:v.(受)腐蚀,侵蚀<br>
+decay:v/n.腐朽,腐烂,衰退衰减<br>
+composite:a.合成的,混合的,复合的;n.合成物,混合物,复合物<br>
+upwash:上升气流<br>
+wingtip:(鸟或飞机的)翼尖,翼梢<br>
+emission:排放<br>
+turbulence:湍流,不稳定的气流</p>
+<h2 id="数学计算机相关词汇">数学,计算机相关词汇</h2>
+<p>decimal:十进的,小数的,十进制的;n.小数<br>
+finite:有限的,[数]有穷的,限定的</p>
 <h2 id="王国之类的">王国之类的</h2>
 <p>realm:王国,国土,领域范围<br>
 territory:领土,版图,领域,范围<br>
 imperial:帝国的,帝王的,(度量衡)英制的<br>
 majesty:n.雄伟壮观;庄严;威严;(对国王或女王的尊称)陛下;王权<br>
 emperor:皇帝<br>
-empire:帝国</p>
-<h2 id="学课">学课</h2>
+empire:帝国<br>
+crown:王冠,冕,君权,君王;v.为...加冕</p>
+<h2 id="学科">学科</h2>
 <p>genetics:遗传学<br>
 mechanics:力学,机械学<br>
-ecology:生态学</p>
-<h2 id="计算机相关词汇">计算机相关词汇</h2>
-<p>decimal:十进的,小数的,十进制的;n.小数</p>
+ecology:生态学<br>
+aeronautics:航空学</p>
 <h2 id="不常见动物单词">不常见动物单词</h2>
 <p>hawk:鹰隼</p>
 <h2 id="做题积累词汇">做题积累词汇</h2>
@@ -1123,7 +1270,7 @@ viable:可行的<br>
 ruthless:无情残忍的<br>
 controversies...erupted:辩论争论爆发<br>
 exempt....from...使...:免除豁免<br>
-peer:同龄,同等地位的人<br>
+peer:同龄,同等地位的人;v.仔细看,端详<br>
 ideal:理想<br>
 landmark:里程碑<br>
 unconstitutional:不符合宪法的<br>
@@ -1132,7 +1279,31 @@ antidiscrimination:反歧视<br>
 usher:引导,~ sth in:开创,开启<br>
 supposedly:据说,据传<br>
 intentional:有意的,故意的<br>
-blue-ribbon:一流头等的</p>
+blue-ribbon:一流头等的<br>
+trumpet:v.大声宣告,大肆宣扬,吹嘘<br>
+respectively:ad.分别地<br>
+lightweight:a.比通常重量轻的<br>
+composite:a.合成的,混合的,复合的;n.合成物,混合物,复合物<br>
+make a difference:有作用,有影响<br>
+naturalistic:自然的<br>
+propel:推进<br>
+substantially:ad.实质上,大体上<br>
+unsubstantiated:未经证实的<br>
+inverted:倒转的<br>
+proceed:v.继续前进<br>
+process:进程<br>
+procedure:程序<br>
+favorable:有利的,赞许的,令人愉快的,讨人喜欢的<br>
+cruise:(汽车飞机等)以平稳速度行驶<br>
+portion:部分<br>
+perception:察觉,感知,洞察力,知觉<br>
+nautical:航海的<br>
+intimate:亲近的<br>
+regulation:规定<br>
+aviation:航空<br>
+wake:航空轨迹<br>
+diminish:变小,减小<br>
+investigate:调查</p>
 <h2 id="阅读思路">阅读思路</h2>
 <ol>
 <li>注意程度
@@ -1160,425 +1331,6 @@ The figures do not seem to correlate.<br>
 A high-fat diet correlates with a greater risk of heart disease.<br>
 高脂肪饮食与增加心脏病发作的风险密切相关。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第一章 绪论]]></title>
-        <id>https://songdlut.github.io/post/di-yi-zhang-xu-lun/</id>
-        <link href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/">
-        </link>
-        <updated>2020-06-23T07:20:43.000Z</updated>
-        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD">1.1 数据结构的基本概念和术语</a>
-<ul>
-<li><a href="#111-%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD">1.1.1 概念和术语</a></li>
-<li><a href="#112-%E4%B8%8A%E8%BF%B0%E6%9C%AF%E8%AF%AD%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB">1.1.2 上述术语的联系与区别</a></li>
-<li><a href="#113-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0%E7%9A%84%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A">1.1.3 数据结构三要素的详细解释</a></li>
-</ul>
-</li>
-<li><a href="#12-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E5%88%86%E7%90%86%E8%A7%A3%E5%92%8C%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">1.2 自己的部分理解和解题思路</a>
-<ul>
-<li><a href="#121-%E6%A6%82%E5%BF%B5">1.2.1 概念</a></li>
-</ul>
-</li>
-<li><a href="#13-%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7">1.3 算法和算法评价</a>
-<ul>
-<li><a href="#131-%E7%AE%97%E6%B3%95%E7%9A%84%E5%8F%8A%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82">1.3.1 算法的及设计要求</a></li>
-<li><a href="#132-%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F">1.3.2 算法效率的度量</a></li>
-<li><a href="#133-%E8%AE%A1%E7%AE%97">1.3.3 计算</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-(目录)<br>
-<strong>考点:</strong></p>
-<ul>
-<li>数据结构相关的概念和术语</li>
-<li>数据结构的三要素:逻辑结构,物理结构和数据运算</li>
-<li>算法时间复杂度和空间复杂度的分析与计算(重点)
-<ul>
-<li>算法设计题通常都要求分析时间,空间复杂度</li>
-<li>考查时间复杂度的选择题<br>
-<strong>知识框架</strong><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/1.1.png" alt="1.1" loading="lazy"></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="11-数据结构的基本概念和术语">1.1 数据结构的基本概念和术语</h2>
-<h3 id="111-概念和术语">1.1.1 概念和术语</h3>
-<ol>
-<li>比较好理解的例子:<br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.2.png" alt="1.2" loading="lazy"></li>
-<li>定义</li>
-</ol>
-<ul>
-<li>数据:数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。</li>
-<li>数据元素:
-<ul>
-<li>数据元素是数据的__基本单位__，通常作为一个整体进行考虑和处理。一个数据元素可由__若干数据项(&gt;=1)__组成，<strong>数据项是构成数据元素的不可分割的最小单位</strong></li>
-<li>在不同的条件下，数据元素又可称为元素、结点、顶点、记录等。数据元素是用一组属性描述定义、标识、表示和允许值的一个数据单元。</li>
-</ul>
-</li>
-<li>数据对象:
-<ul>
-<li>数据对象是具有__相同性质的数据元素的集合__，是数据的一个子集。例如，整数数据对象是集合N={0，土1，土2，…}</li>
-<li>只是一个集合,元素间的关系除了是同一个集合(虽然同为集合,但是和逻辑结构中的非线性结构的集合不要混淆,它不能代表一种数据结构),别无其他</li>
-<li><strong>缺少关系不可以用来定义一个完整的数据结构</strong></li>
-</ul>
-</li>
-<li>数据类型<br>
-数据类型是一个值的集合和定义在此集合上的一组操作的总称。
-<ul>
-<li>原子类型:其值不可再分的数据类型</li>
-<li>结构类型:其值可以再分解为若干成分(分量)的数据类型
-<ul>
-<li>固定聚合类型:值由确定数目的成分按某种结构组成.如:复数是由两个实数依确定的次序关系构成的</li>
-<li>可变聚合类型:&quot;值&quot;的成分的数目不确定.如:定义一个&quot;有序整数序列&quot;的抽象数据类型,其中序列的长度是可变的</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>抽象数据类型:是指一个数学模型以及定义在该模型上的一组操作。(抽象数据组织及与之相关的操作)</li>
-<li>数据结构:是相互之间存在一种或多种特定关系的数据元素的集合,在任何问题中，数据元素都不是孤立存在的，它们之间存在某种关系，这种数据元素相互之间的关系称为结构（Structure）。</li>
-</ul>
-<h3 id="112-上述术语的联系与区别">1.1.2 上述术语的联系与区别</h3>
-<ol>
-<li>数据结构和数据类型是所属关系<a href="https://www.zhihu.com/question/21165020/answer/118852959">知乎</a><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.3.jpg" alt="1.3" loading="lazy"><br>
-一种数据结构+定义在此种数据结构上的一组操作=结构类型<br>
-一种值的集合+定义在此种值的集合上的一组操作=原子类型<br>
-结构类型+原子类型=数据类型<br>
-一句话总结，数据结构是一种值的集合，这种值集＋值集上的操作就是结构类型，而结构类型是数据类型中的一种，所以数据结构属于数据类型。</li>
-<li>数据类型和抽象数据类型的关系<br>
-它们的异同其实就在字面上了抽象。<br>
-<strong>抽象数据类型的定义仅取决于它的一组逻辑特性，而与其在计算机内部如何表示和实现无关</strong>，即无论其内部结构如何变化，只要它的数学特性不变，都不影响其外部的使用。”抽象“的意义在于数据类型的数学抽象特性。</li>
-<li>知乎上的理解:“数据类型”是计算机发展出来的一种重要思想，它将程序设计一分为二：实现基本数据类型和使用抽象数据类型。实现基本数据类型是指在物理层面实现数据类型的逻辑特性；使用抽象数据类型是指仅仅关注数据类型的逻辑特性，而不关注硬件实现。这样两边的人都可以更集中注意力于自己的工作范围，进行更深的钻研。</li>
-</ol>
-<h3 id="113-数据结构三要素的详细解释">1.1.3 数据结构三要素的详细解释</h3>
-<ol>
-<li>逻辑结构<br>
-逻辑结构是指数据元素之间的逻辑关系，即从逻辑关系上描述数据。
-<ul>
-<li>与数据的存储无关,是独立于计算机的.
-<ul>
-<li><strong>数据的逻辑结构独立于存储结构</strong></li>
-<li>__数据的存储结构是逻辑结构在计算机上的映射,不能独立于逻辑结构而存在</li>
-</ul>
-</li>
-<li>分为线性结构和非线性结构,线性表是典型的线性结构；集合、树和图是典型的非线性结构。<br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.4.png" alt="1.4" loading="lazy"></li>
-<li>集合。结构中的数据元素之间除“同属一个集合”外，别无其他关系。</li>
-<li>线性结构。结构中的数据元素之间只存在__一对一__的关系。</li>
-<li>树形结构。结构中的数据元素之间存在__一对多__的关系。</li>
-<li>图状结构或网状结构。结构中的数据元素之间存在__多对多__的关系。<br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.5.png" alt="1.5" loading="lazy"></li>
-</ul>
-</li>
-<li>存储结构<br>
-存储结构是指数据结构在__计算机中的表示（又称映像），也称物理结构__。它包括__数据元素的表示和关系的表示__。数据的存储结构是用计算机语言实现的逻辑结构，<strong>它依赖于计算机语言</strong>。数据的存储结构主要有顺序存储、链式存储、索引存储和散列存储。
-<ul>
-<li>1）顺序存储。把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。其优点是可以实现随机存取，每个元素占用最少的存储空间；缺点是只能使用相邻的一整块存储单元，因此可能产生较多的外部碎片。</li>
-<li>2）链式存储。不要求逻辑上相邻的元素在物理位置上也相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。其优点是不会出现碎片现象，能充分利用所有存储单元；缺点是每个元素因存储指针而占用额外的存储空间，且只能实现顺序存取。</li>
-<li>3）索引存储。在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是（关键字，地址）。其优点是检索速度快；缺点是附加的索引表额外占用存储空间。另外，增加和删除数据时也要修改索引表，因而会花费较多的时间。</li>
-<li>4）散列存储。根据元素的关键字直接计算出该元素的存储地址，又称__哈希（Hash）存储__。<br>
-其优点是检索、增加和删除结点的操作都很快；缺点是若散列函数不好，则可能出现元素存储单元的冲突，而解决冲突会增加时间和空间开销。<br>
-<strong>注意</strong>:XX表中,XX带有顺序,链,哈希之类的都代表了物理(存储)结构,XX抽象一点如有序之类的是逻辑结构</li>
-</ul>
-</li>
-<li>数据的运算<br>
-施加在数据上的运算包括运算的定义和实现。运算的定义是针对逻辑结构的，指出运算的功能；运算的实现是针对存储结构的，指出运算的具体操作步骤。</li>
-<li>总结<br>
-数据的逻辑结构和存储结构是密不可分的两个方面，一个算法的__设计__取决于所选定的__逻辑结构__，而算法的__实现__依赖于所采用的__存储结构__。</li>
-</ol>
-<h2 id="12-自己的部分理解和解题思路">1.2 自己的部分理解和解题思路</h2>
-<h3 id="121-概念">1.2.1 概念</h3>
-<ul>
-<li>数据结构三要素的任意一种不同,就不是同一种数据结构
-<ul>
-<li>因而提问&quot;逻辑或物理,逻辑或运算,……不同时,是不是同一种数据结构&quot;的题,就可以回答这两种相同,但是另一个不一样的情况下也不是同一种数据结构.例如(王道p5)二又树和二又排序树，二叉排序树可以采用二叉树的逻辑表示和存储方式，前者通常用于表示层次关系，而后者通常用于排序和查找。虽然它们的运算都有建立树、插入结点、删除结点和查找结点等功能，但对于二叉树和二叉排序树，这些运算的定义是不同的，以查找结点为例，二叉树的时间复杂度为O(n)，而二叉排序树的时间复杂度为O(log<sub>2</sub>n)。</li>
-</ul>
-</li>
-<li>可以用__抽象数据类型__来定义一个完整的数据结构
-<ul>
-<li>解析:抽象数据类型描述了数据的逻辑结构和抽象运算，通常用（数据对象、数据关系、基本操作集）这样的三元组来表示，从而构成一个完整的数据结构定义。</li>
-<li>个人理解,是可以用更细节的来定义较抽象的(小定大)
-<ul>
-<li>1.数据结构可以用（数据元素的有限集、数据元素的关系）二元组定义。</li>
-<li>2.抽象数据类型是用三元组（数据对象、数据关系、基本操作集）</li>
-<li>3.数据对象是性质相同的数据元素的集合。所以数据结构主要是比抽象数据类型少了一个操作集，所以可以用抽象数据类型定义一个完整的数据结构。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="13-算法和算法评价">1.3 算法和算法评价</h2>
-<h3 id="131-算法的及设计要求">1.3.1 算法的及设计要求</h3>
-<ol>
-<li>算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令表示一个或多个操作。此外，一个算法还具有下列5个重要特性：<br>
-1）有穷性。一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。<br>
-2）确定性。算法中每条指令必须有确切的含义，对于相同的输入只能得出相同的输出。<br>
-3）可行性。算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。<br>
-4）输入。一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。<br>
-5）输出。一个算法有一个或多个输出，这些输出是与输入有着某种特定关系的量。</li>
-<li>通常，设计一个“好”的算法应考虑达到以下目标：</li>
-</ol>
-<ul>
-<li>正确性。算法应能够正确地解决求解问题。
-<ul>
-<li>a.程序不含语法错误；</li>
-<li>b.程序对于几组输入数据能够得出满足规格说明要求的结果；</li>
-<li>c.程序对于精心选择的典型、苛刻而带有刁难性的几组输入数据能够得出满足规格说明要求的结果</li>
-<li>d.程序对于一切合法的输入数据都能产生满足规格说明要求的结果。</li>
-<li>显然，达到第d层意义下的正确是极为困难的，所有不同输入数据的数量大得惊人，逐一验证的方法是不现实的。对于大型软件需要进行专业测试，而一般情况下，通常以第c层意义的正确性作为衡量一个程序是否合格的标准</li>
-</ul>
-</li>
-<li>可读性。算法应具有良好的可读性，以帮助人们理解。</li>
-<li>健壮性。输入非法数据时，算法能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。</li>
-<li>效率与低存储量需求。<strong>效率是指算法执行的时间</strong>，<strong>存储量需求是指算法执行过程中所需要的最大存储空间</strong>，这两者都与问题的规模有关。</li>
-</ul>
-<h3 id="132-算法效率的度量">1.3.2 算法效率的度量</h3>
-<ol>
-<li>时间复杂度
-<ul>
-<li>一个算法是由__控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）__构成的，则算法时间取决于两者的综合效果。</li>
-<li>语句的频度:该语句重复执行的次数</li>
-<li>T(n)
-<ul>
-<li>王道上以及查到的一些资料称:算法中所有语句的频度之和记为T(n)</li>
-<li>书上:执行时间/时间量度</li>
-<li>对于这两种不用太抠字眼,就是对时间复杂度的描述或者说符号,毕竟__分析时间复杂度的时候都是分析T(n)的数量级__(但是还是王道上的好理解一些)</li>
-</ul>
-</li>
-<li>算法中基本运算（最深层循环内的语句）的频度与T(n)同数量级(就挑一个基本操作)，因此通常采用算法中基本运算的频度f(n)来分析算法的时间复杂度。因此，算法的时间复杂度记为 <center>T(n)=O(f(n))</center>式中，O的含义是T(n)的数量级，其严格的数学定义是：若T(n)和f(n)是定义在正整数集合上的两个函数，则存在正常数C和n<sub>0</sub>，使得当n≥n<sub>0</sub>时，都满足0≤T(n)小于等于C(n)。</li>
-<li>渐进时间复杂度:简称是时间复杂度</li>
-<li>一般总是考虑最坏情况下的时间复杂度(除特殊指明)
-<ul>
-<li>算法的时间复杂度不仅依赖于问题的规模n，也取决于待输入数据的性质（如输入数据元素的初始状态）。例如，在数组A[0..n-1]中，查找给定值k的算法大致如下：<br>
-（1）i=n-1；<br>
-（2）while（i&gt;=0&amp;&amp;（A[i]！=k））<br>
-（3）i--；<br>
-（4）return i；该算法中语句3（基本运算）的频度不仅与问题规模n有关，而且与输入实例中A的各元素的取值及k的取值有关：<br>
-①若A中没有与k相等的元素，则语句3的频度f（n）=n。<br>
-②若A的最后一个元素等于k，则语句3的频度f（n）是常数0。<br>
-最坏时间复杂度是指在最坏情况下，算法的时间复杂度。<br>
-平均时间复杂度是指所有可能输入实例在等概率出现的情况下，算法的期望运行时间。<br>
-最好时间复杂度是指在最好情况下，算法的时间复杂度。<br>
-一般总是考虑在最坏情况下的时间复杂度，以保证算法的运行时间不会比它更长。</li>
-</ul>
-</li>
-<li>在分析一个程序的时间复杂性时，有以下两条规则：
-<ul>
-<li>a)加法规则<br>
-T(n)=T1(n)+T2(n)=O(f(n))+O(g(n))=O(maxf(n)，g(n)))</li>
-<li>b)乘法规则<br>
-T(n)=T1(n)×T2(n)=O(f(n))×O(g(n))=O(n)xg(n)</li>
-<li>常见的渐近时间复杂度为<br>
-O(1)&lt;Olog2n)&lt;O(n)&lt;O(nlogan)&lt;O(n2)&lt;O(n3)&lt;O(2)&lt;O(n!)&lt;O(n<sup>n</sup>)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<ol start="2">
-<li>空间复杂度<br>
-类似于算法的时间复杂度，本书中以空间复杂度(space complexity)作为算法所需存储空间的量度，记作<center>S(n)=O(f(n))</center>其中n为问题的规模(或大小)。一个上机执行的程序除了需要存储空间来寄存本身所用指令、常数、变量和输入数据外，也需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。若输入数据所占空间只取决于问题本身，和算法无关，则只需要分析除输入和程序之外的额外空间，否则应同时考虑输入本身所需空间(和输入数据的表示形式有关)。若额外空间相对于输入数据量来说是常数，则称此算法为原地工作，第10章讨论的有些排序算法就属于这类。又如果所占空间量依赖于特定的输入，则除特别指明外，均按最坏情况来分析。<br>
-<strong>算法原地工作是指算法所需要的辅助空间为常量</strong>,并非是不需要任何额外的辅助空间.<br>
-<strong>同一个算法,实现的语言的级别越高,执行效率越低</strong></li>
-</ol>
-<h3 id="133-计算">1.3.3 计算</h3>
-<p><a href="https://zhuanlan.zhihu.com/p/50479555">知乎转载</a></p>
-<ol>
-<li>时间复杂度</li>
-</ol>
-<ul>
-<li>常数阶O(1)<br>
-无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)，如：</li>
-</ul>
-<pre><code>int i = 1;
-int j = 2;
-++i;
-j++;
-int m = i + j;
-</code></pre>
-<p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p>
-<ul>
-<li>线性阶O(n)<br>
-这个在最开始的代码示例中就讲解过了，如：</li>
-</ul>
-<pre><code>for(i=1; i&lt;=n; ++i)
-{
-   j = i;
-   j++;
-}
-</code></pre>
-<p>这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度。</p>
-<ul>
-<li>对数阶O(logN)<br>
-还是先来看代码：</li>
-</ul>
-<pre><code>int i = 1;
-while(i&lt;n)
-{
-    i = i * 2;
-}
-</code></pre>
-<p>从上面代码可以看到，在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。我们试着求解一下，假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2^n<br>
-也就是说当循环 log2^n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(logn)</p>
-<ul>
-<li>线性对数阶O(nlogN)<br>
-线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)。<br>
-就拿上面的代码加一点修改来举例：</li>
-</ul>
-<pre><code>for(m=1; m&lt;n; m++)
-{
-    i = 1;
-    while(i&lt;n)
-    {
-        i = i * 2;
-    }
-}
-</code></pre>
-<ul>
-<li>平方阶O(n²)<br>
-平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²) 了。<br>
-举例：</li>
-</ul>
-<pre><code>for(x=1; i&lt;=n; x++)
-{
-   for(i=1; i&lt;=n; i++)
-    {
-       j = i;
-       j++;
-    }
-}
-</code></pre>
-<p>这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n*n)，即 O(n²)<br>
-如果将其中一层循环的n改成m，即：</p>
-<pre><code>for(x=1; i&lt;=m; x++)
-{
-   for(i=1; i&lt;=n; i++)
-    {
-       j = i;
-       j++;
-    }
-}
-</code></pre>
-<p>那它的时间复杂度就变成了 O(m*n)</p>
-<ul>
-<li>立方阶O(n³)、K次方阶O(n^k)<br>
-参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似。</li>
-<li>除此之外，其实还有 平均时间复杂度、均摊时间复杂度、最坏时间复杂度、最好时间复杂度 的分析方法，有点复杂，这里就不展开了。</li>
-</ul>
-<hr>
-<ol start="2">
-<li>空间复杂度<br>
-既然时间复杂度不是用来计算程序具体耗时的，那么我也应该明白，空间复杂度也不是用来计算程序实际占用的空间的。<br>
-空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度，同样反映的是一个趋势，我们用 S(n) 来定义。<br>
-空间复杂度比较常用的有：O(1)、O(n)、O(n²)，我们下面来看看：</li>
-</ol>
-<ul>
-<li>空间复杂度 O(1)<br>
-如果算法执行所需要的临时空间不随着某个变量n的大小而变化，即此算法空间复杂度为一个常量，可表示为 O(1),举例：</li>
-</ul>
-<pre><code>int i = 1;
-int j = 2;
-++i;
-j++;
-int m = i + j;
-</code></pre>
-<p>代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)</p>
-<ul>
-<li>空间复杂度 O(n)<br>
-我们先看一个代码：</li>
-</ul>
-<pre><code>int[] m = new int[n]
-for(i=1; i&lt;=n; ++i)
-{
-   j = i;
-   j++;
-}
-</code></pre>
-<p>这段代码中，第一行new了一个数组出来，这个数据占用的大小为n，这段代码的2-6行，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)<br>
-以上，就是对算法的时间复杂度与空间复杂度基础的分析，欢迎大家一起交流。<br>
-3. 递归算法和非递归算法在分析时间复杂度上是不同的<br>
-在算法分析中，当一个算法中包含递归调用时，其时间复杂度的分析会转化为一个递归方程求解。实际上，这个问题是数学上求解渐近阶的问题，而递归方程的形式多种多样，其求解方法也是不一而足，比较常用的有以下四种方法：<br>
-(1)代入法(Substitution Method)</p>
-<p>代入法的基本步骤是先推测递归方程的显式解，然后用数学归纳法来验证该解是否合理。</p>
-<p>(2)迭代法(Iteration Method)</p>
-<p>迭代法的基本步骤是迭代地展开递归方程的右端，使之成为一个非递归的和式，然后通过对和式的估计来达到对方程左端即方程的解的估计。</p>
-<p>(3)套用公式法(Master Method)</p>
-<p>这个方法针对形如“T(n) = aT(n/b) + f(n)”的递归方程。这种递归方程是分治法的时间复杂性所满足的递归关系，即一个规模为n的问题被分成规模均为n/b的a个子问题，递归地求解这a个子问题，然后通过对这a个子间题的解的综合，得到原问题的解。</p>
-<p>(4)差分方程法(Difference Formula Method)<br>
-可以将某些递归方程看成差分方程，通过解差分方程的方法来解递归方程，然后对解作出渐近阶估计。</p>
-<p>下面就以上方法给出一些例子说明。</p>
-<p>一、代入法<br>
-大整数乘法计算时间的递归方程为：T(n) = 4T(n/2) + O(n)，其中T(1) = O(1)，我们猜测一个解T(n) = O(n2 )，根据符号O的定义，对n&gt;n0，有T(n) &lt; cn2 - eO(2n)（注意，这里减去O(2n)，因其是低阶项，不会影响到n足够大时的渐近性），把这个解代入递归方程，得到：</p>
-<p>T(n) = 4T(n/2) + O(n)<br>
-≤ 4c(n/2)2 - eO(2n/2)) + O(n)<br>
-= cn2 - eO(n) + O(n)<br>
-≤ cn2</p>
-<p>其中，c为正常数，e取1，上式符合 T(n)≤cn2 的定义，则可认为O(n2 )是T(n)的一个解，再用数学归纳法加以证明。</p>
-<p>二、迭代法<br>
-某算法的计算时间为：T(n) = 3T(n/4) + O(n)，其中T(1) = O(1)，迭代两次可将右端展开为：</p>
-<p>T(n) = 3T(n/4) + O(n)<br>
-= O(n) + 3( O(n/4) + 3T(n/42 ) )<br>
-= O(n) + 3( O(n/4) + 3( O(n/42 ) + 3T(n/43 ) ) )</p>
-<p>从上式可以看出，这是一个递归方程，我们可以写出迭代i次后的方程：</p>
-<p>T(n) = O(n) + 3( O(n/4) + 3( O(n/42 ) + ... + 3( n/4i + 3T(n/4i+1 ) ) ) )</p>
-<p>当n/4i+1 =1时，T(n/4i+1 )=1，则</p>
-<p>T(n) = n + (3/4) + (32 /42 )n + ... + (3i /4i )n + (3i+1 )T(1)<br>
-&lt; 4n + 3i+1</p>
-<p>而由n/4i+1 =1可知，i&lt;log4 n，从而</p>
-<p>3i+1 ≤ 3log4 n+1 = 3log3 n*log4 3 +1 = 3nlog4 3</p>
-<p>代入得：</p>
-<p>T(n) &lt; 4n + 3nlog4 3，即T(n) = O(n)。</p>
-<p>三、套用公式法</p>
-<p>这个方法为估计形如：<br>
-T(n) = aT(n/b) + f(n)<br>
-其中，a≥1和b≥1，均为常数，f(n)是一个确定的正函数。在f(n)的三类情况下，我们有T(n)的渐近估计式：<br>
-1.若对于某常数ε&gt;0，有f(n) = O(nlogb a-ε )，则T(n) = O(nlogb a )</p>
-<p>2.若f(n) = O(nlogb a )，则T(n) = O(nlogb a *logn)</p>
-<p>3.若f(n) = O(nlogb a+ε )，且对于某常数c&gt;1和所有充分大的正整数n，有af(n/b)≤cf(n)，则T(n)=O(f(n))。</p>
-<p>设T(n) = 4T(n/2) + n，则a = 4，b = 2，f(n) = n，计算得出nlogb a = nlog2 4 = n2 ，而f(n) = n = O(n2-ε )，此时ε= 1，根据第1种情况，我们得到T(n) = O(n2 )。</p>
-<p>这里涉及的三类情况，都是拿f(n)与nlogb a 作比较，而递归方程解的渐近阶由这两个函数中的较大者决定。在第一类情况下，函数nlogb a 较大，则T(n)=O(nlogb a )；在第三类情况下，函数f(n)较大，则T(n)=O(f (n))；在第二类情况下，两个函数一样大，则T(n)=O(nlogb a *logn)，即以n的对数作为因子乘上f(n)与T(n)的同阶。</p>
-<p>但上述三类情况并没有覆盖所有可能的f(n)。在第一类情况和第二类情况之间有一个间隙：f(n)小于但不是多项式地小于nlogb a ，第二类与第三类之间也存在这种情况，此时公式法不适用。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://songdlut.github.io/post/hello-gridea/</id>
-        <link href="https://songdlut.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
