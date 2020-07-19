@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>链表操作 | 宋宇航的博客</title>
+<title>第二章 几种调度算法的比较 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595165108127">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="链表操作" />
+  <meta name="description" content="第二章 几种调度算法的比较" />
   <meta name="keywords" content="" />
 </head>
 
@@ -190,7 +190,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -247,6 +248,209 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%80%BB%E8%A7%88">总览</a></li>
+<li><a href="#%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1">先来先服务</a></li>
+<li><a href="#%E7%9F%AD%E4%BD%9C%E4%B8%9A%E4%BC%98%E5%85%88">短作业优先</a>
+<ul>
+<li><a href="#%E9%9D%9E%E6%8A%A2%E5%8D%A0%E5%BC%8Fspf%E4%B8%8E%E6%8A%A2%E5%8D%A0%E5%BC%8F%E5%AF%B9%E6%AF%94srtn">非抢占式(SPF)与抢占式对比(SRTN)</a></li>
+<li><a href="#%E5%87%A0%E4%B8%AA%E7%BB%86%E8%8A%82%E6%9F%90%E4%BA%9B%E8%AF%B4%E6%B3%95%E4%B8%8D%E4%B8%80%E8%87%B4%E6%97%B6">几个细节(某些说法不一致时)</a></li>
+</ul>
+</li>
+<li><a href="#fcfs%E4%B8%8Esjf%E5%AF%B9%E6%AF%94">FCFS与SJF对比</a></li>
+<li><a href="#%E9%AB%98%E5%93%8D%E5%BA%94%E6%AF%94%E4%BC%98%E5%85%88">高响应比优先</a></li>
+<li><a href="#%E4%BB%A5%E4%B8%8A%E4%B8%89%E7%A7%8D%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94">以上三种算法对比</a></li>
+<li><a href="#%E6%97%B6%E9%97%B4%E7%89%87%E8%BD%AE%E8%BD%AC">时间片轮转</a></li>
+<li><a href="#%E4%BC%98%E5%85%88%E7%BA%A7%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95">优先级调度算法</a></li>
+<li><a href="#%E5%A4%9A%E7%BA%A7%E5%8F%8D%E9%A6%88%E9%98%9F%E5%88%97%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95">多级反馈队列调度算法</a></li>
+<li><a href="#%E4%BB%A5%E4%B8%8A%E4%B8%89%E7%A7%8D%E6%AF%94%E5%AF%B9">以上三种比对</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -334,8 +538,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/lian-biao-cao-zuo/">
-      链表操作
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/">
+      第二章 几种调度算法的比较
     </a>
   </h1>
   <div class="post-meta">
@@ -343,23 +547,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-13</span>
+      <span>2020-07-19</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>181<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>626<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/lian-biao-cao-zuo/" data-flag-title="链表操作" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/" data-flag-title="第二章 几种调度算法的比较" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -368,79 +572,85 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-typedef struct LNode
-{
-    int data;
-    struct LNode *next;
-}LNode,*LinkList;
-LinkList list_headinsert(LinkList &amp;L)
-{
-    L=(LinkList)malloc(sizeof(LNode));
-    LNode *s;
-    int i=0;
-    L-&gt;next=NULL;
-    while(i&lt;=20)
-    {
-        s=(LNode*)malloc(sizeof(LNode));
-        s-&gt;data=i;
-        s-&gt;next=L-&gt;next;
-        L-&gt;next=s;
-    }
-}
-LinkList list_tailinsert(LinkList &amp;L)
-{
-    L=(LinkList)malloc(sizeof(LNode));
-    LNode *s,*r=L;
-    int i=0;
-    while(i&lt;=20)
-    {
-        s=(LNode*)malloc(sizeof(LNode));
-        s-&gt;data=i;
-        r-&gt;next=s;
-        r=s;
-    }
-    r-&gt;next=NULL;
-}
-void print(LinkList &amp;L)
-{
-    LNode *p=L-&gt;next;
-    while(p!=NULL)
-    {
-        printf(&quot;%d   &quot;,p-&gt;data);
-        p=p-&gt;next;
-    }
-    printf(&quot;\n&quot;);
-}
-void delx(LinkList &amp;l,int x)
-{
-    LNode *p;
-    if(L==NULL)
-    {
-        return;
-    }
-    if(L-&gt;data==x)
-    {
-        p=L;
-        L=L-&gt;next;
-        free(p);
-        delx(L,x);
-    }
-    else
-        delx(L-&gt;next,x);
-}
-int main()
-{
-    LinkList L;
-    list_tailinsert(L);
-    print(L);
-    printf(&quot;Hello world!\n&quot;);
-    return 0;
-}
-
-</code></pre>
+              <h2 id="总览">总览</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/07/19/UWDGNQ.png" alt="UWDGNQ.png" loading="lazy"></figure>
+<h2 id="先来先服务">先来先服务</h2>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/07/19/UWDfu6.png" alt="UWDfu6.png" loading="lazy"></figure>
+<ul>
+<li>按照到达先后,实际上就是等待时间越久的越先得到服务</li>
+<li>注意等待时间的计算
+<ul>
+<li>纯计算型的进程:周转时间-运行时间</li>
+<li>计算+I/O操作的:周转时间-运行时间-I/O操作时间<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWDuct.png" alt="UWDuct.png" loading="lazy"></li>
+</ul>
+</li>
+</ul>
+<h2 id="短作业优先">短作业优先</h2>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/07/19/UWyGND.png" alt="UWyGND.png" loading="lazy"></figure>
+<h3 id="非抢占式spf与抢占式对比srtn">非抢占式(SPF)与抢占式对比(SRTN)</h3>
+<ol>
+<li>非抢占式<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWsR0K.png" alt="UWsR0K.png" loading="lazy"></li>
+<li>抢占式<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWrGqK.png" alt="UWrGqK.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/07/19/UWr7ZT.png" alt="UWr7ZT.png" loading="lazy"></li>
+</ol>
+<h3 id="几个细节某些说法不一致时">几个细节(某些说法不一致时)</h3>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/07/19/UWyEAU.png" alt="UWyEAU.png" loading="lazy"></figure>
+<h2 id="fcfs与sjf对比">FCFS与SJF对比</h2>
+<p><img src="https://s1.ax1x.com/2020/07/19/UWyBHf.png" alt="UWyBHf.png" loading="lazy"><br>
+因此推出了高响应比优先</p>
+<h2 id="高响应比优先">高响应比优先</h2>
+<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/07/19/UWcY6A.png" alt="UWcY6A.png" loading="lazy"></figure>
+<ul>
+<li>当前运行的进程主动放弃CPU时,才需要进行调度,重新计算响应比<br>
+<img src="https://s1.ax1x.com/2020/07/19/UW6XWQ.png" alt="UW6XWQ.png" loading="lazy"></li>
+</ul>
+<h2 id="以上三种算法对比">以上三种算法对比</h2>
+<ul>
+<li>交互性差<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWc0k8.png" alt="UWc0k8.png" loading="lazy"></li>
+</ul>
+<h2 id="时间片轮转">时间片轮转</h2>
+<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/07/19/UWfzy4.png" alt="UWfzy4.png" loading="lazy"></figure>
+<ul>
+<li>注意,时间片到了之后下处理机时,会加到就绪队列的队尾,不要按照题中给的顺序想到然的来,要时刻按照就绪队列的顺序进行分析,如下:<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWR1YT.png" alt="UWR1YT.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/07/19/UWRGpF.png" alt="UWRGpF.png" loading="lazy"></li>
+<li>时间片太大时,就会变成先来先服务</li>
+<li>太小切换的代价就大了,<strong>切换的开销不超过1%就认为是合适的</strong></li>
+<li>用于进程调度</li>
+</ul>
+<h2 id="优先级调度算法">优先级调度算法</h2>
+<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/07/19/UW4q2T.png" alt="UW4q2T.png" loading="lazy"></figure>
+<ul>
+<li>注意是优先数越大,优先级越高,还是相反</li>
+<li>抢占式和非抢占式
+<ul>
+<li>非抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。</li>
+<li>抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。另外，当就绪队列发生改变时也需要检查是会发生抢占。<br>
+<img src="https://s1.ax1x.com/2020/07/19/UW4RxS.png" alt="UW4RxS.png" loading="lazy"></li>
+</ul>
+</li>
+</ul>
+<h2 id="多级反馈队列调度算法">多级反馈队列调度算法</h2>
+<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/07/19/UWo0rF.png" alt="UWo0rF.png" loading="lazy"></figure>
+<ul>
+<li>认为是抢占式的算法</li>
+<li>用于进程调度<br>
+算法规则(个人理解)</li>
+</ul>
+<ol>
+<li>某一队列的上级队列都空了,才轮到这一级</li>
+<li>某进程在该队列的时间片用完,还没完成,就进入下一级队列(时间片增加的),但如果已经是最底层了,就放到该级队尾</li>
+<li>来一个新的进程首先放到第1级的队尾,如果此时运行的是低级的队列的进程,则发生抢占,被强占的进程放到所在队列的队尾,并不是到下一级了(毕竟是意外,也没说自己在这一级能不能运行完)</li>
+</ol>
+<h2 id="以上三种比对">以上三种比对</h2>
+<ul>
+<li>适合交互式系统<br>
+<img src="https://s1.ax1x.com/2020/07/19/UWoTIA.png" alt="UWoTIA.png" loading="lazy"></li>
+</ul>
 
             </div>
             
@@ -453,7 +663,7 @@ int main()
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/lian-biao-cao-zuo/" title="链表操作">https://songdlut.github.io/post/lian-biao-cao-zuo/</a>
+      <a href="https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/" title="第二章 几种调度算法的比较">https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -466,15 +676,11 @@ int main()
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="卡特兰数的部分理解" href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/">卡特兰数的部分理解</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="卡特兰数的部分理解" href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第二章 进程线程概念部分错题及重要知识点" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/">第二章 进程线程概念部分错题及重要知识点</a>
-        <a class="nav-mobile-next" title="第二章 进程线程概念部分错题及重要知识点" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/">下一篇</a>
+        <a class="nav-pc-next" title="栈与队列错题及重点" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/">栈与队列错题及重点</a>
+        <a class="nav-mobile-next" title="栈与队列错题及重点" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
