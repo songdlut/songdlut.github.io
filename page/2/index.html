@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595381837883">
+<link rel="shortcut icon" href="/favicon.ico?v=1595468050136">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -184,7 +184,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-count">16</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -248,6 +248,65 @@
         <div class="section-box gemini">
           <section class="section  posts-expand slide-down-in">
             
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/">
+      第一章错题及重点问题整理
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-06-30</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
+        <span>操作系统</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>12<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>3237<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+
   <article class="post-list-box  post box-shadow-wrapper">
     <div class="article-wrapper bg-color">
       <header class="post-header">
@@ -403,7 +462,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>4663<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>4765<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
@@ -1348,6 +1407,71 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/"" data-c="
+          &lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHlPR1.png&#34; alt=&#34;UHlPR1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;实现临界区互斥的基本方法&#34;&gt;实现临界区互斥的基本方法&lt;/h2&gt;
+&lt;h3 id=&#34;软件方法&#34;&gt;软件方法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHNoIf.png&#34; alt=&#34;UHNoIf.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;turn变量理解&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;由于在自己进程内的执行时,turn的赋值始终为&lt;strong&gt;turn=别的进程号&lt;/strong&gt;,因此可以理解为谦让给别人&lt;/li&gt;
+&lt;li&gt;那么在单标志法中,检查的就是对面有没有谦让回给我,&lt;br&gt;
+P0:&lt;br&gt;
+while(turn!=0);//没有让给我,那就等着&lt;br&gt;
+critical section;&lt;br&gt;
+turn =1;//我用完了,谦让给你&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;flag[ ]的理解&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;flag[]表示自己的意愿,flag[i]=true:i说我想要,flag[i]=false,i说我不想要
+&lt;ul&gt;
+&lt;li&gt;双标志先检查法那就是在自己的进程里,先检查别人想不想,他想我就等着,他不想了,我就表示想,他就会检查到我想,然后等着,我用完了,就说不想了,他查到我不想了,就表示自己想,然后执行&lt;/li&gt;
+&lt;li&gt;缺点就是我看他不想要,刚准备说想要,tmd那傻b又看到我是不想要,就想要了,然后我俩都想要,就一起用了...违背了忙则等待&lt;/li&gt;
+&lt;li&gt;但是如果检查和表示自己想要可以一气呵成,那么就没有问题了&lt;/li&gt;
+&lt;li&gt;双标志后检查法,就是在自己的进程里,先不管别人想不想要,直接表示自己想要,然后检查有没有人表示过想要,有就等着,没有就用,用完说自己不用了&lt;/li&gt;
+&lt;li&gt;缺点是我说完老子想用,还没来得及检查,有人说想用了,然后我检查,发现有人想用,就等着,tmd别人检查发现我想用,就也等着,违背了有限等待,空闲让进&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;peterson 算法&lt;br&gt;
+我先表示我想用,然后谦让给你&lt;br&gt;
+&lt;code&gt;flag[i]=true;turn=j;&lt;/code&gt;&lt;br&gt;
+然后检查你想不想用并且有没有让给我,如果你想用&lt;strong&gt;并且&lt;/strong&gt;没让给我,我就等着&lt;br&gt;
+&lt;code&gt;while(flag[j]&amp;amp;&amp;amp;turn=j);&lt;/code&gt;&lt;br&gt;
+如果你不想用或者让给我了,我就用了&lt;br&gt;
+&lt;code&gt;critical section;&lt;/code&gt;&lt;br&gt;
+用完表示不想用了&lt;br&gt;
+&lt;code&gt;flag[i]=false;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;硬件方法&#34;&gt;硬件方法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;中断屏蔽法&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHRGoF.png&#34; alt=&#34;UHRGoF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;硬件指令法(都是硬件完成的,代码只是功能的描述)&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHWklR.png&#34; alt=&#34;UHWklR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;解决了之前双标志先检查法的缺点,即检查和上锁可以一气呵成了&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHW8Xt.png&#34; alt=&#34;UHW8Xt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;总结&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHWyn0.png&#34; alt=&#34;UHWyn0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">第二章 进程同步</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/"" data-c="
@@ -2533,7 +2657,13 @@ sponsorship赞助者的地位,赞助行为,资助行为&lt;br&gt;
 outlet:经销店,廉价经销店&lt;br&gt;
 billboard:广告牌,告示牌&lt;br&gt;
 product placement:产品置入,植入式广告&lt;br&gt;
-commodity:商品&lt;/p&gt;
+commodity:商品&lt;br&gt;
+impoverished:贫困的&lt;br&gt;
+across-the-board:一刀切的&lt;br&gt;
+thorny:棘手的&lt;br&gt;
+look into:调查&lt;br&gt;
+put on hold:搁置,暂缓实施&lt;br&gt;
+interpretation:解读&lt;/p&gt;
 &lt;h2 id=&#34;跟政治政府有关&#34;&gt;跟政治,政府有关&lt;/h2&gt;
 &lt;p&gt;elect:选举推选,选择,做出选择&lt;br&gt;
 parade:n.游行,检阅;vi.参加游行,炫耀;vt.使参加游行,绕行&lt;br&gt;
@@ -2599,12 +2729,14 @@ wage:vt.进行,开展;n.工资&lt;/p&gt;
 adequate:足够的,合乎需要的&lt;/p&gt;
 &lt;h2 id=&#34;抓住处理解决&#34;&gt;抓住,处理,解决&lt;/h2&gt;
 &lt;p&gt;tackle&lt;br&gt;
-adress oneself to :致力于,处理&lt;/p&gt;
+adress oneself to :致力于,处理&lt;br&gt;
+address:(着手)处理解决(问题),向...讲话,用..称呼(某人),~ sth to对...提出sth&lt;/p&gt;
 &lt;h2 id=&#34;国会议会代表大会&#34;&gt;国会,议会,代表大会&lt;/h2&gt;
 &lt;p&gt;congress&lt;br&gt;
 parliament&lt;/p&gt;
 &lt;h2 id=&#34;理事会委员会等&#34;&gt;理事会,委员会等&lt;/h2&gt;
-&lt;p&gt;council&lt;/p&gt;
+&lt;p&gt;council&lt;br&gt;
+board:除了板,登船车啥的,还有:(公司或其他机构的)董事会，委员会，理事会&lt;/p&gt;
 &lt;h2 id=&#34;牧草地牧场&#34;&gt;牧草地,牧场&lt;/h2&gt;
 &lt;p&gt;meadow&lt;br&gt;
 pasture&lt;/p&gt;
@@ -2932,7 +3064,10 @@ disguised:伪装的,掩饰的&lt;br&gt;
 disturbed:坎坷的,不幸的&lt;br&gt;
 disputed:争论的,有争议的&lt;br&gt;
 distinguished:卓越的,杰出的&lt;br&gt;
-from the outset:从开始时&lt;/p&gt;
+from the outset:从开始时&lt;br&gt;
+revise:修正,改变&lt;br&gt;
+ritual:惯例,老规矩,例行公事&lt;br&gt;
+mandate:命令指示&lt;/p&gt;
 &lt;h2 id=&#34;阅读思路&#34;&gt;阅读思路&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;注意程度
