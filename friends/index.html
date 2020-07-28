@@ -1,289 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="Gridea静态个人博客">
-<meta name="description" content="学习博客">
-<meta name="theme-color" content="#000">
-<title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595468816050">
-<link rel="stylesheet" href="/media/css/gemini.css">
-<link rel="stylesheet" href="/media/fonts/font-awesome.css">
-<link
-  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
-  rel="stylesheet" type="text/css">
-
-<link href="/media/hljs/styles/androidstudio.css"
-  rel="stylesheet">
-
-<link rel="stylesheet" href="/styles/main.css">
-
-<script src="/media/hljs/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
-
-
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://songdlut.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://songdlut.github.io/media/css/live2d.css">
+    <meta name="description" content="学习博客" />
+    <title>宋宇航的博客</title>
 </head>
+<style>
+    @media screen and (max-width: 1300px) {
+        .archives-content ul li>span {
+            display: none;
+        }
+
+        .archives-content ul {
+            padding: 0px;
+        }
+    }
+</style>
 
 <body>
-  <div class="head-top-line"></div>
-  <div class="header-box">
-    
-<div class="gemini">
-  <header class="header  ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
+    <!-- 响应式布局，针对PC端内容显示 -->
+    <div id="content">
+        <div class="nav-large">
+            <div class="row">
+                <div class="side"><html>
+
+<head>
+    <link rel="stylesheet" href="https://songdlut.github.io/styles/main.css">
+    <meta name="description" content="学习博客" />
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+    <div id=side>
+        <div class="avatar-border">
+            <img src="https://songdlut.github.io/images/avatar.png?v=1595903542195" class="avatar">
         </div>
-      </div>
-      <div class="site-meta">       
-        <div class="site-title">
-          
-            <a href="/" class="brand">
-              <span>宋宇航的博客</span>
-            </a>  
-          
+        <div class="sitename">宋宇航的博客</div>
+        <span class="describtion" data-text='["学习博客"]'>&nbsp;</span>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
         </div>
         
-          <p class="subtitle">越努力,越幸运</p>
+    <div class="share-button">
+        <span>社交按钮</span>
         
-      </div>
-      <nav class="site-nav" id="site_nav">
-        <ul id="nav_ul">
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="https://songdlut.github.io/" target="_self">
-                  <i class="fa fa-globe"></i> 首页
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="https://songdlut.github.io/archives/" target="_self">
-                  <i class="fa fa-globe"></i> 归档
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="https://songdlut.github.io/tags/" target="_self">
-                  <i class="fa fa-globe"></i> 标签
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="https://songdlut.github.io/post/about/" target="_self">
-                  <i class="fa fa-globe"></i> 关于
-                </a>
-              
-            </li>
-          
-          
-            
-              <li class="nav-item ">
-                <a href="/friends/" target="_self">
-                  
-                    <i class="fa fa-address-book"></i> 友情链接
-                  
-                </a>
-              </li>
-            
-          
-          
-            <li id="fa_search" class="nav-item">
-              <a href="javascript:void(0);">
-                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
-              </a>
-            </li>
-          
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
-
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-    if (siteNav.classList.contains('nav-menu-active')) {
-      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
-    } else {
-      siteNav.style = "";
-    }
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-  </div>
-  <div class="main-continer">
-    
-    <div
-      class="section-layout gemini ">
-      <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">宋宇航</p>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
+        <a href="https://github.com/songdlut" target="_blank"><i><img class="icon"
+                    src="https://songdlut.github.io/media/images/github.png" alt=""></i></a>
         
-        <span class="site-item-stat-count">16</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
+        
+        <a onclick="showqq()"><i><img class="icon" src="https://songdlut.github.io/media/images/QQ.png" alt=""></i></a>
+        
+        
+        
+        
+        
     </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">4</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">4</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
-  
+    <div id="qq" style="display:none">1031404638</div>
     
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="https://songdlut.github.io/atom.xml" target="_blank">RSS</a>
+    
+    <div class="mchocie describtion">
+        <a href="https://songdlut.github.io" class="menubutton">
+            首页
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://songdlut.github.io/archives" class="menubutton">
+            归档
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://songdlut.github.io/tags" class="menubutton">
+            标签
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://songdlut.github.io/post/about" class="menubutton">
+            关于
+        </a>
+    </div>
+    
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://songdlut.github.io/friends" class="menubutton">友人帐</a>
+    </div>
+    
+    <hr>
+    <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+        href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
+    
+    <div id="sitegotimeDate">载入天数...</div>
+    <div id="sitegotimes">载入时分秒...</div>
+    <div id="cussitetime" style="display:none">23/06/2020</div>
+    
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div id="vistornum">
+        <span id="busuanzi_container_site_uv">
+            🎈总访问量:<span id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+            🙍‍访问人数:<span id="busuanzi_value_site_uv"></span>
         </span>
-      </div>
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-        
-          
-            <a class="social-img" href="#">
-              <img src="" />
-              <i class="fa fa-globe" title="" ></i>
-            </a>
-          
-        
-      </div>
     </div>
-  
-
-
-
-</div>
-</div>
-<script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
-      }
-    });
-  }
-  </script>
-        <div class="section-box gemini box-shadow-wrapper">
-          <section class="friends-section bg-color slide-down-in">
-            <div class="firends-box">
-              <h1 class="firends-title" itemprop="name headline">友情链接</h1>
-              
-              
-              
-            </div>
-            <hr>
-            <div style="text-align:center">
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
-              <span class="language" data-lan="leave-message">留言添加友链</span>
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
-            </div>
-            <hr>
-            <div class="friends-note">
-              <p><strong class="language" data-lan="format">友链格式：</strong></p>
-              <ul>
-                <li><span class="language" data-lan="site-name">网站名称：</span>宋宇航的博客</li>
-                <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://songdlut.github.io" data-pjax-state="">https://songdlut.github.io</a></li>
-                <li><span class="language" data-lan="site-desc">网站描述：</span>学习博客</li>
-                <li><span class="language" data-lan="site-img">网站头像：</span>
-                  <a href="https://songdlut.github.io/images/avatar.png">https://songdlut.github.io/images/avatar.png</a>
-                </li>
-              </ul>
-            </div>
-            
-  
     
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    </div>
+</body>
+
+</html>
+<script src="https://songdlut.github.io/media/js/wordshow.js"></script>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+</script>
+
+<script>
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    var searchInput = document.querySelector('.search-input');
+    var searchResults = document.querySelector('.search-results');
+
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+    // ajax 的兼容写法
+    var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            xml = xhr.responseXML;
+            arrItems = xml.getElementsByTagName('entry');
+            itemLength = arrItems.length;
+            // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
+            // 同时过滤掉 HTML 标签
+            for (i = 0; i < itemLength; i++) {
+                var link = arrItems[i].getElementsByTagName('link')[0];
+                arrLinks[i] = link.getAttribute("href");
+                arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
+                childNodes[0].nodeValue.replace(/<.*?>/g, '');
+            }
+        }
+    }
+
+    // 开始获取根目录下 feed.xml 文件内的数据
+    xhr.open('get', '/atom.xml', true);
+    xhr.send();
+
+
+
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            if (arr1[i].search(input) !== -1) {
+                var arr = arr1;
+                indexItem.push(i); // 保存匹配值的索引
+                var indexContent = arr[i].search(input);
+                // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
+                var l = input.toString().length - 3;
+                var step = 10;
+
+                // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
+                arrResults.push(arr[i].slice(indexContent - step, indexContent));
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<b>[' + arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + "</p><hr />";
+            itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
+            searchResults.appendChild(itemDiv);
+        }
+    }
+
+    function changeHref(href) {
+        location.href = href;
+    }
+
+    function showqq() {
+        var qq = document.getElementById("qq").innerHTML;
+        if (qq != '')
+            alert("博主的QQ联系方式为：" + qq);
+        else
+            alert("博主暂未设置QQ联系方式");
+    }
+</script></div>
+                <div id="main" class="col-xs-12 col-sm-7" style="z-index: 999;">
+                    <body>
+    <div id="friendscontainermobile">
+        
+        
+        
+    </div>
+
+    <div id="friendscontainer">
+        
+        
+        
+    </div>
+</body>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            
+                            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
 
 <script>
+
   var gitalk = new Gitalk({
     clientID: '293a9ce2fed12e5929b8',
     clientSecret: 'd7bfd198c2befcba2cf59326be85e9b9d5bcba5f',
@@ -293,3170 +325,164 @@
     id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
+
   gitalk.render('gitalk-container')
+
 </script>
-    
-    
-  
 
-          </section>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2"></div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
-        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
-    </div>
-    <div class="poweredby">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-  </footer>
-  
-  
-  <div class="gemini back-to-top" id="back_to_top">
-    <i class="fa fa-arrow-up"></i>
-    
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
-  </div>
-  
-  
-  
-<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
-<div class="box-scale">
-  <div id="landlord" style="left: 10px;bottom: 10px;"
-    data-key="">
-    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
-    
-
-      <div class="message" style="opacity:0"></div>
-      <div class="live_talk_input_body">
-        <div class="live_talk_input_name_body">
-          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
-            placeholder="你的名字" />
+        <div id="bg">
         </div>
-        <div class="live_talk_input_text_body">
-          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
-            placeholder="要和我聊什么呀？" />
-          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
-        </div>
-      </div>
-      <input name="live_talk" id="live_talk" value="1" type="hidden" />
-      <div class="live_ico_box">
-        <div class="live_ico_item type_info" id="showInfoBtn"></div>
-        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div id="bgchoice" style="display: none">default</div>
         
-        <div class="live_ico_item type_youdu" id="youduButton"></div>
-        <div class="live_ico_item type_quit" id="hideButton"></div>
-        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
-        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
-        <input id="duType" value="douqilai" type="hidden">
-        
+        <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
+           
+    </div>
+
+    <!-- 响应式布局，针对手机端内容显示 -->
+    <div class="nav-small">
+        <head>
+
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://songdlut.github.io/media/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://songdlut.github.io">宋宇航的博客&nbsp;&nbsp;|</a>
       </div>
-    
-  </div>
-</div>
-<div id="open_live2d">召唤看板娘</div>
-<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>
-  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
-  let landlord = document.querySelector('#landlord');
-  var apiKey = landlord.dataset.key;
-</script>
-<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
-<script>
-	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
-	var userAgent = window.navigator.userAgent.toLowerCase();
-	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
-	var norunFlag = false;
 
-	for (var i = 0; i < norunAI.length; i++) {
-		if (userAgent.indexOf(norunAI[i]) > -1) {
-			norunFlag = true;
-			break;
-		}
-	}
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          
+          <li>
+            <a href="https://songdlut.github.io">
+              首页
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://songdlut.github.io/archives">
+              归档
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://songdlut.github.io/tags">
+              标签
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://songdlut.github.io/post/about">
+              关于
+            </a>
+          </li>
+          
+          
+          
+          
+          <li><a href="https://songdlut.github.io/friends">友链</a></li>
 
-	if (!window.WebGLRenderingContext) {
-		norunFlag = true;
-	}
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-	if (!norunFlag) {
-		var hitFlag = false;
-		var AIFadeFlag = false;
-		var liveTlakTimer = null;
-		var sleepTimer_ = null;
-		var AITalkFlag = false;
-		var talkNum = 0;
-		(function () {
-			function renderTip(template, context) {
-				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
-				return template.replace(tokenReg, function (word, slash1, token, slash2) {
-					if (slash1 || slash2) {
-						return word.replace('\\', '');
-					}
-					var variables = token.replace(/\s/g, '').split('.');
-					var currentObject = context;
-					var i, length, variable;
-					for (i = 0, length = variables.length; i < length; ++i) {
-						variable = variables[i];
-						currentObject = currentObject[variable];
-						if (currentObject === undefined || currentObject === null) return '';
-					}
-					return currentObject;
-				});
-			}
 
-			String.prototype.renderTip = function (context) {
-				return renderTip(this, context);
-			};
+  <!-- 引入jQuery核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 引入BootStrap核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+        <div style="margin-top:60px"></div>
+        <body>
+    <div id="friendscontainermobile">
+        
+        
+        
+    </div>
 
-			var re = /x/;
-			re.toString = function () {
-				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
-				return '';
-			};
+    <div id="friendscontainer">
+        
+        
+        
+    </div>
+</body>
+        <div style="margin-bottom:60px">&nbsp;</div>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
+                
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-			$(document).on('copy', function () {
-				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
-			});
+<div id="gitalk-container"></div>
 
-			function initTips() {
-				$.ajax({
-					cache: true,
-					url: message_Path + 'message.json',
-					dataType: "json",
-					success: function (result) {
-						$.each(result.mouseover, function (index, tips) {
-							$(tips.selector).mouseover(function () {
-								var text = tips.text;
-								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
-								text = text.renderTip({ text: $(this).text() });
-								showMessage(text, 3000);
-								talkValTimer();
-								clearInterval(liveTlakTimer);
-								liveTlakTimer = null;
-							});
-							$(tips.selector).mouseout(function () {
-								showHitokoto();
-								if (liveTlakTimer == null) {
-									liveTlakTimer = window.setInterval(function () {
-										showHitokoto();
-									}, 15000);
-								};
-							});
-						});
-						$.each(result.click, function (index, tips) {
-							$(tips.selector).click(function () {
-								if (hitFlag) {
-									return false
-								}
-								hitFlag = true;
-								setTimeout(function () {
-									hitFlag = false;
-								}, 8000);
-								var text = tips.text;
-								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
-								text = text.renderTip({ text: $(this).text() });
-								showMessage(text, 3000);
-							});
-							clearInterval(liveTlakTimer);
-							liveTlakTimer = null;
-							if (liveTlakTimer == null) {
-								liveTlakTimer = window.setInterval(function () {
-									showHitokoto();
-								}, 15000);
-							};
-						});
-					}
-				});
-			}
-			initTips();
-
-			var text;
-			if (document.referrer !== '') {
-				var referrer = document.createElement('a');
-				referrer.href = document.referrer;
-				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
-				var domain = referrer.hostname.split('.')[1];
-				if (domain == 'baidu') {
-					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				} else if (domain == 'so') {
-					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				} else if (domain == 'google') {
-					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				}
-			} else {
-				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
-					var now = (new Date()).getHours();
-					if (now > 23 || now <= 5) {
-						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
-					} else if (now > 5 && now <= 7) {
-						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
-					} else if (now > 7 && now <= 11) {
-						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
-					} else if (now > 11 && now <= 14) {
-						text = '中午了，工作了一个上午，现在是午餐时间！';
-					} else if (now > 14 && now <= 17) {
-						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
-					} else if (now > 17 && now <= 19) {
-						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
-					} else if (now > 19 && now <= 21) {
-						text = '晚上好，今天过得怎么样？';
-					} else if (now > 21 && now <= 23) {
-						text = '已经这么晚了呀，早点休息吧，晚安~~';
-					} else {
-						text = '嗨~ 快来逗我玩吧！';
-					}
-				} else {
-					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				}
-			}
-			showMessage(text, 12000);
-		})();
-
-		liveTlakTimer = setInterval(function () {
-			showHitokoto();
-		}, 15000);
-
-		function showHitokoto() {
-			if (sessionStorage.getItem("Sleepy") !== "1") {
-				if (!AITalkFlag) {
-					$.getJSON('https://v1.hitokoto.cn/', function (result) {
-						talkValTimer();
-						showMessage(result.hitokoto, 0);
-					});
-				}
-			} else {
-				hideMessage(0);
-				if (sleepTimer_ == null) {
-					sleepTimer_ = setInterval(function () {
-						checkSleep();
-					}, 200);
-				}
-			}
-		}
-
-		function checkSleep() {
-			var sleepStatu = sessionStorage.getItem("Sleepy");
-			if (sleepStatu !== '1') {
-				talkValTimer();
-				showMessage('你回来啦~', 0);
-				clearInterval(sleepTimer_);
-				sleepTimer_ = null;
-			}
-		}
-
-		function showMessage(text, timeout) {
-			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
-			$('.message').stop();
-			$('.message').html(text);
-			$('.message').fadeTo(200, 1);
-			//if (timeout === null) timeout = 5000;
-			//hideMessage(timeout);
-		}
-		function talkValTimer() {
-			$('#live_talk').val('1');
-		}
-
-		function hideMessage(timeout) {
-			//$('.message').stop().css('opacity',1);
-			if (timeout === null) timeout = 5000;
-			$('.message').delay(timeout).fadeTo(200, 0);
-		}
-
-		function initLive2d() {
-			$('#hideButton').on('click', function () {
-				if (AIFadeFlag) {
-					return false;
-				} else {
-					AIFadeFlag = true;
-					localStorage.setItem("live2dhidden", "0");
-					$('#landlord').fadeOut(200);
-					$('#open_live2d').delay(200).fadeIn(200);
-					setTimeout(function () {
-						AIFadeFlag = false;
-					}, 300);
-				}
-			});
-			$('#open_live2d').on('click', function () {
-				if (AIFadeFlag) {
-					return false;
-				} else {
-					AIFadeFlag = true;
-					localStorage.setItem("live2dhidden", "1");
-					$('#open_live2d').fadeOut(200);
-					$('#landlord').delay(200).fadeIn(200);
-					setTimeout(function () {
-						AIFadeFlag = false;
-					}, 300);
-				}
-			});
-			$('#youduButton').on('click', function () {
-				if ($('#youduButton').hasClass('doudong')) {
-					var typeIs = $('#youduButton').attr('data-type');
-					$('#youduButton').removeClass('doudong');
-					$('body').removeClass(typeIs);
-					$('#youduButton').attr('data-type', '');
-				} else {
-					var duType = $('#duType').val();
-					var duArr = duType.split(",");
-					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
-
-					$('#youduButton').addClass('doudong');
-					$('#youduButton').attr('data-type', dataType);
-					$('body').addClass(dataType);
-				}
-			});
-			if (apiKey) {
-				$('#showInfoBtn').on('click', function () {
-					var live_statu = $('#live_statu_val').val();
-					if (live_statu == "0") {
-						return
-					} else {
-						$('#live_statu_val').val("0");
-						$('.live_talk_input_body').fadeOut(500);
-						AITalkFlag = false;
-						showHitokoto();
-						$('#showTalkBtn').show();
-						$('#showInfoBtn').hide();
-					}
-				});
-				$('#showTalkBtn').on('click', function () {
-					var live_statu = $('#live_statu_val').val();
-					if (live_statu == "1") {
-						return
-					} else {
-						$('#live_statu_val').val("1");
-						$('.live_talk_input_body').fadeIn(500);
-						AITalkFlag = true;
-						$('#showTalkBtn').hide();
-						$('#showInfoBtn').show();
-
-					}
-				});
-				$('#talk_send').on('click', function () {
-					var info_ = $('#AIuserText').val();
-					var userid_ = $('#AIuserName').val();
-					if (info_ == "") {
-						showMessage('写点什么吧！', 0);
-						return;
-					}
-					if (userid_ == "") {
-						showMessage('聊之前请告诉我你的名字吧！', 0);
-						return;
-					}
-					showMessage('思考中~', 0);
-					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
-					$.ajax({
-						type: "get",
-						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
-						dataType: "json",
-						success: function (res) {
-							talkValTimer();
-							showMessage(res.text, 0);
-							$('#AIuserText').val("");
-							sessionStorage.setItem("live2duser", userid_);
-						},
-						error: function (e) {
-							talkValTimer();
-							showMessage('似乎有什么错误，请和站长联系！', 0);
-						}
-					});
-				});
-			} else {
-				$('#showInfoBtn').hide();
-				$('#showTalkBtn').hide();
-			}
-			//获取音乐信息初始化
-			var bgmListInfo = $('input[name=live2dBGM]');
-			if (bgmListInfo.length == 0) {
-				$('#musicButton').hide();
-			} else {
-				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
-				var bgmPlayTime = 0;
-				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
-				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
-				if (live2dBGM_Num) {
-					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
-						bgmPlayNow = parseInt(live2dBGM_Num);
-					}
-				}
-				if (live2dBGM_PlayTime) {
-					bgmPlayTime = parseInt(live2dBGM_PlayTime);
-				}
-				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
-				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
-				$('#live2d_bgm').attr('src', live2dBGMSrc);
-				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
-				$('#live2d_bgm')[0].volume = 0.5;
-				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
-				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
-				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
-					$('#live2d_bgm')[0].play();
-					$('#musicButton').addClass('play');
-				}
-				sessionStorage.setItem("live2dBGM_WindowClose", '1');
-				$('#musicButton').on('click', function () {
-					if ($('#musicButton').hasClass('play')) {
-						$('#live2d_bgm')[0].pause();
-						$('#musicButton').removeClass('play');
-						sessionStorage.setItem("live2dBGM_IsPlay", '1');
-					} else {
-						$('#live2d_bgm')[0].play();
-						$('#musicButton').addClass('play');
-						sessionStorage.setItem("live2dBGM_IsPlay", '0');
-					}
-				});
-				window.onbeforeunload = function () {
-					sessionStorage.setItem("live2dBGM_WindowClose", '0');
-					if ($('#musicButton').hasClass('play')) {
-						sessionStorage.setItem("live2dBGM_IsPlay", '0');
-					}
-				}
-				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
-					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
-					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
-				});
-				document.getElementById('live2d_bgm').addEventListener("ended", function () {
-					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
-					listNow++;
-					if (listNow > $('input[name=live2dBGM]').length - 1) {
-						listNow = 0;
-					}
-					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
-					sessionStorage.setItem("live2dBGM_Num", listNow);
-					$('#live2d_bgm').attr('src', listNewSrc);
-					$('#live2d_bgm')[0].play();
-					$('#live2d_bgm').attr('data-bgm', listNow);
-				});
-				document.getElementById('live2d_bgm').addEventListener("error", function () {
-					$('#live2d_bgm')[0].pause();
-					$('#musicButton').removeClass('play');
-					showMessage('音乐似乎加载不出来了呢！', 0);
-				});
-			}
-			//获取用户名
-			var live2dUser = sessionStorage.getItem("live2duser");
-			if (live2dUser !== null) {
-				$('#AIuserName').val(live2dUser);
-			}
-			//获取位置
-			var landL = sessionStorage.getItem("historywidth");
-			var landB = sessionStorage.getItem("historyheight");
-			if (landL == null || landB == null) {
-				landL = '5px'
-				landB = '0px'
-			}
-			$('#landlord').css('left', landL + 'px');
-			$('#landlord').css('bottom', landB + 'px');
-			//移动
-			function getEvent() {
-				return window.event || arguments.callee.caller.arguments[0];
-			}
-			var smcc = document.getElementById("landlord");
-			var moveX = 0;
-			var moveY = 0;
-			var moveBottom = 0;
-			var moveLeft = 0;
-			var moveable = false;
-			var docMouseMoveEvent = document.onmousemove;
-			var docMouseUpEvent = document.onmouseup;
-			smcc.onmousedown = function () {
-				var ent = getEvent();
-				moveable = true;
-				moveX = ent.clientX;
-				moveY = ent.clientY;
-				var obj = smcc;
-				moveBottom = parseInt(obj.style.bottom);
-				moveLeft = parseInt(obj.style.left);
-				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
-					window.getSelection().removeAllRanges();
-				}
-				document.onmousemove = function () {
-					if (moveable) {
-						var ent = getEvent();
-						var x = moveLeft + ent.clientX - moveX;
-						var y = moveBottom + (moveY - ent.clientY);
-						obj.style.left = x + "px";
-						obj.style.bottom = y + "px";
-					}
-				};
-				document.onmouseup = function () {
-					if (moveable) {
-						var historywidth = obj.style.left;
-						var historyheight = obj.style.bottom;
-						historywidth = historywidth.replace('px', '');
-						historyheight = historyheight.replace('px', '');
-						sessionStorage.setItem("historywidth", historywidth);
-						sessionStorage.setItem("historyheight", historyheight);
-						document.onmousemove = docMouseMoveEvent;
-						document.onmouseup = docMouseUpEvent;
-						moveable = false;
-						moveX = 0;
-						moveY = 0;
-						moveBottom = 0;
-						moveLeft = 0;
-					}
-				};
-			};
-		}
-		$(document).ready(function () {
-			var AIimgSrc = [];
-			let chooseLive2d = 'rem'
-			if (chooseLive2d === 'histoire') {
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
-			} else if (chooseLive2d === 'rem') {
-				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
-			} else if (chooseLive2d === 'aoba') {
-				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
-			} else if (chooseLive2d === 'hijiki') {
-				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
-			} else if (chooseLive2d === 'tororo') {
-				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
-			}
-			var images = [];
-			var imgLength = AIimgSrc.length;
-			var loadingNum = 0;
-			for (var i = 0; i < imgLength; i++) {
-				images[i] = new Image();
-				images[i].src = AIimgSrc[i];
-				images[i].onload = function () {
-					loadingNum++;
-					if (loadingNum === imgLength) {
-						var live2dhidden = localStorage.getItem("live2dhidden");
-						if (live2dhidden === "0") {
-							setTimeout(function () {
-								$('#open_live2d').fadeIn(200);
-							}, 1300);
-						} else {
-							setTimeout(function () {
-								$('#landlord').fadeIn(200);
-							}, 1300);
-						}
-						let model = '';
-						if (chooseLive2d === 'histoire') {
-							model = message_Path + "model/histoire/model.json";
-						} else if (chooseLive2d === 'rem') {
-							model = message_Path + "model/rem/model.json";
-						} else if (chooseLive2d === 'aoba') {
-							model = message_Path + "model/aoba/model.json";
-						} else if (chooseLive2d === 'hijiki') {
-							model = message_Path + "model/hijiki/hijiki.model.json";
-						} else if (chooseLive2d === 'tororo') {
-							model = message_Path + "model/tororo/tororo.model.json";
-						}
-						setTimeout(function () {
-							loadlive2d("live2d", model);
-						}, 1000);
-						initLive2d();
-						images = null;
-					}
-				}
-			}
-		});
-	}
-</script>
-  
-  
-</div>
 <script>
 
-  let sideBarOpen = 'sidebar-open';
-  let body = document.body;
-  let back2Top = document.querySelector('#back_to_top'),
-    back2TopText = document.querySelector('#back_to_top_text'),
-    drawerBox = document.querySelector('#drawer_box'),
-    rightSideBar = document.querySelector('.sidebar'),
-    viewport = document.querySelector('body');
-
-  function scrollAnimation(currentY, targetY) {
-
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
-      } else {
-        window.scrollTo(_currentY, targetY)
-      }
-    }, 1)
-  }
-
-  back2Top.addEventListener("click", function (e) {
-    scrollAnimation(document.scrollingElement.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-
-  window.addEventListener('scroll', function (e) {
-    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
-    }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    if (back2TopText) {
-      back2TopText.textContent = Math.floor(percent);
-    }
-  });
-
-
-  let hasCacu = false;
-  window.onresize = function () {
-    calcuHeight();
-  }
-
-  function calcuHeight() {
-    // 动态调整站点概览高度
-    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-      let sideBar = document.querySelector('.sidebar');
-      let navUl = document.querySelector('#site_nav');
-      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
-      hasCacu = true;
-    }
-  }
-  calcuHeight();
-
-  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
-
-  if (drawerBox) {
-    let rightMotions = document.querySelectorAll('.right-motion');
-    let right = drawerBox.classList.contains('right');
-
-    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
-
-    let openProp, closeProp;
-    if (right) {
-      openProp = {
-        paddingRight: RIGHT_MOVE_DIS
-      };
-      closeProp = {
-        paddingRight: '0px'
-      };
-    } else {
-      openProp = {
-        paddingLeft: RIGHT_MOVE_DIS
-      };
-      closeProp = {
-        paddingLeft: '0px'
-      };
-    }
-
-    drawerBox.onclick = function () {
-      open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
-      if (open) {
-        window.Velocity(rightSideBar, {
-          width: RIGHT_MOVE_DIS
-        }, {
-          duration: MOTION_TIME,
-          begin: function () {
-            window.Velocity(rightMotions, transitionDir, {});
-          }
-        })
-        window.Velocity(viewport, openProp, {
-          duration: MOTION_TIME
-        });
-      } else {
-        window.Velocity(rightSideBar, {
-          width: '0px'
-        }, {
-          duration: MOTION_TIME,
-          begin: function () {
-            window.Velocity(rightMotions, {
-              opacity: 0
-            });
-          }
-        })
-        window.Velocity(viewport, closeProp, {
-          duration: MOTION_TIME
-        });
-      }
-      for (let i = 0; i < drawerBox.children.length; i++) {
-        drawerBox.children[i].classList.toggle('muse-line');
-      }
-      drawerBox.classList.toggle(sideBarOpen);
-    }
-  }
-
-  // 链接跳转
-  let newWindow = 'false'
-  if (newWindow === 'true') {
-    let links = document.querySelectorAll('.post-body a')
-    links.forEach(item => {
-      if (!item.classList.contains('btn')) {
-        item.setAttribute("target", "_blank");
-      }
-    })
-  }
-
-  let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function () {
-    document.querySelector('#search_mask').style = ''
+  var gitalk = new Gitalk({
+    clientID: '293a9ce2fed12e5929b8',
+    clientSecret: 'd7bfd198c2befcba2cf59326be85e9b9d5bcba5f',
+    repo: 'songdlut.github.io',
+    owner: 'songdlut',
+    admin: ['songdlut'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
   })
 
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
-  
-  // 离开当前页title变化
-  var leaveTitle = "";
-  if (leaveTitle) {
-    document.addEventListener('visibilitychange', function () {
-      if (document.visibilityState == 'hidden') {
-        normal_title = document.title;
-        document.title = leaveTitle;
-      } else {
-        document.title = normal_title;
-      }
-    });
-  }
+  gitalk.render('gitalk-container')
 
 </script>
-  </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
 </body>
 
-  <div class="search-mask" id="search_mask" style="display: none;">
-  <div class="search-box">
-    <div class="search-title">
-      <i class="fa fa-search"></i>
-      <div class="input-box">
-        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
-      </div>
-      <i id="close" class="fa fa-times-circle"></i>
-    </div>
-    <div class="stat-box">
-      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
-      <hr>
-    </div>
-    <div class="result" id="result">
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/"" data-c="
-          &lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHlPR1.png&#34; alt=&#34;UHlPR1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;实现临界区互斥的基本方法&#34;&gt;实现临界区互斥的基本方法&lt;/h2&gt;
-&lt;h3 id=&#34;软件方法&#34;&gt;软件方法&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHNoIf.png&#34; alt=&#34;UHNoIf.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;turn变量理解&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;由于在自己进程内的执行时,turn的赋值始终为&lt;strong&gt;turn=别的进程号&lt;/strong&gt;,因此可以理解为谦让给别人&lt;/li&gt;
-&lt;li&gt;那么在单标志法中,检查的就是对面有没有谦让回给我,&lt;br&gt;
-P0:&lt;br&gt;
-while(turn!=0);//没有让给我,那就等着&lt;br&gt;
-critical section;&lt;br&gt;
-turn =1;//我用完了,谦让给你&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;flag[ ]的理解&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;flag[]表示自己的意愿,flag[i]=true:i说我想要,flag[i]=false,i说我不想要
-&lt;ul&gt;
-&lt;li&gt;双标志先检查法那就是在自己的进程里,先检查别人想不想,他想我就等着,他不想了,我就表示想,他就会检查到我想,然后等着,我用完了,就说不想了,他查到我不想了,就表示自己想,然后执行&lt;/li&gt;
-&lt;li&gt;缺点就是我看他不想要,刚准备说想要,tmd那傻b又看到我是不想要,就想要了,然后我俩都想要,就一起用了...违背了忙则等待&lt;/li&gt;
-&lt;li&gt;但是如果检查和表示自己想要可以一气呵成,那么就没有问题了&lt;/li&gt;
-&lt;li&gt;双标志后检查法,就是在自己的进程里,先不管别人想不想要,直接表示自己想要,然后检查有没有人表示过想要,有就等着,没有就用,用完说自己不用了&lt;/li&gt;
-&lt;li&gt;缺点是我说完老子想用,还没来得及检查,有人说想用了,然后我检查,发现有人想用,就等着,tmd别人检查发现我想用,就也等着,违背了有限等待,空闲让进&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;peterson 算法&lt;br&gt;
-我先表示我想用,然后谦让给你&lt;br&gt;
-&lt;code&gt;flag[i]=true;turn=j;&lt;/code&gt;&lt;br&gt;
-然后检查你想不想用并且有没有让给我,如果你想用&lt;strong&gt;并且&lt;/strong&gt;没让给我,我就等着&lt;br&gt;
-&lt;code&gt;while(flag[j]&amp;amp;&amp;amp;turn=j);&lt;/code&gt;&lt;br&gt;
-如果你不想用或者让给我了,我就用了&lt;br&gt;
-&lt;code&gt;critical section;&lt;/code&gt;&lt;br&gt;
-用完表示不想用了&lt;br&gt;
-&lt;code&gt;flag[i]=false;&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;硬件方法&#34;&gt;硬件方法&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;中断屏蔽法&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHRGoF.png&#34; alt=&#34;UHRGoF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;硬件指令法(都是硬件完成的,代码只是功能的描述)&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHWklR.png&#34; alt=&#34;UHWklR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;解决了之前双标志先检查法的缺点,即检查和上锁可以一气呵成了&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHW8Xt.png&#34; alt=&#34;UHW8Xt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;总结&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHWyn0.png&#34; alt=&#34;UHWyn0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-">第二章 进程同步</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/"" data-c="
-          &lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWDGNQ.png&#34; alt=&#34;UWDGNQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;先来先服务&#34;&gt;先来先服务&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWDfu6.png&#34; alt=&#34;UWDfu6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;按照到达先后,实际上就是等待时间越久的越先得到服务&lt;/li&gt;
-&lt;li&gt;注意等待时间的计算
-&lt;ul&gt;
-&lt;li&gt;纯计算型的进程:周转时间-运行时间&lt;/li&gt;
-&lt;li&gt;计算+I/O操作的:周转时间-运行时间-I/O操作时间&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWDuct.png&#34; alt=&#34;UWDuct.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;短作业优先&#34;&gt;短作业优先&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWyGND.png&#34; alt=&#34;UWyGND.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;非抢占式spf与抢占式对比srtn&#34;&gt;非抢占式(SPF)与抢占式对比(SRTN)&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;非抢占式&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWsR0K.png&#34; alt=&#34;UWsR0K.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;抢占式&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWrGqK.png&#34; alt=&#34;UWrGqK.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWr7ZT.png&#34; alt=&#34;UWr7ZT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;几个细节某些说法不一致时&#34;&gt;几个细节(某些说法不一致时)&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWyEAU.png&#34; alt=&#34;UWyEAU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;fcfs与sjf对比&#34;&gt;FCFS与SJF对比&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWyBHf.png&#34; alt=&#34;UWyBHf.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-因此推出了高响应比优先&lt;/p&gt;
-&lt;h2 id=&#34;高响应比优先&#34;&gt;高响应比优先&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWcY6A.png&#34; alt=&#34;UWcY6A.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;当前运行的进程主动放弃CPU时,才需要进行调度,重新计算响应比&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UW6XWQ.png&#34; alt=&#34;UW6XWQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;以上三种算法对比&#34;&gt;以上三种算法对比&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;交互性差&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWc0k8.png&#34; alt=&#34;UWc0k8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;时间片轮转&#34;&gt;时间片轮转&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWfzy4.png&#34; alt=&#34;UWfzy4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;注意,时间片到了之后下处理机时,会加到就绪队列的队尾,不要按照题中给的顺序想到然的来,要时刻按照就绪队列的顺序进行分析,如下:&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWR1YT.png&#34; alt=&#34;UWR1YT.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWRGpF.png&#34; alt=&#34;UWRGpF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;时间片太大时,就会变成先来先服务&lt;/li&gt;
-&lt;li&gt;太小切换的代价就大了,&lt;strong&gt;切换的开销不超过1%就认为是合适的&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;用于进程调度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;优先级调度算法&#34;&gt;优先级调度算法&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UW4q2T.png&#34; alt=&#34;UW4q2T.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;注意是优先数越大,优先级越高,还是相反&lt;/li&gt;
-&lt;li&gt;抢占式和非抢占式
-&lt;ul&gt;
-&lt;li&gt;非抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。&lt;/li&gt;
-&lt;li&gt;抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。另外，当就绪队列发生改变时也需要检查是会发生抢占。&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UW4RxS.png&#34; alt=&#34;UW4RxS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;多级反馈队列调度算法&#34;&gt;多级反馈队列调度算法&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWo0rF.png&#34; alt=&#34;UWo0rF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;认为是抢占式的算法&lt;/li&gt;
-&lt;li&gt;用于进程调度&lt;br&gt;
-算法规则(个人理解)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;某一队列的上级队列都空了,才轮到这一级&lt;/li&gt;
-&lt;li&gt;某进程在该队列的时间片用完,还没完成,就进入下一级队列(时间片增加的),但如果已经是最底层了,就放到该级队尾&lt;/li&gt;
-&lt;li&gt;来一个新的进程首先放到第1级的队尾,如果此时运行的是低级的队列的进程,则发生抢占,被强占的进程放到所在队列的队尾,并不是到下一级了(毕竟是意外,也没说自己在这一级能不能运行完)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;以上三种比对&#34;&gt;以上三种比对&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;适合交互式系统&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/19/UWoTIA.png&#34; alt=&#34;UWoTIA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">第二章 几种调度算法的比较</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/"" data-c="
-          &lt;ul&gt;
-&lt;li&gt;栈和队列具有相同的&lt;strong&gt;逻辑结构&lt;/strong&gt;,这tm别忘啊,逻辑结构就线性和非线性的,&lt;strong&gt;栈和队列都是线性的&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;只有表头结点指针而没有表尾指针的单向循环链表&lt;strong&gt;最不适合&lt;/strong&gt;作为链栈
-&lt;ul&gt;
-&lt;li&gt;比如在出栈的时候,即删除第一个结点,删是好删,但是最后一个结点的next指到新的第一个结点时,得遍历整个链表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-">栈与队列错题及重点</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/chu-li-ji-diao-du-bu-fen-li-jie/"" data-c="
-          &lt;h3 id=&#34;概念部分调度的时机切换与过程&#34;&gt;概念部分,调度的时机,切换与过程&lt;/h3&gt;
-&lt;h3 id=&#34;调度的概念&#34;&gt;调度的概念&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUVu6S.png&#34; alt=&#34;UUVu6S.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;作业调度&#34;&gt;作业调度&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUVIAA.png&#34; alt=&#34;UUVIAA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;进程调度&#34;&gt;进程调度&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUZljO.png&#34; alt=&#34;UUZljO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;内存调度中级调度&#34;&gt;内存调度(中级调度)&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUZGHH.png&#34; alt=&#34;UUZGHH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;七状态模型&#34;&gt;七状态模型&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUZb5R.png&#34; alt=&#34;UUZb5R.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;对比&#34;&gt;对比&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUuPIJ.png&#34; alt=&#34;UUuPIJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-###概念总结&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUulid.png&#34; alt=&#34;UUulid.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;注意调度针对的是什么
-&lt;ul&gt;
-&lt;li&gt;进程调度针对的是就绪队列里的进程,而其他状态的进程是系统处理&lt;/li&gt;
-&lt;li&gt;内存调度针对的是挂起队列(就绪挂起队列/阻塞挂起队列)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;进程调度的时机&#34;&gt;进程调度的时机&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUWU2Q.png&#34; alt=&#34;UUWU2Q.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;strong&gt;注意区别&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;进程在&lt;strong&gt;操作系统内核程序临界区&lt;/strong&gt;中&lt;strong&gt;不能&lt;/strong&gt;进行调度和切换&lt;br&gt;
-进程处于&lt;strong&gt;临界区&lt;/strong&gt;时&lt;strong&gt;不能&lt;/strong&gt;进行处理机调度是&lt;strong&gt;错误的&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUf4Sg.png&#34; alt=&#34;UUf4Sg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUhFk6.png&#34; alt=&#34;UUhFk6.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-后者案例:访问普通临界资源&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUh3h8.png&#34; alt=&#34;UUh3h8.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUhG9S.png&#34; alt=&#34;UUhG9S.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;进程调度方式种类&#34;&gt;进程调度方式种类&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUhLDA.png&#34; alt=&#34;UUhLDA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;进程的切换过程&#34;&gt;进程的切换过程&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UU4qRU.png&#34; alt=&#34;UU4qRU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;调度时机切换与过程的总结&#34;&gt;调度时机,切换与过程的总结&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UU5FzD.png&#34; alt=&#34;UU5FzD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;进程调度方式&#34;&gt;进程调度方式&lt;/h2&gt;
-&lt;h3 id=&#34;调度的基本准则&#34;&gt;调度的基本准则&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;CPU利用率&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUOt0S.png&#34; alt=&#34;UUOt0S.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;系统吞吐量&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUOwfs.png&#34; alt=&#34;UUOwfs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;周转时间&lt;br&gt;
-对于计算机的用户来说，他很关心自己的作业从提交到完成花了多少时间。&lt;br&gt;
-周转时间，是指从作业被提交给系统开始，到作业完成为止的这段时间间隔。&lt;br&gt;
-它包括四个部分：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;作业在外存后备队列上等待作业调度（高级调度）的时间、&lt;/li&gt;
-&lt;li&gt;进程在就绪队列上等待进程调度（低级调度）的时间、&lt;/li&gt;
-&lt;li&gt;进程在CPU上执行的时间、&lt;/li&gt;
-&lt;li&gt;进程等待I/0操作完成的时间。&lt;/li&gt;
-&lt;li&gt;后三项在一个作业的整个处理过程中，可能发生多次。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;center&gt;（作业）周转时间=作业完成时间-作业提交时间&lt;/center&gt; 
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUXBUe.png&#34; alt=&#34;UUXBUe.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUjQMt.png&#34; alt=&#34;UUjQMt.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-4. 等待时间&lt;br&gt;
-注意的是:进程等待I/O完成的期间不算在等待时间里&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUjHFe.png&#34; alt=&#34;UUjHFe.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-5. 响应时间&lt;br&gt;
-指从用户提交请求到首次产生响应所用时间&lt;br&gt;
-6. 小结&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/14/UUv861.png&#34; alt=&#34;UUv861.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-">处理机调度部分理解</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/"" data-c="
-          &lt;p&gt;公式1 (通项公式) ：&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/13/UYhBZV.png&#34; alt=&#34;UYhBZV.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-在上文提到的出栈序列的问题情景中，如果有n&lt;br&gt;
-个元素，在平面直角坐标系中用x坐标表示入栈数，y坐标表示出栈数，则坐标(a,b)表示目前已经进行了a次入栈和b次出栈，则再进行一次入栈就是走到(a+1,b)，再进行一次出栈就是走到(a,b+1)。并且，由于入栈数一定小于等于出栈数，所以路径不能跨越直线y=x&lt;br&gt;
-因此，题目相当于求从(0,0)走到(n,n)且不跨越直线y=x的方案数&lt;br&gt;
-首先，如果不考虑不能跨越直线y=x的要求，相当于从2n次操作中选n次进行入栈，则方案数为Cn2n。&lt;br&gt;
-然后，考虑对于一种不合法的方案，一定在若干次操作后有一次出栈数比入栈数多一次，这个点在直线y=x+1 (即下图中红色的线) 上。那么把第一次碰到该直线以后的部分关于该直线对称，则最终到达的点是(n−1,n+1) (如下图) 。&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/13/UYhJPg.png&#34; alt=&#34;UYhJPg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-图源：英文维基 (即文首网址)&lt;br&gt;
-显然，任何非法方案都可以通过此方式变成一条从(0,0)到(n−1,n+1)的路径，有Cn+12n种。而任何合法方案由于不接触直线y=x+1，无论从哪个点对称都不是一条连续的路径。由于合法方案数就是Catalann&lt;/p&gt;
-&lt;p&gt;，所以：&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/13/UY5Vcd.png&#34; alt=&#34;UY5Vcd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-">卡特兰数的部分理解</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/lian-biao-cao-zuo/"" data-c="
-          &lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;stdlib.h&amp;gt;
-
-typedef struct LNode
-{
-    int data;
-    struct LNode *next;
-}LNode,*LinkList;
-LinkList list_headinsert(LinkList &amp;amp;L)
-{
-    L=(LinkList)malloc(sizeof(LNode));
-    LNode *s;
-    int i=0;
-    L-&amp;gt;next=NULL;
-    while(i&amp;lt;=20)
-    {
-        s=(LNode*)malloc(sizeof(LNode));
-        s-&amp;gt;data=i;
-        s-&amp;gt;next=L-&amp;gt;next;
-        L-&amp;gt;next=s;
-    }
-}
-LinkList list_tailinsert(LinkList &amp;amp;L)
-{
-    L=(LinkList)malloc(sizeof(LNode));
-    LNode *s,*r=L;
-    int i=0;
-    while(i&amp;lt;=20)
-    {
-        s=(LNode*)malloc(sizeof(LNode));
-        s-&amp;gt;data=i;
-        r-&amp;gt;next=s;
-        r=s;
-    }
-    r-&amp;gt;next=NULL;
-}
-void print(LinkList &amp;amp;L)
-{
-    LNode *p=L-&amp;gt;next;
-    while(p!=NULL)
-    {
-        printf(&amp;quot;%d   &amp;quot;,p-&amp;gt;data);
-        p=p-&amp;gt;next;
-    }
-    printf(&amp;quot;\n&amp;quot;);
-}
-void delx(LinkList &amp;amp;l,int x)
-{
-    LNode *p;
-    if(L==NULL)
-    {
-        return;
-    }
-    if(L-&amp;gt;data==x)
-    {
-        p=L;
-        L=L-&amp;gt;next;
-        free(p);
-        delx(L,x);
-    }
-    else
-        delx(L-&amp;gt;next,x);
-}
-int main()
-{
-    LinkList L;
-    list_tailinsert(L);
-    print(L);
-    printf(&amp;quot;Hello world!\n&amp;quot;);
-    return 0;
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-">链表操作</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/"" data-c="
-          &lt;h2 id=&#34;选择题&#34;&gt;选择题&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;线程&lt;strong&gt;没有&lt;/strong&gt;自己独立的地址空间,同一进程的多个线程共享其地址空间&lt;/li&gt;
-&lt;li&gt;线程包含CPU现场,是处理机调度的基本单位,可以独立执行程序&lt;/li&gt;
-&lt;li&gt;进程和程序的根本区别是&lt;strong&gt;静态和动态特点&lt;/strong&gt;k&lt;/li&gt;
-&lt;li&gt;优先级分静态和动态两种&lt;/li&gt;
-&lt;li&gt;在单处理器中,任何时刻都只有一个进程处于运行态是&lt;strong&gt;错的&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;系统死锁全部是阻塞态或者无进程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在进程的整个生命周期中,系统总是通过其PCB来对进程进行控制;
-&lt;ul&gt;
-&lt;li&gt;系统是根据PCB而非其他任何因素来感知进程存在的&lt;/li&gt;
-&lt;li&gt;PCB是进程存在的唯一标志;&lt;/li&gt;
-&lt;li&gt;PCB常驻内存&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;单处理机系统,n个进程,处于就绪队列的最多n-1个,还有一个肯定在运行;处于阻塞态的最多n个&lt;/li&gt;
-&lt;li&gt;并发进程失去封闭性是指并发进程共享变量,其执行结果与速度有关
-&lt;ul&gt;
-&lt;li&gt;程序的封闭性是指进程执行的结果只取决于进程本身,不受外界影响&lt;/li&gt;
-&lt;li&gt;也就是,进程在执行的过程中不管是不停顿的执行还是走走停停,进程的执行速度都不会改变他的执行结果&lt;/li&gt;
-&lt;li&gt;但是,在失去封闭性后,不同的速度下执行的结果不同&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;进程之间可能是相关的,也可能是封闭的&lt;/li&gt;
-&lt;li&gt;进程是作为除CPU之外的系统资源的分配单位
-&lt;ul&gt;
-&lt;li&gt;这里注意题目中一般可能&lt;strong&gt;不特地强调除CPU之外&lt;/strong&gt;,除非特地考查这个概念,不然默认是对的&lt;/li&gt;
-&lt;li&gt;特地强调了引入线程后,还说是资源调度和分配的基本单位就是错的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;多对一模型中,一个线程阻塞,整个进程都阻塞&lt;/li&gt;
-&lt;li&gt;对进程进行定义时,如果带有静态的概念就是错的
-&lt;ul&gt;
-&lt;li&gt;例如说进程是多道程序环境下的完整程序就是错的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;C语言编写的程序在使用内存时一般分为3段:正文段(即代码和赋值数据段),数据堆段,数据栈段
-&lt;ul&gt;
-&lt;li&gt;二进制代码和常量(#define 标识符 常量)在正文段
-&lt;ul&gt;
-&lt;li&gt;全局赋值变量&lt;/li&gt;
-&lt;li&gt;常量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;动态分配的存储区在数据堆段
-&lt;ul&gt;
-&lt;li&gt;动态内存分配&lt;/li&gt;
-&lt;li&gt;new,malloc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;临时使用的变量在数据栈段
-&lt;ul&gt;
-&lt;li&gt;未赋值的局部变量&lt;/li&gt;
-&lt;li&gt;实参传递&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;//main.cpp
-int a = 0; //全局初始化区
-int a = 0; //全局初始化区
-char *p1; //全局未初始化区
-main() {
-    int b; //栈
-    char s[] = &amp;quot;abc&amp;quot;; //栈
-    char *p2; //栈
-    char *p3 = &amp;quot;123456&amp;quot;; //123456\0在常量区，p3在栈上。
-    static int c = 0; //全局（静态）初始化区
-    p1 = (char *)malloc(10);
-    p2 = (char *)malloc(20);
-    //分配得来得10和20字节的区域就在堆区。
-    strcpy(p1, &amp;quot;123456&amp;quot;); //123456\0放在常量区，编译器可能会将它与p3所指向的&amp;quot;123456&amp;quot;优化成一个地方。
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;系统动态DLL库中的系统线程,被不同的进程调用时,任然是相同的线程&lt;/li&gt;
-&lt;li&gt;进程创建需要占用系统内存来存放PCB数据结构,所以一个系统能够创建的进程数量是有限的,最大数目取决于内存的大小&lt;/li&gt;
-&lt;li&gt;阻塞态和挂起态的区别
-&lt;ul&gt;
-&lt;li&gt;阻塞态任然处于五个转化状态中,而挂起态一般直接被操作系统在调度时忽略了,除非恢复&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;     操作系统中睡眠、阻塞、挂起的区别形象解释：
-
-     首先这些术语都是对于线程来说的。对线程的控制就好比你控制了一个雇工为你干活。你对雇工的控制是通过编程来实现的。
-     挂起线程的意思就是你对主动对雇工说：“你睡觉去吧，用着你的时候我主动去叫你，然后接着干活&amp;quot;。
-     使线程睡眠的意思就是你主动对雇工说：“你睡觉去吧，某时某刻过来报到，然后接着干活”。
-     线程阻塞的意思就是，你突然发现，你的雇工不知道在什么时候没经过你允许，自己睡觉呢，但是你不能怪雇工，肯定你这个雇主没注意，本来你让雇工扫地，结果扫帚被偷了或被邻居家借去了，你又没让雇工继续干别的活，他就只好睡觉了。至于扫帚回来后，雇工会不会知道，会不会继续干活，你不用担心，雇工一旦发现扫帚回来了，他就会自己去干活的。因为雇工受过良好的培训。这个培训机构就是操作系统。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;一般默认进程创建完成后就进入就绪队列,除非特地考查资源未分配全进入阻塞态&lt;/li&gt;
-&lt;li&gt;就绪队列不空时,处理器的效率是不变的,和就绪进程数量无关,因为只要有在就绪队列里,就可以一直执行&lt;/li&gt;
-&lt;li&gt;对进程的管理和控制使用&lt;strong&gt;原语&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;I.用户登录成功后，系统要为此创建一个用户管理的进程，包括用户桌面、环境等。所有用户进程都会在该进程下创建和管理。Ⅱ.设备分配是通过在系统中设置相应的数据结构实现的，不需要创建进程，这是操作系统中/O核心子系统的内容。班.启动程序执行是引起创建进程的典型事件。&lt;/li&gt;
-&lt;li&gt;进程中的线程共享进程内的全部资源，但进程中某线程的栈指针对其他线程是透明的，不能与其他线程共享。&lt;/li&gt;
-&lt;li&gt;进程可以在时间片用完时降低优先级以让其他的进程被调度进入执行状态,不应该在就绪态转为运行态时降低优先级&lt;/li&gt;
-&lt;li&gt;当一个进程被唤醒时，这个进程就进入了就绪态，等待进程调度而占有CPU运行。
-&lt;ul&gt;
-&lt;li&gt;进程被唤醒在某种情形下优先级可以增大，但一般不会变为最大，而由固定的算法来计算。&lt;/li&gt;
-&lt;li&gt;也不会在唤醒后位于就绪队列的队首，就绪队列是按照一定的规则赋予其位置的，如先来先服务，或者高优先级优先，或者短进程优先等，更不能直接占有处理器运行(存在疑问)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;进程间的通信主要有管道、消息传递、共享内存、文件映射和套接字等。数据库不能用于进程间通信。&lt;/li&gt;
-&lt;li&gt;进程可以创建进程或线程，线程也可以创建线程，但线程不能创建进程。&lt;/li&gt;
-&lt;li&gt;管道实际上是一种固定大小的缓冲区，管道对于管道两端的进程而言，就是一个文件，但它不是普通的文件，它不属于某种文件系统，而是自立门户、单独构成的一种文件系统，并且只存在于内存中。
-&lt;ul&gt;
-&lt;li&gt;它类似于通信中半双工信道的进程通信机制，一个管道可以实现双向的数据传输，而同一时刻只能最多有一个方向的传输，不能两个方向同时进行。&lt;/li&gt;
-&lt;li&gt;管道的容量大小通常为内存上的一页，它的大小并不受磁盘容量大小的限制。&lt;/li&gt;
-&lt;li&gt;当管道满时，进程在写管道会被阻塞，而当管道空时，进程在读管道会被阻塞&lt;/li&gt;
-&lt;li&gt;一个管道只能有一个读进程或一个写进程对其操作是错的
-&lt;ul&gt;
-&lt;li&gt;有些说是可以有多个读进程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;filedes[0]用于读出数据，读取时必须关闭写入端，即close(filedes[1]);&lt;br&gt;
-filedes[1]用于写入数据，写入时必须关闭读取端，即close(filedes[0])。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;int main(void)
-{
-    int n;
-    int fd[2];
-    pid_t pid;
-    char line[MAXLINE];
-   
-    if(pipe(fd)  0){                 /* 先建立管道得到一对文件描述符 */
-        exit(0);
-    }
-
-    if((pid = fork())  0)            /* 父进程把文件描述符复制给子进程 */
-        exit(1);
-    else if(pid &amp;gt; 0){                /* 父进程写 */
-        close(fd[0]);                /* 关闭读描述符 */
-        write(fd[1], &amp;quot;\nhello world\n&amp;quot;, 14);
-    }
-    else{                            /* 子进程读 */
-        close(fd[1]);                /* 关闭写端 */
-        n = read(fd[0], line, MAXLINE);
-        write(STDOUT_FILENO, line, n);
-    }
-
-    exit(0);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;某进程退出临界区时,之前申请临界区资源而不得进入阻塞态的进程会被唤醒&lt;/li&gt;
-&lt;li&gt;用户级线程间的切换效率比内核级的高&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;简答题&#34;&gt;简答题&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;举例说明进程和程序间可以形成一对一,一对多,多对一,多对多关系
-&lt;ul&gt;
-&lt;li&gt;分析&lt;br&gt;
-从进程的概念、进程与程序之间的关系来考虑问题的解答。进程是程序的执行过程，进程代表执行中的程序，因此进程与程序的差别就隐含在“执行”之中。程序是静态的指令集合，进程是程序的动态执行过程。静态的程序除占用磁盘空间外，不需要其他系统资源，只有执行中的进程才需要分配内存、CPU等系统资源。&lt;br&gt;
-进程的定义说明了两点：&lt;br&gt;
-1）进程与程序相关，进程包含了程序。程序是进程的核心内容，没有程序就没有进程。&lt;br&gt;
-2）进程不仅仅是程序，还包含程序在执行过程中使用的全部资源。没有资源，程序就无法执行，因此进程是程序执行的载体。&lt;br&gt;
-运行一个程序时，操作系统首先要创建一个进程，为进程分配内存等资源，然后加入进程队列中执行。对单个进程在某个时刻而言，一个进程只能执行一个程序，进程与程序之间是一对一的关系。但对整个系统中的进程集合及进程的生命周期而言，进程与程序之间可以形成一对一、多对一、一对多、多对多的关系。&lt;/li&gt;
-&lt;li&gt;解答：&lt;br&gt;
-执行一条命令或运行一个应用程序时，进程和程序之间形成一对一的关系。进程在执行过程中可以加载执行不同的应用程序，从而形成一对多的关系；以不同的参数或数据多次执行同一个应用程序时，形成多对一的关系；并发地执行不同的应用程序时，形成多对多的关系。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;父进程创建子进程和主程序调用子程序的区别
-&lt;blockquote&gt;
-&lt;p&gt;父进程创建子进程后，父进程与子进程同时执行（并发）。主程序调用子程序后，主程序暂停在调用点，子程序开始执行，直到子程序返回，主程序才开始执行&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;为啥进程间通信必须借助操作系统的内核功能
-&lt;blockquote&gt;
-&lt;p&gt;在操作系统中，进程是竞争和分配计算机系统资源的基本单位。每个进程都有自己的独立地址空间。为了保证多个进程能够彼此互不干扰地共享物理内存，操作系统利用硬件地址机制对进程的地址空间进行了严格的保护，限制每个进程只能访问自己的地址空间。&lt;br&gt;
-解答：&lt;br&gt;
-每个进程有自己独立的地址空间。在操作系统和硬件的地址保护机制下，进程无法访问其他进程的地址空间，所以必须借助于操作系统的系统调用函数实现进程之间的通信。进程通信的主要方式有：&lt;br&gt;
-1）共享内存区。通过系统调用创建共享内存区。多个进程可以（通过系统调用）连接同一个共享内存区，通过访问共享内存区实现进程之间的数据交换。使用共享内存区时需要利用信号量解决同步互斥问题。&lt;br&gt;
-2）消息传递。通过发送/接收消息，系统调用实现进程之间的通信。当进程发送消息时，系统将消息从用户缓冲区复制到内核中的消息缓冲区，然后将消息缓冲区挂入消息队列。进程发送的消息保持在消息队列中，直到被另一进程接收。当进程接收消息时，系统从消息队列中解挂消息缓冲区，将消息从内核的消息缓冲区中复制到用户缓冲区，然后释放消息缓冲区。&lt;br&gt;
-3）管道系统。管道是先进先出（FIFO）的信息流，允许多个进程向管道写入数据，允许多个进程从管道读出数据。在读/写过程中，操作系统保证数据的写入顺序和读出顺序是一致的。进程通过读/写管道文件或管道设备实现彼此之间的通信。&lt;br&gt;
-4）共享文件。利用操作系统提供的文件共享功能实现进程之间的通信。这时，也需要信号量来解决文件共享操作中的同步和互斥问题。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;啥是多线程,多线程和多任务的区别
-&lt;blockquote&gt;
-&lt;p&gt;多线程是指在一个程序中可以定义多个线程并同时运行它们，每个线程可以执行不同的任务。多线程与多任务的区别：多任务是针对操作系统而言的，代表操作系统可以同时执行的程序个数；多线程是针对一个程序而言的，代表一个程序可以同时执行的线程个数，而每个线程可以完成不同的任务。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;五题
-&lt;blockquote&gt;
-&lt;p&gt;1）为支持多进程的并发执行，系统为每个进程建立了一个数据结构：进程控制块（PCB），用于进程的管理和控制。PCB中记录了有关进程的一些描述信息和控制信息，包括进程标识符、进程当前的状态、优先级、进程放弃CPU时的现场信息，以及指示组成进程的程序和数据在存储器中存放位置的信息、资源使用信息、进程各种队列的连接指针和反映进程之间的隶属关系的信息等。&lt;br&gt;
-2）在进程的整个生命周期中，会经历多种状态。进程控制的主要职能是对系统中所有进程实施有效的管理，它具有创建新进程、撤销已有进程、实现进程的状态转换等功能。在操作系统内核中，有一组程序专门用于完成对进程的控制，这些原语至少需要包括创建新进程原语、阻塞进程原语、唤醒进程原语、终止进程原语等操作。系统服务对用户开放，即用户可以通过相应的接口来使用它们。&lt;br&gt;
-3）进程创建原语：从PCB集合中申请一个空白的PCB，将调用者参数（如进程外部标识符、初始CPU状态、进程优先数、初始内存及申请资源清单等）添入该PCB，设置记账数据。&lt;br&gt;
-置新进程为“就绪”态。&lt;br&gt;
-终止进程原语：用于终止完成的进程，回收其所占资源。包括消去其资源描述块，消去进程的PCB。阻塞原语：将进程从运行态变为阻塞态。进程被插入等待事件的队列，同时修改PCB中相应的表项，如进程状态和等待队列指针等。&lt;br&gt;
-唤醒原语：将进程从阻塞态变为就绪态。进程从阻塞队列中移出，插入就绪队列，等待调度，同时修改PCB中相应的表项，如进程状态等。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-">第二章 进程线程概念部分错题及重要知识点</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/jin-cheng-de-gai-nian-xiang-guan-zhi-shi-dian/"" data-c="
-          &lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS2.2.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;动态性是进程的最基本特征&lt;/li&gt;
-&lt;li&gt;进程是资源分配和接受调度的单位&lt;/li&gt;
-&lt;li&gt;各进程以不可知的速度前进,&lt;strong&gt;可能导致运行结果的不确定性&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;PCB是进程存在的唯一标志&lt;/li&gt;
-&lt;li&gt;注意
-&lt;ul&gt;
-&lt;li&gt;进程的管理者(操作系统)所需的数据都在PCB中&lt;/li&gt;
-&lt;li&gt;程序本身的运行所需的数据在程序段和数据段中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;状态与转换&#34;&gt;状态与转换&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UncERA.jpg&#34; alt=&#34;UncERA.jpg&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UncAGd.jpg&#34; alt=&#34;UncAGd.jpg&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;注意单核双核&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;进程间通信&#34;&gt;进程间通信&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;管道通信
-&lt;ul&gt;
-&lt;li&gt;写满时不能再写;读空时不能再读&lt;/li&gt;
-&lt;li&gt;未写满时不能读;未读空时不能写&lt;/li&gt;
-&lt;li&gt;一个管道半双工通信,双向通信要俩管道&lt;/li&gt;
-&lt;li&gt;设置一个特殊的共享文件(管道),其实就是一个缓冲区&lt;/li&gt;
-&lt;li&gt;各进程互斥访问管道&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;共享存储
-&lt;ul&gt;
-&lt;li&gt;王道书上说管道是其优化和发展,感觉错的,肯定共享存储是最吊的&lt;/li&gt;
-&lt;li&gt;互斥地访问共享空间&lt;/li&gt;
-&lt;li&gt;两种方式
-&lt;ul&gt;
-&lt;li&gt;基于数据的(低级)&lt;/li&gt;
-&lt;li&gt;基于存储区的共享(高级)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;消息传递
-&lt;ul&gt;
-&lt;li&gt;传送结构化的消息(消息头/消息体)&lt;/li&gt;
-&lt;li&gt;系统提供__发送接收原语__&lt;/li&gt;
-&lt;li&gt;两种方式
-&lt;ul&gt;
-&lt;li&gt;直接通信方式:消息挂到接收方的消息队列&lt;/li&gt;
-&lt;li&gt;简介(信箱)通信方式:消息先发到中间体(信箱)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;线程概念及实现&#34;&gt;线程概念及实现&lt;/h2&gt;
-&lt;h3 id=&#34;概念-2&#34;&gt;概念&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/20200709183533.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;线程可以相同的代码,也可以用不同的代码&lt;/li&gt;
-&lt;li&gt;进程的地址空间相互独立,某进程内的线程对于其他进程不可见&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;线程的实现&#34;&gt;线程的实现&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;用户级线程&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un8WO1.png&#34; alt=&#34;Un8WO1.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Unwa6S.png&#34; alt=&#34;Unwa6S.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;线程的管理工作由应用程序通过线程库来完成的&lt;/li&gt;
-&lt;li&gt;不请求系统服务,在用户态下就完成线程切换&lt;/li&gt;
-&lt;li&gt;操作系统意识不到用户级线程的存在&lt;/li&gt;
-&lt;li&gt;优缺点
-&lt;ul&gt;
-&lt;li&gt;切换在用户空间完成,不需要切换到核心态,管理的开销小&lt;/li&gt;
-&lt;li&gt;某个用户级线程被阻塞,整个进程都会阻塞,并发度不高,多个线程不可在多核处理机上并行运行
-&lt;ul&gt;
-&lt;li&gt;因为在操作系统上还是以进程运行的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;内核级线程&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UnBbLD.png&#34; alt=&#34;UnBbLD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;线程的管理由操作系统完成&lt;/li&gt;
-&lt;li&gt;线程的切换需要CPU变态,即切换到核心态&lt;/li&gt;
-&lt;li&gt;操作系统可以意识到内核级线程的存在
-&lt;ul&gt;
-&lt;li&gt;操作系统会为每个内核级线程建立相应的TCB,通过TCB对线程进行管理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;优缺点
-&lt;ul&gt;
-&lt;li&gt;优点:当一个线程被阻塞的时候,别的线程还可以继续执行,并发能力强;多线程可以在多核处理机上并发执行&lt;/li&gt;
-&lt;li&gt;一个用户进程会占用多个内核级线程,线程的切换由操作系统完成,需要切换到核心态因此线程的管理成本高,开销大&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;多线程模型&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/UnrnNd.png&#34; alt=&#34;UnrnNd.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Unrq5d.png&#34; alt=&#34;Unrq5d.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;这种多对一的线程是无法__并行__运行的&lt;/li&gt;
-&lt;li&gt;这个进程被分配了多个内核级线程时,如果在多核情况下,这些内核级线程肯定可以__并行__运行
-&lt;ul&gt;
-&lt;li&gt;但是考试中提到多对一模型则默认一个进程只被分配一个内核级线程&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un6Fcq.png&#34; alt=&#34;Un6Fcq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;内核级线程可以运行任意一个有映射关系的用户级线程代码,只有两个内核级线程中正在运行的代码逻辑都阻塞时,这个进程才会阻塞&lt;br&gt;
-&lt;img src=&#34;https://s1.ax1x.com/2020/07/09/Un6TbT.png&#34; alt=&#34;Un6TbT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">进程的概念相关知识点</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li/"" data-c="
-          &lt;p&gt;&lt;strong&gt;考试内容&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;进程与线程
-&lt;ul&gt;
-&lt;li&gt;进程的概念&lt;/li&gt;
-&lt;li&gt;进程的状态与转换&lt;/li&gt;
-&lt;li&gt;进程控制&lt;/li&gt;
-&lt;li&gt;进程组织&lt;/li&gt;
-&lt;li&gt;进程通信&lt;/li&gt;
-&lt;li&gt;线程概念与多线程模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;处理机调度
-&lt;ul&gt;
-&lt;li&gt;调度的基本概念&lt;/li&gt;
-&lt;li&gt;调度时机,切换与过程&lt;/li&gt;
-&lt;li&gt;调度的基本准则&lt;/li&gt;
-&lt;li&gt;调度方式&lt;/li&gt;
-&lt;li&gt;典型调度算法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;进程同步
-&lt;ul&gt;
-&lt;li&gt;进程同步的基本概念&lt;/li&gt;
-&lt;li&gt;实现临界区互斥的基本方法&lt;/li&gt;
-&lt;li&gt;信号量&lt;/li&gt;
-&lt;li&gt;管程&lt;/li&gt;
-&lt;li&gt;经典同步问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;死锁
-&lt;ul&gt;
-&lt;li&gt;死锁的概念&lt;/li&gt;
-&lt;li&gt;死锁处理策略&lt;/li&gt;
-&lt;li&gt;死锁预防&lt;/li&gt;
-&lt;li&gt;死锁避免&lt;/li&gt;
-&lt;li&gt;死锁的检测和解除&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;知识框架&lt;/strong&gt;&lt;/p&gt;
-">第二章 进程管理</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/"" data-c="
-          &lt;ol&gt;
-&lt;li&gt;当中断发生后,CPU立即进入__核心态__&lt;/li&gt;
-&lt;li&gt;当中断发生后,当前运行的进程暂停运行,并由操作系统内核对中断进行处理&lt;/li&gt;
-&lt;li&gt;对于不同的中断信号,会进行不同的处理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;p&gt;发生了中断，就意味着需要操作系统介入，开展管理工作。由于操作系统的管理工作（比如进程切换、分配I/O设备等）需要使用特权指令，因此CPU要从用户态转为核心态。&lt;strong&gt;中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权&lt;/strong&gt;。有了中断，才能实现多道程序并发执行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用户态-&amp;gt;核心态是通过中断实现的,并且中断是唯一途径&lt;/li&gt;
-&lt;li&gt;核心态-&amp;gt;用户态的切换是通过执行一个特权指令,将程序状态字(PSW)的标志位设置为&amp;quot;用户态&amp;quot;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan1.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan2.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan6.png&#34; alt=&#34;1.6&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan3.png&#34; alt=&#34;1.3&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan4.png&#34; alt=&#34;1.4&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan5.png&#34; alt=&#34;1.5&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;陷入指令是唯一一个只能在用户态下执行的指令&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">中断的概念及作用</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/"" data-c="
-          &lt;h2 id=&#34;1概念&#34;&gt;1.概念&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;高级程序设计语言的__编译器不是__操作系统关心的问题
-&lt;ul&gt;
-&lt;li&gt;用户界面并非是必须的,但却包含在操作系统范畴内&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS基本功能是__控制管理系统内的各种资源__
-&lt;ul&gt;
-&lt;li&gt;注意网络管理,用户界面,可视化编辑程序都不是最基本的功能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;用户可以通过__命令接口和系统调用__来使用计算机&lt;/li&gt;
-&lt;li&gt;系统调用只能通过用户程序间接使用&lt;/li&gt;
-&lt;li&gt;系统调用的目的是__请求系统服务__
-&lt;ul&gt;
-&lt;li&gt;不是什么申请/释放资源,终止服务啥的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS与用户通信接口通常不包括__缓存管理指令__
-&lt;ul&gt;
-&lt;li&gt;系统中的缓存全部由OS管理,对用户是透明的&lt;/li&gt;
-&lt;li&gt;shell(命令解析器),命令解释器,广义指令(系统调用)都是通信接口&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;库函数与系统调用的区别与联系&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;库函数是语言或应用程序的一部分,可以运行在用户空间中&lt;/li&gt;
-&lt;li&gt;系统调用是操作系统的一部分,是内核为用户提供的程序接口,运行在内核空间中&lt;/li&gt;
-&lt;li&gt;许多库函数会使用系统调用来实现功能&lt;/li&gt;
-&lt;li&gt;未使用系统调用的库函数执行效率通常要比系统调用的高&lt;/li&gt;
-&lt;li&gt;因为使用系统调用需要上下文切换以及状态的转换(由用户态转移到核心态)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;各技术所解决的问题
-&lt;ul&gt;
-&lt;li&gt;脱机技术用于解决独占设备问题。&lt;/li&gt;
-&lt;li&gt;虚拟技术与交换技术以多道程序设计技术为前提。&lt;/li&gt;
-&lt;li&gt;多道程序设计技术由于同时在主存中运行多个程序，在一个程序等待时，可以去执行其他程序，因此提高了系统咨源的利用率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;引入多道程序后,程序的执行就失去了顺序性和封闭性,执行的程序是断续的&lt;/li&gt;
-&lt;li&gt;操作系统的基本主要类型:
-&lt;ul&gt;
-&lt;li&gt;批处理OS&lt;/li&gt;
-&lt;li&gt;分时OS&lt;/li&gt;
-&lt;li&gt;实时OS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;中断技术使得多道批处理系统和I/O设备可与CPU并行工作&lt;/li&gt;
-&lt;li&gt;实时系统的进度调度通常采用__抢占式的优先级高者优先__算法&lt;/li&gt;
-&lt;li&gt;实时OS的主要目标不包括__资源利用率__&lt;/li&gt;
-&lt;li&gt;分时OS的主要目标是__比较快速响应用户__&lt;/li&gt;
-&lt;li&gt;分时OS响应时间T≈QN,Q:时间片;N:用户数&lt;/li&gt;
-&lt;li&gt;批处理OS,分时OS,实时OS的各自特点
-&lt;ul&gt;
-&lt;li&gt;批处理操作系统的用户脱机使用计算机，作业是成批处理的，系统内多道程序并发执行，交互能力差。&lt;/li&gt;
-&lt;li&gt;分时操作系统可让多个用户同时使用计算机，人机交互性较强，具有每个用户独立使用计算机的独占性，系统响应及时&lt;/li&gt;
-&lt;li&gt;实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2中断等&#34;&gt;2.中断等&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;进程调度可以不需要硬件支持,而时钟管理,地址映射,中断系统都需要硬件的支持&lt;/li&gt;
-&lt;li&gt;用户态到核心态的转换由__硬件__完成&lt;/li&gt;
-&lt;li&gt;中断处理程序一般在核心态执行,因此无法完成&amp;quot;转换成核心态&amp;quot;这一任务&lt;/li&gt;
-&lt;li&gt;命令解释程序是运行在用户态的&lt;/li&gt;
-&lt;li&gt;注意区分在__用户态执行和发生的区别__
-&lt;ul&gt;
-&lt;li&gt;例如系统调用发生在用户态,而被调用程序在核心态下执行&lt;/li&gt;
-&lt;li&gt;外部中断是用户态到核心态的&amp;quot;门&amp;quot;,发生在用户态,但是在核心态完成中断过程&lt;/li&gt;
-&lt;li&gt;进程切换术语系统调用的执行过程中的事件,只能发生在核心态&lt;/li&gt;
-&lt;li&gt;缺页产生后,在用户态发生缺页中断,然后进入核心态执行缺页程序中断服务程序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;只能在核心态下执行的指令&lt;/strong&gt;(继续补充)
-&lt;ul&gt;
-&lt;li&gt;置时钟指令&lt;/li&gt;
-&lt;li&gt;广义指令&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不是只能在核心态下&amp;quot;执行&amp;quot;的指令&lt;/strong&gt;(继续补充)
-&lt;ul&gt;
-&lt;li&gt;读时钟指令&lt;/li&gt;
-&lt;li&gt;取数指令&lt;/li&gt;
-&lt;li&gt;寄存器清零&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;陷入指令是唯一一个只能在用户态下执行而不能在核心态下执行的指令&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;中断处理和子程序调用的区别(重要)
-&lt;ul&gt;
-&lt;li&gt;子程序调用只需保存程序断点，即该指令的下一条指令的地址；&lt;/li&gt;
-&lt;li&gt;中断调用子程序不仅要保存断点（PC的内容），还要保存程序状态字寄存器（PSW）的内容。在中断处理中，最重要的两个寄存器是PC和PSWR。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;关中断指令是权限非常大的指令,必须在核心态才能执行
-&lt;ul&gt;
-&lt;li&gt;trap指令,跳转指令,压栈指令均可在用户态下执行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;有关内部异常的叙述
-&lt;ul&gt;
-&lt;li&gt;内部异常的产生与当前执行指令相关&lt;/li&gt;
-&lt;li&gt;内部异常的检测由CPU内部逻辑实现&lt;/li&gt;
-&lt;li&gt;内部异常的响应发生在指令执行过程中
-&lt;ul&gt;
-&lt;li&gt;内中断是指来自CPU和内存内部产生的中断，包括程序运算引起的各种错误，如地址非法、校验错、页面失效、非法指令、用户程序执行特权指令自行中断（INT）和除数为零等，以上都是在指令的执行过程中产生的，因此A正确。这种检测异常的工作肯定是由CPU（包括控制器和运算器）实现的，因此B正确。内中断不能被屏蔽，一旦出现应立即处理，C正确。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;(&lt;strong&gt;错误&lt;/strong&gt;)内部异常处理后返回到发生异常的指令继续执行
-&lt;ul&gt;
-&lt;li&gt;考虑到特殊情况，如除数为零和自行中断（INT）都会自动跳过中断指令，所以不会返回到发生异常的指令继续执行，因此错误。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;注意狭义中断和广义中断
-&lt;ul&gt;
-&lt;li&gt;广义上,异常(内中断)和外部中断都叫&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;外部中断处理过程，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存。(重要)&lt;/li&gt;
-&lt;li&gt;MOV R0,addr:有可能出现缺页异常的可能&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行系统调用的过程如下&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;正在运行的进程先传递系统调用参数，然后由陷入（trap）指令负责将用户态转换为内核态，并将返回地址压入堆栈以备后用，接下来CPU执行相应的内核态服务程序，最后返回用户态。所以选项C正确。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。&lt;/li&gt;
-&lt;li&gt;不同的操作系统为应用程序提供的系统调用接口也不同&lt;/li&gt;
-&lt;li&gt;设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;区分执行态的主要目的是保护系统程序&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;用户态到核心态的转换发生在中断产生时，而核心态到用户态的转换则发生在中断返回用户程序时。&lt;/li&gt;
-&lt;li&gt;为什么说直到出现中断和通道技术之后,多道程序概念才变得有用?
-&lt;ul&gt;
-&lt;li&gt;多道程序并发执行是指有的程序正在CPU上执行，而另一些程序正在I/O设备上进行传输，即通过CPU操作与外设传输在时间上的重叠必须有中断和通道技术的支持，原因如下：&lt;br&gt;
-1）通道是一种控制一台或多台外部设备的硬件机构，它一旦被启动就独立于CPU运行，因而做到了输入/输出操作与CPU并行工作。但早期CPU与通道的联络方法是由CPU向通道发出询问指令来了解通道工作是否完成的。若未完成，则主机就循环询问直到通道工作结束为止。因此，这种询问方式是无法真正做到CPU与I/O设备并行工作的。&lt;br&gt;
-2）在硬件上引入了中断技术。所谓中断，就是在输入/输出结束时，或硬件发生某种故障时，由相应的硬件（即中断机构）向CPU发出信号，这时CPU立即停下工作而转向处理中断请求，待处理完中断后再继续原来的工作。&lt;br&gt;
-因此，通道技术和中断技术结合起来就可实现CPU与I/O设备并行工作，即CPU启动通道传输数据后便去执行其他程序的计算工作，而通道则进行输入/输出操作；当通道工作结束时，再通过中断机构向CPU发出中断请求，CPU则暂停正在执行的操作，对出现的中断进行处理，处理完后再继续原来的工作。这样，就真正做到了CPU与IVO设备并行工作。此时，多道程序的概念才变为现实。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;3本章疑难点&#34;&gt;3.本章疑难点&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;并行性与并发性的区别和联系&lt;br&gt;
-并行性和并发性是既相似又有区别的两个概念。并行性是指两个或多个事件在同一时刻发生，并发性是指两个或多个事件在同一时间间隔内发生。&lt;br&gt;
-在多道程序环境下，并发性是指在一段时间内，宏观上有多个程序同时运行，但在单处理器系统中每个时刻却仅能有一道程序执行，因此微观上这些程序只能分时地交替执行。若在计算机系统中有多个处理器，则这些可以并发执行的程序便被分配到多个处理器上，实现并行执行，即利用每个处理器来处理一个可并发执行的程序。&lt;/li&gt;
-&lt;li&gt;特权指令与非特权指令&lt;br&gt;
-所谓特权指令，是指有特殊权限的指令，由于这类指令的权限最大，使用不当将导致整个系统崩溃，如清内存、置时钟、分配系统资源、修改虚存的段表或页表、修改用户的访问权限等。若所有程序都能使用这些指令，则系统一天死机n次就不足为奇。为保证系统安全，这类指令只能用于操作系统或其他系统软件，不直接提供给用户使用。因此，特权指令必须在核心态执行。&lt;br&gt;
-实际上，CPU在核心态下可以执行指令系统的全集。形象地说，特权指令是那些儿童不宜的东西，而非特权指令是老少皆宜的东西。&lt;br&gt;
-为了防止用户程序中使用特权指令，用户态下只能使用非特权指令，核心态下可以使用全部指令。在用户态下使用特权指令时，将产生中断以阻止用户使用特权指令。所以把用户程序放在用户态下运行，而操作系统中必须使用特权指令的那部分程序在核心态下运行，保证了计算机系统的安全可靠。从用户态转换为核心态的唯一途径是中断或异常。&lt;/li&gt;
-&lt;li&gt;访管指令与访管中断&lt;br&gt;
-访管指令是一条可以在用户态下执行的指令。在用户程序中，因要求操作系统提供服务而有意识地使用访管指令，从而产生一个中断事件（自愿中断），将操作系统转换为核心态，称为访管中断。访管中断由访管指令产生，程序员使用访管指令向操作系统请求服务。&lt;br&gt;
-为什么要在程序中引入访管指令呢？这是因为用户程序只能在用户态下运行。若用户程序想要完成在用户态下无法完成的工作，该怎么办？解决这个问题要靠访管指令。访管指令本身不是特权指令，其基本功能是让程序拥有“自愿进管”的手段，从而引起访管中断。&lt;br&gt;
-处于用户态的用户程序使用访管指令时，系统根据访管指令的操作数执行访管中断处理程序，访管中断处理程序将按系统调用的操作数和参数转到相应的例行子程序。完成服务功能后，退出中断，返回到用户程序断点继续执行。&lt;/li&gt;
-&lt;/ol&gt;
-">第一章错题及重点问题整理</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-ji-suan-ji-xi-tong-yin-lun/"" data-c="
-          &lt;p&gt;&lt;strong&gt;考试内容&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;操作系统的概念,特征,功能和提供的方服务&lt;/li&gt;
-&lt;li&gt;操作系统的发展和分类&lt;/li&gt;
-&lt;li&gt;操作系统的运行环境
-&lt;ul&gt;
-&lt;li&gt;内核态与用户态&lt;/li&gt;
-&lt;li&gt;中断,异常&lt;/li&gt;
-&lt;li&gt;系统调用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;操作系统体系结构&lt;br&gt;
-&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.1.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;strong&gt;重点&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;通常选择题的形式&lt;/li&gt;
-&lt;li&gt;形成大体框架后,反复做题,完善知识体系&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;11-操作系统的基本概念&#34;&gt;1.1 操作系统的基本概念&lt;/h2&gt;
-&lt;h3 id=&#34;111-操作系统的目标和作用&#34;&gt;1.1.1 操作系统的目标和作用&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;目标
-&lt;ul&gt;
-&lt;li&gt;方便性
-&lt;ul&gt;
-&lt;li&gt;裸机运行程序很不方便,要用机器语言书写程序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;有效性
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;提高系统资源的利用率&lt;/strong&gt;:在早期未配置OS的计算机系统中，诸如处理机、I/O设备等都经常处于空闲状态，各种资源无法得到充分利用，所以在当时，提高系统资源利用率是推动OS发展最主要的动力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;提高系统的吞吐量&lt;/strong&gt;:OS可以通过合理地组织计算机的工作流程，加速程序的运行，缩短程序的运行周期，从而提高了系统的吞吐量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可扩充性
-&lt;ul&gt;
-&lt;li&gt;早期的无结构发展成模块化结构，进而又发展成层次化结构&lt;/li&gt;
-&lt;li&gt;近年来OS已广泛采用了__微内核结构__。微内核结构能方便地增添新的功能和模块，以及对原有的功能和模块进行修改，具有良好的可扩充性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开放性
-&lt;ul&gt;
-&lt;li&gt;所谓开放性，是指系统能遵循世界标准规范，特别是遵循开放系统互连OSI国际标准&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;作用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;OS作为用户与计算机硬件系统之间的接口&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.2.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;OS作为计算机系统资源的管理者
-&lt;ul&gt;
-&lt;li&gt;主要分为:处理机,存储器,I/O设备,文件(数据和程序)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OS实现了对计算机资源的抽象&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/OS1.3.png&#34; alt=&#34;1.3&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">第一章 计算机系统引论</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-xian-xing-biao/"" data-c="
-          &lt;p&gt;&lt;ul class=&#34;markdownIt-TOC&#34;&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#21-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E5%8F%8A%E6%93%8D%E4%BD%9C&#34;&gt;2.1 线性表相关概念及操作&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#211-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5&#34;&gt;2.1.1 线性表相关概念&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#212-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C&#34;&gt;2.1.2 线性表的基本操作&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#22-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA&#34;&gt;2.2 线性表的顺序表示&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#221-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89&#34;&gt;2.2.1 顺序表的定义&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#222-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E4%B8%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%9A%84%E5%AE%9E%E7%8E%B0&#34;&gt;2.2.2 顺序表上基本操作的实现&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-(目录)&lt;br&gt;
-&lt;strong&gt;考点&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;线性表的定义和基本操作&lt;/li&gt;
-&lt;li&gt;线性表的实现
-&lt;ul&gt;
-&lt;li&gt;顺序存储&lt;/li&gt;
-&lt;li&gt;链式存储&lt;/li&gt;
-&lt;li&gt;线性表的应用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS2.1&#34; alt=&#34;2.1&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;strong&gt;重点&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;考研命题重点&lt;/li&gt;
-&lt;li&gt;代码量少,但是性能要求极高(时间,空间复杂度)&lt;/li&gt;
-&lt;li&gt;基于两种存储结构的各种基本操作&lt;/li&gt;
-&lt;li&gt;可执行性不强求(那肯定语法正确更好),但须尽量表达出算法的思想和步骤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;21-线性表相关概念及操作&#34;&gt;2.1 线性表相关概念及操作&lt;/h2&gt;
-&lt;h3 id=&#34;211-线性表相关概念&#34;&gt;2.1.1 线性表相关概念&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;线性结构的特点,在数据元素的非空有限集中:
-&lt;ul&gt;
-&lt;li&gt;存在惟一的一个被称做“第一个”的数据元素&lt;/li&gt;
-&lt;li&gt;存在惟一的一个被称做“最后一个”的数据元素&lt;/li&gt;
-&lt;li&gt;除第一个之外，集合中的每个数据元素均只有一个前驱&lt;/li&gt;
-&lt;li&gt;除最后一个之外，集合中每个数据元素均只有一个后继。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;线性表的定义&lt;br&gt;
-线性表是具有相同数据类型的n(n≥0)个数据元素的__有限序列__，其中__n为表长，当n=0时线性表是一个空表__。若用L命名线性表，则其一般表示为:&lt;center&gt;L=(a&lt;sub&gt;1&lt;/sub&gt;,a&lt;sub&gt;2&lt;/sub&gt;,...,a&lt;sub&gt;i+1&lt;/sub&gt;,...,a&lt;sub&gt;n&lt;/sub&gt;)&lt;/center&gt;式中:
-&lt;ul&gt;
-&lt;li&gt;a&lt;sub&gt;1&lt;/sub&gt;是唯一的“第一个”数据元素，又称表头元素；&lt;/li&gt;
-&lt;li&gt;a&lt;sub&gt;n&lt;/sub&gt;是唯一的“最后一个”数据元素，又称表尾元素。&lt;/li&gt;
-&lt;li&gt;除第一个元素外，每个元素有且仅有一个直接前驱。&lt;/li&gt;
-&lt;li&gt;除最后一个元素外，每个元素有且仅有一个直接后继。&lt;br&gt;
-以上就是线性表的逻辑特性，这种线性有序的逻辑结构正是线性表名字的由来。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;线性表的特点:
-&lt;ul&gt;
-&lt;li&gt;表中元素的__个数有限__。&lt;/li&gt;
-&lt;li&gt;表中元素具有逻辑上的__顺序性__，表中元素有其先后次序。&lt;/li&gt;
-&lt;li&gt;表中元素都是数据元素，每个元素都是单个元素。&lt;/li&gt;
-&lt;li&gt;表中元素的数据类型都相同，这意味着__每个元素占有相同大小的存储空间__。&lt;/li&gt;
-&lt;li&gt;表中元素具有抽象性，即仅讨论元素间的逻辑关系，而不考虑元素究竟表示什么内容。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;注意点
-&lt;ul&gt;
-&lt;li&gt;线性表是一种逻辑结构，表示元素之间一对一的相邻关系。&lt;/li&gt;
-&lt;li&gt;顺序表和链表是指存储结构，两者属于不同层面的概念，因此不要将其混淆。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;212-线性表的基本操作&#34;&gt;2.1.2 线性表的基本操作&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;一个数据结构的基本操作是指其最核心、最基本的操作。其他较复杂的操作可通过调用其基本操作来实现。线性表的主要操作如下:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;InitList(&amp;amp;L):初始化表。构造一个空的线性表。
-Length(L):求表长。返回线性表L的长度，即L中数据元素的个数。
-LocateElem(L，e):按值查找操作。在表L中查找具有给定关键字值的元素。返回i,无返回0(咱-1)
-GetElem(L，i):按位查找操作。获取表工中第i个位置的元素的值。
-ListInsert(&amp;amp;L，i，e):插入操作。在表L中的第i个位置上插入指定元素e。
-Listpelete(&amp;amp;L，i，&amp;amp;e):删除操作。删除表工中第i个位置的元素，并用e返回删除元素的值。
-PrintList(L):输出操作。按前后顺序输出线性表L的所有元素值。
-Empty(L):判空操作。若L为空表，则返回true，否则返回false。
-DestroyList(&amp;amp;L):销毁操作。销毁线性表，并释放线性表工所占用的内存空间。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;注意:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;基本操作的__实现取决于采用哪种存储结构__，存储结构不同，算法的实现也不同。&lt;/li&gt;
-&lt;li&gt;&amp;quot;&amp;amp;&amp;quot;表示C++中的引用调用。若传入的变量是指针型变量，且在函数体内要对传入的指针进行改变，则会用到指针变量的引用型。在C中采用指针的指针也可达到同样的效果。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;22-线性表的顺序表示&#34;&gt;2.2 线性表的顺序表示&lt;/h2&gt;
-&lt;h3 id=&#34;221-顺序表的定义&#34;&gt;2.2.1 顺序表的定义&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;线性表的顺序表示是指用一组地址连续的存储单元依次存储线性表中数据元素,使得逻辑上相邻的两个元素在物理位置上也相邻.
-&lt;ul&gt;
-&lt;li&gt;线性表的顺序存储又称__顺序表__&lt;/li&gt;
-&lt;li&gt;第1个元素存储在线性表的起始位置,也叫__基地址__&lt;/li&gt;
-&lt;li&gt;第i个元素的存储位置后面紧接着存储的是第i+1个元素，称i为元素a&lt;sub&gt;i&lt;/sub&gt;在线性表中的位序。假设线性表L存储的起始位置为LOC(A)，sizeof(ElemType)是每个数据元素所占用存储空间的大小，则表L所对应的顺序存储如图;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS2.2&#34; alt=&#34;2.2&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;线性表的这种机内表示称作__线性表的顺序存储结构或顺序映像__&lt;/li&gt;
-&lt;li&gt;顺序表的特点是表中元素的逻辑顺序与其物理顺序相同&lt;/li&gt;
-&lt;li&gt;线性表中元素的位序是从1开始的,而数组中的元素的下标是从0开始的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;顺序表的描述&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;假定线性表的元素类型为ElemType，则线性表的顺序存储类型描述为(静态)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;#define MaxSize50//定义线性表的最大长度
-typedef struct{
-    ElemType data[MaxSize]；//顺序表的元素
-    int length；/顺序表的当前长度
-}SqList;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;一维数组可以是静态分配的，也可以是动态分配的。
-&lt;ul&gt;
-&lt;li&gt;在静态分配时，由于数组的大小和空间事先已经固定，一旦空间占满，再加入新的数据将会产生溢出，进而导致程序崩溃。而在动态分配时，存储数组的空间是在程序执行过程中通过动态存储分配语句分配的，一旦数据空间占满，就另外开辟一块更大的存储空间，用以替换原来的存储空间，从而达到扩充存储数组空间的目的，而不需要为线性表一次性地划分所有空间。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;#define InitSize 100//表长度的初始定义
-typedef struct{
-    Elemrype*data；//指示动态分配数组的指针
-    int MaxSize，length；//数组的最大容量和当前个数
-}SeqList；/动态分配数组顺序表的类型定义
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;    * C的初始动态分配语句:
-    L.data=(ElemType*)malloc(sizeof(ElemType)*InitSize);
-    * C++的初始动态分配语句
-    L.data=newElemType(InitSize);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;由于高级程序语言中的数组类型也有随机存取的特性,因此通常用数组来描述数据结构中的顺序存储结构&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;注意：动态分配并不是链式存储&lt;/strong&gt;，它同样属于顺序存储结构，物理结构没有变化，依然是随机存取方式，只是分配的空间大小可以在运行时决定。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;总结&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;顺序表最主要的特点是随机访问，即通过首地址和元素序号可在时间O(1)内找到指定的元素。&lt;/li&gt;
-&lt;li&gt;顺序表的存储密度高，每个结点只存储数据元素。&lt;/li&gt;
-&lt;li&gt;顺序表逻辑上相邻的元素物理上也相邻，所以插入和删除操作需要移动大量元素。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;222-顺序表上基本操作的实现&#34;&gt;2.2.2 顺序表上基本操作的实现&lt;/h3&gt;
-">第二章 线性表</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/"" data-c="
-          &lt;p&gt;&lt;ul class=&#34;markdownIt-TOC&#34;&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%92%8C%E4%BD%9C%E8%80%85%E6%80%81%E5%BA%A6%E7%9B%B8%E5%85%B3%E7%9A%84%E8%AF%8D&#34;&gt;和作者态度相关的词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%81%8C%E7%A7%B0%E7%A7%B0%E8%B0%93%E7%9B%B8%E5%85%B3%E7%9A%84%E5%8D%95%E8%AF%8D&#34;&gt;职称,称谓相关的单词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%BA%AB%E4%BD%93%E9%83%A8%E4%BD%8D%E7%9A%84&#34;&gt;身体部位的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%A7%A3%E9%9B%87&#34;&gt;解雇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B8%A6%E6%9C%89%E5%88%A0%E9%99%A4%E5%BF%BD%E7%95%A5%E7%95%A5%E5%8E%BB%E6%8E%92%E9%99%A4%E6%84%8F%E5%91%B3%E7%9A%84%E8%AF%8D&#34;&gt;带有删除,忽略,略去,排除意味的词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B8%A6%E6%9C%89%E5%8C%85%E5%90%AB%E6%84%8F%E5%91%B3%E7%9A%84%E8%AF%8D&#34;&gt;带有包含意味的词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B8%A6%E6%9C%89%E6%83%B3%E8%B1%A1%E5%B9%BB%E6%83%B3%E6%84%8F%E5%91%B3%E7%9A%84&#34;&gt;带有想象,幻想意味的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%B7%9F%E9%92%B1%E6%9C%89%E5%85%B3&#34;&gt;跟钱有关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%B7%9F%E6%94%BF%E6%B2%BB%E6%94%BF%E5%BA%9C%E6%9C%89%E5%85%B3&#34;&gt;跟政治,政府有关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%B3%95%E5%BE%8B%E7%8A%AF%E7%BD%AA%E4%B9%8B%E7%B1%BB%E7%9A%84&#34;&gt;法律犯罪之类的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%8E%A2%E7%B4%A2%E8%BF%BD%E6%B1%82%E4%B9%8B%E7%B1%BB%E7%9A%84&#34;&gt;探索追求之类的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%8C%85%E8%A3%B9%E7%9B%B8%E5%85%B3&#34;&gt;包裹相关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%A1%A5%E4%B8%81%E7%A2%8E%E7%89%87%E5%9E%83%E5%9C%BE%E7%9B%B8%E5%85%B3&#34;&gt;补丁,碎片,垃圾相关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%92%8C%E6%95%B0%E9%87%8F%E7%9B%B8%E5%85%B3&#34;&gt;和数量相关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E4%B8%80%E4%BA%9B%E6%84%8F%E6%80%9D%E5%A4%AA%E5%A4%9A%E4%BD%86%E6%98%AF%E8%A1%A8%E7%A4%BA%E5%BE%88%E7%89%9B%E6%89%B9%E7%9A%84%E9%82%A3%E7%A7%8D%E6%84%8F%E6%80%9D&#34;&gt;一些意思太多,但是表示很牛批的那种意思&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E9%9B%84%E8%BE%A9%E7%9A%84%E6%9C%89%E8%AF%B4%E6%9C%8D%E5%8A%9B%E7%9A%84&#34;&gt;雄辩的,有说服力的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%96%98%E6%81%AF%E5%96%98%E6%B0%94%E6%B0%94%E5%96%98%E5%90%81%E5%90%81%E5%9C%B0%E8%AF%B4&#34;&gt;喘息,喘气,气喘吁吁地说&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%A1%A8%E6%98%8E%E8%AF%81%E6%98%8E&#34;&gt;表明证明&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%89%BF%E8%AE%A4&#34;&gt;承认&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%9B%B8%E5%85%B3%E6%80%A7%E7%9A%84%E6%9C%89%E5%85%B3%E8%81%94%E9%82%A3%E7%A7%8D%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8D%95%E8%AF%8D&#34;&gt;相关性的,有关联那种意思的一些单词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%BC%80%E5%A7%8B%E7%9D%80%E6%89%8B%E5%81%9A&#34;&gt;开始,着手做&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%81%B0%E5%BD%93%E7%9A%84%E5%90%88%E9%80%82%E7%9A%84&#34;&gt;恰当的,合适的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%B6%B3%E5%A4%9F%E7%9A%84%E9%82%A3%E7%A7%8D%E6%84%8F%E6%80%9D%E6%80%BB%E6%98%AF%E5%92%8C%E6%81%B0%E5%BD%93%E8%AE%B0%E6%B7%B7&#34;&gt;足够的那种意思(总是和恰当记混)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%8A%93%E4%BD%8F%E5%A4%84%E7%90%86%E8%A7%A3%E5%86%B3&#34;&gt;抓住,处理,解决&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%9B%BD%E4%BC%9A%E8%AE%AE%E4%BC%9A%E4%BB%A3%E8%A1%A8%E5%A4%A7%E4%BC%9A&#34;&gt;国会,议会,代表大会&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%90%86%E4%BA%8B%E4%BC%9A%E5%A7%94%E5%91%98%E4%BC%9A%E7%AD%89&#34;&gt;理事会,委员会等&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%89%A7%E8%8D%89%E5%9C%B0%E7%89%A7%E5%9C%BA&#34;&gt;牧草地,牧场&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E4%BD%BF%E7%96%B2%E5%8A%B3&#34;&gt;(使)疲劳&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%A6%A8%E7%A2%8D%E9%98%BB%E7%A2%8D&#34;&gt;妨碍,阻碍&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%89%A9%E5%A4%A7%E5%A2%9E%E5%A4%A7&#34;&gt;扩大,增大&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B7%A8%E5%A4%A7%E7%9A%84&#34;&gt;巨大的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%8F%A4%E6%80%AA%E7%9A%84&#34;&gt;古怪的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%90%8C%E6%84%8F%E8%B5%9E%E6%88%90%E7%AD%94%E5%BA%94&#34;&gt;同意赞成答应&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%98%BE%E7%9C%BC%E7%9A%84%E6%98%8E%E6%98%BE%E7%9A%84&#34;&gt;显眼的,明显的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%A1%A8%E7%A4%BA%E9%87%8D%E8%A6%81%E6%80%A7%E7%9A%84%E4%B8%80%E7%B1%BB%E8%AF%8D&#34;&gt;表示重要性的一类词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%90%88%E5%90%8C%E5%A5%91%E7%BA%A6%E6%9D%A1%E7%BA%A6%E5%85%AC%E7%BA%A6&#34;&gt;合同,契约,条约,公约&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%AD%96%E5%88%92%E5%9B%BE%E8%B0%8B&#34;&gt;策划,图谋&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%87%A0%E4%B8%AA%E8%A1%A8%E7%A4%BA%E6%99%AE%E9%80%9A%E6%AD%A3%E5%B8%B8%E7%9A%84%E5%8D%95%E8%AF%8D%E7%9A%84%E5%8C%BA%E5%88%AB&#34;&gt;几个表示普通正常的单词的区别&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%BD%BB%E8%A7%86%E8%94%91%E8%A7%86%E7%9E%A7%E4%B8%8D%E8%B5%B7&#34;&gt;轻视蔑视瞧不起&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%BC%BA%E7%82%B9%E4%B8%8D%E8%B6%B3&#34;&gt;缺点,不足&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%8E%A8%E5%8A%A8%E4%BF%83%E8%BF%9B&#34;&gt;推动促进&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%B1%87%E9%9B%86%E8%81%9A%E9%9B%86&#34;&gt;汇集聚集&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E4%BA%B2%E5%88%87%E8%AF%9Axx%E4%B9%8B%E7%B1%BB%E7%9A%84&#34;&gt;亲切,诚XX之类的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B8%A6%E6%9C%89%E5%BE%AE%E5%BC%B1%E6%9C%A6%E8%83%A7%E6%99%A6%E6%B6%A9%E8%BF%99%E7%A7%8D%E5%90%AB%E4%B9%89%E7%9A%84&#34;&gt;带有微弱,朦胧,晦涩这种含义的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%B0%BC%E7%8E%9B%E6%80%BB%E6%98%AF%E5%BF%98%E6%8E%89%E7%9A%84%E4%B8%80%E4%BA%9B&#34;&gt;尼玛总是忘掉的一些&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E4%BA%A4%E9%80%9A%E5%B7%A5%E5%85%B7&#34;&gt;交通工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E8%B7%9F%E8%8D%AF%E5%93%81%E5%8C%BB%E5%AD%A6%E6%9C%89%E5%85%B3%E7%9A%84%E8%AF%8D%E6%B1%87%E4%BB%8A%E5%B9%B4%E6%9C%89%E5%8F%AF%E8%83%BD%E8%80%83%E5%88%B0&#34;&gt;跟药品.医学有关的词汇(今年有可能考到)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3&#34;&gt;时间相关&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%8C%96%E5%B7%A5%E7%89%A9%E7%90%86%E7%A7%91%E6%8A%80&#34;&gt;化工,物理,科技&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%87%A0%E4%B8%AAp%E5%BC%80%E5%A4%B4%E7%9A%84%E6%80%BB%E6%B7%B7%E6%B7%86%E7%9A%84%E5%8D%95%E8%AF%8D&#34;&gt;几个P开头的总混淆的单词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E8%AF%8D%E6%B1%87&#34;&gt;数学,计算机相关词汇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E7%8E%8B%E5%9B%BD%E4%B9%8B%E7%B1%BB%E7%9A%84&#34;&gt;王国之类的&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%AD%A6%E7%A7%91&#34;&gt;学科&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E4%B8%8D%E5%B8%B8%E8%A7%81%E5%8A%A8%E7%89%A9%E5%8D%95%E8%AF%8D&#34;&gt;不常见动物单词&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%81%9A%E9%A2%98%E7%A7%AF%E7%B4%AF%E8%AF%8D%E6%B1%87&#34;&gt;做题积累词汇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E9%98%85%E8%AF%BB%E6%80%9D%E8%B7%AF&#34;&gt;阅读思路&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#%E5%8A%A8%E8%AF%8D%E7%9A%84%E6%84%8F%E6%80%9D%E4%B8%AD%E7%B1%BB%E4%BC%BC%E4%BD%BFxx%E8%A7%A3%E9%87%8A&#34;&gt;动词的意思中类似**(使)XX**解释&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;和作者态度相关的词&#34;&gt;和作者态度相关的词&lt;/h2&gt;
-&lt;p&gt;indifferent:漠不关心的&lt;br&gt;
-positive:积极的&lt;br&gt;
-negative:消极的,肯定的&lt;br&gt;
-permissive:放任&lt;br&gt;
-scornful:蔑视&lt;br&gt;
-critical:批评&lt;br&gt;
-biased:片面的&lt;br&gt;
-pessimistic:悲观的&lt;br&gt;
-desperate:绝望的&lt;br&gt;
-conceited:自负的&lt;/p&gt;
-&lt;h2 id=&#34;职称称谓相关的单词&#34;&gt;职称,称谓相关的单词&lt;/h2&gt;
-&lt;p&gt;dean:(大学)院长,主持牧师,(基督)教长&lt;br&gt;
-mayor:市长&lt;br&gt;
-juvenile:青少年,少年读物;a.青少年的,幼稚的&lt;br&gt;
-landlady:女房东,女地主&lt;br&gt;
-landlord:男房东,男地主&lt;br&gt;
-tenant:承租人,房客,佃[diàn]户;vt.租赁,承租&lt;br&gt;
-vegetarian:素食主义者&lt;br&gt;
-magistrate:(地方)行政官,法官,治安官&lt;br&gt;
-executive:主管,领导,管理层&lt;br&gt;
-outside director:外部董事&lt;br&gt;
-dealer:商人&lt;br&gt;
-lad:小伙子,男孩&lt;br&gt;
-skipper:机长&lt;br&gt;
-cheerleader:啦啦队长,(强有力的)支持者&lt;br&gt;
-celebrity:名人,知名人士,名流&lt;br&gt;
-executive:主管&lt;br&gt;
-secretary of state:(美国)国务卿,(英国)部长&lt;br&gt;
-correspondent:记者,通讯员&lt;/p&gt;
-&lt;h2 id=&#34;身体部位的&#34;&gt;身体部位的&lt;/h2&gt;
-&lt;p&gt;jaw:颚,颌&lt;br&gt;
-nail:指甲,爪,钉;vt.将...钉住&lt;br&gt;
-waist:腰部&lt;br&gt;
-belly:肚子,腹部&lt;br&gt;
-elbow:肘,(衣服)肘部&lt;/p&gt;
-&lt;h2 id=&#34;解雇&#34;&gt;解雇&lt;/h2&gt;
-&lt;p&gt;sack:vt.解雇;n.袋,包,麻袋&lt;br&gt;
-axe:vt.解雇,用斧头砍;n.斧子&lt;br&gt;
-layoff:n.临时解雇,操作停止,活动停止期间,停业期&lt;/p&gt;
-&lt;h2 id=&#34;带有删除忽略略去排除意味的词&#34;&gt;带有删除,忽略,略去,排除意味的词&lt;/h2&gt;
-&lt;p&gt;omit:vt.省略,删去,遗漏疏忽&lt;br&gt;
-negligible:忽略的,微不足道的&lt;br&gt;
-eliminate:vt.删去,淘汰,(排/删/消)除,消减(人员)&lt;/p&gt;
-&lt;h2 id=&#34;带有包含意味的词&#34;&gt;带有包含意味的词&lt;/h2&gt;
-&lt;p&gt;embrace:拥抱,包含,包围,环绕,采用,接受&lt;/p&gt;
-&lt;h2 id=&#34;带有想象幻想意味的&#34;&gt;带有想象,幻想意味的&lt;/h2&gt;
-&lt;p&gt;fancy:n.爱好,迷恋;vt想像幻想;a.花式的,奇特的&lt;br&gt;
-fairy:幻想中,虚构,优雅的;n.仙女精灵&lt;br&gt;
-illusion:幻想,错误观念,错觉,幻觉,假象&lt;/p&gt;
-&lt;h2 id=&#34;跟钱有关&#34;&gt;跟钱有关&lt;/h2&gt;
-&lt;p&gt;bankrupt:破产的,使破产,破产者&lt;br&gt;
-fare:车费船费,伙食,乘客,vi.过活,进展,经营&lt;br&gt;
-margin:利润,盈余&lt;br&gt;
-profit margins:利润空间&lt;br&gt;
-revenue:n.总收入&lt;br&gt;
-proportion:比,比率,比例&lt;br&gt;
-devaluation:(货币)贬值&lt;br&gt;
-fiscal:财政上的&lt;br&gt;
-redistribution:(尤指钱或土地的)重新分配&lt;br&gt;
-corporate-tax rates:企业税率&lt;br&gt;
-labour costs:劳动力成本&lt;br&gt;
-sponsorship赞助者的地位,赞助行为,资助行为&lt;br&gt;
-outlet:经销店,廉价经销店&lt;br&gt;
-billboard:广告牌,告示牌&lt;br&gt;
-product placement:产品置入,植入式广告&lt;br&gt;
-commodity:商品&lt;br&gt;
-impoverished:贫困的&lt;br&gt;
-across-the-board:一刀切的&lt;br&gt;
-thorny:棘手的&lt;br&gt;
-look into:调查&lt;br&gt;
-put on hold:搁置,暂缓实施&lt;br&gt;
-interpretation:解读&lt;/p&gt;
-&lt;h2 id=&#34;跟政治政府有关&#34;&gt;跟政治,政府有关&lt;/h2&gt;
-&lt;p&gt;elect:选举推选,选择,做出选择&lt;br&gt;
-parade:n.游行,检阅;vi.参加游行,炫耀;vt.使参加游行,绕行&lt;br&gt;
-rebellion:n.叛乱反抗,起义&lt;br&gt;
-defy:(公然)违抗,反抗,蔑视&lt;br&gt;
-bureau:局,处,科,办事处&lt;br&gt;
-ministerial:内阁的,部长的,行政(上)的&lt;br&gt;
-working class:工人阶级,劳动阶级&lt;br&gt;
-military adventurism:军事冒险主义&lt;br&gt;
-Nazi reign of murder:纳粹杀戮统治&lt;/p&gt;
-&lt;h2 id=&#34;法律犯罪之类的&#34;&gt;法律犯罪之类的&lt;/h2&gt;
-&lt;p&gt;bail:保释,离开,三柱门上的横木&lt;br&gt;
-jury:陪审团&lt;br&gt;
-judical:司法的,法庭的,公正的,审判的&lt;br&gt;
-convict:vt.证明..有罪,判..有罪;n.囚犯&lt;br&gt;
-conviction:n.深信,确信,定罪&lt;br&gt;
-counsel:n.法律顾问,辩护人,劝告忠告;v.劝告,忠告&lt;br&gt;
-defendant:被告人&lt;br&gt;
-culprit:犯人,肇事者&lt;/p&gt;
-&lt;h2 id=&#34;探索追求之类的&#34;&gt;探索追求之类的&lt;/h2&gt;
-&lt;p&gt;quest:探寻探求追求&lt;br&gt;
-rake:耙子;v.耙,搜索,探索&lt;/p&gt;
-&lt;h2 id=&#34;包裹相关&#34;&gt;包裹相关&lt;/h2&gt;
-&lt;p&gt;packet:小包裹,小梱,一扎,邮船,班轮&lt;br&gt;
-parcel:n.包裹,邮包,部分;vt.打包,捆扎,分配&lt;/p&gt;
-&lt;h2 id=&#34;补丁碎片垃圾相关&#34;&gt;补丁,碎片,垃圾相关&lt;/h2&gt;
-&lt;p&gt;rag:抹布,破布,碎布&lt;br&gt;
-junk:废物&lt;/p&gt;
-&lt;h2 id=&#34;和数量相关&#34;&gt;和数量相关&lt;/h2&gt;
-&lt;p&gt;gang:n.一群一伙一帮&lt;br&gt;
-batch:n.一批一组一群&lt;/p&gt;
-&lt;h2 id=&#34;一些意思太多但是表示很牛批的那种意思&#34;&gt;一些意思太多,但是表示很牛批的那种意思&lt;/h2&gt;
-&lt;p&gt;marve(l)lous:惊人的,奇迹般的,妙极的&lt;br&gt;
-fabulous:极好的,极为巨大的,寓言中的,传说中的&lt;br&gt;
-magnificent:华丽的,高尚的,雄伟的&lt;br&gt;
-immense:&amp;lt;口&amp;gt;极好的,广大的,巨大的&lt;br&gt;
-terrific:极好的,非常的,极度的&lt;br&gt;
-mega:,巨大的,极佳的&lt;/p&gt;
-&lt;h2 id=&#34;雄辩的有说服力的&#34;&gt;雄辩的,有说服力的&lt;/h2&gt;
-&lt;p&gt;eloquent&lt;br&gt;
-lame:辩解论据&lt;strong&gt;无&lt;/strong&gt;说服力的,跛的&lt;/p&gt;
-&lt;h2 id=&#34;喘息喘气气喘吁吁地说&#34;&gt;喘息,喘气,气喘吁吁地说&lt;/h2&gt;
-&lt;p&gt;gasp&lt;br&gt;
-pant&lt;/p&gt;
-&lt;h2 id=&#34;表明证明&#34;&gt;表明证明&lt;/h2&gt;
-&lt;p&gt;manifest:表明证明显示,明白的,显然的&lt;br&gt;
-testimony:证据,证词;表明,说明&lt;br&gt;
-testify:v.作证,证明;(to)表明,说明&lt;br&gt;
-warrant:正当理由,许可证,委任状;v.保证,担保&lt;/p&gt;
-&lt;h2 id=&#34;承认&#34;&gt;承认&lt;/h2&gt;
-&lt;p&gt;acknowledge&lt;br&gt;
-admit&lt;/p&gt;
-&lt;h2 id=&#34;相关性的有关联那种意思的一些单词&#34;&gt;相关性的,有关联那种意思的一些单词&lt;/h2&gt;
-&lt;p&gt;correlate:相互关联的事物;v.(~ with/to)(使)互相关联&lt;br&gt;
-coordinate:同等的,同等物,坐标(|neit|其余发音都是|nət|);vt.协作,协调&lt;br&gt;
-identical:(~to/with)同一的,同样的&lt;/p&gt;
-&lt;h2 id=&#34;开始着手做&#34;&gt;开始,着手做&lt;/h2&gt;
-&lt;p&gt;embark:另:上船(车飞机等)&lt;br&gt;
-wage:vt.进行,开展;n.工资&lt;/p&gt;
-&lt;h2 id=&#34;恰当的合适的&#34;&gt;恰当的,合适的&lt;/h2&gt;
-&lt;h2 id=&#34;足够的那种意思总是和恰当记混&#34;&gt;足够的那种意思(总是和恰当记混)&lt;/h2&gt;
-&lt;p&gt;abundant:丰富的,大量的&lt;br&gt;
-adequate:足够的,合乎需要的&lt;/p&gt;
-&lt;h2 id=&#34;抓住处理解决&#34;&gt;抓住,处理,解决&lt;/h2&gt;
-&lt;p&gt;tackle&lt;br&gt;
-adress oneself to :致力于,处理&lt;br&gt;
-address:(着手)处理解决(问题),向...讲话,用..称呼(某人),~ sth to对...提出sth&lt;/p&gt;
-&lt;h2 id=&#34;国会议会代表大会&#34;&gt;国会,议会,代表大会&lt;/h2&gt;
-&lt;p&gt;congress&lt;br&gt;
-parliament&lt;/p&gt;
-&lt;h2 id=&#34;理事会委员会等&#34;&gt;理事会,委员会等&lt;/h2&gt;
-&lt;p&gt;council&lt;br&gt;
-board:除了板,登船车啥的,还有:(公司或其他机构的)董事会，委员会，理事会&lt;/p&gt;
-&lt;h2 id=&#34;牧草地牧场&#34;&gt;牧草地,牧场&lt;/h2&gt;
-&lt;p&gt;meadow&lt;br&gt;
-pasture&lt;/p&gt;
-&lt;h2 id=&#34;使疲劳&#34;&gt;(使)疲劳&lt;/h2&gt;
-&lt;p&gt;fatigue:v/n(使)疲劳&lt;br&gt;
-weary:疲倦的,令人厌烦的,v.使疲倦,使厌倦&lt;br&gt;
-feeble:虚弱的,无力的&lt;/p&gt;
-&lt;h2 id=&#34;妨碍阻碍&#34;&gt;妨碍,阻碍&lt;/h2&gt;
-&lt;p&gt;hinder&lt;br&gt;
-hamper&lt;br&gt;
-handicap:另:(身体或智力)缺陷,不利条件&lt;/p&gt;
-&lt;h2 id=&#34;扩大增大&#34;&gt;扩大,增大&lt;/h2&gt;
-&lt;p&gt;magnify:扩大,增大,夸张,夸大,n.magnitude:大小数量巨大广大&lt;/p&gt;
-&lt;h2 id=&#34;巨大的&#34;&gt;巨大的&lt;/h2&gt;
-&lt;p&gt;enormous&lt;br&gt;
-immense&lt;br&gt;
-giant:巨大,巨大的&lt;/p&gt;
-&lt;h2 id=&#34;古怪的&#34;&gt;古怪的&lt;/h2&gt;
-&lt;p&gt;eccentric:另:怪癖的,异乎寻常的,n:古怪的人&lt;br&gt;
-peculiar:古怪异常,特殊,特有的&lt;/p&gt;
-&lt;h2 id=&#34;同意赞成答应&#34;&gt;同意赞成答应&lt;/h2&gt;
-&lt;p&gt;consent:~ to&lt;br&gt;
-consensus:(意见等)一致,一致同意,共识&lt;br&gt;
-unanimous:全体一致的,一致同意的&lt;br&gt;
-sanction:n/v.批准同意支持认可;n.处罚制裁&lt;/p&gt;
-&lt;h2 id=&#34;显眼的明显的&#34;&gt;显眼的,明显的&lt;/h2&gt;
-&lt;p&gt;conspicuous&lt;/p&gt;
-&lt;h2 id=&#34;表示重要性的一类词&#34;&gt;表示重要性的一类词&lt;/h2&gt;
-&lt;p&gt;salient:显著的,突出的,重要的&lt;/p&gt;
-&lt;h2 id=&#34;合同契约条约公约&#34;&gt;合同,契约,条约,公约&lt;/h2&gt;
-&lt;p&gt;packt&lt;br&gt;
-contract:合同契约,v.订合同,(使)缩小&lt;/p&gt;
-&lt;h2 id=&#34;策划图谋&#34;&gt;策划,图谋&lt;/h2&gt;
-&lt;p&gt;hatch:另:v.孵化孵出,n.舱口,小门&lt;br&gt;
-conspiracy:阴谋密谋共谋&lt;br&gt;
-contemplate:盘算,计议,注视,周密考虑&lt;br&gt;
-contrive:谋划策划,设计&lt;br&gt;
-scenario:n.设想,(行动的)方案,预测,剧情梗概&lt;br&gt;
-maneuvel:n.策略花招;n/v.机动,操作,操纵;&lt;br&gt;
-tactic(s):策略战术&lt;br&gt;
-scheme:计划,方案,阴谋,配置;v.计划,策划,阴谋&lt;/p&gt;
-&lt;h2 id=&#34;几个表示普通正常的单词的区别&#34;&gt;几个表示普通正常的单词的区别&lt;/h2&gt;
-&lt;p&gt;normal:正常的 反义,不正常,变态&lt;br&gt;
-formal:正式的 比如正式的会议,正式的演讲稿（不是临时的,随便的）&lt;br&gt;
-average:普通的 ,人均的 ,平均（水平,数）的&lt;br&gt;
-common:普通的 ,共同的（强调普通性）&lt;br&gt;
-ordinary 普通的&lt;br&gt;
-average ,common,ordinary 都只普通的,平均水平的,不异于人的,后两者意思更接近&lt;br&gt;
-plain:平平的,朴素的&lt;/p&gt;
-&lt;h2 id=&#34;轻视蔑视瞧不起&#34;&gt;轻视蔑视瞧不起&lt;/h2&gt;
-&lt;p&gt;contempt&lt;/p&gt;
-&lt;h2 id=&#34;缺点不足&#34;&gt;缺点,不足&lt;/h2&gt;
-&lt;p&gt;deficiency:n.缺乏不足,缺点缺陷&lt;br&gt;
-defect:过失,缺点,不足&lt;/p&gt;
-&lt;h2 id=&#34;推动促进&#34;&gt;推动促进&lt;/h2&gt;
-&lt;p&gt;impetus:n.推动(力),促进&lt;br&gt;
-impulse:n/v推动,冲动;n.刺激&lt;/p&gt;
-&lt;h2 id=&#34;汇集聚集&#34;&gt;汇集聚集&lt;/h2&gt;
-&lt;p&gt;gather:聚集,推测推断&lt;br&gt;
-converge:另:会于一点&lt;br&gt;
-rally:v.恢复重整振作;n.聚集,集会,大会,拉力赛&lt;/p&gt;
-&lt;h2 id=&#34;亲切诚xx之类的&#34;&gt;亲切,诚XX之类的&lt;/h2&gt;
-&lt;p&gt;cordial:诚恳,亲切,热诚的&lt;br&gt;
-zeal:热情,热心,热忱&lt;br&gt;
-upright:诚实的,垂直的,正直的;ad.竖立着的&lt;br&gt;
-benign:仁慈和蔼的;良性的(病)&lt;br&gt;
-beloved:受爱戴的,敬爱的,爱人&lt;/p&gt;
-&lt;h2 id=&#34;带有微弱朦胧晦涩这种含义的&#34;&gt;带有微弱,朦胧,晦涩这种含义的&lt;/h2&gt;
-&lt;p&gt;faint:a.微弱,不明显,暗淡的,n/v.昏倒昏厥&lt;br&gt;
-pale:苍白灰白的,浅的,暗淡的&lt;br&gt;
-vague:不明确的,含糊的,暧昧的&lt;br&gt;
-obscure:暗的,朦胧的,模糊的,晦涩的,不著名的,不重要的&lt;br&gt;
-opaque:难理解,不透明,晦涩的&lt;br&gt;
-latent:潜在的,不易察觉的,潜伏的&lt;/p&gt;
-&lt;h2 id=&#34;尼玛总是忘掉的一些&#34;&gt;尼玛总是忘掉的一些&lt;/h2&gt;
-&lt;p&gt;scatter:v.驱散,散开,散布,散播&lt;br&gt;
-vapo(u)r:汽,(水)蒸汽&lt;br&gt;
-rack:挂物架,搁物架,v:折磨使痛苦&lt;br&gt;
-racket:吵闹,喧闹&lt;br&gt;
-rage:愤怒,风靡一时的事物,时尚;vi.狂吹,汹涌,发怒&lt;br&gt;
-undermine:暗中破坏,逐渐削弱,挖....墙脚&lt;br&gt;
-uproar:骚动,喧嚣,鼎沸&lt;br&gt;
-cordial:热诚,诚恳,亲切的&lt;br&gt;
-malignant:恶性的,致命的,恶意的,恶毒的&lt;br&gt;
-courtesy:n.恭谦有礼,有礼貌的举止/言辞&lt;br&gt;
-eloquent:雄辩有说服力的,有口才的&amp;lt;--反--&amp;gt;lame:a.辩解无说服力的,另:跛的&lt;br&gt;
-daunt:使胆怯,使气馁vt&lt;br&gt;
-genuine:真正的,名副其实的&lt;br&gt;
-hazard:n/v.危险,冒险,危害,拼命&lt;br&gt;
-harness:v.治理,利用,n.马具,挽具&lt;br&gt;
-rake:耙子,v.耙,搜索&lt;br&gt;
-rally:v.重整,恢复,振作,n.聚集,集会,大会,接力赛&lt;br&gt;
-harassment:骚扰,扰乱,烦恼,烦乱&lt;br&gt;
-convention:大会,常规,惯例,习俗,公约&lt;br&gt;
-patrol:v/n巡逻巡查,巡逻队&lt;br&gt;
-scrap:碎片废料;v.废弃,报废&lt;br&gt;
-wedge:楔形,楔;vt.楔牢,楔人,挤进&lt;br&gt;
-scout:侦查员(机/船),童子军,v.探索,侦察&lt;br&gt;
-coupon:证明持券人有某种权力的卡片,票证,赠券&lt;br&gt;
-cripple:跛子,残疾人;v使跛,残疾&lt;/p&gt;
-&lt;h2 id=&#34;交通工具&#34;&gt;交通工具&lt;/h2&gt;
-&lt;p&gt;waggon:运货(马)车,敞篷车箱&lt;/p&gt;
-&lt;h2 id=&#34;跟药品医学有关的词汇今年有可能考到&#34;&gt;跟药品.医学有关的词汇(今年有可能考到)&lt;/h2&gt;
-&lt;p&gt;vaccine:疫苗,痘苗,疫苗的,痘苗的&lt;br&gt;
-immune:免疫的,有免疫力的,有受影响的,豁免的&lt;br&gt;
-tablet:药片,碑匾&lt;br&gt;
-administer:**给予,施用(药物)**管理治理,实施&lt;br&gt;
-administration:(药物等的施用),管理行政部门,(美国)政府&lt;br&gt;
-moisturizer:润肤膏&lt;br&gt;
-disinfecting:消毒的&lt;br&gt;
-purifier:净化器&lt;br&gt;
-cavity-preventing:口腔预防&lt;br&gt;
-contagious:接触传染的&lt;br&gt;
-therapy:n.治疗,(不需要药物或手术的)物理疗法&lt;br&gt;
-germ:微生物&lt;br&gt;
-genetic:遗传&lt;br&gt;
-embryo:胚胎,胚&lt;br&gt;
-odo(u)r:气味,臭味,名声&lt;br&gt;
-scent:n.气味,香味,香水,线索,嗅觉;v.嗅,发觉&lt;br&gt;
-malignant:恶性的,致命的,恶意的,恶毒的&lt;br&gt;
-diabetes:糖尿病,多尿症&lt;br&gt;
-paediatrics:儿科学,小儿科&lt;/p&gt;
-&lt;h2 id=&#34;时间相关&#34;&gt;时间相关&lt;/h2&gt;
-&lt;p&gt;dawn:黎明拂晓;v.破晓,开始出现&lt;br&gt;
-elapse:vi(时间)溜走,(光阴)逝去&lt;/p&gt;
-&lt;h2 id=&#34;化工物理科技&#34;&gt;化工,物理,科技&lt;/h2&gt;
-&lt;p&gt;neutron:中子&lt;br&gt;
-particle:n.粒子,微粒,极小量,小品词,虚词&lt;br&gt;
-zinc:锌&lt;br&gt;
-laser:激光&lt;br&gt;
-gear:齿轮,传动装置&lt;br&gt;
-copper:铜,铜币,铜制器&lt;br&gt;
-nickle:镍,镍币,五美分&lt;br&gt;
-ignite:v.点燃,点火&lt;br&gt;
-quench:v.熄灭扑灭,压制,抑制,止渴&lt;br&gt;
-jet:(喷气)发动机,飞机,喷口;v.喷出,喷射&lt;br&gt;
-generator:发电机,发生器&lt;br&gt;
-radiant:发光的,辐射的,容光焕发的&lt;br&gt;
-radioactive放射性的,放射引起的&lt;br&gt;
-radiate:v.放射,辐射,散布,传播&lt;br&gt;
-ultraviolet:n/a.紫外线(的)&lt;br&gt;
-tangle:n.纠缠,缠结,混乱;v.(使)变乱/缠绕&lt;br&gt;
-quartz:石英&lt;br&gt;
-marble:云石,大理石,(pl.)弹子游戏&lt;br&gt;
-pebble:卵石&lt;br&gt;
-corrode:v.(受)腐蚀,侵蚀&lt;br&gt;
-decay:v/n.腐朽,腐烂,衰退衰减&lt;br&gt;
-composite:a.合成的,混合的,复合的;n.合成物,混合物,复合物&lt;br&gt;
-upwash:上升气流&lt;br&gt;
-wingtip:(鸟或飞机的)翼尖,翼梢&lt;br&gt;
-emission:排放&lt;br&gt;
-turbulence:湍流,不稳定的气流&lt;/p&gt;
-&lt;h2 id=&#34;几个p开头的总混淆的单词&#34;&gt;几个P开头的总混淆的单词&lt;/h2&gt;
-&lt;p&gt;prosperity:繁荣,兴旺,昌盛&lt;br&gt;
-properly:正确地,适当地,得体地&lt;br&gt;
-proportion:比,比例&lt;br&gt;
-proposal:提议;建议;动议;求婚&lt;br&gt;
-property:所有物;财产;财物;不动产;房地产;房屋及院落;庄园&lt;/p&gt;
-&lt;h2 id=&#34;数学计算机相关词汇&#34;&gt;数学,计算机相关词汇&lt;/h2&gt;
-&lt;p&gt;decimal:十进的,小数的,十进制的;n.小数&lt;br&gt;
-finite:有限的,[数]有穷的,限定的&lt;/p&gt;
-&lt;h2 id=&#34;王国之类的&#34;&gt;王国之类的&lt;/h2&gt;
-&lt;p&gt;realm:王国,国土,领域范围&lt;br&gt;
-territory:领土,版图,领域,范围&lt;br&gt;
-imperial:帝国的,帝王的,(度量衡)英制的&lt;br&gt;
-majesty:n.雄伟壮观;庄严;威严;(对国王或女王的尊称)陛下;王权&lt;br&gt;
-emperor:皇帝&lt;br&gt;
-empire:帝国&lt;br&gt;
-crown:王冠,冕,君权,君王;v.为...加冕&lt;/p&gt;
-&lt;h2 id=&#34;学科&#34;&gt;学科&lt;/h2&gt;
-&lt;p&gt;genetics:遗传学&lt;br&gt;
-mechanics:力学,机械学&lt;br&gt;
-ecology:生态学&lt;br&gt;
-aeronautics:航空学&lt;br&gt;
-aesthetic:美学的,审美的&lt;/p&gt;
-&lt;h2 id=&#34;不常见动物单词&#34;&gt;不常见动物单词&lt;/h2&gt;
-&lt;p&gt;hawk:鹰隼&lt;/p&gt;
-&lt;h2 id=&#34;做题积累词汇&#34;&gt;做题积累词汇&lt;/h2&gt;
-&lt;p&gt;tropical:热带的&lt;br&gt;
-soap habbit:用肥皂洗手的习惯;&lt;strong&gt;类似的组合词学会结合上下文翻译&lt;/strong&gt;&lt;br&gt;
-wipe:抹,擦&lt;br&gt;
-counter:柜台&lt;br&gt;
-cue:暗示,提示&lt;br&gt;
-turn to:求助于&lt;br&gt;
-subtle:微妙的&lt;br&gt;
-invest ... doing sth:投入...做某事&lt;br&gt;
-routine:惯例&lt;br&gt;
-shrewd:精明的&lt;br&gt;
-scrub:n.擦洗&lt;br&gt;
-sip:小口地喝&lt;br&gt;
-primarily:首先地&lt;br&gt;
-ritual:仪式&lt;br&gt;
-viable:可行的&lt;br&gt;
-ruthless:无情残忍的&lt;br&gt;
-controversies...erupted:辩论争论爆发&lt;br&gt;
-exempt....from...使...:免除豁免&lt;br&gt;
-peer:同龄,同等地位的人;v.仔细看,端详&lt;br&gt;
-ideal:理想&lt;br&gt;
-landmark:里程碑&lt;br&gt;
-unconstitutional:不符合宪法的&lt;br&gt;
-discrimination:歧视&lt;br&gt;
-antidiscrimination:反歧视&lt;br&gt;
-usher:引导,~ sth in:开创,开启&lt;br&gt;
-supposedly:据说,据传&lt;br&gt;
-intentional:有意的,故意的&lt;br&gt;
-blue-ribbon:一流头等的&lt;br&gt;
-trumpet:v.大声宣告,大肆宣扬,吹嘘&lt;br&gt;
-respectively:ad.分别地&lt;br&gt;
-lightweight:a.比通常重量轻的&lt;br&gt;
-composite:a.合成的,混合的,复合的;n.合成物,混合物,复合物&lt;br&gt;
-make a difference:有作用,有影响&lt;br&gt;
-naturalistic:自然的&lt;br&gt;
-propel:推进&lt;br&gt;
-substantially:ad.实质上,大体上&lt;br&gt;
-unsubstantiated:未经证实的&lt;br&gt;
-inverted:倒转的&lt;br&gt;
-proceed:v.继续前进&lt;br&gt;
-process:进程&lt;br&gt;
-procedure:程序&lt;br&gt;
-favorable:有利的,赞许的,令人愉快的,讨人喜欢的&lt;br&gt;
-cruise:(汽车飞机等)以平稳速度行驶&lt;br&gt;
-portion:部分&lt;br&gt;
-perception:察觉,感知,洞察力,知觉&lt;br&gt;
-nautical:航海的&lt;br&gt;
-intimate:亲近的&lt;br&gt;
-regulation:规定&lt;br&gt;
-aviation:航空&lt;br&gt;
-wake:航空轨迹&lt;br&gt;
-diminish:变小,减小&lt;br&gt;
-investigate:调查&lt;br&gt;
-under fire:收到批评和攻击&lt;br&gt;
-compensation:报酬薪水&lt;br&gt;
-bonus payout:奖金支出&lt;br&gt;
-presumably:ad.据推测,大概,可能&lt;br&gt;
-weather:v.平安度过(难关),挨过,经受住&lt;br&gt;
-a firm&#39;s board:公司董事会&lt;br&gt;
-make one&#39;s wealth and reputations:功成名就&lt;br&gt;
-executive:主管&lt;br&gt;
-proxy:代表权,委托书&lt;br&gt;
-subsequently:ad.其后,随后,接着&lt;br&gt;
-restate:v.重申,重新申报:restate earnings:重申盈利&lt;br&gt;
-depart a board:从董事会离职&lt;br&gt;
-federal class-action lawsuit:联邦集体诉讼&lt;br&gt;
-jump off a sinking ship:跳离沉船&lt;br&gt;
-blow:打击,意外的灾害,摧毁&lt;br&gt;
-incentive:动机,鼓励,刺激&lt;br&gt;
-a blow to the reputations:有损名誉&lt;br&gt;
-recession:n.经济衰退/萎缩,不景气&lt;br&gt;
-chronicle:记录(大事)&lt;br&gt;
-chronic:慢性的,长期的,习惯性的&lt;br&gt;
-devaluation:(货币)贬值&lt;br&gt;
-subsidize:v.以津贴补助&lt;br&gt;
-inhabit:v.居住,在....出现,填满&lt;br&gt;
-routine:常规,通常情况&lt;br&gt;
-shrug off:对...满不在乎,不屑一顾&lt;br&gt;
-afloat:ad.漂流着的,漂浮不定:stay ~:维持运营&lt;br&gt;
-overboard:ad.越过船边坠入水中:push sth/sb overboard:抛弃,甩掉某人/某事&lt;br&gt;
-whirlwind:旋风,猛烈的势力&lt;br&gt;
-distinctive:有特色的,与众不同的&lt;br&gt;
-savagely:野蛮地,残忍地,粗野地&lt;br&gt;
-line up:排队&lt;br&gt;
-common sense:常识&lt;br&gt;
-stylish:时髦的,流行的,入时的&lt;br&gt;
-take up posts:就职&lt;br&gt;
-stimulus:刺激物,刺激因素&lt;br&gt;
-exert:发挥,运用,使受(影响)&lt;br&gt;
-signature:签名,署名,识别标志,鲜明特征:~ phrase:口头禅&lt;br&gt;
-derive from:由...起源,取自&lt;br&gt;
-laminated:由薄片叠成的,分层的&lt;br&gt;
-symbolize:象征,用符号表现&lt;br&gt;
-sophisticated:复杂的,精致的&lt;br&gt;
-take for granted:认为...理所当然&lt;br&gt;
-mask the fact:掩盖事实&lt;br&gt;
-modest:适度的,适中的,端庄的&lt;br&gt;
-desirable:令人满意的,可取的&lt;br&gt;
-inevitable:不可避免的,必然发生的&lt;br&gt;
-forthright:直率的,明确的&lt;br&gt;
-disintegration:瓦解,崩溃&lt;br&gt;
-stuck:动不了,被卡主的,被难住的&lt;br&gt;
-dominant:占优势的,统治的,支配的&lt;br&gt;
-harmonisation:和谐,协调,相称&lt;br&gt;
-quasi-automatic:半自动的,准自动的&lt;br&gt;
-mega:巨大的,极佳的&lt;br&gt;
-suspension:悬挂,暂停&lt;br&gt;
-rigour:严苛,严酷&lt;br&gt;
-backed by:依靠,在...支持下&lt;br&gt;
-intervene:介于..之间,干预,介入:~ in介入,干预&lt;br&gt;
-murmur:咕哝,发牢骚,私下抱怨&lt;br&gt;
-curb:制止,束缚,限制,抑制&lt;br&gt;
-remarkably:引人注目地,明显地&lt;br&gt;
-liberal:开明的,自由的&lt;br&gt;
-blunt:使迟钝&lt;br&gt;
-write off:认定...不重要/无用/无可救药&lt;br&gt;
-weigh in:参加,加入(争论等)&lt;br&gt;
-spiral:盘旋上升(或下降),(物价等)不断急剧上升(或下降)&lt;br&gt;
-excessive:过度的,极度的,非常的&lt;br&gt;
-inconceivable:不能想象的,不可思议的,难以置信的&lt;br&gt;
-in respect of:关于,涉及&lt;br&gt;
-inducement:诱导,诱惑,诱因&lt;br&gt;
-lure:吸引,引诱&lt;br&gt;
-up front:预先,在前面&lt;br&gt;
-takeaway:外卖食品,外卖店&lt;br&gt;
-centerpiece:最重要的项目(或物品)&lt;br&gt;
-set out:陈述,列述&lt;br&gt;
-deploy:展开,施展,部署&lt;br&gt;
-abbreviation:缩写词,缩写形式&lt;br&gt;
-article:文章,(成套的)五篇,物件&lt;br&gt;
-mindless:无头脑的,盲目的,无谓的&lt;br&gt;
-tear away from ...:依依不舍离开..&lt;br&gt;
-foxhole:散兵坑&lt;br&gt;
-stick it/sth out:坚持到底,忍受下去&lt;br&gt;
-up against:必须面对某人/某事&lt;br&gt;
-hand out:分发&lt;br&gt;
-turn over:移交,交托&lt;br&gt;
-pass down:遗传,继承&lt;br&gt;
-cover:报道的意思一定记住啊,经常用&lt;br&gt;
-portray:扮演某角色&lt;br&gt;
-civilization:文明,文明社会:注意和urbanization(城市化)区别开,总记错&lt;br&gt;
-colony:殖民地,群体&lt;br&gt;
-parallel:除了有平行,还有&lt;strong&gt;相似的意思啊注意注意&lt;/strong&gt;&lt;br&gt;
-counteracted:抵消,中和&lt;br&gt;
-duplicate:重复,复制&lt;br&gt;
-duplex:双工&lt;br&gt;
-disguised:伪装的,掩饰的&lt;br&gt;
-disturbed:坎坷的,不幸的&lt;br&gt;
-disputed:争论的,有争议的&lt;br&gt;
-distinguished:卓越的,杰出的&lt;br&gt;
-from the outset:从开始时&lt;br&gt;
-revise:修正,改变&lt;br&gt;
-ritual:惯例,老规矩,例行公事&lt;br&gt;
-mandate:命令指示&lt;/p&gt;
-&lt;h2 id=&#34;阅读思路&#34;&gt;阅读思路&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;注意程度
-&lt;ul&gt;
-&lt;li&gt;类似的,不提倡,不支持,不建议&amp;lt;--不等于--&amp;gt;禁止&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;动词的意思中类似使xx解释&#34;&gt;动词的意思中类似**(使)XX**解释&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;原因就在这里,以air为例：&lt;br&gt;
-air vt. 使通风;vi. 通风&lt;br&gt;
-air 同时是vt和vi。当它是vt时，就要把括号中的使字译出。当它是vi是，就不用把使译出。为了方便，所以很多字典都把使用括号括起来。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;以correlate为例:(使)相互关联&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;及物&lt;br&gt;
-The figures do not seem to correlate.&lt;br&gt;
-这些数字似乎毫不相干。&lt;/li&gt;
-&lt;li&gt;不及物&lt;br&gt;
-A high-fat diet correlates with a greater risk of heart disease.&lt;br&gt;
-高脂肪饮食与增加心脏病发作的风险密切相关。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;imply和implicate&lt;br&gt;
-hint 是给个“bai提示”，比如老师du留作业的时候顺便给你个hint，或者有话不直zhi说但是拐弯给你个hint让你自dao己去领悟。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;imply带有推理的性质，比如两眼距离过大往往implies这个人是白痴，一个现象推理出另一个结论，用imply。&lt;/p&gt;
-&lt;p&gt;implicate跟imply有点联系，都有推理的性质，但是这个词好象不推出什么好事情，比如被牵连进去就是implicate in...&lt;/p&gt;
-">背单词时遇到到意思相近的词</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-xing-lie-shi/"" data-c="
-          &lt;h2 id=&#34;自己的理解&#34;&gt;自己的理解&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;n阶行列式:就是一行挑一个出来,不能在同一列,这n个数相乘,前面的正负号按列序号的排列的逆序数来决定,逆序数是偶就取1,逆序数是奇就取-1,最后再累加(也就是代数和)&lt;/li&gt;
-&lt;li&gt;逆序数:
-&lt;ul&gt;
-&lt;li&gt;由1,2,3....n组成的有序数组成为一个n阶排列,通常用j&lt;sub&gt;1&lt;/sub&gt;,j&lt;sub&gt;2&lt;/sub&gt;,...j&lt;sub&gt;n&lt;/sub&gt;来表示n阶排列(j就是列嘛)&lt;/li&gt;
-&lt;li&gt;在一次的排列中,如果大的数排在了小的前面,就称这俩数构成了一个__逆序__,一个排列的逆序的总数称为这个排列的__逆序数__&lt;/li&gt;
-&lt;li&gt;偶排列:逆序数是偶数,奇排列就是奇数了&lt;/li&gt;
-&lt;li&gt;例25134: 21,51,53,54,逆序数就是4了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;计算的技巧&#34;&gt;计算的技巧&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;看0的情况:
-&lt;ul&gt;
-&lt;li&gt;0多的情况下,先按0多的那一行(列)展开&lt;/li&gt;
-&lt;li&gt;0排列比较规则的情况下,可考虑拉普拉斯展开式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-">第一章 行列式</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-yi-zhang-xu-lun/"" data-c="
-          &lt;p&gt;&lt;ul class=&#34;markdownIt-TOC&#34;&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD&#34;&gt;1.1 数据结构的基本概念和术语&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#111-%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD&#34;&gt;1.1.1 概念和术语&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#112-%E4%B8%8A%E8%BF%B0%E6%9C%AF%E8%AF%AD%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB&#34;&gt;1.1.2 上述术语的联系与区别&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#113-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%89%E8%A6%81%E7%B4%A0%E7%9A%84%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A&#34;&gt;1.1.3 数据结构三要素的详细解释&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#12-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E5%88%86%E7%90%86%E8%A7%A3%E5%92%8C%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF&#34;&gt;1.2 自己的部分理解和解题思路&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#121-%E6%A6%82%E5%BF%B5&#34;&gt;1.2.1 概念&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#13-%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E8%AF%84%E4%BB%B7&#34;&gt;1.3 算法和算法评价&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#131-%E7%AE%97%E6%B3%95%E7%9A%84%E5%8F%8A%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82&#34;&gt;1.3.1 算法的及设计要求&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#132-%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F&#34;&gt;1.3.2 算法效率的度量&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#133-%E8%AE%A1%E7%AE%97&#34;&gt;1.3.3 计算&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-(目录)&lt;br&gt;
-&lt;strong&gt;考点:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据结构相关的概念和术语&lt;/li&gt;
-&lt;li&gt;数据结构的三要素:逻辑结构,物理结构和数据运算&lt;/li&gt;
-&lt;li&gt;算法时间复杂度和空间复杂度的分析与计算(重点)
-&lt;ul&gt;
-&lt;li&gt;算法设计题通常都要求分析时间,空间复杂度&lt;/li&gt;
-&lt;li&gt;考查时间复杂度的选择题&lt;br&gt;
-&lt;strong&gt;知识框架&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/1.1.png&#34; alt=&#34;1.1&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;11-数据结构的基本概念和术语&#34;&gt;1.1 数据结构的基本概念和术语&lt;/h2&gt;
-&lt;h3 id=&#34;111-概念和术语&#34;&gt;1.1.1 概念和术语&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;比较好理解的例子:&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.2.png&#34; alt=&#34;1.2&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;定义&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;数据:数据是信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合。数据是计算机程序加工的原料。&lt;/li&gt;
-&lt;li&gt;数据元素:
-&lt;ul&gt;
-&lt;li&gt;数据元素是数据的__基本单位__，通常作为一个整体进行考虑和处理。一个数据元素可由__若干数据项(&amp;gt;=1)__组成，&lt;strong&gt;数据项是构成数据元素的不可分割的最小单位&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;在不同的条件下，数据元素又可称为元素、结点、顶点、记录等。数据元素是用一组属性描述定义、标识、表示和允许值的一个数据单元。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据对象:
-&lt;ul&gt;
-&lt;li&gt;数据对象是具有__相同性质的数据元素的集合__，是数据的一个子集。例如，整数数据对象是集合N={0，土1，土2，…}&lt;/li&gt;
-&lt;li&gt;只是一个集合,元素间的关系除了是同一个集合(虽然同为集合,但是和逻辑结构中的非线性结构的集合不要混淆,它不能代表一种数据结构),别无其他&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;缺少关系不可以用来定义一个完整的数据结构&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据类型&lt;br&gt;
-数据类型是一个值的集合和定义在此集合上的一组操作的总称。
-&lt;ul&gt;
-&lt;li&gt;原子类型:其值不可再分的数据类型&lt;/li&gt;
-&lt;li&gt;结构类型:其值可以再分解为若干成分(分量)的数据类型
-&lt;ul&gt;
-&lt;li&gt;固定聚合类型:值由确定数目的成分按某种结构组成.如:复数是由两个实数依确定的次序关系构成的&lt;/li&gt;
-&lt;li&gt;可变聚合类型:&amp;quot;值&amp;quot;的成分的数目不确定.如:定义一个&amp;quot;有序整数序列&amp;quot;的抽象数据类型,其中序列的长度是可变的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;抽象数据类型:是指一个数学模型以及定义在该模型上的一组操作。(抽象数据组织及与之相关的操作)&lt;/li&gt;
-&lt;li&gt;数据结构:是相互之间存在一种或多种特定关系的数据元素的集合,在任何问题中，数据元素都不是孤立存在的，它们之间存在某种关系，这种数据元素相互之间的关系称为结构（Structure）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;112-上述术语的联系与区别&#34;&gt;1.1.2 上述术语的联系与区别&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;数据结构和数据类型是所属关系&lt;a href=&#34;https://www.zhihu.com/question/21165020/answer/118852959&#34;&gt;知乎&lt;/a&gt;&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.3.jpg&#34; alt=&#34;1.3&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-一种数据结构+定义在此种数据结构上的一组操作=结构类型&lt;br&gt;
-一种值的集合+定义在此种值的集合上的一组操作=原子类型&lt;br&gt;
-结构类型+原子类型=数据类型&lt;br&gt;
-一句话总结，数据结构是一种值的集合，这种值集＋值集上的操作就是结构类型，而结构类型是数据类型中的一种，所以数据结构属于数据类型。&lt;/li&gt;
-&lt;li&gt;数据类型和抽象数据类型的关系&lt;br&gt;
-它们的异同其实就在字面上了抽象。&lt;br&gt;
-&lt;strong&gt;抽象数据类型的定义仅取决于它的一组逻辑特性，而与其在计算机内部如何表示和实现无关&lt;/strong&gt;，即无论其内部结构如何变化，只要它的数学特性不变，都不影响其外部的使用。”抽象“的意义在于数据类型的数学抽象特性。&lt;/li&gt;
-&lt;li&gt;知乎上的理解:“数据类型”是计算机发展出来的一种重要思想，它将程序设计一分为二：实现基本数据类型和使用抽象数据类型。实现基本数据类型是指在物理层面实现数据类型的逻辑特性；使用抽象数据类型是指仅仅关注数据类型的逻辑特性，而不关注硬件实现。这样两边的人都可以更集中注意力于自己的工作范围，进行更深的钻研。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;113-数据结构三要素的详细解释&#34;&gt;1.1.3 数据结构三要素的详细解释&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;逻辑结构&lt;br&gt;
-逻辑结构是指数据元素之间的逻辑关系，即从逻辑关系上描述数据。
-&lt;ul&gt;
-&lt;li&gt;与数据的存储无关,是独立于计算机的.
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;数据的逻辑结构独立于存储结构&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;__数据的存储结构是逻辑结构在计算机上的映射,不能独立于逻辑结构而存在&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;分为线性结构和非线性结构,线性表是典型的线性结构；集合、树和图是典型的非线性结构。&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.4.png&#34; alt=&#34;1.4&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;li&gt;集合。结构中的数据元素之间除“同属一个集合”外，别无其他关系。&lt;/li&gt;
-&lt;li&gt;线性结构。结构中的数据元素之间只存在__一对一__的关系。&lt;/li&gt;
-&lt;li&gt;树形结构。结构中的数据元素之间存在__一对多__的关系。&lt;/li&gt;
-&lt;li&gt;图状结构或网状结构。结构中的数据元素之间存在__多对多__的关系。&lt;br&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/DS1.5.png&#34; alt=&#34;1.5&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;存储结构&lt;br&gt;
-存储结构是指数据结构在__计算机中的表示（又称映像），也称物理结构__。它包括__数据元素的表示和关系的表示__。数据的存储结构是用计算机语言实现的逻辑结构，&lt;strong&gt;它依赖于计算机语言&lt;/strong&gt;。数据的存储结构主要有顺序存储、链式存储、索引存储和散列存储。
-&lt;ul&gt;
-&lt;li&gt;1）顺序存储。把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。其优点是可以实现随机存取，每个元素占用最少的存储空间；缺点是只能使用相邻的一整块存储单元，因此可能产生较多的外部碎片。&lt;/li&gt;
-&lt;li&gt;2）链式存储。不要求逻辑上相邻的元素在物理位置上也相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。其优点是不会出现碎片现象，能充分利用所有存储单元；缺点是每个元素因存储指针而占用额外的存储空间，且只能实现顺序存取。&lt;/li&gt;
-&lt;li&gt;3）索引存储。在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是（关键字，地址）。其优点是检索速度快；缺点是附加的索引表额外占用存储空间。另外，增加和删除数据时也要修改索引表，因而会花费较多的时间。&lt;/li&gt;
-&lt;li&gt;4）散列存储。根据元素的关键字直接计算出该元素的存储地址，又称__哈希（Hash）存储__。&lt;br&gt;
-其优点是检索、增加和删除结点的操作都很快；缺点是若散列函数不好，则可能出现元素存储单元的冲突，而解决冲突会增加时间和空间开销。&lt;br&gt;
-&lt;strong&gt;注意&lt;/strong&gt;:XX表中,XX带有顺序,链,哈希之类的都代表了物理(存储)结构,XX抽象一点如有序之类的是逻辑结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;数据的运算&lt;br&gt;
-施加在数据上的运算包括运算的定义和实现。运算的定义是针对逻辑结构的，指出运算的功能；运算的实现是针对存储结构的，指出运算的具体操作步骤。&lt;/li&gt;
-&lt;li&gt;总结&lt;br&gt;
-数据的逻辑结构和存储结构是密不可分的两个方面，一个算法的__设计__取决于所选定的__逻辑结构__，而算法的__实现__依赖于所采用的__存储结构__。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;12-自己的部分理解和解题思路&#34;&gt;1.2 自己的部分理解和解题思路&lt;/h2&gt;
-&lt;h3 id=&#34;121-概念&#34;&gt;1.2.1 概念&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;数据结构三要素的任意一种不同,就不是同一种数据结构
-&lt;ul&gt;
-&lt;li&gt;因而提问&amp;quot;逻辑或物理,逻辑或运算,……不同时,是不是同一种数据结构&amp;quot;的题,就可以回答这两种相同,但是另一个不一样的情况下也不是同一种数据结构.例如(王道p5)二又树和二又排序树，二叉排序树可以采用二叉树的逻辑表示和存储方式，前者通常用于表示层次关系，而后者通常用于排序和查找。虽然它们的运算都有建立树、插入结点、删除结点和查找结点等功能，但对于二叉树和二叉排序树，这些运算的定义是不同的，以查找结点为例，二叉树的时间复杂度为O(n)，而二叉排序树的时间复杂度为O(log&lt;sub&gt;2&lt;/sub&gt;n)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可以用__抽象数据类型__来定义一个完整的数据结构
-&lt;ul&gt;
-&lt;li&gt;解析:抽象数据类型描述了数据的逻辑结构和抽象运算，通常用（数据对象、数据关系、基本操作集）这样的三元组来表示，从而构成一个完整的数据结构定义。&lt;/li&gt;
-&lt;li&gt;个人理解,是可以用更细节的来定义较抽象的(小定大)
-&lt;ul&gt;
-&lt;li&gt;1.数据结构可以用（数据元素的有限集、数据元素的关系）二元组定义。&lt;/li&gt;
-&lt;li&gt;2.抽象数据类型是用三元组（数据对象、数据关系、基本操作集）&lt;/li&gt;
-&lt;li&gt;3.数据对象是性质相同的数据元素的集合。所以数据结构主要是比抽象数据类型少了一个操作集，所以可以用抽象数据类型定义一个完整的数据结构。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;13-算法和算法评价&#34;&gt;1.3 算法和算法评价&lt;/h2&gt;
-&lt;h3 id=&#34;131-算法的及设计要求&#34;&gt;1.3.1 算法的及设计要求&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令表示一个或多个操作。此外，一个算法还具有下列5个重要特性：&lt;br&gt;
-1）有穷性。一个算法必须总在执行有穷步之后结束，且每一步都可在有穷时间内完成。&lt;br&gt;
-2）确定性。算法中每条指令必须有确切的含义，对于相同的输入只能得出相同的输出。&lt;br&gt;
-3）可行性。算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。&lt;br&gt;
-4）输入。一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。&lt;br&gt;
-5）输出。一个算法有一个或多个输出，这些输出是与输入有着某种特定关系的量。&lt;/li&gt;
-&lt;li&gt;通常，设计一个“好”的算法应考虑达到以下目标：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;正确性。算法应能够正确地解决求解问题。
-&lt;ul&gt;
-&lt;li&gt;a.程序不含语法错误；&lt;/li&gt;
-&lt;li&gt;b.程序对于几组输入数据能够得出满足规格说明要求的结果；&lt;/li&gt;
-&lt;li&gt;c.程序对于精心选择的典型、苛刻而带有刁难性的几组输入数据能够得出满足规格说明要求的结果&lt;/li&gt;
-&lt;li&gt;d.程序对于一切合法的输入数据都能产生满足规格说明要求的结果。&lt;/li&gt;
-&lt;li&gt;显然，达到第d层意义下的正确是极为困难的，所有不同输入数据的数量大得惊人，逐一验证的方法是不现实的。对于大型软件需要进行专业测试，而一般情况下，通常以第c层意义的正确性作为衡量一个程序是否合格的标准&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可读性。算法应具有良好的可读性，以帮助人们理解。&lt;/li&gt;
-&lt;li&gt;健壮性。输入非法数据时，算法能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。&lt;/li&gt;
-&lt;li&gt;效率与低存储量需求。&lt;strong&gt;效率是指算法执行的时间&lt;/strong&gt;，&lt;strong&gt;存储量需求是指算法执行过程中所需要的最大存储空间&lt;/strong&gt;，这两者都与问题的规模有关。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;132-算法效率的度量&#34;&gt;1.3.2 算法效率的度量&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;时间复杂度
-&lt;ul&gt;
-&lt;li&gt;一个算法是由__控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）__构成的，则算法时间取决于两者的综合效果。&lt;/li&gt;
-&lt;li&gt;语句的频度:该语句重复执行的次数&lt;/li&gt;
-&lt;li&gt;T(n)
-&lt;ul&gt;
-&lt;li&gt;王道上以及查到的一些资料称:算法中所有语句的频度之和记为T(n)&lt;/li&gt;
-&lt;li&gt;书上:执行时间/时间量度&lt;/li&gt;
-&lt;li&gt;对于这两种不用太抠字眼,就是对时间复杂度的描述或者说符号,毕竟__分析时间复杂度的时候都是分析T(n)的数量级__(但是还是王道上的好理解一些)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;算法中基本运算（最深层循环内的语句）的频度与T(n)同数量级(就挑一个基本操作)，因此通常采用算法中基本运算的频度f(n)来分析算法的时间复杂度。因此，算法的时间复杂度记为 &lt;center&gt;T(n)=O(f(n))&lt;/center&gt;式中，O的含义是T(n)的数量级，其严格的数学定义是：若T(n)和f(n)是定义在正整数集合上的两个函数，则存在正常数C和n&lt;sub&gt;0&lt;/sub&gt;，使得当n≥n&lt;sub&gt;0&lt;/sub&gt;时，都满足0≤T(n)小于等于C(n)。&lt;/li&gt;
-&lt;li&gt;渐进时间复杂度:简称是时间复杂度&lt;/li&gt;
-&lt;li&gt;一般总是考虑最坏情况下的时间复杂度(除特殊指明)
-&lt;ul&gt;
-&lt;li&gt;算法的时间复杂度不仅依赖于问题的规模n，也取决于待输入数据的性质（如输入数据元素的初始状态）。例如，在数组A[0..n-1]中，查找给定值k的算法大致如下：&lt;br&gt;
-（1）i=n-1；&lt;br&gt;
-（2）while（i&amp;gt;=0&amp;amp;&amp;amp;（A[i]！=k））&lt;br&gt;
-（3）i--；&lt;br&gt;
-（4）return i；该算法中语句3（基本运算）的频度不仅与问题规模n有关，而且与输入实例中A的各元素的取值及k的取值有关：&lt;br&gt;
-①若A中没有与k相等的元素，则语句3的频度f（n）=n。&lt;br&gt;
-②若A的最后一个元素等于k，则语句3的频度f（n）是常数0。&lt;br&gt;
-最坏时间复杂度是指在最坏情况下，算法的时间复杂度。&lt;br&gt;
-平均时间复杂度是指所有可能输入实例在等概率出现的情况下，算法的期望运行时间。&lt;br&gt;
-最好时间复杂度是指在最好情况下，算法的时间复杂度。&lt;br&gt;
-一般总是考虑在最坏情况下的时间复杂度，以保证算法的运行时间不会比它更长。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在分析一个程序的时间复杂性时，有以下两条规则：
-&lt;ul&gt;
-&lt;li&gt;a)加法规则&lt;br&gt;
-T(n)=T1(n)+T2(n)=O(f(n))+O(g(n))=O(maxf(n)，g(n)))&lt;/li&gt;
-&lt;li&gt;b)乘法规则&lt;br&gt;
-T(n)=T1(n)×T2(n)=O(f(n))×O(g(n))=O(n)xg(n)&lt;/li&gt;
-&lt;li&gt;常见的渐近时间复杂度为&lt;br&gt;
-O(1)&amp;lt;Olog2n)&amp;lt;O(n)&amp;lt;O(nlogan)&amp;lt;O(n2)&amp;lt;O(n3)&amp;lt;O(2)&amp;lt;O(n!)&amp;lt;O(n&lt;sup&gt;n&lt;/sup&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;空间复杂度&lt;br&gt;
-类似于算法的时间复杂度，本书中以空间复杂度(space complexity)作为算法所需存储空间的量度，记作&lt;center&gt;S(n)=O(f(n))&lt;/center&gt;其中n为问题的规模(或大小)。一个上机执行的程序除了需要存储空间来寄存本身所用指令、常数、变量和输入数据外，也需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。若输入数据所占空间只取决于问题本身，和算法无关，则只需要分析除输入和程序之外的额外空间，否则应同时考虑输入本身所需空间(和输入数据的表示形式有关)。若额外空间相对于输入数据量来说是常数，则称此算法为原地工作，第10章讨论的有些排序算法就属于这类。又如果所占空间量依赖于特定的输入，则除特别指明外，均按最坏情况来分析。&lt;br&gt;
-&lt;strong&gt;算法原地工作是指算法所需要的辅助空间为常量&lt;/strong&gt;,并非是不需要任何额外的辅助空间.&lt;br&gt;
-&lt;strong&gt;同一个算法,实现的语言的级别越高,执行效率越低&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;133-计算&#34;&gt;1.3.3 计算&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/50479555&#34;&gt;知乎转载&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;时间复杂度&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;常数阶O(1)&lt;br&gt;
-无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)，如：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;int i = 1;
-int j = 2;
-++i;
-j++;
-int m = i + j;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;线性阶O(n)&lt;br&gt;
-这个在最开始的代码示例中就讲解过了，如：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;for(i=1; i&amp;lt;=n; ++i)
-{
-   j = i;
-   j++;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对数阶O(logN)&lt;br&gt;
-还是先来看代码：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;int i = 1;
-while(i&amp;lt;n)
-{
-    i = i * 2;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;从上面代码可以看到，在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。我们试着求解一下，假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2^n&lt;br&gt;
-也就是说当循环 log2^n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(logn)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;线性对数阶O(nlogN)&lt;br&gt;
-线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)。&lt;br&gt;
-就拿上面的代码加一点修改来举例：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;for(m=1; m&amp;lt;n; m++)
-{
-    i = 1;
-    while(i&amp;lt;n)
-    {
-        i = i * 2;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;平方阶O(n²)&lt;br&gt;
-平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²) 了。&lt;br&gt;
-举例：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;for(x=1; i&amp;lt;=n; x++)
-{
-   for(i=1; i&amp;lt;=n; i++)
-    {
-       j = i;
-       j++;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n*n)，即 O(n²)&lt;br&gt;
-如果将其中一层循环的n改成m，即：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for(x=1; i&amp;lt;=m; x++)
-{
-   for(i=1; i&amp;lt;=n; i++)
-    {
-       j = i;
-       j++;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;那它的时间复杂度就变成了 O(m*n)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;立方阶O(n³)、K次方阶O(n^k)&lt;br&gt;
-参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似。&lt;/li&gt;
-&lt;li&gt;除此之外，其实还有 平均时间复杂度、均摊时间复杂度、最坏时间复杂度、最好时间复杂度 的分析方法，有点复杂，这里就不展开了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;空间复杂度&lt;br&gt;
-既然时间复杂度不是用来计算程序具体耗时的，那么我也应该明白，空间复杂度也不是用来计算程序实际占用的空间的。&lt;br&gt;
-空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度，同样反映的是一个趋势，我们用 S(n) 来定义。&lt;br&gt;
-空间复杂度比较常用的有：O(1)、O(n)、O(n²)，我们下面来看看：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;空间复杂度 O(1)&lt;br&gt;
-如果算法执行所需要的临时空间不随着某个变量n的大小而变化，即此算法空间复杂度为一个常量，可表示为 O(1),举例：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;int i = 1;
-int j = 2;
-++i;
-j++;
-int m = i + j;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;空间复杂度 O(n)&lt;br&gt;
-我们先看一个代码：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;int[] m = new int[n]
-for(i=1; i&amp;lt;=n; ++i)
-{
-   j = i;
-   j++;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这段代码中，第一行new了一个数组出来，这个数据占用的大小为n，这段代码的2-6行，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)&lt;br&gt;
-以上，就是对算法的时间复杂度与空间复杂度基础的分析，欢迎大家一起交流。&lt;br&gt;
-3. 递归算法和非递归算法在分析时间复杂度上是不同的&lt;br&gt;
-在算法分析中，当一个算法中包含递归调用时，其时间复杂度的分析会转化为一个递归方程求解。实际上，这个问题是数学上求解渐近阶的问题，而递归方程的形式多种多样，其求解方法也是不一而足，比较常用的有以下四种方法：&lt;br&gt;
-(1)代入法(Substitution Method)&lt;/p&gt;
-&lt;p&gt;代入法的基本步骤是先推测递归方程的显式解，然后用数学归纳法来验证该解是否合理。&lt;/p&gt;
-&lt;p&gt;(2)迭代法(Iteration Method)&lt;/p&gt;
-&lt;p&gt;迭代法的基本步骤是迭代地展开递归方程的右端，使之成为一个非递归的和式，然后通过对和式的估计来达到对方程左端即方程的解的估计。&lt;/p&gt;
-&lt;p&gt;(3)套用公式法(Master Method)&lt;/p&gt;
-&lt;p&gt;这个方法针对形如“T(n) = aT(n/b) + f(n)”的递归方程。这种递归方程是分治法的时间复杂性所满足的递归关系，即一个规模为n的问题被分成规模均为n/b的a个子问题，递归地求解这a个子问题，然后通过对这a个子间题的解的综合，得到原问题的解。&lt;/p&gt;
-&lt;p&gt;(4)差分方程法(Difference Formula Method)&lt;br&gt;
-可以将某些递归方程看成差分方程，通过解差分方程的方法来解递归方程，然后对解作出渐近阶估计。&lt;/p&gt;
-&lt;p&gt;下面就以上方法给出一些例子说明。&lt;/p&gt;
-&lt;p&gt;一、代入法&lt;br&gt;
-大整数乘法计算时间的递归方程为：T(n) = 4T(n/2) + O(n)，其中T(1) = O(1)，我们猜测一个解T(n) = O(n2 )，根据符号O的定义，对n&amp;gt;n0，有T(n) &amp;lt; cn2 - eO(2n)（注意，这里减去O(2n)，因其是低阶项，不会影响到n足够大时的渐近性），把这个解代入递归方程，得到：&lt;/p&gt;
-&lt;p&gt;T(n) = 4T(n/2) + O(n)&lt;br&gt;
-≤ 4c(n/2)2 - eO(2n/2)) + O(n)&lt;br&gt;
-= cn2 - eO(n) + O(n)&lt;br&gt;
-≤ cn2&lt;/p&gt;
-&lt;p&gt;其中，c为正常数，e取1，上式符合 T(n)≤cn2 的定义，则可认为O(n2 )是T(n)的一个解，再用数学归纳法加以证明。&lt;/p&gt;
-&lt;p&gt;二、迭代法&lt;br&gt;
-某算法的计算时间为：T(n) = 3T(n/4) + O(n)，其中T(1) = O(1)，迭代两次可将右端展开为：&lt;/p&gt;
-&lt;p&gt;T(n) = 3T(n/4) + O(n)&lt;br&gt;
-= O(n) + 3( O(n/4) + 3T(n/42 ) )&lt;br&gt;
-= O(n) + 3( O(n/4) + 3( O(n/42 ) + 3T(n/43 ) ) )&lt;/p&gt;
-&lt;p&gt;从上式可以看出，这是一个递归方程，我们可以写出迭代i次后的方程：&lt;/p&gt;
-&lt;p&gt;T(n) = O(n) + 3( O(n/4) + 3( O(n/42 ) + ... + 3( n/4i + 3T(n/4i+1 ) ) ) )&lt;/p&gt;
-&lt;p&gt;当n/4i+1 =1时，T(n/4i+1 )=1，则&lt;/p&gt;
-&lt;p&gt;T(n) = n + (3/4) + (32 /42 )n + ... + (3i /4i )n + (3i+1 )T(1)&lt;br&gt;
-&amp;lt; 4n + 3i+1&lt;/p&gt;
-&lt;p&gt;而由n/4i+1 =1可知，i&amp;lt;log4 n，从而&lt;/p&gt;
-&lt;p&gt;3i+1 ≤ 3log4 n+1 = 3log3 n*log4 3 +1 = 3nlog4 3&lt;/p&gt;
-&lt;p&gt;代入得：&lt;/p&gt;
-&lt;p&gt;T(n) &amp;lt; 4n + 3nlog4 3，即T(n) = O(n)。&lt;/p&gt;
-&lt;p&gt;三、套用公式法&lt;/p&gt;
-&lt;p&gt;这个方法为估计形如：&lt;br&gt;
-T(n) = aT(n/b) + f(n)&lt;br&gt;
-其中，a≥1和b≥1，均为常数，f(n)是一个确定的正函数。在f(n)的三类情况下，我们有T(n)的渐近估计式：&lt;br&gt;
-1.若对于某常数ε&amp;gt;0，有f(n) = O(nlogb a-ε )，则T(n) = O(nlogb a )&lt;/p&gt;
-&lt;p&gt;2.若f(n) = O(nlogb a )，则T(n) = O(nlogb a *logn)&lt;/p&gt;
-&lt;p&gt;3.若f(n) = O(nlogb a+ε )，且对于某常数c&amp;gt;1和所有充分大的正整数n，有af(n/b)≤cf(n)，则T(n)=O(f(n))。&lt;/p&gt;
-&lt;p&gt;设T(n) = 4T(n/2) + n，则a = 4，b = 2，f(n) = n，计算得出nlogb a = nlog2 4 = n2 ，而f(n) = n = O(n2-ε )，此时ε= 1，根据第1种情况，我们得到T(n) = O(n2 )。&lt;/p&gt;
-&lt;p&gt;这里涉及的三类情况，都是拿f(n)与nlogb a 作比较，而递归方程解的渐近阶由这两个函数中的较大者决定。在第一类情况下，函数nlogb a 较大，则T(n)=O(nlogb a )；在第三类情况下，函数f(n)较大，则T(n)=O(f (n))；在第二类情况下，两个函数一样大，则T(n)=O(nlogb a *logn)，即以n的对数作为因子乘上f(n)与T(n)的同阶。&lt;/p&gt;
-&lt;p&gt;但上述三类情况并没有覆盖所有可能的f(n)。在第一类情况和第二类情况之间有一个间隙：f(n)小于但不是多项式地小于nlogb a ，第二类与第三类之间也存在这种情况，此时公式法不适用。&lt;/p&gt;
-">第一章 绪论</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/about/"" data-c="
-          &lt;blockquote&gt;
-&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
-&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
-&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
-&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
-">关于</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/hello-gridea/"" data-c="
-          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
-✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
-&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
-&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
-&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
-&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
-&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
-&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
-&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
-&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
-&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
-&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
-&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
-&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
-&lt;p&gt;😘 Enjoy~&lt;/p&gt;
-">Hello Gridea</a>
-      </div>
-      
-    </div>
-    <div class="page">
-      <div id="page_ul"></div>
-    </div>
-  </div>
-</div>
-<script>
-  !function () {
-    let searchMask = document.querySelector('#search_mask');
-    let result = document.querySelector('#result');
-    let items = document.querySelectorAll('.item');
-    let searchBox = document.querySelector('#search');
-    let statCount = document.querySelector('#stat_count');
-    let statTimes = document.querySelector('#stat_times');
-    let pageUl = document.querySelector('#page_ul');
-    let close = document.querySelector('#close');
-    
-    close.addEventListener('click', function() {
-      searchMask.style = 'display: none;'
-    })
-
-    let finds = [];
-    let contents = [];
-    let pageSize = 10;
-    items.forEach(item => {
-      let a = item.querySelector('a');
-      contents.push({
-        title: a.innerText,
-        details: a.dataset.c,
-        link: a.href
-      })
-      item.remove();
-    })
-
-    function insertStr(soure, start, count) {
-      let newStr = soure.substr(start, count);
-      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
-    }
-
-    pageUl.addEventListener('click', function(event) {
-      let target = event.target;
-      if (target.__proto__ === HTMLSpanElement.prototype) {
-        appendResults(parseInt(target.dataset.i));
-      }
-    })
-
-    function appendResults(index) {
-      let htmlResult = '';
-      let start = index || 0;
-      let end = Math.min(start + pageSize, finds.length);
-      for (let i = start; i < end; i++) {
-        const current = finds[i];
-        let html = current.title;
-        let sum = 0;
-        let positions = current.positions;
-        positions.forEach(position => {
-          html = insertStr(html, position.start + sum, position.count);
-          sum += 9;
-        })
-        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
-      }
-      result.innerHTML = htmlResult;
-      pageUl.innerHTML = '';
-      let count = finds.length / pageSize;
-      let lis = '';
-      if (start !== 0) {
-        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
-      }
-      for (let i = 0; i < count; i++) {
-        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
-      }
-      if (start+1 < count) {
-        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
-      }
-      pageUl.innerHTML = lis;
-    }
-
-    function search(delay) {
-      let timer = null
-      return function () {
-        clearTimeout(timer)
-        timer = setTimeout(() => {
-          let start = Date.now();
-          let segments = searchBox.value.split(' ').filter(c => c != '');
-          if (segments.length <= 0) {
-            return;
-          }
-          finds = [];
-          let htmlResult = '';
-          contents.forEach(content => {
-            let title = content.title;
-            let positions = [];
-            let find = false;
-            segments.forEach((segment) => {
-              if (content.title.includes(segment)) {
-                find = true;
-                positions.push({
-                  start: content.title.indexOf(segment),
-                  count: segment.length
-                })
-              } else if (content.details.includes(segment)) {
-                find = true;
-              }
-            });
-            if (find) {
-              finds.push({
-                title: content.title,
-                link: content.link,
-                positions
-              });
-            }
-          })
-          appendResults(0);
-          statCount.textContent = finds.length;
-          statTimes.textContent = Date.now() - start;
-        }, delay)
-      }
-    }
-    searchBox.addEventListener('input', search(200));
-  }()
-</script>
-
-<input hidden id="copy" />
-<script>
-  let language = '';
-  if (language !== '') {
-    let map = new Map();
-    if (language === 'en') {
-      map.set('search', 'Search');
-      map.set('category', 'Categories');
-      map.set('article', 'Articles');
-      map.set('tag', 'Tags');
-      map.set('top', 'Top');
-      map.set('publish', 'published');
-      map.set('minute', ' minutes');
-      map.set('read-more', 'Read More');
-      map.set('view', 'View');
-      map.set('words', ' words');
-      map.set('category-in', 'category in');
-      map.set('preview', 'Meta');
-      map.set('index', 'Toc');
-      map.set('no-archives', "You haven't created yet");
-      map.set('archives', " articles in total");
-      map.set('cloud-tags', " tags in total");
-      map.set('copyright', "Copyright: ");
-      map.set('author', "Author: ");
-      map.set('link', "Link: ");
-      map.set('leave-message', "Leave a message");
-      map.set('format', "Links Format");
-      map.set('site-name', "Name: ");
-      map.set('site-link', "Link: ");
-      map.set('site-desc', "Desc: ");
-      map.set('stat', " related results, taking ");
-      map.set('stat-time', " ms");
-      map.set('site-img', "Image: ");
-    }
-
-    if (map.size > 0) {
-      let lanElems = document.querySelectorAll('.language');
-      lanElems.forEach(elem => {
-        let lan = elem.dataset.lan, text = map.get(lan);
-        if (elem.__proto__ === HTMLInputElement.prototype) {
-          elem.placeholder = text
-        } else {
-          if (elem.dataset.count) {
-            text = elem.dataset.count + text;
-          }
-          elem.textContent = text;
-        }
-      })
-    }
-  }
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
-
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
-
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
-          }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
-
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
-
-</script>
-<script src="/media/js/motion.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
-  });
-</script>
-
-
-
-
 </html>
+<script src="https://songdlut.github.io/media/js/index.js"></script>
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'http://ericam.top/' //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://songdlut.github.io/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://songdlut.github.io/media/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://songdlut.github.io/media/live2d/assets/tororo.model.json");
+</script>
