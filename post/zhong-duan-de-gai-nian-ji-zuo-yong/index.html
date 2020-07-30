@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>中断的概念及作用 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595924459103">
+<link rel="shortcut icon" href="/favicon.ico?v=1596069239877">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1630,7 +1630,8 @@ turn =1;//我用完了,谦让给你&lt;/li&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/"" data-c="
-          &lt;ul&gt;
+          &lt;h2 id=&#34;概念部分&#34;&gt;概念部分&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;栈和队列具有相同的&lt;strong&gt;逻辑结构&lt;/strong&gt;,这tm别忘啊,逻辑结构就线性和非线性的,&lt;strong&gt;栈和队列都是线性的&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;只有表头结点指针而没有表尾指针的单向循环链表&lt;strong&gt;最不适合&lt;/strong&gt;作为链栈
 &lt;ul&gt;
@@ -1638,6 +1639,36 @@ turn =1;//我用完了,谦让给你&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;栈与队列的应用&#34;&gt;栈与队列的应用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用到栈的操作
+&lt;ul&gt;
+&lt;li&gt;递归&lt;/li&gt;
+&lt;li&gt;进制转换&lt;/li&gt;
+&lt;li&gt;迷宫求解&lt;/li&gt;
+&lt;li&gt;括号匹配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用到队列的操作
+&lt;ul&gt;
+&lt;li&gt;缓冲区&lt;/li&gt;
+&lt;li&gt;页面替换算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;调用函数时,系统会为调用者构造一个由参数表和返回地址组成的活动记录,并将记录压入系统提供的栈中,若被调用的函数有局部变量,也要压入栈中&lt;/li&gt;
+&lt;li&gt;栈和队列都是操作受限的线性表,但是只有队列允许在两端操作,&lt;strong&gt;栈只能在一端操作&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;递归调用函数时,在系统栈中保存的函数信息需要满足先进后出的特点,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;int s(int n)
+{
+    return (n&amp;lt;=0)?0:s(n-1)+n;
+}
+int main()
+{
+    cout&amp;lt;&amp;lt;S(1);
+}
+main()-&amp;gt;s(1)-&amp;gt;s(0)
+&lt;/code&gt;&lt;/pre&gt;
 ">栈与队列错题及重点</a>
       </div>
       
@@ -2664,6 +2695,8 @@ typedef struct{
 &lt;/p&gt;
 &lt;h2 id=&#34;和作者态度相关的词&#34;&gt;和作者态度相关的词&lt;/h2&gt;
 &lt;p&gt;indifferent:漠不关心的&lt;br&gt;
+trivial:无关紧要的&lt;br&gt;
+certain:确定的:&lt;strong&gt;当作者提及影响时,只说有某种影响(中性的,没说好的还是坏的),就选certain,但让最好还是结合别的选项看看,排除一下&lt;/strong&gt;&lt;br&gt;
 positive:积极的&lt;br&gt;
 negative:消极的,肯定的&lt;br&gt;
 permissive:放任&lt;br&gt;
@@ -2672,7 +2705,8 @@ critical:批评&lt;br&gt;
 biased:片面的&lt;br&gt;
 pessimistic:悲观的&lt;br&gt;
 desperate:绝望的&lt;br&gt;
-conceited:自负的&lt;/p&gt;
+conceited:自负的&lt;br&gt;
+destructive:毁灭性的(问影响的时候)&lt;/p&gt;
 &lt;h2 id=&#34;职称称谓相关的单词&#34;&gt;职称,称谓相关的单词&lt;/h2&gt;
 &lt;p&gt;dean:(大学)院长,主持牧师,(基督)教长&lt;br&gt;
 mayor:市长&lt;br&gt;
@@ -2693,7 +2727,8 @@ executive:主管&lt;br&gt;
 secretary of state:(美国)国务卿,(英国)部长&lt;br&gt;
 correspondent:记者,通讯员&lt;br&gt;
 associate professor:&lt;strong&gt;副&lt;/strong&gt;教授&lt;br&gt;
-toddler:幼童&lt;/p&gt;
+toddler:幼童&lt;br&gt;
+sage:哲人,先知&lt;/p&gt;
 &lt;h2 id=&#34;身体部位的&#34;&gt;身体部位的&lt;/h2&gt;
 &lt;p&gt;jaw:颚,颌&lt;br&gt;
 nail:指甲,爪,钉;vt.将...钉住&lt;br&gt;
@@ -2733,7 +2768,13 @@ product placement:产品置入,植入式广告&lt;br&gt;
 commodity:商品&lt;br&gt;
 impoverished:贫困的&lt;br&gt;
 consumerism:消费主义&lt;br&gt;
-monopoly:垄断者,垄断企业&lt;/p&gt;
+monopoly:垄断者,垄断企业&lt;br&gt;
+lean times:经济不景气的时期&lt;br&gt;
+economic stagnation:经济停滞&lt;br&gt;
+materialistic:实利主义的,物质主义的(含贬义)&lt;br&gt;
+prudent:节俭的,明智谨慎的&lt;br&gt;
+great recession:经济大衰退,经济萧条&lt;br&gt;
+high joblessness:高失业率&lt;/p&gt;
 &lt;h2 id=&#34;跟政治政府有关&#34;&gt;跟政治,政府有关&lt;/h2&gt;
 &lt;p&gt;elect:选举推选,选择,做出选择&lt;br&gt;
 parade:n.游行,检阅;vi.参加游行,炫耀;vt.使参加游行,绕行&lt;br&gt;
@@ -2934,7 +2975,8 @@ paediatrics:儿科学,小儿科&lt;br&gt;
 genome:基因组&lt;/p&gt;
 &lt;h2 id=&#34;时间相关&#34;&gt;时间相关&lt;/h2&gt;
 &lt;p&gt;dawn:黎明拂晓;v.破晓,开始出现&lt;br&gt;
-elapse:vi(时间)溜走,(光阴)逝去&lt;/p&gt;
+elapse:vi(时间)溜走,(光阴)逝去&lt;br&gt;
+the Renaissance:文艺复兴时期&lt;/p&gt;
 &lt;h2 id=&#34;化工物理科技&#34;&gt;化工,物理,科技&lt;/h2&gt;
 &lt;p&gt;neutron:中子&lt;br&gt;
 particle:n.粒子,微粒,极小量,小品词,虚词&lt;br&gt;
@@ -3178,7 +3220,39 @@ session:(一系列会议中的一次)会议&lt;br&gt;
 landscape:景色,形势&lt;br&gt;
 packed:挤满人的,非常拥挤的&lt;br&gt;
 alike:adv.同样都(用于强调刚刚提及的两者)&lt;br&gt;
-over turn:使倾覆,打翻&lt;/p&gt;
+over turn:使倾覆,打翻&lt;br&gt;
+national polls:国内民意调查&lt;br&gt;
+social fabric:社会结构&lt;br&gt;
+discern:识别,看清,领悟&lt;br&gt;
+resentment:怨气,怨恨,不满&lt;br&gt;
+shrink:(使)缩小/收缩&lt;br&gt;
+reinforce:加强,强化....&lt;strong&gt;不要老是记成限制(restrain)啊&lt;/strong&gt;&lt;br&gt;
+lengthy:长时间的,过长的&lt;br&gt;
+mean-spirited:心胸狭隘的&lt;br&gt;
+inclusive:包容的&lt;br&gt;
+sentiment:观点感想意见&lt;br&gt;
+far off:遥远&lt;br&gt;
+reckless:鲁莽轻率不顾后果的&lt;br&gt;
+exemplary:模范的&lt;br&gt;
+lining:n.衬层;内衬;衬里;(身体器官内壁的)膜v.(用…)做衬里;(在某物的内部)形成一层;沿…形成行(或列、排)&lt;br&gt;
+rambling:讲话或文章杂乱无章的&lt;br&gt;
+champion:除了冠军,还有捍卫维护的意思&lt;br&gt;
+cunning:n.狡猾狡诈&lt;br&gt;
+ruthlessness:无情冷酷&lt;br&gt;
+furnish:v.提供,供应&lt;br&gt;
+resolute:坚决的,坚定的&lt;br&gt;
+steadfast:忠诚的,坚贞不渝的&lt;br&gt;
+integrity:n.诚实正直;完整;完好&lt;br&gt;
+beacon:引路人,指路明灯&lt;br&gt;
+bourgeois:过分追求名利的,注意物质享受的;市侩的,庸俗的&lt;br&gt;
+epochal:具有时代意义的&lt;br&gt;
+bombast:空洞华丽的(言论)&lt;br&gt;
+hitherto:ad.迄今,至今&lt;br&gt;
+nurture:v.培养培育&lt;br&gt;
+unpick:v.拆去针脚,撬开,引申为分析研究&lt;br&gt;
+multiplicity:多样性&lt;br&gt;
+downstairs:底层(阶级)&lt;br&gt;
+upstairs:上层(阶级)&lt;/p&gt;
 &lt;h2 id=&#34;阅读思路&#34;&gt;阅读思路&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;注意程度
@@ -3211,7 +3285,13 @@ A high-fat diet correlates with a greater risk of heart disease.&lt;br&gt;
 hint 是给个“bai提示”，比如老师du留作业的时候顺便给你个hint，或者有话不直zhi说但是拐弯给你个hint让你自dao己去领悟。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;imply带有推理的性质，比如两眼距离过大往往implies这个人是白痴，一个现象推理出另一个结论，用imply。&lt;/p&gt;
-&lt;p&gt;implicate跟imply有点联系，都有推理的性质，但是这个词好象不推出什么好事情，比如被牵连进去就是implicate in...&lt;/p&gt;
+&lt;p&gt;implicate跟imply有点联系，都有推理的性质，但是这个词好象不推出什么好事情，比如被牵连进去就是implicate in...&lt;br&gt;
+4. issue&lt;br&gt;
+英 [ˈɪʃuː] 美 [ˈɪʃuː]&lt;br&gt;
+n.&lt;br&gt;
+重要议题;争论的问题;(有关某事的)问题，担忧;一期;期号&lt;br&gt;
+v.&lt;br&gt;
+宣布;公布;发出;(正式)发给，供给;(尤指通过正式文件)将…诉诸法律&lt;/p&gt;
 ">背单词时遇到到意思相近的词</a>
       </div>
       

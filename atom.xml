@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-28T08:21:05.252Z</updated>
+    <updated>2020-07-30T00:53:09.959Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -192,7 +192,8 @@ turn =1;//我用完了,谦让给你</li>
         <link href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/">
         </link>
         <updated>2020-07-17T10:42:30.000Z</updated>
-        <content type="html"><![CDATA[<ul>
+        <content type="html"><![CDATA[<h2 id="概念部分">概念部分</h2>
+<ul>
 <li>栈和队列具有相同的<strong>逻辑结构</strong>,这tm别忘啊,逻辑结构就线性和非线性的,<strong>栈和队列都是线性的</strong></li>
 <li>只有表头结点指针而没有表尾指针的单向循环链表<strong>最不适合</strong>作为链栈
 <ul>
@@ -200,6 +201,36 @@ turn =1;//我用完了,谦让给你</li>
 </ul>
 </li>
 </ul>
+<h2 id="栈与队列的应用">栈与队列的应用</h2>
+<ul>
+<li>用到栈的操作
+<ul>
+<li>递归</li>
+<li>进制转换</li>
+<li>迷宫求解</li>
+<li>括号匹配</li>
+</ul>
+</li>
+<li>用到队列的操作
+<ul>
+<li>缓冲区</li>
+<li>页面替换算法</li>
+</ul>
+</li>
+<li>调用函数时,系统会为调用者构造一个由参数表和返回地址组成的活动记录,并将记录压入系统提供的栈中,若被调用的函数有局部变量,也要压入栈中</li>
+<li>栈和队列都是操作受限的线性表,但是只有队列允许在两端操作,<strong>栈只能在一端操作</strong></li>
+<li>递归调用函数时,在系统栈中保存的函数信息需要满足先进后出的特点,</li>
+</ul>
+<pre><code>int s(int n)
+{
+    return (n&lt;=0)?0:s(n-1)+n;
+}
+int main()
+{
+    cout&lt;&lt;S(1);
+}
+main()-&gt;s(1)-&gt;s(0)
+</code></pre>
 ]]></content>
     </entry>
     <entry>
