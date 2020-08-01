@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>第二章 线性表 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596069239877">
+<link rel="shortcut icon" href="/favicon.ico?v=1596269831276">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">16</span>
+        <span class="site-item-stat-count">17</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1794,6 +1794,92 @@ typedef struct{
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/"" data-c="
+          &lt;h2 id=&#34;生产者-消费者问题&#34;&gt;生产者-消费者问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;问题分析&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/auN1MR.png&#34; alt=&#34;auN1MR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;解决&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/aua8UK.png&#34; alt=&#34;aua8UK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;mutex的p操作不能放到前面,否则会造成死锁&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/audco6.png&#34; alt=&#34;audco6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实现互斥的P操作一定要放到实现同步的P操作之后&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;V操作不会导致进程阻塞,因此两个V操作顺序可以互换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分&lt;/li&gt;
+&lt;li&gt;小结&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/au0wr9.png&#34; alt=&#34;au0wr9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;多生产者-多消费者问题&#34;&gt;多生产者-多消费者问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;问题分析&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/auf2zn.png&#34; alt=&#34;auf2zn.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/auh56I.png&#34; alt=&#34;auh56I.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;实现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;有mutex&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/au4wE8.png&#34; alt=&#34;au4wE8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;这里可以去掉mutex,plate作为互斥信号量&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/au4bK1.png&#34; alt=&#34;au4bK1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;这里可以是因为缓冲区大小为1,当然加上mutex肯定没错&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当缓冲区大小大于1时,要加上mutex互斥信号量&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/au5YiF.png&#34; alt=&#34;au5YiF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;小结&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/au5rdK.png&#34; alt=&#34;au5rdK.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/07/30/auID6s.png&#34; alt=&#34;auID6s.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;注:不要从单个进程的角度来看问题,要从事件的角度&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;读者写者问题&#34;&gt;读者写者问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;问题分析&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a3XIET.png&#34; alt=&#34;a3XIET.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;实现&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a3jaiF.png&#34; alt=&#34;a3jaiF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;避免写进程饥饿&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a3xy4O.png&#34; alt=&#34;a3xy4O.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;小结&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;遇到同步问题一般是生产者-消费者问题&lt;/li&gt;
+&lt;li&gt;遇到包含互斥的一般是复杂的读者-写者问题&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a3z0zQ.png&#34; alt=&#34;a3z0zQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;哲学家进餐问题&#34;&gt;哲学家进餐问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;问题分析&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8kg8x.png&#34; alt=&#34;a8kg8x.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;造成死锁的方法&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8kbGt.png&#34; alt=&#34;a8kbGt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;解决思索的方法
+&lt;ol&gt;
+&lt;li&gt;至多允许四个哲学家拿起筷子&lt;/li&gt;
+&lt;li&gt;仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子&lt;/li&gt;
+&lt;li&gt;对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8M7mq.png&#34; alt=&#34;a8M7mq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;小结&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8QmjA.png&#34; alt=&#34;a8QmjA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;吸烟者问题&#34;&gt;吸烟者问题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;问题分析&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8tifP.png&#34; alt=&#34;a8tifP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;实现&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8tMYq.png&#34; alt=&#34;a8tMYq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;小结&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8t86U.png&#34; alt=&#34;a8t86U.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">第二章 进程同步之经典同步问题(重点)</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/"" data-c="
           &lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/22/UHlPR1.png&#34; alt=&#34;UHlPR1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
@@ -3033,7 +3119,7 @@ typedef struct{
 trivial:无关紧要的&lt;br&gt;
 certain:确定的:&lt;strong&gt;当作者提及影响时,只说有某种影响(中性的,没说好的还是坏的),就选certain,但让最好还是结合别的选项看看,排除一下&lt;/strong&gt;&lt;br&gt;
 positive:积极的&lt;br&gt;
-negative:消极的,肯定的&lt;br&gt;
+negative:消极的,否定的&lt;br&gt;
 permissive:放任&lt;br&gt;
 scornful:蔑视&lt;br&gt;
 critical:批评&lt;br&gt;
@@ -3063,7 +3149,13 @@ secretary of state:(美国)国务卿,(英国)部长&lt;br&gt;
 correspondent:记者,通讯员&lt;br&gt;
 associate professor:&lt;strong&gt;副&lt;/strong&gt;教授&lt;br&gt;
 toddler:幼童&lt;br&gt;
-sage:哲人,先知&lt;/p&gt;
+sage:哲人,先知&lt;br&gt;
+sojourner:旅居者,逗留者,sojourn:逗留,旅居&lt;br&gt;
+alien:外国人.外星人&lt;br&gt;
+violinist:小提琴手&lt;br&gt;
+entrepreneur:企业家,承包人&lt;br&gt;
+aide:助手,助理&lt;br&gt;
+rival:对手&lt;/p&gt;
 &lt;h2 id=&#34;身体部位的&#34;&gt;身体部位的&lt;/h2&gt;
 &lt;p&gt;jaw:颚,颌&lt;br&gt;
 nail:指甲,爪,钉;vt.将...钉住&lt;br&gt;
@@ -3109,7 +3201,13 @@ economic stagnation:经济停滞&lt;br&gt;
 materialistic:实利主义的,物质主义的(含贬义)&lt;br&gt;
 prudent:节俭的,明智谨慎的&lt;br&gt;
 great recession:经济大衰退,经济萧条&lt;br&gt;
-high joblessness:高失业率&lt;/p&gt;
+high joblessness:高失业率&lt;br&gt;
+withdraw:除了撤退之外,还有从银行账户取钱提款的意思&lt;br&gt;
+withdrawal:n. 也是取钱的意思,但是为从对方账户直接汇到我的里面&lt;br&gt;
+issuer:开支票的人,出票人&lt;br&gt;
+shed wokers:裁员&lt;br&gt;
+mill:n.磨坊;面粉厂;工厂;制造厂;磨粉机;磨面机v.(用磨粉机)碾碎，磨成粉&lt;br&gt;
+thrive:兴旺发达,繁荣,蓬勃发展&lt;/p&gt;
 &lt;h2 id=&#34;跟政治政府有关&#34;&gt;跟政治,政府有关&lt;/h2&gt;
 &lt;p&gt;elect:选举推选,选择,做出选择&lt;br&gt;
 parade:n.游行,检阅;vi.参加游行,炫耀;vt.使参加游行,绕行&lt;br&gt;
@@ -3119,7 +3217,8 @@ bureau:局,处,科,办事处&lt;br&gt;
 ministerial:内阁的,部长的,行政(上)的&lt;br&gt;
 working class:工人阶级,劳动阶级&lt;br&gt;
 military adventurism:军事冒险主义&lt;br&gt;
-Nazi reign of murder:纳粹杀戮统治&lt;/p&gt;
+Nazi reign of murder:纳粹杀戮统治&lt;br&gt;
+G.I Bill:美国退伍军人权利法案(考到好多次了)&lt;/p&gt;
 &lt;h2 id=&#34;法律犯罪之类的&#34;&gt;法律犯罪之类的&lt;/h2&gt;
 &lt;p&gt;bail:保释,离开,三柱门上的横木&lt;br&gt;
 jury:陪审团&lt;br&gt;
@@ -3473,7 +3572,7 @@ inevitable:不可避免的,必然发生的&lt;br&gt;
 forthright:直率的,明确的&lt;br&gt;
 disintegration:瓦解,崩溃&lt;br&gt;
 stuck:动不了,被卡主的,被难住的&lt;br&gt;
-dominant:占优势的,统治的,支配的&lt;br&gt;
+dominant:占优势的,统治的,支配的,首要的&lt;br&gt;
 harmonisation:和谐,协调,相称&lt;br&gt;
 quasi-automatic:半自动的,准自动的&lt;br&gt;
 mega:巨大的,极佳的&lt;br&gt;
@@ -3550,7 +3649,7 @@ shake...to its core:彻底震惊&lt;br&gt;
 suppress:压制,镇压,制止&lt;br&gt;
 make arguments against:提出反对...的理由&lt;br&gt;
 innovation:创新&lt;br&gt;
-violate:侵犯&lt;br&gt;
+violate:侵犯,干扰&lt;br&gt;
 session:(一系列会议中的一次)会议&lt;br&gt;
 landscape:景色,形势&lt;br&gt;
 packed:挤满人的,非常拥挤的&lt;br&gt;
@@ -3587,12 +3686,53 @@ nurture:v.培养培育&lt;br&gt;
 unpick:v.拆去针脚,撬开,引申为分析研究&lt;br&gt;
 multiplicity:多样性&lt;br&gt;
 downstairs:底层(阶级)&lt;br&gt;
-upstairs:上层(阶级)&lt;/p&gt;
+upstairs:上层(阶级)&lt;br&gt;
+fruition:n.(计划、过程或活动的)完成，实现，取得成果:come to fruition:完成实现&lt;br&gt;
+revolutionize:v.彻底改革,彻底变革&lt;br&gt;
+steady:稳定的,持续的&lt;br&gt;
+telecommunication:电磁通信,远距离通信&lt;br&gt;
+receipt:收据收条&lt;br&gt;
+unauthorized:未被授权的,未经认可的&lt;br&gt;
+fraud:欺诈,欺骗&lt;br&gt;
+chunk:厚块,大块&lt;br&gt;
+trail:踪迹,痕迹&lt;br&gt;
+stubbornly:顽固地,倔强地&lt;br&gt;
+make the point:表明观点&lt;br&gt;
+automate:自动化&lt;br&gt;
+relate:除了关联之外还有讲述叙述的意思&lt;br&gt;
+look to do sh:寻找机会做某事&lt;br&gt;
+for good:永久地,永远地,一劳永逸地&lt;br&gt;
+birds of passage:候鸟,漂泊的人&lt;br&gt;
+affectionate:深情的,充满深情的&lt;br&gt;
+rigid:严格的,僵硬的死板的&lt;br&gt;
+brand:打烙印于,印商标于&lt;br&gt;
+paralysis:n.麻痹,无力,停顿(活动工作能力)完全丧失,瘫痪&lt;br&gt;
+look beyond:超越...看问题&lt;br&gt;
+in the making:在酝酿中,在形成中&lt;br&gt;
+kick out:踢出&lt;br&gt;
+hail ..as...:将..誉为...&lt;br&gt;
+mightily:很,非常ad&lt;br&gt;
+straddle:跨立于,跨越&lt;br&gt;
+jurisdiction:管辖范围&lt;br&gt;
+commit oneself to sth/doing sth:承诺&lt;br&gt;
+in motion:在运动中的&lt;/p&gt;
 &lt;h2 id=&#34;阅读思路&#34;&gt;阅读思路&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;注意程度
 &lt;ul&gt;
-&lt;li&gt;类似的,不提倡,不支持,不建议&amp;lt;--不等于--&amp;gt;禁止&lt;/li&gt;
+&lt;li&gt;类似的,不提倡,不支持,不建议**&amp;lt;--不等于--&amp;gt;**禁止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;选项错误的原因
+&lt;ul&gt;
+&lt;li&gt;偷换主语&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;给文章取标题的题目
+&lt;ul&gt;
+&lt;li&gt;考查概括主旨,体现文章探讨的主要对象&lt;/li&gt;
+&lt;li&gt;干扰项长为文章中的细枝末节,不能涵盖全文内容&lt;/li&gt;
+&lt;li&gt;仅在&lt;strong&gt;某一段&lt;/strong&gt;出现一次或多次的关键词不是,而分别在&lt;strong&gt;不同段&lt;/strong&gt;出现大于一次的关键词可能是的,末尾段一般作为总结,看看开头的句子是否有出现在别的段落的关键词&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

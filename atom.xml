@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-07-30T00:53:09.959Z</updated>
+    <updated>2020-08-01T08:17:18.153Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,95 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[第二章 进程同步之经典同步问题(重点)]]></title>
+        <id>https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/</id>
+        <link href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">
+        </link>
+        <updated>2020-07-30T06:37:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="生产者-消费者问题">生产者-消费者问题</h2>
+<ol>
+<li>问题分析<br>
+<img src="https://s1.ax1x.com/2020/07/30/auN1MR.png" alt="auN1MR.png" loading="lazy"></li>
+<li>解决<br>
+<img src="https://s1.ax1x.com/2020/07/30/aua8UK.png" alt="aua8UK.png" loading="lazy"></li>
+<li>mutex的p操作不能放到前面,否则会造成死锁<br>
+<img src="https://s1.ax1x.com/2020/07/30/audco6.png" alt="audco6.png" loading="lazy"></li>
+</ol>
+<ul>
+<li><strong>实现互斥的P操作一定要放到实现同步的P操作之后</strong></li>
+<li>V操作不会导致进程阻塞,因此两个V操作顺序可以互换</li>
+</ul>
+<ol start="4">
+<li>生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分</li>
+<li>小结<br>
+<img src="https://s1.ax1x.com/2020/07/30/au0wr9.png" alt="au0wr9.png" loading="lazy"></li>
+</ol>
+<h2 id="多生产者-多消费者问题">多生产者-多消费者问题</h2>
+<ol>
+<li>问题分析<br>
+<img src="https://s1.ax1x.com/2020/07/30/auf2zn.png" alt="auf2zn.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/07/30/auh56I.png" alt="auh56I.png" loading="lazy"></li>
+<li>实现</li>
+</ol>
+<ul>
+<li>有mutex<br>
+<img src="https://s1.ax1x.com/2020/07/30/au4wE8.png" alt="au4wE8.png" loading="lazy"></li>
+<li>这里可以去掉mutex,plate作为互斥信号量<br>
+<img src="https://s1.ax1x.com/2020/07/30/au4bK1.png" alt="au4bK1.png" loading="lazy"></li>
+<li>这里可以是因为缓冲区大小为1,当然加上mutex肯定没错</li>
+<li><strong>当缓冲区大小大于1时,要加上mutex互斥信号量</strong><br>
+<img src="https://s1.ax1x.com/2020/07/30/au5YiF.png" alt="au5YiF.png" loading="lazy"></li>
+</ul>
+<ol start="3">
+<li>小结<br>
+<img src="https://s1.ax1x.com/2020/07/30/au5rdK.png" alt="au5rdK.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/07/30/auID6s.png" alt="auID6s.png" loading="lazy"><br>
+<strong>注:不要从单个进程的角度来看问题,要从事件的角度</strong></li>
+</ol>
+<h2 id="读者写者问题">读者写者问题</h2>
+<ol>
+<li>问题分析<br>
+<img src="https://s1.ax1x.com/2020/08/01/a3XIET.png" alt="a3XIET.png" loading="lazy"></li>
+<li>实现<br>
+<img src="https://s1.ax1x.com/2020/08/01/a3jaiF.png" alt="a3jaiF.png" loading="lazy"></li>
+<li>避免写进程饥饿<br>
+<img src="https://s1.ax1x.com/2020/08/01/a3xy4O.png" alt="a3xy4O.png" loading="lazy"></li>
+<li>小结</li>
+</ol>
+<ul>
+<li>遇到同步问题一般是生产者-消费者问题</li>
+<li>遇到包含互斥的一般是复杂的读者-写者问题<br>
+<img src="https://s1.ax1x.com/2020/08/01/a3z0zQ.png" alt="a3z0zQ.png" loading="lazy"></li>
+</ul>
+<h2 id="哲学家进餐问题">哲学家进餐问题</h2>
+<ol>
+<li>问题分析<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8kg8x.png" alt="a8kg8x.png" loading="lazy"></li>
+<li>造成死锁的方法<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8kbGt.png" alt="a8kbGt.png" loading="lazy"></li>
+<li>解决思索的方法
+<ol>
+<li>至多允许四个哲学家拿起筷子</li>
+<li>仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子</li>
+<li>对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8M7mq.png" alt="a8M7mq.png" loading="lazy"></li>
+</ol>
+</li>
+<li>小结<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8QmjA.png" alt="a8QmjA.png" loading="lazy"></li>
+</ol>
+<h2 id="吸烟者问题">吸烟者问题</h2>
+<ol>
+<li>问题分析<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8tifP.png" alt="a8tifP.png" loading="lazy"></li>
+<li>实现<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8tMYq.png" alt="a8tMYq.png" loading="lazy"></li>
+<li>小结<br>
+<img src="https://s1.ax1x.com/2020/08/01/a8t86U.png" alt="a8t86U.png" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第二章 进程同步]]></title>
         <id>https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/</id>
@@ -795,33 +884,6 @@ filedes[1]用于写入数据，写入时必须关闭读取端，即close(filedes
 </li>
 </ul>
 <p><strong>知识框架</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中断的概念及作用]]></title>
-        <id>https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/</id>
-        <link href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/">
-        </link>
-        <updated>2020-07-01T08:22:39.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>当中断发生后,CPU立即进入__核心态__</li>
-<li>当中断发生后,当前运行的进程暂停运行,并由操作系统内核对中断进行处理</li>
-<li>对于不同的中断信号,会进行不同的处理</li>
-</ol>
-<hr>
-<p>发生了中断，就意味着需要操作系统介入，开展管理工作。由于操作系统的管理工作（比如进程切换、分配I/O设备等）需要使用特权指令，因此CPU要从用户态转为核心态。<strong>中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权</strong>。有了中断，才能实现多道程序并发执行。</p>
-<ul>
-<li>用户态-&gt;核心态是通过中断实现的,并且中断是唯一途径</li>
-<li>核心态-&gt;用户态的切换是通过执行一个特权指令,将程序状态字(PSW)的标志位设置为&quot;用户态&quot;<br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan1.png" alt="1.1" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan2.png" alt="1.2" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan6.png" alt="1.6" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan3.png" alt="1.3" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan4.png" alt="1.4" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/songdlut/Picbed_PicGo/master/img/zhongduan5.png" alt="1.5" loading="lazy"></li>
-<li>陷入指令是唯一一个只能在用户态下执行的指令</li>
-<li></li>
-</ul>
 ]]></content>
     </entry>
 </feed>
