@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-08-01T08:17:18.153Z</updated>
+    <updated>2020-08-01T11:48:10.624Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -186,6 +186,33 @@ turn =1;//我用完了,谦让给你</li>
 <figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/07/28/aAOuTO.png" alt="aAOuTO.png" loading="lazy"></figure>
 <h3 id="小结-2">小结</h3>
 <figure data-type="image" tabindex="10"><img src="https://s1.ax1x.com/2020/07/28/aAOAp9.png" alt="aAOAp9.png" loading="lazy"></figure>
+<h2 id="管程">管程</h2>
+<h3 id="概念">概念</h3>
+<figure data-type="image" tabindex="11"><img src="https://s1.ax1x.com/2020/08/01/a8xWOs.png" alt="a8xWOs.png" loading="lazy"></figure>
+<ol>
+<li>组成其实就是一个类数据+方法
+<ul>
+<li>因此只有局部于管程的过程(函数)才能访问局部于的数据</li>
+<li>也只有调用管程内的方法才能访问共享数据</li>
+</ul>
+</li>
+<li>每次仅允许一个进程在管程内执行某个内部过程==&gt;保证了访问共享数据时的互斥性</li>
+</ol>
+<h3 id="应用">应用</h3>
+<figure data-type="image" tabindex="12"><img src="https://s1.ax1x.com/2020/08/01/aGSMUx.png" alt="aGSMUx.png" loading="lazy"></figure>
+<ol>
+<li>实现互斥:由编译器负责实现各进程互斥地进入管程中的过程<br>
+当两个进程并发执行,一次调用insert过程,如果第一个没执行完,发生调度,则第二个执行到insert时会阻塞,这是由编译器完成的<br>
+**队列:insert-&gt;producer2</li>
+<li>实现同步:管程中设置条件变量和等待/唤醒条件,以解决同步问题</li>
+</ol>
+<h3 id="小结-3">小结</h3>
+<p>其实就是用了封装的思想,对外提供接口,方便使用<br>
+<img src="https://s1.ax1x.com/2020/08/01/aGC82T.png" alt="aGC82T.png" loading="lazy"></p>
+<h3 id="java中的类似管程的机制">java中的类似管程的机制</h3>
+<figure data-type="image" tabindex="13"><img src="https://s1.ax1x.com/2020/08/01/aGCrRK.png" alt="aGCrRK.png" loading="lazy"></figure>
+<h3 id="总结">总结</h3>
+<figure data-type="image" tabindex="14"><img src="https://s1.ax1x.com/2020/08/01/aGC4it.png" alt="aGC4it.png" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>

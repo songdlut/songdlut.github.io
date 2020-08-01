@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>背单词时遇到到意思相近的词 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596269831276">
+<link rel="shortcut icon" href="/favicon.ico?v=1596282167491">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -2571,6 +2571,33 @@ turn =1;//我用完了,谦让给你&lt;/li&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/28/aAOuTO.png&#34; alt=&#34;aAOuTO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;小结-2&#34;&gt;小结&lt;/h3&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/28/aAOAp9.png&#34; alt=&#34;aAOAp9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;管程&#34;&gt;管程&lt;/h2&gt;
+&lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8xWOs.png&#34; alt=&#34;a8xWOs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;组成其实就是一个类数据+方法
+&lt;ul&gt;
+&lt;li&gt;因此只有局部于管程的过程(函数)才能访问局部于的数据&lt;/li&gt;
+&lt;li&gt;也只有调用管程内的方法才能访问共享数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;每次仅允许一个进程在管程内执行某个内部过程==&amp;gt;保证了访问共享数据时的互斥性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;应用&#34;&gt;应用&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGSMUx.png&#34; alt=&#34;aGSMUx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;实现互斥:由编译器负责实现各进程互斥地进入管程中的过程&lt;br&gt;
+当两个进程并发执行,一次调用insert过程,如果第一个没执行完,发生调度,则第二个执行到insert时会阻塞,这是由编译器完成的&lt;br&gt;
+**队列:insert-&amp;gt;producer2&lt;/li&gt;
+&lt;li&gt;实现同步:管程中设置条件变量和等待/唤醒条件,以解决同步问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;小结-3&#34;&gt;小结&lt;/h3&gt;
+&lt;p&gt;其实就是用了封装的思想,对外提供接口,方便使用&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGC82T.png&#34; alt=&#34;aGC82T.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;java中的类似管程的机制&#34;&gt;java中的类似管程的机制&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGCrRK.png&#34; alt=&#34;aGCrRK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGC4it.png&#34; alt=&#34;aGC4it.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 ">第二章 进程同步</a>
       </div>
       

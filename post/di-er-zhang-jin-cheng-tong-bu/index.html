@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>第二章 进程同步 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596269831276">
+<link rel="shortcut icon" href="/favicon.ico?v=1596282167491">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -277,6 +277,15 @@
 <li><a href="#%E5%90%8C%E6%AD%A5">同步</a></li>
 <li><a href="#%E5%89%8D%E9%A9%B1">前驱</a></li>
 <li><a href="#%E5%B0%8F%E7%BB%93-2">小结</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%A1%E7%A8%8B">管程</a>
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8">应用</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93-3">小结</a></li>
+<li><a href="#java%E4%B8%AD%E7%9A%84%E7%B1%BB%E4%BC%BC%E7%AE%A1%E7%A8%8B%E7%9A%84%E6%9C%BA%E5%88%B6">java中的类似管程的机制</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
 </ul>
 </li>
 </ul>
@@ -561,12 +570,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>621<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>862<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -661,6 +670,33 @@ turn =1;//我用完了,谦让给你</li>
 <figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/07/28/aAOuTO.png" alt="aAOuTO.png" loading="lazy"></figure>
 <h3 id="小结-2">小结</h3>
 <figure data-type="image" tabindex="10"><img src="https://s1.ax1x.com/2020/07/28/aAOAp9.png" alt="aAOAp9.png" loading="lazy"></figure>
+<h2 id="管程">管程</h2>
+<h3 id="概念">概念</h3>
+<figure data-type="image" tabindex="11"><img src="https://s1.ax1x.com/2020/08/01/a8xWOs.png" alt="a8xWOs.png" loading="lazy"></figure>
+<ol>
+<li>组成其实就是一个类数据+方法
+<ul>
+<li>因此只有局部于管程的过程(函数)才能访问局部于的数据</li>
+<li>也只有调用管程内的方法才能访问共享数据</li>
+</ul>
+</li>
+<li>每次仅允许一个进程在管程内执行某个内部过程==&gt;保证了访问共享数据时的互斥性</li>
+</ol>
+<h3 id="应用">应用</h3>
+<figure data-type="image" tabindex="12"><img src="https://s1.ax1x.com/2020/08/01/aGSMUx.png" alt="aGSMUx.png" loading="lazy"></figure>
+<ol>
+<li>实现互斥:由编译器负责实现各进程互斥地进入管程中的过程<br>
+当两个进程并发执行,一次调用insert过程,如果第一个没执行完,发生调度,则第二个执行到insert时会阻塞,这是由编译器完成的<br>
+**队列:insert-&gt;producer2</li>
+<li>实现同步:管程中设置条件变量和等待/唤醒条件,以解决同步问题</li>
+</ol>
+<h3 id="小结-3">小结</h3>
+<p>其实就是用了封装的思想,对外提供接口,方便使用<br>
+<img src="https://s1.ax1x.com/2020/08/01/aGC82T.png" alt="aGC82T.png" loading="lazy"></p>
+<h3 id="java中的类似管程的机制">java中的类似管程的机制</h3>
+<figure data-type="image" tabindex="13"><img src="https://s1.ax1x.com/2020/08/01/aGCrRK.png" alt="aGCrRK.png" loading="lazy"></figure>
+<h3 id="总结">总结</h3>
+<figure data-type="image" tabindex="14"><img src="https://s1.ax1x.com/2020/08/01/aGC4it.png" alt="aGC4it.png" loading="lazy"></figure>
 
             </div>
             
@@ -1886,6 +1922,33 @@ turn =1;//我用完了,谦让给你&lt;/li&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/28/aAOuTO.png&#34; alt=&#34;aAOuTO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;小结-2&#34;&gt;小结&lt;/h3&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/28/aAOAp9.png&#34; alt=&#34;aAOAp9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;管程&#34;&gt;管程&lt;/h2&gt;
+&lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/a8xWOs.png&#34; alt=&#34;a8xWOs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;组成其实就是一个类数据+方法
+&lt;ul&gt;
+&lt;li&gt;因此只有局部于管程的过程(函数)才能访问局部于的数据&lt;/li&gt;
+&lt;li&gt;也只有调用管程内的方法才能访问共享数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;每次仅允许一个进程在管程内执行某个内部过程==&amp;gt;保证了访问共享数据时的互斥性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;应用&#34;&gt;应用&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGSMUx.png&#34; alt=&#34;aGSMUx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;实现互斥:由编译器负责实现各进程互斥地进入管程中的过程&lt;br&gt;
+当两个进程并发执行,一次调用insert过程,如果第一个没执行完,发生调度,则第二个执行到insert时会阻塞,这是由编译器完成的&lt;br&gt;
+**队列:insert-&amp;gt;producer2&lt;/li&gt;
+&lt;li&gt;实现同步:管程中设置条件变量和等待/唤醒条件,以解决同步问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;小结-3&#34;&gt;小结&lt;/h3&gt;
+&lt;p&gt;其实就是用了封装的思想,对外提供接口,方便使用&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGC82T.png&#34; alt=&#34;aGC82T.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;java中的类似管程的机制&#34;&gt;java中的类似管程的机制&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGCrRK.png&#34; alt=&#34;aGCrRK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/08/01/aGC4it.png&#34; alt=&#34;aGC4it.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 ">第二章 进程同步</a>
       </div>
       
