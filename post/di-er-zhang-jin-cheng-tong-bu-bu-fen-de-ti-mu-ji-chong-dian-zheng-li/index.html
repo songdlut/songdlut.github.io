@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>处理机调度部分理解 | 宋宇航的博客</title>
+<title>第二章 进程同步部分的题目及重点整理 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1597365690415">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="处理机调度部分理解" />
+  <meta name="description" content="第二章 进程同步部分的题目及重点整理" />
   <meta name="keywords" content="" />
 </head>
 
@@ -190,8 +190,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -248,214 +247,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%A6%82%E5%BF%B5%E9%83%A8%E5%88%86%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E5%88%87%E6%8D%A2%E4%B8%8E%E8%BF%87%E7%A8%8B">概念部分,调度的时机,切换与过程</a></li>
-<li><a href="#%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5">调度的概念</a></li>
-<li><a href="#%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6">作业调度</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6">进程调度</a></li>
-<li><a href="#%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E4%B8%AD%E7%BA%A7%E8%B0%83%E5%BA%A6">内存调度(中级调度)</a></li>
-<li><a href="#%E4%B8%83%E7%8A%B6%E6%80%81%E6%A8%A1%E5%9E%8B">七状态模型</a></li>
-<li><a href="#%E5%AF%B9%E6%AF%94">对比</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA">进程调度的时机</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F%E7%A7%8D%E7%B1%BB">进程调度方式种类</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%87%E6%8D%A2%E8%BF%87%E7%A8%8B">进程的切换过程</a></li>
-<li><a href="#%E8%B0%83%E5%BA%A6%E6%97%B6%E6%9C%BA%E5%88%87%E6%8D%A2%E4%B8%8E%E8%BF%87%E7%A8%8B%E7%9A%84%E6%80%BB%E7%BB%93">调度时机,切换与过程的总结</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F">进程调度方式</a>
-<ul>
-<li><a href="#%E8%B0%83%E5%BA%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99">调度的基本准则</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -543,8 +334,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/chu-li-ji-diao-du-bu-fen-li-jie/">
-      处理机调度部分理解
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">
+      第二章 进程同步部分的题目及重点整理
     </a>
   </h1>
   <div class="post-meta">
@@ -552,23 +343,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-14</span>
+      <span>2020-08-01</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>461<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>840<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/chu-li-ji-diao-du-bu-fen-li-jie/" data-flag-title="处理机调度部分理解" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/" data-flag-title="第二章 进程同步部分的题目及重点整理" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -577,76 +368,58 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h3 id="概念部分调度的时机切换与过程">概念部分,调度的时机,切换与过程</h3>
-<h3 id="调度的概念">调度的概念</h3>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/07/14/UUVu6S.png" alt="UUVu6S.png" loading="lazy"></figure>
-<h3 id="作业调度">作业调度</h3>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/07/14/UUVIAA.png" alt="UUVIAA.png" loading="lazy"></figure>
-<h3 id="进程调度">进程调度</h3>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/07/14/UUZljO.png" alt="UUZljO.png" loading="lazy"></figure>
-<h3 id="内存调度中级调度">内存调度(中级调度)</h3>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/07/14/UUZGHH.png" alt="UUZGHH.png" loading="lazy"></figure>
-<h3 id="七状态模型">七状态模型</h3>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/07/14/UUZb5R.png" alt="UUZb5R.png" loading="lazy"></figure>
-<h3 id="对比">对比</h3>
-<p><img src="https://s1.ax1x.com/2020/07/14/UUuPIJ.png" alt="UUuPIJ.png" loading="lazy"><br>
-###概念总结<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUulid.png" alt="UUulid.png" loading="lazy"></p>
+              <ul>
+<li>临界区是指进程中<strong>访问临界资源</strong>的那部分<strong>代码</strong></li>
+<li>信号量为负值时,绝对值就是阻塞(等待)的进程数
 <ul>
-<li>注意调度针对的是什么
+<li>当前信号量大于0,则说明没有进程处于等待状态,且为多少就有多少资源</li>
+</ul>
+</li>
+<li>进程处于临界区允许其他进程抢占(☆)
 <ul>
-<li>进程调度针对的是就绪队列里的进程,而其他状态的进程是系统处理</li>
-<li>内存调度针对的是挂起队列(就绪挂起队列/阻塞挂起队列)</li>
+<li>进程在操作系统内核程序临界区时不能发生调度与切换,原因是<strong>内核程序临界区一般是用来访问某种内核数据结构的,如果不尽快释放,有可能导致操作系统内核的其他管理工作</strong></li>
+</ul>
+</li>
+<li>情景类问题,如不同旅行社为为旅客到某航空公司顶机票,机票是临界资源
+<ul>
+<li>这里就注意对应关系,一张机票对应的都只能是一个人,而旅行社可以对应不同旅客,航空公司也可以对应不同旅行社</li>
+</ul>
+</li>
+<li>要对并发进程同步的原因是并发进程是异步的</li>
+<li>关于PV操作的概念
+<ul>
+<li><strong>是低级进程通信原语</strong></li>
+<li><strong>不是系统调用</strong></li>
+<li>是由<strong>两个不可被中断</strong>的过程组成,因为分别是P和V所以俩</li>
+</ul>
+</li>
+<li>关于互斥和同步信号量的初值
+<ul>
+<li>互斥信号量的初值是1,固定的</li>
+<li>同步信号量的初值是由用户决定的
+<ul>
+<li>若期望的消息未产生设置为0,若期望的消息已存在,则信号量的初值设置为一个非0的正整数,就像生产者消费者中的缓冲区容量以及数据数</li>
 </ul>
 </li>
 </ul>
-<h3 id="进程调度的时机">进程调度的时机</h3>
-<p><img src="https://s1.ax1x.com/2020/07/14/UUWU2Q.png" alt="UUWU2Q.png" loading="lazy"><br>
-<strong>注意区别</strong></p>
-<blockquote>
-<p>进程在<strong>操作系统内核程序临界区</strong>中<strong>不能</strong>进行调度和切换<br>
-进程处于<strong>临界区</strong>时<strong>不能</strong>进行处理机调度是<strong>错误的</strong><br>
-<img src="https://s1.ax1x.com/2020/07/14/UUf4Sg.png" alt="UUf4Sg.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/14/UUhFk6.png" alt="UUhFk6.png" loading="lazy"><br>
-后者案例:访问普通临界资源<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUh3h8.png" alt="UUh3h8.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/14/UUhG9S.png" alt="UUhG9S.png" loading="lazy"></p>
-</blockquote>
-<h3 id="进程调度方式种类">进程调度方式种类</h3>
-<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/07/14/UUhLDA.png" alt="UUhLDA.png" loading="lazy"></figure>
-<h3 id="进程的切换过程">进程的切换过程</h3>
-<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/07/14/UU4qRU.png" alt="UU4qRU.png" loading="lazy"></figure>
-<h3 id="调度时机切换与过程的总结">调度时机,切换与过程的总结</h3>
-<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/07/14/UU5FzD.png" alt="UU5FzD.png" loading="lazy"></figure>
-<h2 id="进程调度方式">进程调度方式</h2>
-<h3 id="调度的基本准则">调度的基本准则</h3>
-<ol>
-<li>CPU利用率<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUOt0S.png" alt="UUOt0S.png" loading="lazy"></li>
-<li>系统吞吐量<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUOwfs.png" alt="UUOwfs.png" loading="lazy"></li>
-<li>周转时间<br>
-对于计算机的用户来说，他很关心自己的作业从提交到完成花了多少时间。<br>
-周转时间，是指从作业被提交给系统开始，到作业完成为止的这段时间间隔。<br>
-它包括四个部分：</li>
-</ol>
+</li>
+<li>若代码可被多个进程在任意时刻共享，则要求任一个进程在调用此段代码时都以同样的方式运行；而且进程在运行过程中被中断后再继续执行，其执行结果不受影响。这必然要求代码<strong>不能被任何进程修改</strong>，否则无法满足共享的要求。这样的代码就是<strong>可重入代码，也称纯代码</strong>，即允许多个进程同时访问的代码。</li>
+<li>共享程序段必须用可重入编码编写</li>
+<li>注意:管程的signal操作和信号量机制中的V操作不同,V操作会改变信号量的值S=S+1;管程中的signal操作是针对某个条件变量,若不存在因该条件而阻塞的进程,则signal不会产生任何影响
 <ul>
-<li>作业在外存后备队列上等待作业调度（高级调度）的时间、</li>
-<li>进程在就绪队列上等待进程调度（低级调度）的时间、</li>
-<li>进程在CPU上执行的时间、</li>
-<li>进程等待I/0操作完成的时间。</li>
-<li>后三项在一个作业的整个处理过程中，可能发生多次。</li>
+<li>考察的就是条件变量与信号量的区别,条件变量是没有值的,剩余资源数是用共享数据结构记录的</li>
 </ul>
-<center>（作业）周转时间=作业完成时间-作业提交时间</center> 
-<figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/07/14/UUXBUe.png" alt="UUXBUe.png" loading="lazy"></figure>
-<p><img src="https://s1.ax1x.com/2020/07/14/UUjQMt.png" alt="UUjQMt.png" loading="lazy"><br>
-4. 等待时间<br>
-注意的是:进程等待I/O完成的期间不算在等待时间里<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUjHFe.png" alt="UUjHFe.png" loading="lazy"><br>
-5. 响应时间<br>
-指从用户提交请求到首次产生响应所用时间<br>
-6. 小结<br>
-<img src="https://s1.ax1x.com/2020/07/14/UUv861.png" alt="UUv861.png" loading="lazy"></p>
+</li>
+<li>管程是被进程调用的,是语法范围,无法创建和销毁\</li>
+<li>关于TSL
+<ul>
+<li>当进程退出临界区时置lock为FALSE，会负责唤醒处于就绪态的进程</li>
+<li>等待进入临界区的进程会一直停留在执行while（TSL（&amp;lock）的循环中，不会主动放弃CPU.让权等待，即进程不能进入临界区时，应立即释放处理器，防止进程忙等待。并不满足“让权等待”的同步准则while（TSL（&amp;lock））在关中断状态下执行时，若TSL（&amp;lock）一直为true，不再开中断，则系统可能会因此终止</li>
+</ul>
+</li>
+<li>信箱通信是一种间接通信方式</li>
+<li></li>
+</ul>
 
             </div>
             
@@ -659,7 +432,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/chu-li-ji-diao-du-bu-fen-li-jie/" title="处理机调度部分理解">https://songdlut.github.io/post/chu-li-ji-diao-du-bu-fen-li-jie/</a>
+      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/" title="第二章 进程同步部分的题目及重点整理">https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -673,14 +446,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="栈与队列错题及重点" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/">栈与队列错题及重点</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="栈与队列错题及重点" href="https://songdlut.github.io/post/zhan-yu-dui-lie-cuo-ti-ji-chong-dian/">上一篇</a>
+        <a class="nav-pc-next" title="关于堆栈的讲解" href="https://songdlut.github.io/post/guan-yu-dui-zhan-de-jiang-jie/">关于堆栈的讲解</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="关于堆栈的讲解" href="https://songdlut.github.io/post/guan-yu-dui-zhan-de-jiang-jie/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="卡特兰数的部分理解" href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/">卡特兰数的部分理解</a>
-        <a class="nav-mobile-next" title="卡特兰数的部分理解" href="https://songdlut.github.io/post/qia-te-lan-shu-de-bu-fen-li-jie/">下一篇</a>
+        <a class="nav-pc-next" title="第二章 进程同步之经典同步问题(重点)" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">第二章 进程同步之经典同步问题(重点)</a>
+        <a class="nav-mobile-next" title="第二章 进程同步之经典同步问题(重点)" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
