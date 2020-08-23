@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第二章 进程同步之经典同步问题(重点) | 宋宇航的博客</title>
+<title>第五章 树的基本概念及错题重点整理 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598195654277">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="第二章 进程同步之经典同步问题(重点)" />
+  <meta name="description" content="第五章 树的基本概念及错题重点整理" />
   <meta name="keywords" content="" />
 </head>
 
@@ -256,11 +256,9 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">生产者-消费者问题</a></li>
-<li><a href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">多生产者-多消费者问题</a></li>
-<li><a href="#%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98">读者写者问题</a></li>
-<li><a href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98">哲学家进餐问题</a></li>
-<li><a href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98">吸烟者问题</a></li>
+<li><a href="#11-%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5">1.1 基本的一些概念</a></li>
+<li><a href="#12-%E6%80%A7%E8%B4%A8">1.2 性质</a></li>
+<li><a href="#%E9%94%99%E9%A2%98%E9%87%8D%E7%82%B9">错题重点</a></li>
 </ul>
 </li>
 </ul>
@@ -528,8 +526,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">
-      第二章 进程同步之经典同步问题(重点)
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/">
+      第五章 树的基本概念及错题重点整理
     </a>
   </h1>
   <div class="post-meta">
@@ -537,7 +535,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-30</span>
+      <span>2020-08-20</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -548,12 +546,12 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>407<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>332<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" data-flag-title="第二章 进程同步之经典同步问题(重点)" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/" data-flag-title="第五章 树的基本概念及错题重点整理" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -562,86 +560,38 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="生产者-消费者问题">生产者-消费者问题</h2>
+              <h2 id="11-基本的一些概念">1.1 基本的一些概念</h2>
+<p>不写了,太基本了</p>
+<h2 id="12-性质">1.2 性质</h2>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auN1MR.png" alt="auN1MR.png" loading="lazy"></li>
-<li>解决<br>
-<img src="https://s1.ax1x.com/2020/07/30/aua8UK.png" alt="aua8UK.png" loading="lazy"></li>
-<li>mutex的p操作不能放到前面,否则会造成死锁<br>
-<img src="https://s1.ax1x.com/2020/07/30/audco6.png" alt="audco6.png" loading="lazy"></li>
-</ol>
+<li>结点数=所有结点度数+1</li>
+<li>度为m的树中,第i层<strong>至多</strong>有m<sup>i-1</sup>个结点(i≥1)
 <ul>
-<li><strong>实现互斥的P操作一定要放到实现同步的P操作之后</strong></li>
-<li>V操作不会导致进程阻塞,因此两个V操作顺序可以互换</li>
+<li>树中结点最大的度数叫树的度</li>
+<li>度为m,第2层最多m个,第3层最多m²个....第i层m<sup>i-1</sup></li>
 </ul>
-<ol start="4">
-<li>生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au0wr9.png" alt="au0wr9.png" loading="lazy"></li>
-</ol>
-<h2 id="多生产者-多消费者问题">多生产者-多消费者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auf2zn.png" alt="auf2zn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auh56I.png" alt="auh56I.png" loading="lazy"></li>
-<li>实现</li>
-</ol>
-<ul>
-<li>有mutex<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4wE8.png" alt="au4wE8.png" loading="lazy"></li>
-<li>这里可以去掉mutex,plate作为互斥信号量<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4bK1.png" alt="au4bK1.png" loading="lazy"></li>
-<li>这里可以是因为缓冲区大小为1,当然加上mutex肯定没错</li>
-<li><strong>当缓冲区大小大于1时,要加上mutex互斥信号量</strong><br>
-<img src="https://s1.ax1x.com/2020/07/30/au5YiF.png" alt="au5YiF.png" loading="lazy"></li>
-</ul>
-<ol start="3">
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au5rdK.png" alt="au5rdK.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auID6s.png" alt="auID6s.png" loading="lazy"><br>
-<strong>注:不要从单个进程的角度来看问题,要从事件的角度</strong></li>
-</ol>
-<h2 id="读者写者问题">读者写者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3XIET.png" alt="a3XIET.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3jaiF.png" alt="a3jaiF.png" loading="lazy"></li>
-<li>避免写进程饥饿<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3xy4O.png" alt="a3xy4O.png" loading="lazy"></li>
-<li>小结</li>
-</ol>
-<ul>
-<li>遇到同步问题一般是生产者-消费者问题</li>
-<li>遇到包含互斥的一般是复杂的读者-写者问题<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3z0zQ.png" alt="a3z0zQ.png" loading="lazy"></li>
-</ul>
-<h2 id="哲学家进餐问题">哲学家进餐问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kg8x.png" alt="a8kg8x.png" loading="lazy"></li>
-<li>造成死锁的方法<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kbGt.png" alt="a8kbGt.png" loading="lazy"></li>
-<li>解决思索的方法
-<ol>
-<li>至多允许四个哲学家拿起筷子</li>
-<li>仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子</li>
-<li>对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8M7mq.png" alt="a8M7mq.png" loading="lazy"></li>
-</ol>
 </li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8QmjA.png" alt="a8QmjA.png" loading="lazy"></li>
+<li>高度为h的m叉树至多有(m<sup>h</sup>-1)/(m-1)个结点
+<ul>
+<li>1层:1<br>
+2层最多:m<br>
+3层最多:m²<br>
+....<br>
+累加:S=m<sup>h-1</sup>+m<sup>h-2</sup>+m<sup>h-3</sup>+...+m+1=(m<sup>h</sup>-1)/(m-1)</li>
+</ul>
+</li>
+<li>有n个结点的m叉树(最大结点数是m就行)最小高度:log<sub>m</sub>(n(m-1)+1)向上取整<br>
+最大高度:好像不咋求,有说是串成链了(n层),也有说最后一层m个,前面是链(n-m+1)层
+<ul>
+<li>最小高度,则每层铺满了,根据第3点:n=(m<sup>h</sup>-1)/(m-1),可以推导出这里h=log<sub>m</sub>(n(m-1)+1),再向上取个整,因为如果有零头,说明最后一层有结点但是没满,故而再加一层</li>
+</ul>
+</li>
 </ol>
-<h2 id="吸烟者问题">吸烟者问题</h2>
+<h2 id="错题重点">错题重点</h2>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tifP.png" alt="a8tifP.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tMYq.png" alt="a8tMYq.png" loading="lazy"></li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8t86U.png" alt="a8t86U.png" loading="lazy"></li>
+<li>树的路径长度是指<strong>树根到每个结点的路径长的总和</strong>,根到每个结点的路径长度的最大值是高度减1</li>
+<li>结点总数n=分支数(度的和)+1,即<strong>n=1+n<sub>1</sub>+2n<sub>2</sub>+3n<sub>3</sub>+4n<sub>4</sub>+……=n<sub>0</sub>+n<sub>1</sub>+n<sub>2</sub>+……</strong><br>
+求叶子结点就是求n<sub>0</sub></li>
 </ol>
 
             </div>
@@ -655,7 +605,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" title="第二章 进程同步之经典同步问题(重点)">https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/</a>
+      <a href="https://songdlut.github.io/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/" title="第五章 树的基本概念及错题重点整理">https://songdlut.github.io/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -669,14 +619,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">第二章 进程同步部分的题目及重点整理</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">上一篇</a>
+        <a class="nav-pc-next" title="第五章 二叉树" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/">第五章 二叉树</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第五章 二叉树" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">第二章 进程同步</a>
-        <a class="nav-mobile-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">下一篇</a>
+        <a class="nav-pc-next" title="关于堆栈的讲解" href="https://songdlut.github.io/post/guan-yu-dui-zhan-de-jiang-jie/">关于堆栈的讲解</a>
+        <a class="nav-mobile-next" title="关于堆栈的讲解" href="https://songdlut.github.io/post/guan-yu-dui-zhan-de-jiang-jie/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第二章 进程同步之经典同步问题(重点) | 宋宇航的博客</title>
+<title>第五章 二叉树的遍历 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598195654277">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="第二章 进程同步之经典同步问题(重点)" />
+  <meta name="description" content="第五章 二叉树的遍历" />
   <meta name="keywords" content="" />
 </head>
 
@@ -256,11 +256,15 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">生产者-消费者问题</a></li>
-<li><a href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">多生产者-多消费者问题</a></li>
-<li><a href="#%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98">读者写者问题</a></li>
-<li><a href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98">哲学家进餐问题</a></li>
-<li><a href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98">吸烟者问题</a></li>
+<li><a href="#11-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86">1.1 二叉树的遍历</a>
+<ul>
+<li><a href="#111-%E6%B7%B1%E5%BA%A6%E9%81%8D%E5%8E%86%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95">1.1.1 深度遍历递归算法</a></li>
+<li><a href="#112-%E6%B7%B1%E5%BA%A6%E9%81%8D%E5%8E%86%E9%9D%9E%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95">1.1.2 深度遍历非递归算法</a></li>
+<li><a href="#113-%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93">1.1.3 一些总结</a></li>
+<li><a href="#114-%E5%B9%BF%E5%BA%A6%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86">1.1.4 广度(层次)遍历</a></li>
+<li><a href="#115-%E7%94%B1%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91">1.1.5 由遍历序列构造二叉树</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -528,8 +532,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">
-      第二章 进程同步之经典同步问题(重点)
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">
+      第五章 二叉树的遍历
     </a>
   </h1>
   <div class="post-meta">
@@ -537,23 +541,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-30</span>
+      <span>2020-08-22</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>407<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1253<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" data-flag-title="第二章 进程同步之经典同步问题(重点)" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/" data-flag-title="第五章 二叉树的遍历" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -562,86 +566,194 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="生产者-消费者问题">生产者-消费者问题</h2>
+              <h2 id="11-二叉树的遍历">1.1 二叉树的遍历</h2>
+<h3 id="111-深度遍历递归算法">1.1.1 深度遍历递归算法</h3>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auN1MR.png" alt="auN1MR.png" loading="lazy"></li>
-<li>解决<br>
-<img src="https://s1.ax1x.com/2020/07/30/aua8UK.png" alt="aua8UK.png" loading="lazy"></li>
-<li>mutex的p操作不能放到前面,否则会造成死锁<br>
-<img src="https://s1.ax1x.com/2020/07/30/audco6.png" alt="audco6.png" loading="lazy"></li>
+<li>PreOrder<br>
+顺序:根-&gt;左子树-&gt;右子树</li>
 </ol>
-<ul>
-<li><strong>实现互斥的P操作一定要放到实现同步的P操作之后</strong></li>
-<li>V操作不会导致进程阻塞,因此两个V操作顺序可以互换</li>
-</ul>
-<ol start="4">
-<li>生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au0wr9.png" alt="au0wr9.png" loading="lazy"></li>
+<pre><code>void PreOrder(BiTree T)
+{
+    if(T!=NULL)
+    {
+        visit(T);
+        PreOrder(T-&gt;lchild);
+        PreOrder(T-&gt;rchild);
+    }
+}
+</code></pre>
+<ol start="2">
+<li>InOrder<br>
+顺序:左子树-&gt;根-&gt;右子树</li>
 </ol>
-<h2 id="多生产者-多消费者问题">多生产者-多消费者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auf2zn.png" alt="auf2zn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auh56I.png" alt="auh56I.png" loading="lazy"></li>
-<li>实现</li>
-</ol>
-<ul>
-<li>有mutex<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4wE8.png" alt="au4wE8.png" loading="lazy"></li>
-<li>这里可以去掉mutex,plate作为互斥信号量<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4bK1.png" alt="au4bK1.png" loading="lazy"></li>
-<li>这里可以是因为缓冲区大小为1,当然加上mutex肯定没错</li>
-<li><strong>当缓冲区大小大于1时,要加上mutex互斥信号量</strong><br>
-<img src="https://s1.ax1x.com/2020/07/30/au5YiF.png" alt="au5YiF.png" loading="lazy"></li>
-</ul>
+<pre><code>void InOrder(BiTree T)
+{
+    if(T!=NULL)
+    {
+        InOrder(T-&gt;lchild);
+        visit(T);
+        InOrder(T-&gt;rchild);
+    }
+}
+</code></pre>
 <ol start="3">
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au5rdK.png" alt="au5rdK.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auID6s.png" alt="auID6s.png" loading="lazy"><br>
-<strong>注:不要从单个进程的角度来看问题,要从事件的角度</strong></li>
+<li>PostOrder<br>
+顺序:左子树-&gt;右子树-&gt;根</li>
 </ol>
-<h2 id="读者写者问题">读者写者问题</h2>
+<pre><code>void PostOrder(BiTree T)
+{
+    if(T!=NULL)
+    {
+        PostOrder(T-&gt;lchild);
+        PostOrder(T-&gt;rchild);
+        visit(T);
+    }
+}
+</code></pre>
+<h3 id="112-深度遍历非递归算法">1.1.2 深度遍历非递归算法</h3>
+<p>难就难在递归到非递归的转换</p>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3XIET.png" alt="a3XIET.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3jaiF.png" alt="a3jaiF.png" loading="lazy"></li>
-<li>避免写进程饥饿<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3xy4O.png" alt="a3xy4O.png" loading="lazy"></li>
-<li>小结</li>
+<li>PreOrder</li>
 </ol>
-<ul>
-<li>遇到同步问题一般是生产者-消费者问题</li>
-<li>遇到包含互斥的一般是复杂的读者-写者问题<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3z0zQ.png" alt="a3z0zQ.png" loading="lazy"></li>
-</ul>
-<h2 id="哲学家进餐问题">哲学家进餐问题</h2>
+<pre><code>void PreOrder(BiTree T)
+{
+    Stack s;
+    BiTree p=T;
+    while(p||!IsEmpty(s))
+    {
+        if(p)
+        {
+            visit(p);
+            Push(s,p);
+            p=p-&gt;leftchild;
+        }
+        else
+        {
+            Pop(s,p);
+            p=p-&gt;rchild;
+        }
+    }
+}
+</code></pre>
+<ol start="2">
+<li>InOrder</li>
+</ol>
+<pre><code>void InOrder(BiTree T)
+{
+    Stack s;
+    BiTree p=T;
+    while(p||!IsEmpty(s))
+    {
+        if(p)
+        {
+            Push(p);
+            p=p-&gt;lchild;
+        }
+        else
+        {
+            Pop(p);
+            visit(p);
+            p=p-&gt;rchild;
+        }
+    }
+}
+</code></pre>
+<ol start="3">
+<li>PostOrder</li>
+</ol>
+<pre><code>void PostOrder(BiTree T)
+{
+    Stack s;
+    BiTree p=T;
+    BiTree r=NULL;
+    while(p||!sEmpty(s))
+    {
+        if(p)
+        {
+            Push(s,p);
+            p=p-&gt;lchild;
+        }
+        else//没得左子树了
+        {
+            Top(s,p);//栈顶元素
+            if(p-&gt;rchild&amp;&amp;p-&gt;rchild!=r)//右子树如果存在且没有被访问过
+            {
+                p=p-&gt;rchild;//把右子树的根结点入栈
+                Push(s,p);
+                p=p-&gt;lchild;继续转向左子树
+            }
+            else//右子树访问过或者不存在右子树,就可以安心地访问这个根结点了
+            {
+                Pop(s,p);
+                visit(p);
+                r=p;//记录一哈这个访问过了,万一是右子树的根的话,他的老头就会知道自己的右子树访问过了
+                p=NULL;//p不空的唯一用途就是一直往下寻找左子树,因此置空则是为了表明可以回退去找右子树了
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="113-一些总结">1.1.3 一些总结</h3>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kg8x.png" alt="a8kg8x.png" loading="lazy"></li>
-<li>造成死锁的方法<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kbGt.png" alt="a8kbGt.png" loading="lazy"></li>
-<li>解决思索的方法
+<li>三种遍历算法中,递归遍历左子树,右子树都是固定的,只是访问根结点的顺序不同,不管哪种方式,根结点都访问且仅访问一次,<strong>时间复杂度为O(n)</strong></li>
+<li>空间复杂度和栈的深度有关,最坏是O(n)(一条从上到下)
 <ol>
-<li>至多允许四个哲学家拿起筷子</li>
-<li>仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子</li>
-<li>对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8M7mq.png" alt="a8M7mq.png" loading="lazy"></li>
+<li>栈的深度是树的深度</li>
+<li>递归工作栈和非递归用的栈都是</li>
 </ol>
 </li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8QmjA.png" alt="a8QmjA.png" loading="lazy"></li>
+<li></li>
 </ol>
-<h2 id="吸烟者问题">吸烟者问题</h2>
+<p>用途(☆):访问p的时候,此时栈内恰好是p结点的所有祖先,从栈底到栈顶再加上p正好构成从根结点到p结点的一条路径.</p>
+<h3 id="114-广度层次遍历">1.1.4 广度(层次)遍历</h3>
+<p>自上而下,自左向右的遍历</p>
+<pre><code>void LevelOrder(BiTree T)
+{
+    Queue q;
+    BiTree p=T;
+    EnQueue(q,p);
+    while(!IsEmpty(q))//队列非空
+    {
+        DeQueue(q,p);
+        visit(p);
+        if(p-&gt;lchild)
+            EnQueue(q,p-&gt;lchild);
+        if(p-&gt;rchild)
+            EnQueue(q,p-&gt;rchild);
+    }
+}
+</code></pre>
+<h3 id="115-由遍历序列构造二叉树">1.1.5 由遍历序列构造二叉树</h3>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tifP.png" alt="a8tifP.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tMYq.png" alt="a8tMYq.png" loading="lazy"></li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8t86U.png" alt="a8t86U.png" loading="lazy"></li>
+<li>先序和中序唯一确定一棵二叉树
+<blockquote>
+<p>在先序遍历序列中，第一个结点一定是二叉树的根结点；而在中序遍历中，根结点必然将中序序列分割成两个子序列，前一个子序列是根结点的左子树的中序序列，后一个子序列是根结点的右子树的中序序列。根据这两个子序列，在先序序列中找到对应的左子序列和右子序列。在先序序列中，左子序列的第一个结点是左子树的根结点，右子序列的第一个结点是右子树的根结点。如此递归地进行下去，便能唯一地确定这棵二叉树。</p>
+</blockquote>
+<ol>
+<li>先序序列的第一个是根结点(老祖宗),然后在中序序列中从前到后找到老祖宗,根据老祖宗将中序队列划成左子树和右子树的序列</li>
+<li>左子树再从先序序列找到根(小祖宗了),依次进行,右子树也是......</li>
+<li>以先序(ABCDEFGHI),中序(BCAEDGHFI)为例</li>
+</ol>
+<blockquote>
+<p>先序中,第一个A,老祖宗,在中序中发现A将BC,EDGHFI隔开,因此左子树是BC,右子树是EDGHFI<br>
+<img src="https://s1.ax1x.com/2020/08/23/dw5kPH.png" alt="dw5kPH.png" loading="lazy"><br>
+再看BC,先序BC,因此B是根结点,而中序中也是BC,故而C是右子树的<br>
+<img src="https://s1.ax1x.com/2020/08/23/dw5msP.png" alt="dw5msP.png" loading="lazy"><br>
+再看右子树EDGHFI,先序是DEFGHI,故而D是根结点,因此在中序中看,D将EDGHFI分成了E和GHFI,E是左子树了<br>
+<img src="https://s1.ax1x.com/2020/08/23/dw51iQ.png" alt="dw51iQ.png" loading="lazy"><br>
+再看GHFI,先序为FGHI,故而F为其根,因此,GH为左子树,I为右子树<br>
+<img src="https://s1.ax1x.com/2020/08/23/dw58Rs.png" alt="dw58Rs.png" loading="lazy">      <img src="https://s1.ax1x.com/2020/08/23/dw5YMq.png" alt="dw5YMq.png" loading="lazy"><br>
+先序后序中GH都是GH的顺序(和刚刚BC的理解一样),因此,G为根,H为右子树<br>
+完整是:<br>
+<img src="https://s1.ax1x.com/2020/08/23/dw5szR.png" alt="dw5szR.png" loading="lazy"></p>
+</blockquote>
+</li>
+<li>后序和中序确定一棵二叉树<br>
+和前序中序是差不多的,只是倒过来了,这两种本质都是从先序或后序找到根结点,再到相应的中序中划分成左子树对应的序列,右子树对应的序列,将分好的左右子树序列再带入到先序或后序找到对应的序列,先序就是最左边的是左/右子树的根结点,而后序就是最右边的是左/右子树的根结点</li>
+<li>层序序列和中序也可以确定<br>
+慢慢分析吧,比前面的简单,跟着序列画几个就出来了</li>
+<li>先序后后序无法确定一棵树<br>
+<img src="https://s1.ax1x.com/2020/08/23/dwTSrq.png" alt="dwTSrq.png" loading="lazy"></li>
 </ol>
 
             </div>
@@ -655,7 +767,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" title="第二章 进程同步之经典同步问题(重点)">https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/</a>
+      <a href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/" title="第五章 二叉树的遍历">https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -669,14 +781,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">第二章 进程同步部分的题目及重点整理</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">上一篇</a>
+        <a class="nav-pc-next" title="第五章 线索二叉树" href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/">第五章 线索二叉树</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第五章 线索二叉树" href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">第二章 进程同步</a>
-        <a class="nav-mobile-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">下一篇</a>
+        <a class="nav-pc-next" title="第五章 二叉树" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/">第五章 二叉树</a>
+        <a class="nav-mobile-next" title="第五章 二叉树" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

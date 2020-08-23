@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第二章 进程同步之经典同步问题(重点) | 宋宇航的博客</title>
+<title>第五章 线索二叉树 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598195654277">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="第二章 进程同步之经典同步问题(重点)" />
+  <meta name="description" content="第五章 线索二叉树" />
   <meta name="keywords" content="" />
 </head>
 
@@ -256,11 +256,24 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">生产者-消费者问题</a></li>
-<li><a href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">多生产者-多消费者问题</a></li>
-<li><a href="#%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98">读者写者问题</a></li>
-<li><a href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98">哲学家进餐问题</a></li>
-<li><a href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98">吸烟者问题</a></li>
+<li><a href="#11-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91">1.1 线索二叉树</a>
+<ul>
+<li><a href="#111-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">1.1.1 基本概念</a></li>
+<li><a href="#112-%E6%9E%84%E9%80%A0">1.1.2 构造</a>
+<ul>
+<li><a href="#1121-%E4%B8%AD%E5%BA%8F%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0">1.1.2.1 中序线索二叉树的构造</a></li>
+<li><a href="#1122-%E5%85%88%E5%BA%8F">1.1.2.2 先序</a></li>
+<li><a href="#1123-%E5%90%8E%E5%BA%8F%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91">1.1.2.3 后序线索二叉树</a></li>
+<li><a href="#1124-%E5%B0%8F%E7%BB%93">1.1.2.4 小结</a></li>
+</ul>
+</li>
+<li><a href="#113-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86">1.1.3 线索二叉树的遍历</a>
+<ul>
+<li><a href="#1131-%E4%B8%AD%E5%BA%8F">1.1.3.1 中序</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -528,8 +541,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">
-      第二章 进程同步之经典同步问题(重点)
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/">
+      第五章 线索二叉树
     </a>
   </h1>
   <div class="post-meta">
@@ -537,23 +550,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-30</span>
+      <span>2020-08-23</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>407<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>773<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" data-flag-title="第二章 进程同步之经典同步问题(重点)" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-wu-zhang-xian-suo-er-cha-shu/" data-flag-title="第五章 线索二叉树" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -562,87 +575,150 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="生产者-消费者问题">生产者-消费者问题</h2>
+              <h2 id="11-线索二叉树">1.1 线索二叉树</h2>
+<h3 id="111-基本概念">1.1.1 基本概念</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/08/23/d0VWvj.png" alt="d0VWvj.png" loading="lazy"></figure>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auN1MR.png" alt="auN1MR.png" loading="lazy"></li>
-<li>解决<br>
-<img src="https://s1.ax1x.com/2020/07/30/aua8UK.png" alt="aua8UK.png" loading="lazy"></li>
-<li>mutex的p操作不能放到前面,否则会造成死锁<br>
-<img src="https://s1.ax1x.com/2020/07/30/audco6.png" alt="audco6.png" loading="lazy"></li>
+<li>记录前驱和后继是针对某一种遍历来的,不同的遍历方式对某一结点有不同的前驱后继</li>
+<li>结点结构<br>
+<img src="https://s1.ax1x.com/2020/08/23/d0kq8H.png" alt="d0kq8H.png" loading="lazy"></li>
+<li>标志域含义<br>
+<img src="https://s1.ax1x.com/2020/08/23/d0kxqP.png" alt="d0kxqP.png" loading="lazy"></li>
+<li>结点存储结构的代码描述</li>
 </ol>
-<ul>
-<li><strong>实现互斥的P操作一定要放到实现同步的P操作之后</strong></li>
-<li>V操作不会导致进程阻塞,因此两个V操作顺序可以互换</li>
-</ul>
-<ol start="4">
-<li>生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au0wr9.png" alt="au0wr9.png" loading="lazy"></li>
+<pre><code>typedef struct ThreadNode{
+    ElemType data;  //数据元素
+    struct ThreadNode *lchild,rchild;  //左右孩子指针
+    int ltag,rtag;   //左右线索标志
+}ThreadNode ,*ThreadTree;
+</code></pre>
+<ol start="5">
+<li>以这种结点构成的二叉链表作为二叉树的存储结构,称为<strong>线索链表</strong>,指向前驱和后继的指针称为线索,加了线索的二叉树叫做线索二叉树</li>
 </ol>
-<h2 id="多生产者-多消费者问题">多生产者-多消费者问题</h2>
+<h3 id="112-构造">1.1.2 构造</h3>
+<h4 id="1121-中序线索二叉树的构造">1.1.2.1 中序线索二叉树的构造</h4>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/08/23/d0E4AK.png" alt="d0E4AK.png" loading="lazy"></figure>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auf2zn.png" alt="auf2zn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auh56I.png" alt="auh56I.png" loading="lazy"></li>
-<li>实现</li>
+<li>中序遍历找某一结点的前驱</li>
 </ol>
-<ul>
-<li>有mutex<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4wE8.png" alt="au4wE8.png" loading="lazy"></li>
-<li>这里可以去掉mutex,plate作为互斥信号量<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4bK1.png" alt="au4bK1.png" loading="lazy"></li>
-<li>这里可以是因为缓冲区大小为1,当然加上mutex肯定没错</li>
-<li><strong>当缓冲区大小大于1时,要加上mutex互斥信号量</strong><br>
-<img src="https://s1.ax1x.com/2020/07/30/au5YiF.png" alt="au5YiF.png" loading="lazy"></li>
-</ul>
-<ol start="3">
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au5rdK.png" alt="au5rdK.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auID6s.png" alt="auID6s.png" loading="lazy"><br>
-<strong>注:不要从单个进程的角度来看问题,要从事件的角度</strong></li>
+<pre><code>BiNode *pre=NULL;//遍历时的前驱结点
+BiNode *final=NULL;//最终的前驱
+BiNode * p;//目标结点
+void FindPre(BiNode *q)
+{
+    if(q=p)
+        final=pre;找到了
+    else
+        pre=q;//往下走
+}
+void InOrder(Bitree T)
+{
+    InOrder(T-&gt;lchild);
+    FindPre(T);
+    InOrder(T-&gt;rchild);
+}
+
+</code></pre>
+<ol start="2">
+<li>中序线索二叉树的构造(实质就是再遍历一遍,然后找符合条件的连一连线)</li>
 </ol>
-<h2 id="读者写者问题">读者写者问题</h2>
+<pre><code>ThreadNode * pre=NULL;
+void visist(ThreadNode *q)//对遍历到的每个结点处理前驱后继
+{
+    if(q-&gt;lchild==NULL)//当前结点的左孩子为空,指向左孩子
+    {
+        q-&gt;child=pre;
+        q-&gt;ltag=1;
+    }
+    if(pre!=NULL&amp;&amp;pre-&gt;rchild==NULL)//前驱的右孩子为空
+    {
+        pre-&gt;rchild=q;
+        pre-&gt;rtag=1;
+    }
+    pre=q;
+}
+void InThread(ThreadTree T)//中序遍历
+{
+    InThread(T-&gt;lchild);
+    visit(T);
+    InThread(T-&gt;rchild);
+}
+void CreateThreadTree(Thread T)//中序遍历构造线索二叉树
+{
+    pre=NULL;
+    if(T!=NULL)
+    {
+        InThread(T);
+        pre-&gt;rchild=NULL;//处理最后一个结点
+        pre-&gt;rtag=1;
+    }
+}
+</code></pre>
+<h4 id="1122-先序">1.1.2.2 先序</h4>
+<p>和中序的区别不大,但是到最左下角的时候,如果没有左子树了,会指向前驱,但是再到PreThread函数中时,往下执行,会再次返回到他的前驱,然后又到他,死循环<br>
+<img src="https://s1.ax1x.com/2020/08/23/d06wtI.png" alt="d06wtI.png" loading="lazy"><br>
+因此需要在其中判断是不是真的指向左子树if(T-&gt;ltag==0)</p>
+<pre><code>ThreadNode * pre=NULL;
+/********visit()函数是一毛一样的****/
+void visist(ThreadNode *q)//对遍历到的每个结点处理前驱后继
+{
+    if(q-&gt;lchild==NULL)//当前结点的左孩子为空,指向左孩子
+    {
+        q-&gt;child=pre;
+        q-&gt;ltag=1;
+    }
+    if(pre!=NULL&amp;&amp;pre-&gt;rchild==NULL)//前驱的右孩子为空
+    {
+        pre-&gt;rchild=q;
+        pre-&gt;rtag=1;
+    }
+    pre=q;
+}
+void PreThread(ThreadTree T)//序遍历
+{
+    visit(T);
+    if(T-&gt;ltag==0)//lchild指向的不是线索而是真正的左孩子
+        InThread(T-&gt;lchild);
+    InThread(T-&gt;rchild);
+}
+void CreateThreadTree(Thread T)//先序遍历构造线索二叉树
+{
+    pre=NULL;
+    if(T!=NULL)
+    {
+        InThread(T);
+        pre-&gt;rchild=NULL;//处理最后一个结点
+        pre-&gt;rtag=1;
+    }
+}
+</code></pre>
+<h4 id="1123-后序线索二叉树">1.1.2.3 后序线索二叉树</h4>
+<p>visit()一毛一样<br>
+PostThread()里顺序改改就行<br>
+不同:</p>
+<pre><code>void PostThread(ThreadTree T)
+{
+    PostThread(T-&gt;lchild);
+    PostThread(T-&gt;rchild);
+    visit(T);
+}
+</code></pre>
+<h4 id="1124-小结">1.1.2.4 小结</h4>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/08/23/d0vmuD.png" alt="d0vmuD.png" loading="lazy"></figure>
+<h3 id="113-线索二叉树的遍历">1.1.3 线索二叉树的遍历</h3>
+<h4 id="1131-中序">1.1.3.1 中序</h4>
 <ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3XIET.png" alt="a3XIET.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3jaiF.png" alt="a3jaiF.png" loading="lazy"></li>
-<li>避免写进程饥饿<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3xy4O.png" alt="a3xy4O.png" loading="lazy"></li>
-<li>小结</li>
+<li>找某一中序序列下的第一个结点,其实就是给了个子树的根,一直往左下跑</li>
 </ol>
-<ul>
-<li>遇到同步问题一般是生产者-消费者问题</li>
-<li>遇到包含互斥的一般是复杂的读者-写者问题<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3z0zQ.png" alt="a3z0zQ.png" loading="lazy"></li>
-</ul>
-<h2 id="哲学家进餐问题">哲学家进餐问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kg8x.png" alt="a8kg8x.png" loading="lazy"></li>
-<li>造成死锁的方法<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kbGt.png" alt="a8kbGt.png" loading="lazy"></li>
-<li>解决思索的方法
-<ol>
-<li>至多允许四个哲学家拿起筷子</li>
-<li>仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子</li>
-<li>对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8M7mq.png" alt="a8M7mq.png" loading="lazy"></li>
-</ol>
-</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8QmjA.png" alt="a8QmjA.png" loading="lazy"></li>
-</ol>
-<h2 id="吸烟者问题">吸烟者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tifP.png" alt="a8tifP.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tMYq.png" alt="a8tMYq.png" loading="lazy"></li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8t86U.png" alt="a8t86U.png" loading="lazy"></li>
-</ol>
+<pre><code>ThreadNode *FirstNode(ThreadNode *p)
+{
+    while(p-&gt;ltag==0)
+    {
+        p=p-&gt;lchild;
+    }
+    return p;
+}
+</code></pre>
 
             </div>
             
@@ -655,7 +731,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" title="第二章 进程同步之经典同步问题(重点)">https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/</a>
+      <a href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/" title="第五章 线索二叉树">https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -669,14 +745,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">第二章 进程同步部分的题目及重点整理</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">上一篇</a>
+        <a class="nav-pc-next" title="关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)" href="https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/">关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)" href="https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">第二章 进程同步</a>
-        <a class="nav-mobile-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">下一篇</a>
+        <a class="nav-pc-next" title="第五章 二叉树的遍历" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">第五章 二叉树的遍历</a>
+        <a class="nav-mobile-next" title="第五章 二叉树的遍历" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

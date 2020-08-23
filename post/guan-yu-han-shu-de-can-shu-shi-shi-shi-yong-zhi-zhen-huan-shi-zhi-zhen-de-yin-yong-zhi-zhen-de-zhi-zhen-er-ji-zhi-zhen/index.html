@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第二章 进程同步之经典同步问题(重点) | 宋宇航的博客</title>
+<title>关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针) | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598195654277">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="第二章 进程同步之经典同步问题(重点)" />
+  <meta name="description" content="关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)" />
   <meta name="keywords" content="" />
 </head>
 
@@ -190,8 +190,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -248,199 +247,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">生产者-消费者问题</a></li>
-<li><a href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98">多生产者-多消费者问题</a></li>
-<li><a href="#%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98">读者写者问题</a></li>
-<li><a href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98">哲学家进餐问题</a></li>
-<li><a href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98">吸烟者问题</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -528,8 +334,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/">
-      第二章 进程同步之经典同步问题(重点)
+    <a class="post-title-link" href="https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/">
+      关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)
     </a>
   </h1>
   <div class="post-meta">
@@ -537,23 +343,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-30</span>
+      <span>2020-08-23</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>407<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>696<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" data-flag-title="第二章 进程同步之经典同步问题(重点)" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/" data-flag-title="关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -562,87 +368,118 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="生产者-消费者问题">生产者-消费者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auN1MR.png" alt="auN1MR.png" loading="lazy"></li>
-<li>解决<br>
-<img src="https://s1.ax1x.com/2020/07/30/aua8UK.png" alt="aua8UK.png" loading="lazy"></li>
-<li>mutex的p操作不能放到前面,否则会造成死锁<br>
-<img src="https://s1.ax1x.com/2020/07/30/audco6.png" alt="audco6.png" loading="lazy"></li>
+              <ol>
+<li>当只修改p指向的对象(对象的内容啥的)<br>
+例如:</li>
 </ol>
-<ul>
-<li><strong>实现互斥的P操作一定要放到实现同步的P操作之后</strong></li>
-<li>V操作不会导致进程阻塞,因此两个V操作顺序可以互换</li>
-</ul>
-<ol start="4">
-<li>生产产品的过程和使用产品的过程,会较长,为了避免降低效率(减少上锁时间),不建议将这两个过程放到产品放入缓冲区和从缓冲区取产品的部分</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au0wr9.png" alt="au0wr9.png" loading="lazy"></li>
-</ol>
-<h2 id="多生产者-多消费者问题">多生产者-多消费者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/07/30/auf2zn.png" alt="auf2zn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auh56I.png" alt="auh56I.png" loading="lazy"></li>
-<li>实现</li>
-</ol>
-<ul>
-<li>有mutex<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4wE8.png" alt="au4wE8.png" loading="lazy"></li>
-<li>这里可以去掉mutex,plate作为互斥信号量<br>
-<img src="https://s1.ax1x.com/2020/07/30/au4bK1.png" alt="au4bK1.png" loading="lazy"></li>
-<li>这里可以是因为缓冲区大小为1,当然加上mutex肯定没错</li>
-<li><strong>当缓冲区大小大于1时,要加上mutex互斥信号量</strong><br>
-<img src="https://s1.ax1x.com/2020/07/30/au5YiF.png" alt="au5YiF.png" loading="lazy"></li>
-</ul>
-<ol start="3">
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/07/30/au5rdK.png" alt="au5rdK.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/30/auID6s.png" alt="auID6s.png" loading="lazy"><br>
-<strong>注:不要从单个进程的角度来看问题,要从事件的角度</strong></li>
-</ol>
-<h2 id="读者写者问题">读者写者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3XIET.png" alt="a3XIET.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3jaiF.png" alt="a3jaiF.png" loading="lazy"></li>
-<li>避免写进程饥饿<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3xy4O.png" alt="a3xy4O.png" loading="lazy"></li>
-<li>小结</li>
-</ol>
-<ul>
-<li>遇到同步问题一般是生产者-消费者问题</li>
-<li>遇到包含互斥的一般是复杂的读者-写者问题<br>
-<img src="https://s1.ax1x.com/2020/08/01/a3z0zQ.png" alt="a3z0zQ.png" loading="lazy"></li>
-</ul>
-<h2 id="哲学家进餐问题">哲学家进餐问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kg8x.png" alt="a8kg8x.png" loading="lazy"></li>
-<li>造成死锁的方法<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8kbGt.png" alt="a8kbGt.png" loading="lazy"></li>
-<li>解决思索的方法
-<ol>
-<li>至多允许四个哲学家拿起筷子</li>
-<li>仅当一名哲学家左右两边的筷子都可以用时,才抓起筷子</li>
-<li>对哲学家顺序编号,奇数号先拿左边筷子,再拿右边,偶数号先拿右边筷子再拿左边<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8M7mq.png" alt="a8M7mq.png" loading="lazy"></li>
-</ol>
-</li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8QmjA.png" alt="a8QmjA.png" loading="lazy"></li>
-</ol>
-<h2 id="吸烟者问题">吸烟者问题</h2>
-<ol>
-<li>问题分析<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tifP.png" alt="a8tifP.png" loading="lazy"></li>
-<li>实现<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8tMYq.png" alt="a8tMYq.png" loading="lazy"></li>
-<li>小结<br>
-<img src="https://s1.ax1x.com/2020/08/01/a8t86U.png" alt="a8t86U.png" loading="lazy"></li>
-</ol>
+<pre><code>typedef struct node{
+    int data;
+    struct node next;
+}Node,List*;//再用List p就相当于Node *p;
+List p=(Node*)malloc(sizeof(Node));
+List q=(Node*)malloc(sizeof(Node));
+</code></pre>
+<p>指针p和q分别指向了两个不同的Node对象<br>
+如果一个函数fun()要改变p的data或next指向的对象,直接传递p即可</p>
+<pre><code>void fun(List p)
+{
+    p-&gt;data=xx;
+    p-&gt;next=p;//或者NULL,啥别的都行
+}
+</code></pre>
+<p>但是要修改p指向q的对象,就得引用了,因为只是指针的话,参数的传递实际上传的是指针变量里那个地址(对象的地址),而如果要改变指向(就是改变指针变量的值),必须是引用指针,就好比传一个int类型,你是没法改变传值进去的那个变量的值的,指针变量也是一个道理,改变不了那个地址,因此要用引用</p>
+<pre><code>void fun2(List &amp;p,List q)
+{
+    p=q;
+}
+</code></pre>
+<p>下面是C语言的测试(C语言没得引用就用了二级指针)<br>
+<img src="https://s1.ax1x.com/2020/08/23/dBQiad.png" alt="dBQiad.png" loading="lazy"></p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+void fun(int *p)
+{
+    *p=100;
+}
+void fun2(int **p,int *q)
+{
+    printf(&quot;infun2  %p\n&quot;,q);
+    *p=q;
+    printf(&quot;in fun2  *p     %p\n&quot;,*p);
+}
+int main()
+{
+    int a=1;
+    int b=2;
+    int *p=&amp;a;
+    int *q=&amp;b;
+    printf(&quot;p: %p\n&quot;,p);
+    printf(&quot;&amp;a: %p\n&quot;,&amp;a);
+    printf(&quot;&amp;p:  %p\n&quot;,&amp;p);
+    printf(&quot;q:  %p\n&quot;,q);
+    printf(&quot;&amp;b: %p\n&quot;,&amp;b);
+    printf(&quot;&amp;q: %p\n&quot;,&amp;q);
+    fun(p);
+    printf(&quot;%d\n&quot;,*p);
+    printf(&quot;%p\n&quot;,p);
+    fun2(&amp;p,q);
+    printf(&quot;%d\n&quot;,*p);
+    printf(&quot;%p\n&quot;,p);
+    printf(&quot;Hello world!\n&quot;);
+    return 0;
+}
+
+</code></pre>
+<p>下面是c++的测试,使用了引用<br>
+<img src="https://s1.ax1x.com/2020/08/23/dB3uqO.png" alt="dB3uqO.png" loading="lazy"></p>
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+typedef struct node{
+    int data;
+    struct node *next;
+}Node,*List;
+void ChangeData(List l)
+{
+    l-&gt;data=100;
+}
+void NotYingyong(List l,List j)
+{
+    cout&lt;&lt;&quot;In NOtYingyong:&quot;&lt;&lt;endl;
+    cout&lt;&lt;&quot;l-&gt;data=: &quot;&lt;&lt;l-&gt;data&lt;&lt;endl;
+    l=j;
+    cout&lt;&lt;&quot;After change: &quot;&lt;&lt;l-&gt;data&lt;&lt;endl;
+    cout&lt;&lt;&quot;Finish NotYingyong&quot;&lt;&lt;endl;
+}
+void Yingyong(List &amp;l,List j)
+{
+    l=j;
+}
+int main()
+{
+    Node n1,n2,n3;
+    n1.data=1;
+    n1.next=&amp;n3;
+    n2.data=2;
+    n2.next=&amp;n3;
+    n3.data=3;
+    n3.next=NULL;
+    List l1=&amp;n1;
+    List l2=&amp;n2;
+    List l3=&amp;n3;
+    cout&lt;&lt;&quot;l1: &quot;&lt;&lt;l1&lt;&lt;endl&lt;&lt;&quot;l2: &quot;&lt;&lt;l2&lt;&lt;endl&lt;&lt;&quot;l3: &quot;&lt;&lt;l3&lt;&lt;endl;
+    ChangeData(l3);
+    cout&lt;&lt;&quot;l3 change:  &quot;&lt;&lt;l3-&gt;data&lt;&lt;endl;
+    NotYingyong(l1,l3);
+    cout&lt;&lt;&quot;after NotYingyong l1: &quot;&lt;&lt;l1-&gt;data&lt;&lt;endl;
+    Yingyong(l2,l3);
+    cout&lt;&lt;&quot;after Yingyong l2: &quot;&lt;&lt;l2-&gt;data&lt;&lt;endl;
+    cout&lt;&lt;&quot;after change&quot;&lt;&lt;&quot;l1: &quot;&lt;&lt;l1&lt;&lt;endl&lt;&lt;&quot;l2: &quot;&lt;&lt;l2&lt;&lt;endl&lt;&lt;&quot;l3: &quot;&lt;&lt;l3&lt;&lt;endl;
+    cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; endl;
+    return 0;
+}
+
+</code></pre>
 
             </div>
             
@@ -655,7 +492,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/" title="第二章 进程同步之经典同步问题(重点)">https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-zhi-jing-dian-tong-bu-wen-ti-chong-dian/</a>
+      <a href="https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/" title="关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)">https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -668,15 +505,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">第二章 进程同步部分的题目及重点整理</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第二章 进程同步部分的题目及重点整理" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu-bu-fen-de-ti-mu-ji-chong-dian-zheng-li/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">第二章 进程同步</a>
-        <a class="nav-mobile-next" title="第二章 进程同步" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-tong-bu/">下一篇</a>
+        <a class="nav-pc-next" title="第五章 线索二叉树" href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/">第五章 线索二叉树</a>
+        <a class="nav-mobile-next" title="第五章 线索二叉树" href="https://songdlut.github.io/post/di-wu-zhang-xian-suo-er-cha-shu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
