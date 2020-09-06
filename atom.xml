@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-08-23T15:27:20.722Z</updated>
+    <updated>2020-09-06T13:44:49.309Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[第五章 二叉树及线索二叉树的重点及错题整理]]></title>
+        <id>https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-ji-xian-suo-er-cha-shu-de-chong-dian-ji-cuo-ti-zheng-li/</id>
+        <link href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-ji-xian-suo-er-cha-shu-de-chong-dian-ji-cuo-ti-zheng-li/">
+        </link>
+        <updated>2020-09-06T13:24:44.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-概念">1 概念</h2>
+<ol>
+<li>线索二叉树是一种物理结构</li>
+<li>后序线索二叉树无法很好的用于寻找后继结点,例如右子树最右下脚的有左右孩子结点的结点,它的后继应该指向根结点,但是没有空的链域了,<strong>因此需要借助栈来实现,也是三种线索二叉树中唯一一个在遍历时需要借助栈的</strong></li>
+<li>先序和后续序列正好相反的条件是只有一个叶子结点,也即结点个数就是树的高度</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于函数的参数是是使用指针,还是指针的引用(指针的指针,二级指针)]]></title>
         <id>https://songdlut.github.io/post/guan-yu-han-shu-de-can-shu-shi-shi-shi-yong-zhi-zhen-huan-shi-zhi-zhen-de-yin-yong-zhi-zhen-de-zhi-zhen-er-ji-zhi-zhen/</id>
@@ -1004,93 +1018,6 @@ turn =1;//我用完了,谦让给你</li>
 <figure data-type="image" tabindex="13"><img src="https://s1.ax1x.com/2020/08/01/aGCrRK.png" alt="aGCrRK.png" loading="lazy"></figure>
 <h3 id="总结">总结</h3>
 <figure data-type="image" tabindex="14"><img src="https://s1.ax1x.com/2020/08/01/aGC4it.png" alt="aGC4it.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第二章 几种调度算法的比较]]></title>
-        <id>https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/</id>
-        <link href="https://songdlut.github.io/post/di-er-zhang-ji-chong-diao-du-suan-fa-de-bi-jiao/">
-        </link>
-        <updated>2020-07-19T11:37:42.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="总览">总览</h2>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/07/19/UWDGNQ.png" alt="UWDGNQ.png" loading="lazy"></figure>
-<h2 id="先来先服务">先来先服务</h2>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/07/19/UWDfu6.png" alt="UWDfu6.png" loading="lazy"></figure>
-<ul>
-<li>按照到达先后,实际上就是等待时间越久的越先得到服务</li>
-<li>注意等待时间的计算
-<ul>
-<li>纯计算型的进程:周转时间-运行时间</li>
-<li>计算+I/O操作的:周转时间-运行时间-I/O操作时间<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWDuct.png" alt="UWDuct.png" loading="lazy"></li>
-</ul>
-</li>
-</ul>
-<h2 id="短作业优先">短作业优先</h2>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/07/19/UWyGND.png" alt="UWyGND.png" loading="lazy"></figure>
-<h3 id="非抢占式spf与抢占式对比srtn">非抢占式(SPF)与抢占式对比(SRTN)</h3>
-<ol>
-<li>非抢占式<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWsR0K.png" alt="UWsR0K.png" loading="lazy"></li>
-<li>抢占式<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWrGqK.png" alt="UWrGqK.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/19/UWr7ZT.png" alt="UWr7ZT.png" loading="lazy"></li>
-</ol>
-<h3 id="几个细节某些说法不一致时">几个细节(某些说法不一致时)</h3>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/07/19/UWyEAU.png" alt="UWyEAU.png" loading="lazy"></figure>
-<h2 id="fcfs与sjf对比">FCFS与SJF对比</h2>
-<p><img src="https://s1.ax1x.com/2020/07/19/UWyBHf.png" alt="UWyBHf.png" loading="lazy"><br>
-因此推出了高响应比优先</p>
-<h2 id="高响应比优先">高响应比优先</h2>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/07/19/UWcY6A.png" alt="UWcY6A.png" loading="lazy"></figure>
-<ul>
-<li>当前运行的进程主动放弃CPU时,才需要进行调度,重新计算响应比<br>
-<img src="https://s1.ax1x.com/2020/07/19/UW6XWQ.png" alt="UW6XWQ.png" loading="lazy"></li>
-</ul>
-<h2 id="以上三种算法对比">以上三种算法对比</h2>
-<ul>
-<li>交互性差<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWc0k8.png" alt="UWc0k8.png" loading="lazy"></li>
-</ul>
-<h2 id="时间片轮转">时间片轮转</h2>
-<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/07/19/UWfzy4.png" alt="UWfzy4.png" loading="lazy"></figure>
-<ul>
-<li>注意,时间片到了之后下处理机时,会加到就绪队列的队尾,不要按照题中给的顺序想到然的来,要时刻按照就绪队列的顺序进行分析,如下:<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWR1YT.png" alt="UWR1YT.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/07/19/UWRGpF.png" alt="UWRGpF.png" loading="lazy"></li>
-<li>时间片太大时,就会变成先来先服务</li>
-<li>太小切换的代价就大了,<strong>切换的开销不超过1%就认为是合适的</strong></li>
-<li>用于进程调度</li>
-</ul>
-<h2 id="优先级调度算法">优先级调度算法</h2>
-<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/07/19/UW4q2T.png" alt="UW4q2T.png" loading="lazy"></figure>
-<ul>
-<li>注意是优先数越大,优先级越高,还是相反</li>
-<li>抢占式和非抢占式
-<ul>
-<li>非抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。</li>
-<li>抢占式的优先级调度算法：每次调度时选择当前已到达且优先级最高的进程。当前进程主动放弃处理机时发生调度。另外，当就绪队列发生改变时也需要检查是会发生抢占。<br>
-<img src="https://s1.ax1x.com/2020/07/19/UW4RxS.png" alt="UW4RxS.png" loading="lazy"></li>
-</ul>
-</li>
-</ul>
-<h2 id="多级反馈队列调度算法">多级反馈队列调度算法</h2>
-<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/07/19/UWo0rF.png" alt="UWo0rF.png" loading="lazy"></figure>
-<ul>
-<li>认为是抢占式的算法</li>
-<li>用于进程调度<br>
-算法规则(个人理解)</li>
-</ul>
-<ol>
-<li>某一队列的上级队列都空了,才轮到这一级</li>
-<li>某进程在该队列的时间片用完,还没完成,就进入下一级队列(时间片增加的),但如果已经是最底层了,就放到该级队尾</li>
-<li>来一个新的进程首先放到第1级的队尾,如果此时运行的是低级的队列的进程,则发生抢占,被强占的进程放到所在队列的队尾,并不是到下一级了(毕竟是意外,也没说自己在这一级能不能运行完)</li>
-</ol>
-<h2 id="以上三种比对">以上三种比对</h2>
-<ul>
-<li>适合交互式系统<br>
-<img src="https://s1.ax1x.com/2020/07/19/UWoTIA.png" alt="UWoTIA.png" loading="lazy"></li>
-</ul>
 ]]></content>
     </entry>
 </feed>
