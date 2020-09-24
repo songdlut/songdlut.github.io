@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1600958056428">
+<link rel="shortcut icon" href="/favicon.ico?v=1600958283326">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -476,48 +476,7 @@
       <div class="post-body">
         
         
-          <h2 id="bfsdfs的算法开销">BFS/DFS的算法开销</h2>
-<ol>
-<li>时间复杂度</li>
-</ol>
-<p>来源:访问顶点以及查找顶点的邻接点</p>
-<ul>
-<li>
-<p>对于BFS/DFS,如果邻接矩阵表示,则访问顶点为O(|V|),查找顶点邻接点(需要遍历整个矩阵)为O(|V|²)</p>
-</li>
-<li>
-<p>如果是邻接表,则前者为O(|V|),后者为2|E|,也就是O(|E|)</p>
-</li>
-</ul>
-<p><strong>分析的时候不要一味的看代码找循环</strong></p>
-<ol start="2">
-<li>空间复杂度</li>
-</ol>
-<p>BFS:O(|V|):最坏发散的</p>
-<p>DFS:O(|V|):最坏连着一串的,最好发散的</p>
-<h2 id="bfsdfs调用次数">BFS/DFS调用次数</h2>
-<ol>
-<li>无向图:</li>
-</ol>
-<p>几个连通分量就调用几次</p>
-<p>若是连通图,则调用一次即可</p>
-<ol start="2">
-<li>有向图:</li>
-</ol>
-<ul>
-<li>
-<p>具体分析</p>
-</li>
-<li>
-<p>如果起始顶点到其他顶点都有路径,则只调用一次</p>
-</li>
-<li>
-<p>如果是强连通图,则从任意顶点出发都只调用一次</p>
-</li>
-</ul>
-<p><strong>注意:DFS可以用于判断G是否有环:无向图在DFS中遇到回边则说明有环,有向图中回边可能是生成树森林中别的树指向的,也可能是环,因此需要判断一下,但是可以用</strong></p>
-<h2 id=""></h2>
-
+          
         
         
         <div class="post-button text-center">
@@ -1734,7 +1693,6 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;注意:DFS可以用于判断G是否有环:无向图在DFS中遇到回边则说明有环,有向图中回边可能是生成树森林中别的树指向的,也可能是环,因此需要判断一下,但是可以用&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;&#34;&gt;&lt;/h2&gt;
-&lt;!-- more --&gt;
 &lt;p&gt;2 判断无向图为树&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;bool isTree(Graph G)
 {
