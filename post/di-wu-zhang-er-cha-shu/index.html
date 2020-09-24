@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>第五章 二叉树 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1600049045242">
+<link rel="shortcut icon" href="/favicon.ico?v=1600957981737">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">25</span>
+        <span class="site-item-stat-count">28</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1744,6 +1744,328 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/"" data-c="
+          &lt;h2 id=&#34;1-死锁饥饿死循环的区别&#34;&gt;1 死锁,饥饿,死循环的区别&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;死锁的定义:多个进程因竞争资源而造成的一种僵局(互相等待),若无外力作用,这些进程多无法向前推进&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;C:%5CUsers%5C10314%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200924140828926.png&#34; alt=&#34;image-20200924140828926&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-死锁产生的必要条件&#34;&gt;2 死锁产生的必要条件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;互斥条件&lt;/li&gt;
+&lt;li&gt;不剥夺条件&lt;/li&gt;
+&lt;li&gt;请求并保持条件&lt;/li&gt;
+&lt;li&gt;循环等待条件&lt;br&gt;
+&lt;strong&gt;循环等待条件不是充要条件的原因是:即使循环等待,但其中一个可能需要的资源可以来自链里,也可以来自链外,此时如果链外的那个资源释放了,就不用等待了,但是死锁的时候,一定在循环等待&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-死锁产生的原因&#34;&gt;3 死锁产生的原因&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;系统资源的竞争:只有对不可剥夺的资源竞争才会产生死锁&lt;/li&gt;
+&lt;li&gt;进程推进顺序非法:请求和释放资源的顺序不当,P1,P2分别保持R1,R2,P1申请R2,P2申请R1&lt;/li&gt;
+&lt;li&gt;信号量使用不当:进程间彼此互等对方发来消息&lt;br&gt;
+&lt;strong&gt;总之对不可剥夺的资源分配不合理时就会导致死锁&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4-死锁的处理策略&#34;&gt;4 死锁的处理策略&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;死锁预防&lt;/li&gt;
+&lt;li&gt;避免死锁&lt;/li&gt;
+&lt;li&gt;死锁的检测和解除&lt;br&gt;
+&lt;strong&gt;注:前两种不会产生死锁,后一种是死锁产生后的解决&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;5-总结&#34;&gt;5 总结&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/24/wzXPV1.png&#34; alt=&#34;wzXPV1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">死锁概念部分</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/bfsdfs-de-yi-xie-ti-he-zhi-shi-dian/"" data-c="
+          &lt;h2 id=&#34;bfsdfs的算法开销&#34;&gt;BFS/DFS的算法开销&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;时间复杂度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;来源:访问顶点以及查找顶点的邻接点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对于BFS/DFS,如果邻接矩阵表示,则访问顶点为O(|V|),查找顶点邻接点(需要遍历整个矩阵)为O(|V|²)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果是邻接表,则前者为O(|V|),后者为2|E|,也就是O(|E|)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;分析的时候不要一味的看代码找循环&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;空间复杂度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;BFS:O(|V|):最坏发散的&lt;/p&gt;
+&lt;p&gt;DFS:O(|V|):最坏连着一串的,最好发散的&lt;/p&gt;
+&lt;h2 id=&#34;bfsdfs调用次数&#34;&gt;BFS/DFS调用次数&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;无向图:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;几个连通分量就调用几次&lt;/p&gt;
+&lt;p&gt;若是连通图,则调用一次即可&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;有向图:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;具体分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果起始顶点到其他顶点都有路径,则只调用一次&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果是强连通图,则从任意顶点出发都只调用一次&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意:DFS可以用于判断G是否有环:无向图在DFS中遇到回边则说明有环,有向图中回边可能是生成树森林中别的树指向的,也可能是环,因此需要判断一下,但是可以用&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;&#34;&gt;&lt;/h2&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;2 判断无向图为树&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;bool isTree(Graph G)
+{
+    for(v=0;v&amp;lt;G.vexnum;v++)
+        visited[v]=false;
+    int c=0;
+    int flag=0;
+    for(v=0;v&amp;lt;G.vexnum;v++)
+    {
+        if(!visited[v])
+        {
+            if(c=1)//说明调用过一次了,再调用就是非连通的,不是一棵树
+                return false;
+            else
+            {
+                DFS(G,v,&amp;amp;flag);
+                c++;
+            }
+        }
+    }
+    if(flag==1) return false;
+    return true;
+}
+void DFS(Graph G,int v,int &amp;amp;flag)
+{
+    visit(v);
+    visited[v]=true;
+    for(w=FirstNeighbor(G,v);w&amp;gt;=0;w=NextNeighbor(G,v,w))
+    {
+        if(visited[w])//访问过,说明有环
+        {
+            flag=1;
+        }
+        else
+        {
+            DFS(G,w,flag);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-dfs的非递归实现&#34;&gt;3 DFS的非递归实现&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void DFS_NotRC(Graph G,int v)
+{
+    int w;
+    Stack S;
+    for(w=0;w&amp;lt;G.vexnum;w++)
+        visited[w]=false;
+    S.Push(v);visited[v]=true;
+    while(!S.Isempty())
+    {
+        int k=S.Pop();
+        for(w=FirstNeighbor(G,k);w&amp;gt;=0;w=NextNeighbor(G,k,w))
+        {
+            if(!visited[w])//未被访问过,入栈,置位true
+            {
+                S.Push(w);
+                visited[w]=true;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+">BFS/DFS的一些题和知识点</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/tu-de-ying-yong/"" data-c="
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&#34;1-最小生成树&#34;&gt;1 最小生成树&lt;/h2&gt;
+&lt;h3 id=&#34;1-概念及注意&#34;&gt;1 概念及注意&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;针对的是带权无向图&lt;/li&gt;
+&lt;li&gt;如果本身就是一棵树,则它的最小生成树就是本身&lt;/li&gt;
+&lt;li&gt;只有连通图才有生成树,非连通图只有生成森林&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-实现算法&#34;&gt;2 实现算法&lt;/h2&gt;
+&lt;h3 id=&#34;1-prim算法&#34;&gt;1 Prim算法&lt;/h3&gt;
+&lt;p&gt;从某一顶点开始构建生成树;每次将代价最小的新顶点纳入生成树,直到所有顶点都纳入为止&lt;/p&gt;
+&lt;p&gt;时间复杂度:O(|V|²)&lt;/p&gt;
+&lt;p&gt;适合边稠密的图&lt;/p&gt;
+&lt;h3 id=&#34;2-kruskal算法&#34;&gt;2 Kruskal算法&lt;/h3&gt;
+&lt;p&gt;每次选择一条权值最小的边,使这条边的两头连通(已经连通的就不选)直到所有的结点都连通&lt;/p&gt;
+&lt;p&gt;时间复杂度:O(|E|log&lt;sub&gt;2&lt;/sub&gt;|E|)&lt;/p&gt;
+&lt;p&gt;适合边稀疏而顶点较多的图&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/21/wbOhBF.png&#34; alt=&#34;wbOhBF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/21/wbOXnO.png&#34; alt=&#34;wbOXnO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2-最短路径&#34;&gt;2 最短路径&lt;/h2&gt;
+&lt;h3 id=&#34;分类&#34;&gt;分类&lt;/h3&gt;
+&lt;p&gt;单源最短路径:BFS(无权图),Dijkstra算法(无权/带权)&lt;/p&gt;
+&lt;p&gt;各顶点之间的最短路径:Floyd算法(无权/带权)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当图是带权图时,一条路径上所有边的权值之和称为带权路径长度&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-bfs求最短路径&#34;&gt;1 BFS求最短路径&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void BFS_Min_Distance(Graph G,int u)
+{
+    for(int i=0;i&amp;lt;G.vexnum;i++)
+    {
+        visited[i]=false;
+        d[i]=∞;
+        p[i]=-1;
+    }
+    d[u]=0;visited[u]=true;
+    Queue Q;
+    EnQueue(Q,u);
+    for(w=FirstNeighbor(G,u);w&amp;gt;=0;w=NextNeighbor(G,u,w))
+    {
+        DeQueue(Q,u);
+        if(!visited[u])
+        {
+            d[w]=d[u]+1;
+            p[w]=u;
+            visited=true;
+            EnQueue(Q,w);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2-dijkstra算法&#34;&gt;2 DijKstra算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不适用于带有负权值的图&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/21/wqe4bQ.png&#34; alt=&#34;wqe4bQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-floyd算法&#34;&gt;3 Floyd算法&lt;/h3&gt;
+&lt;p&gt;若 A&lt;sup&gt;(k-1)&lt;/sup&gt;[i] [j]&amp;gt; A&lt;sup&gt;(k-1)&lt;/sup&gt;[i] [k]+ A&lt;sup&gt;(k-1)&lt;/sup&gt;[k] [j]&lt;/p&gt;
+&lt;p&gt;则 A&lt;sup&gt;(k)&lt;/sup&gt;[i] [j]=A&lt;sup&gt;(k-1)&lt;/sup&gt;[i] [k]+ A&lt;sup&gt;(k-1)&lt;/sup&gt;[k] [j]&lt;/p&gt;
+&lt;p&gt;Path&lt;sup&gt;(k)&lt;/sup&gt;=k&lt;/p&gt;
+&lt;p&gt;否则A&lt;sup&gt;(k)&lt;/sup&gt;[i] [j]和Path&lt;sup&gt;(k)&lt;/sup&gt;保持原值&lt;/p&gt;
+&lt;h4 id=&#34;算法代码实现&#34;&gt;算法代码实现&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void Floyd_Min_Distance(Graph G)
+{
+    for(k=0;k&amp;lt;n;k++)
+        for(i=0;i&amp;lt;n;i++)
+            for(j=0;j&amp;lt;n;j++)
+            {
+                if(A[i][j]&amp;gt;A[i][k]+A[k][j])
+                    A[i][j]=A[i][k]+A[k][j];
+            }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;开销:&lt;/p&gt;
+&lt;p&gt;时间复杂度:O(|V|³)&lt;/p&gt;
+&lt;p&gt;空间复杂度:O(|V|²)&lt;/p&gt;
+&lt;p&gt;可以用于负权值的图,但是&lt;strong&gt;不可以用于&lt;/strong&gt;带负权值的回路&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjiWfx.png&#34; alt=&#34;wjiWfx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;4-总结&#34;&gt;4 总结&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjFwEd.png&#34; alt=&#34;wjFwEd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;5-有向无环图dagdirected-acyclic-graph描述表达式&#34;&gt;5 有向无环图(DAG:Directed Acyclic Graph)描述表达式&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjmgWd.png&#34; alt=&#34;wjmgWd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;6-拓扑排序&#34;&gt;6 拓扑排序&lt;/h3&gt;
+&lt;h4 id=&#34;1aov网activity-on-vertex-network用顶点表示活动的网&#34;&gt;1.AOV网(Activity On Vertex Network):用顶点表示活动的网&lt;/h4&gt;
+&lt;h4 id=&#34;2-拓扑排序代码实现&#34;&gt;2. 拓扑排序代码实现&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;bool TopoLogicalSort(Graph G)
+{
+    Stack S;
+    for(int i=0;i&amp;lt;G.vexnum;i++)
+    {
+        if(indegree[i]==0)//入度为0的进栈
+            S.Push(i);
+    }
+    int count=0;
+    while(!S.isEmpty())
+    {
+        i=S.Pop();//栈顶元素出栈
+        print[count++]=i;//记录出栈序列,即为拓扑排序
+        for(p=G.verticle[i].firstarc;p;p=p-&amp;gt;nextarc)//遍历所有与i顶点所连的边
+        {
+            v=p-&amp;gt;adjvex;//v是顶点i指向的点
+            if(!(--index[v]))//所有i指向的点的入度都减一
+            {
+                S.Push(v);//减完之后入度为0的说明又可以作为下一个入栈的点
+            }
+            
+        }//for
+    }//while
+    if(count&amp;lt;G.vexnum)//手动画一遍即可知如果有环,会在遍历完所有结点前,栈就空了,因此会提前跳出while循环而导致count值小于G.vexnum
+    {
+        return false;//有环
+    }
+    else
+        return true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这是邻接表存储的,时间复杂度为O(|V|+|E|);&lt;/p&gt;
+&lt;p&gt;如果采用的是邻接矩阵存储则为O(|V|²);&lt;/p&gt;
+&lt;h4 id=&#34;3逆拓扑排序&#34;&gt;3.逆拓扑排序&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;倒过来,找出度为0的,用临界矩阵或逆邻接表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DFS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不带判断环的只要在DFS的最后打印顶点就行&lt;/li&gt;
+&lt;li&gt;带判断的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;bool isTree(Graph G)
+{
+    for(v=0;v&amp;lt;G.vexnum;v++)
+        visited[v]=false;
+    int c=0;
+    int flag=0;
+    for(v=0;v&amp;lt;G.vexnum;v++)
+    {
+        if(!visited[v])
+        {
+            if(c=1)//说明调用过一次了,再调用就是非连通的,不是一棵树
+                return false;
+            else
+            {
+                DFS(G,v,&amp;amp;flag);
+                c++;
+            }
+        }
+    }
+    if(flag==1) return false;
+    return true;
+}
+void DFS(Graph G,int v,int &amp;amp;flag)
+{
+    //visit(v);
+    visited[v]=true;
+    for(w=FirstNeighbor(G,v);w&amp;gt;=0;w=NextNeighbor(G,v,w))
+    {
+        if(visited[w])//访问过,说明有环
+        {
+            flag=1;
+        }
+        else
+        {
+            DFS(G,w,flag);
+        }
+    }
+    print(v);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;C:%5CUsers%5C10314%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200923142724490.png&#34; alt=&#34;image-20200923142724490&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;7-关键路径&#34;&gt;7 关键路径&lt;/h3&gt;
+&lt;h3 id=&#34;1-aoe网&#34;&gt;1 AOE网&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvft0J.png&#34; alt=&#34;wvft0J.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvfBp6.png&#34; alt=&#34;wvfBp6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+"> 图的应用</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-ji-xian-suo-er-cha-shu-de-chong-dian-ji-cuo-ti-zheng-li/"" data-c="
