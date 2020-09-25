@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-09-24T14:38:43.452Z</updated>
+    <updated>2020-09-25T10:29:08.358Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -49,32 +49,44 @@
         </link>
         <updated>2020-09-24T14:32:09.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-死锁饥饿死循环的区别">1 死锁,饥饿,死循环的区别</h2>
-<p><strong>死锁的定义:多个进程因竞争资源而造成的一种僵局(互相等待),若无外力作用,这些进程多无法向前推进</strong><br>
-<img src="C:%5CUsers%5C10314%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200924140828926.png" alt="image-20200924140828926" loading="lazy"></p>
+<p><strong>死锁的定义:多个进程因竞争资源而造成的一种僵局(互相等待),若无外力作用,这些进程多无法向前推进</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/25/0CFrmq.png" alt="0CFrmq.png" loading="lazy"></figure>
 <h2 id="2-死锁产生的必要条件">2 死锁产生的必要条件</h2>
 <ol>
 <li>互斥条件</li>
 <li>不剥夺条件</li>
 <li>请求并保持条件</li>
-<li>循环等待条件<br>
-<strong>循环等待条件不是充要条件的原因是:即使循环等待,但其中一个可能需要的资源可以来自链里,也可以来自链外,此时如果链外的那个资源释放了,就不用等待了,但是死锁的时候,一定在循环等待</strong></li>
+<li>循环等待条件</li>
 </ol>
+<p><strong>循环等待条件不是充要条件的原因是:即使循环等待,但其中一个可能需要的资源可以来自链里,也可以来自链外,此时如果链外的那个资源释放了,就不用等待了,但是死锁的时候,一定在循环等待</strong></p>
 <h2 id="3-死锁产生的原因">3 死锁产生的原因</h2>
 <ol>
-<li>系统资源的竞争:只有对不可剥夺的资源竞争才会产生死锁</li>
-<li>进程推进顺序非法:请求和释放资源的顺序不当,P1,P2分别保持R1,R2,P1申请R2,P2申请R1</li>
-<li>信号量使用不当:进程间彼此互等对方发来消息<br>
-<strong>总之对不可剥夺的资源分配不合理时就会导致死锁</strong></li>
+<li>
+<p>系统资源的竞争:只有对不可剥夺的资源竞争才会产生死锁</p>
+</li>
+<li>
+<p>进程推进顺序非法:请求和释放资源的顺序不当,P1,P2分别保持R1,R2,P1申请R2,P2申请R1</p>
+</li>
+<li>
+<p>信号量使用不当:进程间彼此互等对方发来消息</p>
+<p><strong>总之对不可剥夺的资源分配不合理时就会导致死锁</strong></p>
+</li>
 </ol>
 <h2 id="4-死锁的处理策略">4 死锁的处理策略</h2>
 <ol>
-<li>死锁预防</li>
-<li>避免死锁</li>
-<li>死锁的检测和解除<br>
-<strong>注:前两种不会产生死锁,后一种是死锁产生后的解决</strong></li>
+<li>
+<p>死锁预防</p>
+</li>
+<li>
+<p>避免死锁</p>
+</li>
+<li>
+<p>死锁的检测和解除</p>
+<p><strong>注:前两种不会产生死锁,后一种是死锁产生后的解决</strong></p>
+</li>
 </ol>
 <h2 id="5-总结">5 总结</h2>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/24/wzXPV1.png" alt="wzXPV1.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/24/wzXPV1.png" alt="wzXPV1.png" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -194,8 +206,7 @@ void DFS(Graph G,int v,int &amp;flag)
         <link href="https://songdlut.github.io/post/tu-de-ying-yong/">
         </link>
         <updated>2020-09-24T14:26:26.000Z</updated>
-        <content type="html"><![CDATA[<p>[toc]</p>
-<h2 id="1-最小生成树">1 最小生成树</h2>
+        <content type="html"><![CDATA[<h2 id="1-最小生成树">1 最小生成树</h2>
 <h3 id="1-概念及注意">1 概念及注意</h3>
 <ul>
 <li>针对的是带权无向图</li>
@@ -365,7 +376,7 @@ void DFS(Graph G,int v,int &amp;flag)
 </code></pre>
 </li>
 </ol>
-<figure data-type="image" tabindex="7"><img src="C:%5CUsers%5C10314%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200923142724490.png" alt="image-20200923142724490" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/09/25/0CkpHP.png" alt="0CkpHP.png" loading="lazy"></figure>
 <h3 id="7-关键路径">7 关键路径</h3>
 <h3 id="1-aoe网">1 AOE网</h3>
 <figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/09/23/wvft0J.png" alt="wvft0J.png" loading="lazy"></figure>
