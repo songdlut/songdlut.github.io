@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-09-26T02:13:05.597Z</updated>
+    <updated>2020-09-26T13:25:00.336Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,129 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[内存管理概念部分]]></title>
+        <id>https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/</id>
+        <link href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/">
+        </link>
+        <updated>2020-09-26T02:42:58.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-基本原理和要求">1 基本原理和要求</h2>
+<h3 id="1-内存管理的功能">1 内存管理的功能</h3>
+<ol>
+<li>内存空间的分配与回收</li>
+<li>地址转换</li>
+<li>内存空间的扩充</li>
+<li>存储保护<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PHSu4.png" alt="0PHSu4.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0P7j3T.png" alt="0P7j3T.png" loading="lazy"></li>
+</ol>
+<h3 id="2-程序装入和链接">2 程序装入和链接</h3>
+<ol>
+<li>静态链接</li>
+<li>装入时动态链接</li>
+<li>运行时动态链接</li>
+</ol>
+<h3 id="3-装入内存的三种方式">3 装入内存的三种方式</h3>
+<ol>
+<li>绝对装入
+<ul>
+<li>编译时,编译程序产生绝对地址的目标代码,</li>
+<li>只适用于单道程序环境</li>
+<li>绝对地址可在编译或汇编时给出,也可由程序员直接赋予</li>
+<li>通常情况下,程序中采用的是符号地址,然后再转换为绝对地址</li>
+</ul>
+</li>
+<li>可重定位装入
+<ul>
+<li>指令中使用的地址,数据的地址都是相对于起始地址的逻辑地址</li>
+<li>装入时才重新定位,将逻辑地址转换为物理地址(地址变换是在装入时一次完成的)</li>
+<li>一个作业装入内存时必须分配完所有的内存空间,若果不足,就不能装入</li>
+<li>在运行期间不能移动,也不可再申请新的内存</li>
+</ul>
+</li>
+<li>动态运行时装入
+<ul>
+<li>编译链接后的装入模块的地址都是从0开始的</li>
+<li>装入模块装入内存后不会立刻把逻辑地址转换为物理地址,而是把逻辑地址转换为物理地址的过程推迟到程序真正运行时</li>
+<li>需要重定位寄存器,存放装入模块存放的起始地址</li>
+<li>允许程序在内存中移动</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-关于链接和装入的理解">4 关于链接和装入的理解(☆)</h3>
+<p>不是说上面的链接和装入是一一对应的,静态链接不是说就非得和静态装入(绝对装入)是一块儿的,绝对装入现在都不用了,但是静态链接我们还是用的就可以说明这一问题.<br>
+链接是针对程序在磁盘中的,比如静态链接的程序是用到的模块已经固定好啥样了,就像这样<br>
+<img src="https://s1.ax1x.com/2020/09/26/0P2zTS.png" alt="0P2zTS.png" loading="lazy"><br>
+然后怎么装入就看哪种方式,现在的应该都是动态装入<br>
+静态装入:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PWWVK.png" alt="0PWWVK.png" loading="lazy"><br>
+假设有一个没有错误(err.o),使用动态装入:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PWqqP.png" alt="0PWqqP.png" loading="lazy"><br>
+如果动态链接:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PoVgg.png" alt="0PoVgg.png" loading="lazy"><br>
+装入后:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0Po3CT.png" alt="0Po3CT.png" loading="lazy"><br>
+装入是怎样将链接好后的程序装入到内存里,当然也可能是没有链接好,但是编译通过了(毕竟动态链接)<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PTcWT.png" alt="0PTcWT.png" loading="lazy"></p>
+<h2 id="2-覆盖和交换">2 覆盖和交换</h2>
+<p>覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法<br>
+<img src="https://s1.ax1x.com/2020/09/26/0POkee.png" alt="0POkee.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0PLbsU.png" alt="0PLbsU.png" loading="lazy"></p>
+<h2 id="3-连续分配管理方式">3 连续分配管理方式</h2>
+<p>连续分配:系统为用户进程分配的必须是一个连续的内存空间</p>
+<h3 id="1-单一连续分配">1 单一连续分配</h3>
+<p>一般无需内存保护<br>
+优点:简单,无外部碎片,可采用覆盖技术,不需要额外的技术支持<br>
+缺点:只适用于单用户,单任务,有内部碎片,利用率低</p>
+<h3 id="2-固定分区分配">2 固定分区分配</h3>
+<p>分类:</p>
+<ol>
+<li>分区大小相等</li>
+<li>分区大小不等<br>
+优点:可用于多道程序的最简单的存储分配,无外部碎片<br>
+缺点:不能实现多进程共享一个主存区,所以利用率低,存在内部碎片(当程序小于固定分区大小,也占用一个完整的内存分区,这样分区内部就存在空间浪费,这种现象称为内部碎片);程序可能太大而放不进任意一个分区中,此时用户不得不使用覆盖技术来使用内存空间</li>
+</ol>
+<h3 id="3-动态分区分配">3 动态分区分配</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/26/0it6pD.png" alt="0it6pD.png" loading="lazy"></figure>
+<h4 id="内部碎片外部碎片">内部碎片,外部碎片</h4>
+<p>动态分配没有内部碎片<br>
+<img src="https://s1.ax1x.com/2020/09/26/0ikxxg.png" alt="0ikxxg.png" loading="lazy"><br>
+当剩余的内存空间可以满足某进程,但是由于是不连续的碎片,可以采用紧凑(拼凑Compaction)技术来解决</p>
+<h4 id="1-使用的数据结构">1 使用的数据结构</h4>
+<ol>
+<li>空闲分区表</li>
+<li>空闲分区链<br>
+<img src="https://s1.ax1x.com/2020/09/26/0iFZkV.png" alt="0iFZkV.png" loading="lazy"></li>
+</ol>
+<h4 id="2-分配与回收">2 分配与回收</h4>
+<ol>
+<li>分配
+<ol>
+<li>如果那一块未满就更新一下</li>
+<li>如果恰好那一块一样大,就删除表项或结点</li>
+</ol>
+</li>
+<li>回收
+<ol>
+<li>回收区前面有就俩合并,后面有也是,如果前后都有,就三个都合并</li>
+<li>前后都没,插入一个表项</li>
+</ol>
+</li>
+<li>适合重定位装入方式,因为连续,且可以移动</li>
+</ol>
+<h3 id="动态分区分配算法">动态分区分配算法</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/26/0iaEY6.png" alt="0iaEY6.png" loading="lazy"></figure>
+<h2 id="4-非连续分配管理方式">4 非连续分配管理方式</h2>
+<h3 id="1-基本分页存储管理方式">1 基本分页存储管理方式</h3>
+<p>知识点:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0iIUiV.png" alt="0iIUiV.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4neI.png" alt="0i4neI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i48Sg.png" alt="0i48Sg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4Nmn.png" alt="0i4Nmn.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4BfU.png" alt="0i4BfU.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4fk6.png" alt="0i4fk6.png" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[死锁部分的题目]]></title>
         <id>https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/</id>
@@ -784,203 +907,6 @@ PostThread()里顺序改改就行<br>
     return p;
 }
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第五章 二叉树的遍历]]></title>
-        <id>https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/</id>
-        <link href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">
-        </link>
-        <updated>2020-08-22T11:46:11.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="11-二叉树的遍历">1.1 二叉树的遍历</h2>
-<h3 id="111-深度遍历递归算法">1.1.1 深度遍历递归算法</h3>
-<ol>
-<li>PreOrder<br>
-顺序:根-&gt;左子树-&gt;右子树</li>
-</ol>
-<pre><code>void PreOrder(BiTree T)
-{
-    if(T!=NULL)
-    {
-        visit(T);
-        PreOrder(T-&gt;lchild);
-        PreOrder(T-&gt;rchild);
-    }
-}
-</code></pre>
-<ol start="2">
-<li>InOrder<br>
-顺序:左子树-&gt;根-&gt;右子树</li>
-</ol>
-<pre><code>void InOrder(BiTree T)
-{
-    if(T!=NULL)
-    {
-        InOrder(T-&gt;lchild);
-        visit(T);
-        InOrder(T-&gt;rchild);
-    }
-}
-</code></pre>
-<ol start="3">
-<li>PostOrder<br>
-顺序:左子树-&gt;右子树-&gt;根</li>
-</ol>
-<pre><code>void PostOrder(BiTree T)
-{
-    if(T!=NULL)
-    {
-        PostOrder(T-&gt;lchild);
-        PostOrder(T-&gt;rchild);
-        visit(T);
-    }
-}
-</code></pre>
-<h3 id="112-深度遍历非递归算法">1.1.2 深度遍历非递归算法</h3>
-<p>难就难在递归到非递归的转换</p>
-<ol>
-<li>PreOrder</li>
-</ol>
-<pre><code>void PreOrder(BiTree T)
-{
-    Stack s;
-    BiTree p=T;
-    while(p||!IsEmpty(s))
-    {
-        if(p)
-        {
-            visit(p);
-            Push(s,p);
-            p=p-&gt;leftchild;
-        }
-        else
-        {
-            Pop(s,p);
-            p=p-&gt;rchild;
-        }
-    }
-}
-</code></pre>
-<ol start="2">
-<li>InOrder</li>
-</ol>
-<pre><code>void InOrder(BiTree T)
-{
-    Stack s;
-    BiTree p=T;
-    while(p||!IsEmpty(s))
-    {
-        if(p)
-        {
-            Push(p);
-            p=p-&gt;lchild;
-        }
-        else
-        {
-            Pop(p);
-            visit(p);
-            p=p-&gt;rchild;
-        }
-    }
-}
-</code></pre>
-<ol start="3">
-<li>PostOrder</li>
-</ol>
-<pre><code>void PostOrder(BiTree T)
-{
-    Stack s;
-    BiTree p=T;
-    BiTree r=NULL;
-    while(p||!sEmpty(s))
-    {
-        if(p)
-        {
-            Push(s,p);
-            p=p-&gt;lchild;
-        }
-        else//没得左子树了
-        {
-            Top(s,p);//栈顶元素
-            if(p-&gt;rchild&amp;&amp;p-&gt;rchild!=r)//右子树如果存在且没有被访问过
-            {
-                p=p-&gt;rchild;//把右子树的根结点入栈
-                Push(s,p);
-                p=p-&gt;lchild;继续转向左子树
-            }
-            else//右子树访问过或者不存在右子树,就可以安心地访问这个根结点了
-            {
-                Pop(s,p);
-                visit(p);
-                r=p;//记录一哈这个访问过了,万一是右子树的根的话,他的老头就会知道自己的右子树访问过了
-                p=NULL;//p不空的唯一用途就是一直往下寻找左子树,因此置空则是为了表明可以回退去找右子树了
-            }
-        }
-    }
-}
-</code></pre>
-<h3 id="113-一些总结">1.1.3 一些总结</h3>
-<ol>
-<li>三种遍历算法中,递归遍历左子树,右子树都是固定的,只是访问根结点的顺序不同,不管哪种方式,根结点都访问且仅访问一次,<strong>时间复杂度为O(n)</strong></li>
-<li>空间复杂度和栈的深度有关,最坏是O(n)(一条从上到下)
-<ol>
-<li>栈的深度是树的深度</li>
-<li>递归工作栈和非递归用的栈都是</li>
-</ol>
-</li>
-<li></li>
-</ol>
-<p>用途(☆):访问p的时候,此时栈内恰好是p结点的所有祖先,从栈底到栈顶再加上p正好构成从根结点到p结点的一条路径.</p>
-<h3 id="114-广度层次遍历">1.1.4 广度(层次)遍历</h3>
-<p>自上而下,自左向右的遍历</p>
-<pre><code>void LevelOrder(BiTree T)
-{
-    Queue q;
-    BiTree p=T;
-    EnQueue(q,p);
-    while(!IsEmpty(q))//队列非空
-    {
-        DeQueue(q,p);
-        visit(p);
-        if(p-&gt;lchild)
-            EnQueue(q,p-&gt;lchild);
-        if(p-&gt;rchild)
-            EnQueue(q,p-&gt;rchild);
-    }
-}
-</code></pre>
-<h3 id="115-由遍历序列构造二叉树">1.1.5 由遍历序列构造二叉树</h3>
-<ol>
-<li>先序和中序唯一确定一棵二叉树
-<blockquote>
-<p>在先序遍历序列中，第一个结点一定是二叉树的根结点；而在中序遍历中，根结点必然将中序序列分割成两个子序列，前一个子序列是根结点的左子树的中序序列，后一个子序列是根结点的右子树的中序序列。根据这两个子序列，在先序序列中找到对应的左子序列和右子序列。在先序序列中，左子序列的第一个结点是左子树的根结点，右子序列的第一个结点是右子树的根结点。如此递归地进行下去，便能唯一地确定这棵二叉树。</p>
-</blockquote>
-<ol>
-<li>先序序列的第一个是根结点(老祖宗),然后在中序序列中从前到后找到老祖宗,根据老祖宗将中序队列划成左子树和右子树的序列</li>
-<li>左子树再从先序序列找到根(小祖宗了),依次进行,右子树也是......</li>
-<li>以先序(ABCDEFGHI),中序(BCAEDGHFI)为例</li>
-</ol>
-<blockquote>
-<p>先序中,第一个A,老祖宗,在中序中发现A将BC,EDGHFI隔开,因此左子树是BC,右子树是EDGHFI<br>
-<img src="https://s1.ax1x.com/2020/08/23/dw5kPH.png" alt="dw5kPH.png" loading="lazy"><br>
-再看BC,先序BC,因此B是根结点,而中序中也是BC,故而C是右子树的<br>
-<img src="https://s1.ax1x.com/2020/08/23/dw5msP.png" alt="dw5msP.png" loading="lazy"><br>
-再看右子树EDGHFI,先序是DEFGHI,故而D是根结点,因此在中序中看,D将EDGHFI分成了E和GHFI,E是左子树了<br>
-<img src="https://s1.ax1x.com/2020/08/23/dw51iQ.png" alt="dw51iQ.png" loading="lazy"><br>
-再看GHFI,先序为FGHI,故而F为其根,因此,GH为左子树,I为右子树<br>
-<img src="https://s1.ax1x.com/2020/08/23/dw58Rs.png" alt="dw58Rs.png" loading="lazy">      <img src="https://s1.ax1x.com/2020/08/23/dw5YMq.png" alt="dw5YMq.png" loading="lazy"><br>
-先序后序中GH都是GH的顺序(和刚刚BC的理解一样),因此,G为根,H为右子树<br>
-完整是:<br>
-<img src="https://s1.ax1x.com/2020/08/23/dw5szR.png" alt="dw5szR.png" loading="lazy"></p>
-</blockquote>
-</li>
-<li>后序和中序确定一棵二叉树<br>
-和前序中序是差不多的,只是倒过来了,这两种本质都是从先序或后序找到根结点,再到相应的中序中划分成左子树对应的序列,右子树对应的序列,将分好的左右子树序列再带入到先序或后序找到对应的序列,先序就是最左边的是左/右子树的根结点,而后序就是最右边的是左/右子树的根结点</li>
-<li>层序序列和中序也可以确定<br>
-慢慢分析吧,比前面的简单,跟着序列画几个就出来了</li>
-<li>先序后后序无法确定一棵树<br>
-<img src="https://s1.ax1x.com/2020/08/23/dwTSrq.png" alt="dwTSrq.png" loading="lazy"></li>
-</ol>
 ]]></content>
     </entry>
 </feed>

@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>卡特兰数的部分理解 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1601086380493">
+<link rel="shortcut icon" href="/favicon.ico?v=1601126691311">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -201,7 +201,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">31</span>
+        <span class="site-item-stat-count">32</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1435,6 +1435,126 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/"" data-c="
+          &lt;h2 id=&#34;1-基本原理和要求&#34;&gt;1 基本原理和要求&lt;/h2&gt;
+&lt;h3 id=&#34;1-内存管理的功能&#34;&gt;1 内存管理的功能&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;内存空间的分配与回收&lt;/li&gt;
+&lt;li&gt;地址转换&lt;/li&gt;
+&lt;li&gt;内存空间的扩充&lt;/li&gt;
+&lt;li&gt;存储保护&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PHSu4.png&#34; alt=&#34;0PHSu4.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0P7j3T.png&#34; alt=&#34;0P7j3T.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-程序装入和链接&#34;&gt;2 程序装入和链接&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;静态链接&lt;/li&gt;
+&lt;li&gt;装入时动态链接&lt;/li&gt;
+&lt;li&gt;运行时动态链接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-装入内存的三种方式&#34;&gt;3 装入内存的三种方式&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;绝对装入
+&lt;ul&gt;
+&lt;li&gt;编译时,编译程序产生绝对地址的目标代码,&lt;/li&gt;
+&lt;li&gt;只适用于单道程序环境&lt;/li&gt;
+&lt;li&gt;绝对地址可在编译或汇编时给出,也可由程序员直接赋予&lt;/li&gt;
+&lt;li&gt;通常情况下,程序中采用的是符号地址,然后再转换为绝对地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可重定位装入
+&lt;ul&gt;
+&lt;li&gt;指令中使用的地址,数据的地址都是相对于起始地址的逻辑地址&lt;/li&gt;
+&lt;li&gt;装入时才重新定位,将逻辑地址转换为物理地址(地址变换是在装入时一次完成的)&lt;/li&gt;
+&lt;li&gt;一个作业装入内存时必须分配完所有的内存空间,若果不足,就不能装入&lt;/li&gt;
+&lt;li&gt;在运行期间不能移动,也不可再申请新的内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;动态运行时装入
+&lt;ul&gt;
+&lt;li&gt;编译链接后的装入模块的地址都是从0开始的&lt;/li&gt;
+&lt;li&gt;装入模块装入内存后不会立刻把逻辑地址转换为物理地址,而是把逻辑地址转换为物理地址的过程推迟到程序真正运行时&lt;/li&gt;
+&lt;li&gt;需要重定位寄存器,存放装入模块存放的起始地址&lt;/li&gt;
+&lt;li&gt;允许程序在内存中移动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-关于链接和装入的理解&#34;&gt;4 关于链接和装入的理解(☆)&lt;/h3&gt;
+&lt;p&gt;不是说上面的链接和装入是一一对应的,静态链接不是说就非得和静态装入(绝对装入)是一块儿的,绝对装入现在都不用了,但是静态链接我们还是用的就可以说明这一问题.&lt;br&gt;
+链接是针对程序在磁盘中的,比如静态链接的程序是用到的模块已经固定好啥样了,就像这样&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0P2zTS.png&#34; alt=&#34;0P2zTS.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+然后怎么装入就看哪种方式,现在的应该都是动态装入&lt;br&gt;
+静态装入:&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PWWVK.png&#34; alt=&#34;0PWWVK.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+假设有一个没有错误(err.o),使用动态装入:&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PWqqP.png&#34; alt=&#34;0PWqqP.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+如果动态链接:&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PoVgg.png&#34; alt=&#34;0PoVgg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+装入后:&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0Po3CT.png&#34; alt=&#34;0Po3CT.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+装入是怎样将链接好后的程序装入到内存里,当然也可能是没有链接好,但是编译通过了(毕竟动态链接)&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PTcWT.png&#34; alt=&#34;0PTcWT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-覆盖和交换&#34;&gt;2 覆盖和交换&lt;/h2&gt;
+&lt;p&gt;覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0POkee.png&#34; alt=&#34;0POkee.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0PLbsU.png&#34; alt=&#34;0PLbsU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-连续分配管理方式&#34;&gt;3 连续分配管理方式&lt;/h2&gt;
+&lt;p&gt;连续分配:系统为用户进程分配的必须是一个连续的内存空间&lt;/p&gt;
+&lt;h3 id=&#34;1-单一连续分配&#34;&gt;1 单一连续分配&lt;/h3&gt;
+&lt;p&gt;一般无需内存保护&lt;br&gt;
+优点:简单,无外部碎片,可采用覆盖技术,不需要额外的技术支持&lt;br&gt;
+缺点:只适用于单用户,单任务,有内部碎片,利用率低&lt;/p&gt;
+&lt;h3 id=&#34;2-固定分区分配&#34;&gt;2 固定分区分配&lt;/h3&gt;
+&lt;p&gt;分类:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分区大小相等&lt;/li&gt;
+&lt;li&gt;分区大小不等&lt;br&gt;
+优点:可用于多道程序的最简单的存储分配,无外部碎片&lt;br&gt;
+缺点:不能实现多进程共享一个主存区,所以利用率低,存在内部碎片(当程序小于固定分区大小,也占用一个完整的内存分区,这样分区内部就存在空间浪费,这种现象称为内部碎片);程序可能太大而放不进任意一个分区中,此时用户不得不使用覆盖技术来使用内存空间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-动态分区分配&#34;&gt;3 动态分区分配&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0it6pD.png&#34; alt=&#34;0it6pD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;内部碎片外部碎片&#34;&gt;内部碎片,外部碎片&lt;/h4&gt;
+&lt;p&gt;动态分配没有内部碎片&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0ikxxg.png&#34; alt=&#34;0ikxxg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+当剩余的内存空间可以满足某进程,但是由于是不连续的碎片,可以采用紧凑(拼凑Compaction)技术来解决&lt;/p&gt;
+&lt;h4 id=&#34;1-使用的数据结构&#34;&gt;1 使用的数据结构&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;空闲分区表&lt;/li&gt;
+&lt;li&gt;空闲分区链&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0iFZkV.png&#34; alt=&#34;0iFZkV.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;2-分配与回收&#34;&gt;2 分配与回收&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;分配
+&lt;ol&gt;
+&lt;li&gt;如果那一块未满就更新一下&lt;/li&gt;
+&lt;li&gt;如果恰好那一块一样大,就删除表项或结点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;回收
+&lt;ol&gt;
+&lt;li&gt;回收区前面有就俩合并,后面有也是,如果前后都有,就三个都合并&lt;/li&gt;
+&lt;li&gt;前后都没,插入一个表项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;适合重定位装入方式,因为连续,且可以移动&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;动态分区分配算法&#34;&gt;动态分区分配算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0iaEY6.png&#34; alt=&#34;0iaEY6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;4-非连续分配管理方式&#34;&gt;4 非连续分配管理方式&lt;/h2&gt;
+&lt;h3 id=&#34;1-基本分页存储管理方式&#34;&gt;1 基本分页存储管理方式&lt;/h3&gt;
+&lt;p&gt;知识点:&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0iIUiV.png&#34; alt=&#34;0iIUiV.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0i4neI.png&#34; alt=&#34;0i4neI.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0i48Sg.png&#34; alt=&#34;0i48Sg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0i4Nmn.png&#34; alt=&#34;0i4Nmn.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0i4BfU.png&#34; alt=&#34;0i4BfU.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/26/0i4fk6.png&#34; alt=&#34;0i4fk6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">内存管理概念部分</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/"" data-c="

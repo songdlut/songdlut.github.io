@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>关于 | 宋宇航的博客</title>
+<title>内存管理概念部分 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1601126691311">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="关于" />
+  <meta name="description" content="内存管理概念部分" />
   <meta name="keywords" content="" />
 </head>
 
@@ -256,10 +256,34 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#1-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E8%A6%81%E6%B1%82">1 基本原理和要求</a>
+<ul>
+<li><a href="#1-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%8A%9F%E8%83%BD">1 内存管理的功能</a></li>
+<li><a href="#2-%E7%A8%8B%E5%BA%8F%E8%A3%85%E5%85%A5%E5%92%8C%E9%93%BE%E6%8E%A5">2 程序装入和链接</a></li>
+<li><a href="#3-%E8%A3%85%E5%85%A5%E5%86%85%E5%AD%98%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F">3 装入内存的三种方式</a></li>
+<li><a href="#4-%E5%85%B3%E4%BA%8E%E9%93%BE%E6%8E%A5%E5%92%8C%E8%A3%85%E5%85%A5%E7%9A%84%E7%90%86%E8%A7%A3">4 关于链接和装入的理解(☆)</a></li>
+</ul>
+</li>
+<li><a href="#2-%E8%A6%86%E7%9B%96%E5%92%8C%E4%BA%A4%E6%8D%A2">2 覆盖和交换</a></li>
+<li><a href="#3-%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">3 连续分配管理方式</a>
+<ul>
+<li><a href="#1-%E5%8D%95%E4%B8%80%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D">1 单一连续分配</a></li>
+<li><a href="#2-%E5%9B%BA%E5%AE%9A%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D">2 固定分区分配</a></li>
+<li><a href="#3-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D">3 动态分区分配</a>
+<ul>
+<li><a href="#%E5%86%85%E9%83%A8%E7%A2%8E%E7%89%87%E5%A4%96%E9%83%A8%E7%A2%8E%E7%89%87">内部碎片,外部碎片</a></li>
+<li><a href="#1-%E4%BD%BF%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">1 使用的数据结构</a></li>
+<li><a href="#2-%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6">2 分配与回收</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95">动态分区分配算法</a></li>
+</ul>
+</li>
+<li><a href="#4-%E9%9D%9E%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">4 非连续分配管理方式</a>
+<ul>
+<li><a href="#1-%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">1 基本分页存储管理方式</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -527,8 +551,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/about/">
-      关于
+    <a class="post-title-link" href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/">
+      内存管理概念部分
     </a>
   </h1>
   <div class="post-meta">
@@ -536,23 +560,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2019-01-25</span>
+      <span>2020-09-26</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>31<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1098<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/about/" data-flag-title="关于" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/nei-cun-guan-li-gai-nian-bu-fen/" data-flag-title="内存管理概念部分" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -561,16 +585,156 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+              <h2 id="1-基本原理和要求">1 基本原理和要求</h2>
+<h3 id="1-内存管理的功能">1 内存管理的功能</h3>
+<ol>
+<li>内存空间的分配与回收</li>
+<li>地址转换</li>
+<li>内存空间的扩充</li>
+<li>存储保护<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PHSu4.png" alt="0PHSu4.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0P7j3T.png" alt="0P7j3T.png" loading="lazy"></li>
+</ol>
+<h3 id="2-程序装入和链接">2 程序装入和链接</h3>
+<ol>
+<li>静态链接</li>
+<li>装入时动态链接</li>
+<li>运行时动态链接</li>
+</ol>
+<h3 id="3-装入内存的三种方式">3 装入内存的三种方式</h3>
+<ol>
+<li>绝对装入
+<ul>
+<li>编译时,编译程序产生绝对地址的目标代码,</li>
+<li>只适用于单道程序环境</li>
+<li>绝对地址可在编译或汇编时给出,也可由程序员直接赋予</li>
+<li>通常情况下,程序中采用的是符号地址,然后再转换为绝对地址</li>
+</ul>
+</li>
+<li>可重定位装入
+<ul>
+<li>指令中使用的地址,数据的地址都是相对于起始地址的逻辑地址</li>
+<li>装入时才重新定位,将逻辑地址转换为物理地址(地址变换是在装入时一次完成的)</li>
+<li>一个作业装入内存时必须分配完所有的内存空间,若果不足,就不能装入</li>
+<li>在运行期间不能移动,也不可再申请新的内存</li>
+</ul>
+</li>
+<li>动态运行时装入
+<ul>
+<li>编译链接后的装入模块的地址都是从0开始的</li>
+<li>装入模块装入内存后不会立刻把逻辑地址转换为物理地址,而是把逻辑地址转换为物理地址的过程推迟到程序真正运行时</li>
+<li>需要重定位寄存器,存放装入模块存放的起始地址</li>
+<li>允许程序在内存中移动</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-关于链接和装入的理解">4 关于链接和装入的理解(☆)</h3>
+<p>不是说上面的链接和装入是一一对应的,静态链接不是说就非得和静态装入(绝对装入)是一块儿的,绝对装入现在都不用了,但是静态链接我们还是用的就可以说明这一问题.<br>
+链接是针对程序在磁盘中的,比如静态链接的程序是用到的模块已经固定好啥样了,就像这样<br>
+<img src="https://s1.ax1x.com/2020/09/26/0P2zTS.png" alt="0P2zTS.png" loading="lazy"><br>
+然后怎么装入就看哪种方式,现在的应该都是动态装入<br>
+静态装入:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PWWVK.png" alt="0PWWVK.png" loading="lazy"><br>
+假设有一个没有错误(err.o),使用动态装入:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PWqqP.png" alt="0PWqqP.png" loading="lazy"><br>
+如果动态链接:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PoVgg.png" alt="0PoVgg.png" loading="lazy"><br>
+装入后:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0Po3CT.png" alt="0Po3CT.png" loading="lazy"><br>
+装入是怎样将链接好后的程序装入到内存里,当然也可能是没有链接好,但是编译通过了(毕竟动态链接)<br>
+<img src="https://s1.ax1x.com/2020/09/26/0PTcWT.png" alt="0PTcWT.png" loading="lazy"></p>
+<h2 id="2-覆盖和交换">2 覆盖和交换</h2>
+<p>覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法<br>
+<img src="https://s1.ax1x.com/2020/09/26/0POkee.png" alt="0POkee.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0PLbsU.png" alt="0PLbsU.png" loading="lazy"></p>
+<h2 id="3-连续分配管理方式">3 连续分配管理方式</h2>
+<p>连续分配:系统为用户进程分配的必须是一个连续的内存空间</p>
+<h3 id="1-单一连续分配">1 单一连续分配</h3>
+<p>一般无需内存保护<br>
+优点:简单,无外部碎片,可采用覆盖技术,不需要额外的技术支持<br>
+缺点:只适用于单用户,单任务,有内部碎片,利用率低</p>
+<h3 id="2-固定分区分配">2 固定分区分配</h3>
+<p>分类:</p>
+<ol>
+<li>分区大小相等</li>
+<li>分区大小不等<br>
+优点:可用于多道程序的最简单的存储分配,无外部碎片<br>
+缺点:不能实现多进程共享一个主存区,所以利用率低,存在内部碎片(当程序小于固定分区大小,也占用一个完整的内存分区,这样分区内部就存在空间浪费,这种现象称为内部碎片);程序可能太大而放不进任意一个分区中,此时用户不得不使用覆盖技术来使用内存空间</li>
+</ol>
+<h3 id="3-动态分区分配">3 动态分区分配</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/26/0it6pD.png" alt="0it6pD.png" loading="lazy"></figure>
+<h4 id="内部碎片外部碎片">内部碎片,外部碎片</h4>
+<p>动态分配没有内部碎片<br>
+<img src="https://s1.ax1x.com/2020/09/26/0ikxxg.png" alt="0ikxxg.png" loading="lazy"><br>
+当剩余的内存空间可以满足某进程,但是由于是不连续的碎片,可以采用紧凑(拼凑Compaction)技术来解决</p>
+<h4 id="1-使用的数据结构">1 使用的数据结构</h4>
+<ol>
+<li>空闲分区表</li>
+<li>空闲分区链<br>
+<img src="https://s1.ax1x.com/2020/09/26/0iFZkV.png" alt="0iFZkV.png" loading="lazy"></li>
+</ol>
+<h4 id="2-分配与回收">2 分配与回收</h4>
+<ol>
+<li>分配
+<ol>
+<li>如果那一块未满就更新一下</li>
+<li>如果恰好那一块一样大,就删除表项或结点</li>
+</ol>
+</li>
+<li>回收
+<ol>
+<li>回收区前面有就俩合并,后面有也是,如果前后都有,就三个都合并</li>
+<li>前后都没,插入一个表项</li>
+</ol>
+</li>
+<li>适合重定位装入方式,因为连续,且可以移动</li>
+</ol>
+<h3 id="动态分区分配算法">动态分区分配算法</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/26/0iaEY6.png" alt="0iaEY6.png" loading="lazy"></figure>
+<h2 id="4-非连续分配管理方式">4 非连续分配管理方式</h2>
+<h3 id="1-基本分页存储管理方式">1 基本分页存储管理方式</h3>
+<p>知识点:<br>
+<img src="https://s1.ax1x.com/2020/09/26/0iIUiV.png" alt="0iIUiV.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4neI.png" alt="0i4neI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i48Sg.png" alt="0i48Sg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4Nmn.png" alt="0i4Nmn.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4BfU.png" alt="0i4BfU.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/09/26/0i4fk6.png" alt="0i4fk6.png" loading="lazy"></p>
 
             </div>
             
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      宋宇航
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/" title="内存管理概念部分">https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">死锁部分的题目</a>
+        <a class="nav-mobile-next" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
             
   
