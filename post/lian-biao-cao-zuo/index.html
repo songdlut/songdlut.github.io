@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>链表操作 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1601029744646">
+<link rel="shortcut icon" href="/favicon.ico?v=1601086380493">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -201,7 +201,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-count">31</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1496,6 +1496,117 @@ int main()
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;死锁的四个必要条件中无法破坏的是&lt;strong&gt;互斥使用资源&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/25/0CBkjg.png&#34; alt=&#34;0CBkjg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;引入多道程序技术的前提条件之一是系统具有&lt;strong&gt;中断功能&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;资源分配图中无法判断是否处于死锁状态:
+&lt;ul&gt;
+&lt;li&gt;出现了环路(只满足了循环等待这一必要条件,不是充分条件)&lt;/li&gt;
+&lt;li&gt;每个进程结点至少有一条请求边(资源数未知因此不可以判断是否为死锁状态)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;接上,可以用于判断是否处于死锁状态
+&lt;ul&gt;
+&lt;li&gt;没有环路(破坏了必要条件因此可以知道是非死锁的)&lt;/li&gt;
+&lt;li&gt;每种资源只有一个,且出现环路(充要条件可知为死锁)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关于定量判断是否发生死锁的题&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;不会发生死锁的最少资源数&lt;/li&gt;
+&lt;li&gt;不会发生死锁的最大进程数&lt;/li&gt;
+&lt;li&gt;公式:资源m个,n个进程,每个最大需求k,m≥n(k-1)+1时不会死锁&lt;/li&gt;
+&lt;li&gt;解法都是先给到每个进程比最大请求量少一个的资源数,如果是求最少资源,则是刚刚分配的加上1(3个进程,每个都要四个资源,分成3,3,3,然后再来一个给谁都能安全),如果是求进程数,则看能分成几块(比如11个资源,X个进程,每个最多3个,则分成2,2,2,2,2,余一个,给谁都能安全)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;限制用户申请资源的顺序的只有死锁预防,死锁避免和死锁检测与解除都不会限制&lt;/li&gt;
+&lt;li&gt;死锁检测和解除时,系统为进程分配资源时不会采取任何措施来限制&lt;/li&gt;
+&lt;li&gt;关于三种策略对进程并发性的影响:并发性由大到小::无策略&amp;gt;死锁检测与解除&amp;gt;死锁避免&amp;gt;死锁预防,是与对分配干预的程度相一致的&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">死锁部分的题目</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/"" data-c="
+          &lt;h2 id=&#34;1-总览&#34;&gt;1 总览&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/24/wzjCQg.png&#34; alt=&#34;wzjCQg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2-死锁预防&#34;&gt;2 死锁预防&lt;/h2&gt;
+&lt;h3 id=&#34;1-破坏互斥条件&#34;&gt;1 破坏互斥条件&lt;/h3&gt;
+&lt;p&gt;使用SPOOLing技术&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/24/wzvK4P.png&#34; alt=&#34;wzvK4P.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+缺点:并不是所有资源都可以改成可共享的资源,并且为了系统安全,很多时候必须保持这种互斥性,因此很多时候都无法破坏互斥条件&lt;/p&gt;
+&lt;h3 id=&#34;2-破坏不剥夺条件&#34;&gt;2 破坏不剥夺条件&lt;/h3&gt;
+&lt;p&gt;两种策略:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我得不到想要的,就把我占有的释放(无私,成全别人)&lt;/li&gt;
+&lt;li&gt;借助操作系统协助,将想要的资源强行抢来,一般需要考虑各进程的优先级&lt;br&gt;
+缺点:&lt;/li&gt;
+&lt;li&gt;实现起来比较复杂&lt;/li&gt;
+&lt;li&gt;释放已获得的资源可能会造成前一阶段工作的失效,因此这种方法只适用于易保存和恢复状态的资源,如cpu&lt;/li&gt;
+&lt;li&gt;反复申请和释放资源会增加系统开销,降低系统吞吐量&lt;/li&gt;
+&lt;li&gt;若采用方案一,意味着只要暂时得不到某个资源,之前获得的都要放弃,以后重新申请,如果一直发生就会导致进程饥饿&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-破坏请求并保持条件&#34;&gt;3 破坏请求并保持条件&lt;/h3&gt;
+&lt;p&gt;策略:&lt;br&gt;
+进程在运行之前一次申请完所有需要的资源,在资源未满足之前不让它投入运行,一旦运行,这些字眼就一直归他所有,&lt;strong&gt;该进程就不会申请别的任何资源&lt;/strong&gt;&lt;br&gt;
+缺点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有些资源可能只要使用很短的时间,因此如果进程的整个运行期间都一直保持着所有资源,就会造成严重的资源浪费,&lt;strong&gt;资源利用率低&lt;/strong&gt;,也可能导致某些进程饥饿&lt;br&gt;
+造成饥饿:A类用R1,B类用R2,C类俩都用,AB的不断用,C的就可能弄不着用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-破坏循环等待条件&#34;&gt;4 破坏循环等待条件&lt;/h3&gt;
+&lt;p&gt;策略:&lt;br&gt;
+顺序资源分配法:先给系统中的资源编号,规定每个进程必须按编号递增的顺序请求资源,同类资源(即编号相同的资源)一次申请完&lt;br&gt;
+一个进程只有已占有小编号的资源时,才有资格申请更大编号的资源,按此规则,已持有大编号资源的进程不可能逆向回来申请小编号的资源,从而就不会产生循环等待的现象&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/24/0SF9N4.png&#34; alt=&#34;0SF9N4.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+缺点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不方便添加新的设备,因为可能需要重新分配所有的编号&lt;/li&gt;
+&lt;li&gt;进程实际使用资源的顺序可能和编号递增的顺序不一直,会导致资源的浪费,如,我要先用5,很久后用3,只能把3先申请占着,就浪费了.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-总结&#34;&gt;5 总结&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/24/0SAA0K.png&#34; alt=&#34;0SAA0K.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+注意去分析哲学家进餐中策略避免死锁所对应的方法&lt;/p&gt;
+&lt;h2 id=&#34;3-死锁避免&#34;&gt;3 死锁避免&lt;/h2&gt;
+&lt;h3 id=&#34;1-安全序列不安全状态死锁的联系&#34;&gt;1 安全序列,不安全状态,死锁的联系&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安全序列:指系统如果按照这种序列分配资源,则每个进程都能顺利完成&lt;/li&gt;
+&lt;li&gt;只要能找到一个安全序列,系统就是安全状态,安全序列可能有多个&lt;/li&gt;
+&lt;li&gt;在分配了资源后,系统找不到任何一个安全序列,系统就进入不安全状态,意味着之后&lt;strong&gt;可能&lt;/strong&gt;所有进程都无法顺利的执行下去,但如果有进程提前归还一些资源,&lt;strong&gt;系统有可能回到安全状态&lt;/strong&gt;,不过分配钱总是要考虑最坏情况&lt;br&gt;
+&lt;strong&gt;注:1. 如果系统处于安全状态,就一定不会发生死锁&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2. 如果系统进入不安全状态,就可能发生死锁&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;3. 处于不安全状态未必就是发生了死锁(可能还没有去竞争某一资源),但死锁发生时一定是不安全状态&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;4. 银行家算法的核心思想:在资源分配前预先判断这次分配是否会导致系统进入不安全状态,以此来决定是否答应资源分配请求&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-银行家算法&#34;&gt;2 银行家算法&lt;/h3&gt;
+&lt;h2 id=&#34;4-死锁检测和解除&#34;&gt;4 死锁检测和解除&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;S为死锁的条件是当且仅当S的状态的资源分配图是不可完全花间的,该条件为死锁定理&lt;/li&gt;
+&lt;li&gt;化简之后还连着边的是死锁进程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;死锁解除&#34;&gt;死锁解除:&lt;/h3&gt;
+&lt;p&gt;方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;资源剥夺法&lt;/li&gt;
+&lt;li&gt;撤销进程法&lt;/li&gt;
+&lt;li&gt;进程回退法&lt;br&gt;
+对谁动手相对而言:&lt;/li&gt;
+&lt;li&gt;优先级低的&lt;/li&gt;
+&lt;li&gt;已执行时间短的&lt;/li&gt;
+&lt;li&gt;还有较长时间才能完成的&lt;/li&gt;
+&lt;li&gt;持有资源多的&lt;/li&gt;
+&lt;li&gt;交互式的先不干掉,批处理的先&lt;br&gt;
+注意点:&lt;/li&gt;
+&lt;li&gt;死锁检测时检查的是资源有向图&lt;/li&gt;
+&lt;li&gt;死锁定理是用于处理死锁的&lt;strong&gt;检测死锁&lt;/strong&gt;的方法&lt;/li&gt;
+&lt;/ol&gt;
+"> 死锁的处理策略</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/"" data-c="

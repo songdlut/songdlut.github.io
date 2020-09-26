@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第五章 二叉树 | 宋宇航的博客</title>
+<title> 死锁的处理策略 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1601086380493">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="第五章 二叉树" />
+  <meta name="description" content=" 死锁的处理策略" />
   <meta name="keywords" content="" />
 </head>
 
@@ -256,16 +256,27 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#11-%E6%B3%A8%E6%84%8F%E7%82%B9">1.1 注意点</a></li>
-<li><a href="#12-%E5%87%A0%E4%B8%AA%E7%89%B9%E6%AE%8A%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91">1.2 几个特殊的二叉树</a></li>
-<li><a href="#13-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%80%A7%E8%B4%A8">1.3 二叉树的性质</a></li>
-<li><a href="#14-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">1.4 二叉树的存储结构</a>
+<li><a href="#1-%E6%80%BB%E8%A7%88">1 总览</a></li>
+<li><a href="#2-%E6%AD%BB%E9%94%81%E9%A2%84%E9%98%B2">2 死锁预防</a>
 <ul>
-<li><a href="#141%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">1.4.1顺序存储结构</a></li>
-<li><a href="#142%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">1.4.2链式存储结构</a></li>
+<li><a href="#1-%E7%A0%B4%E5%9D%8F%E4%BA%92%E6%96%A5%E6%9D%A1%E4%BB%B6">1 破坏互斥条件</a></li>
+<li><a href="#2-%E7%A0%B4%E5%9D%8F%E4%B8%8D%E5%89%A5%E5%A4%BA%E6%9D%A1%E4%BB%B6">2 破坏不剥夺条件</a></li>
+<li><a href="#3-%E7%A0%B4%E5%9D%8F%E8%AF%B7%E6%B1%82%E5%B9%B6%E4%BF%9D%E6%8C%81%E6%9D%A1%E4%BB%B6">3 破坏请求并保持条件</a></li>
+<li><a href="#4-%E7%A0%B4%E5%9D%8F%E5%BE%AA%E7%8E%AF%E7%AD%89%E5%BE%85%E6%9D%A1%E4%BB%B6">4 破坏循环等待条件</a></li>
+<li><a href="#5-%E6%80%BB%E7%BB%93">5 总结</a></li>
 </ul>
 </li>
-<li><a href="#15-%E9%94%99%E9%A2%98%E5%8F%8A%E9%87%8D%E7%82%B9%E6%95%B4%E7%90%86">1.5 错题及重点整理</a></li>
+<li><a href="#3-%E6%AD%BB%E9%94%81%E9%81%BF%E5%85%8D">3 死锁避免</a>
+<ul>
+<li><a href="#1-%E5%AE%89%E5%85%A8%E5%BA%8F%E5%88%97%E4%B8%8D%E5%AE%89%E5%85%A8%E7%8A%B6%E6%80%81%E6%AD%BB%E9%94%81%E7%9A%84%E8%81%94%E7%B3%BB">1 安全序列,不安全状态,死锁的联系</a></li>
+<li><a href="#2-%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95">2 银行家算法</a></li>
+</ul>
+</li>
+<li><a href="#4-%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B%E5%92%8C%E8%A7%A3%E9%99%A4">4 死锁检测和解除</a>
+<ul>
+<li><a href="#%E6%AD%BB%E9%94%81%E8%A7%A3%E9%99%A4">死锁解除:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -533,8 +544,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/">
-      第五章 二叉树
+    <a class="post-title-link" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/">
+       死锁的处理策略
     </a>
   </h1>
   <div class="post-meta">
@@ -542,23 +553,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-08-20</span>
+      <span>2020-09-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>8<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1966<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1162<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-wu-zhang-er-cha-shu/" data-flag-title="第五章 二叉树" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/si-suo-de-chu-li-ce-lue/" data-flag-title=" 死锁的处理策略" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -567,127 +578,77 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="11-注意点">1.1 注意点</h2>
+              <h2 id="1-总览">1 总览</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/24/wzjCQg.png" alt="wzjCQg.png" loading="lazy"></figure>
+<h2 id="2-死锁预防">2 死锁预防</h2>
+<h3 id="1-破坏互斥条件">1 破坏互斥条件</h3>
+<p>使用SPOOLing技术<br>
+<img src="https://s1.ax1x.com/2020/09/24/wzvK4P.png" alt="wzvK4P.png" loading="lazy"><br>
+缺点:并不是所有资源都可以改成可共享的资源,并且为了系统安全,很多时候必须保持这种互斥性,因此很多时候都无法破坏互斥条件</p>
+<h3 id="2-破坏不剥夺条件">2 破坏不剥夺条件</h3>
+<p>两种策略:</p>
 <ol>
-<li>不存在度大于2的结点</li>
-<li>子树有左右之分,次序不可任意颠倒</li>
-<li>以递归的形式定义:<br>
-二叉树是n(n≥0)个结点的有限集合:
+<li>我得不到想要的,就把我占有的释放(无私,成全别人)</li>
+<li>借助操作系统协助,将想要的资源强行抢来,一般需要考虑各进程的优先级<br>
+缺点:</li>
+<li>实现起来比较复杂</li>
+<li>释放已获得的资源可能会造成前一阶段工作的失效,因此这种方法只适用于易保存和恢复状态的资源,如cpu</li>
+<li>反复申请和释放资源会增加系统开销,降低系统吞吐量</li>
+<li>若采用方案一,意味着只要暂时得不到某个资源,之前获得的都要放弃,以后重新申请,如果一直发生就会导致进程饥饿</li>
+</ol>
+<h3 id="3-破坏请求并保持条件">3 破坏请求并保持条件</h3>
+<p>策略:<br>
+进程在运行之前一次申请完所有需要的资源,在资源未满足之前不让它投入运行,一旦运行,这些字眼就一直归他所有,<strong>该进程就不会申请别的任何资源</strong><br>
+缺点:</p>
 <ol>
-<li>或者为空二叉树:n=0;</li>
-<li>或者由一个根节点和两个互不相交的被称为根的左子树和右子树组成,左子树和右子树又分别是一棵二叉树</li>
+<li>有些资源可能只要使用很短的时间,因此如果进程的整个运行期间都一直保持着所有资源,就会造成严重的资源浪费,<strong>资源利用率低</strong>,也可能导致某些进程饥饿<br>
+造成饥饿:A类用R1,B类用R2,C类俩都用,AB的不断用,C的就可能弄不着用</li>
 </ol>
-</li>
-<li>二叉树是有序树,左右子树颠倒,就不是同一棵树了,五种形态<br>
-空  只有根结点   只有左子树   只有右子树   左右子树都有</li>
-<li><strong>与度为2的有序树的区别:</strong>
-<ul>
-<li>度为2的树至少有3个结点,而二叉树可以为空</li>
-<li>度为2的有序树的孩子的左右次序是相对的,若某结点只有一个孩子,则不需区分左右次序;而二叉树无论是否俩孩子都要确定左右次序,因此是绝对的而不是相对的</li>
-</ul>
-</li>
-</ol>
-<h2 id="12-几个特殊的二叉树">1.2 几个特殊的二叉树</h2>
+<h3 id="4-破坏循环等待条件">4 破坏循环等待条件</h3>
+<p>策略:<br>
+顺序资源分配法:先给系统中的资源编号,规定每个进程必须按编号递增的顺序请求资源,同类资源(即编号相同的资源)一次申请完<br>
+一个进程只有已占有小编号的资源时,才有资格申请更大编号的资源,按此规则,已持有大编号资源的进程不可能逆向回来申请小编号的资源,从而就不会产生循环等待的现象<br>
+<img src="https://s1.ax1x.com/2020/09/24/0SF9N4.png" alt="0SF9N4.png" loading="lazy"><br>
+缺点:</p>
 <ol>
-<li>满二叉树<br>
-一棵高度为h，且含有2<sup>h</sup>-1个结点的二叉树称为满二又树，即树中的每层都含有最多的结点，如图所示。满二叉树的叶子结点都集中在二叉树的最下一层，并且除叶子结点之外的每个结点度数均为2。<br>
-可以对满二叉树按层序编号：约定编号从根结点（根结点编号为1）起，自上而下，自左向右。这样，每个结点对应一个编号，对于编号为i的结点，若有双亲，则其双亲为Li/2，若有左孩子，则左孩子为2i；若有右孩子，则右孩子为2i+1。<br>
-<img src="https://s1.ax1x.com/2020/08/21/dYGF0I.png" alt="dYGF0I.png" loading="lazy"></li>
-<li>完全二叉树<br>
-高度为h、有n个结点的二叉树，当且仅当其每个结点都与高度为h的满二叉树中编号为1～n的结点一一对应时，称为完全二又树，如图所示。<strong>就是相同高度的满二叉树缺失最下层最右边的一些连续的叶子结点</strong>其特点如下：<br>
-①若i≤n/2(向下取整)，则结点i为分支结点，否则为叶子结点。<br>
-②叶子结点只可能在层次最大的两层上出现。对于最大层次中的叶子结点，都依次排列在该层最左边的位置上。<br>
-③若有度为1的结点，则只可能有一个，且该结点只有左孩子而无右孩子（重要特征）。<br>
-④按层序编号后，一旦出现某结点（编号为i）为叶子结点或只有左孩子，则编号大于i的结点均为叶子结点。<br>
-⑤若n为奇数，则每个分支结点都有左孩子和右孩子；若n为偶数，则编号最大的分支结点（编号为n/2）只有左孩子，没有右孩子，其余分支结点左、右孩子都有。</li>
-<li>二叉排序树<br>
-左子树所有结点关键字&lt;根结点的关键字&lt;右子树所有结点的关键字<br>
-左子树和右子树又各是一棵二叉排序树</li>
-<li>平衡二叉树<br>
-任意结点的左子树和右子树的深度之差不超过1</li>
+<li>不方便添加新的设备,因为可能需要重新分配所有的编号</li>
+<li>进程实际使用资源的顺序可能和编号递增的顺序不一直,会导致资源的浪费,如,我要先用5,很久后用3,只能把3先申请占着,就浪费了.</li>
 </ol>
-<h2 id="13-二叉树的性质">1.3 二叉树的性质</h2>
+<h3 id="5-总结">5 总结</h3>
+<p><img src="https://s1.ax1x.com/2020/09/24/0SAA0K.png" alt="0SAA0K.png" loading="lazy"><br>
+注意去分析哲学家进餐中策略避免死锁所对应的方法</p>
+<h2 id="3-死锁避免">3 死锁避免</h2>
+<h3 id="1-安全序列不安全状态死锁的联系">1 安全序列,不安全状态,死锁的联系</h3>
 <ol>
-<li>非空二叉树上的叶子结点数等于度为2的结点数加1:n<sub>0</sub>=n<sub>2</sub>+1</li>
+<li>安全序列:指系统如果按照这种序列分配资源,则每个进程都能顺利完成</li>
+<li>只要能找到一个安全序列,系统就是安全状态,安全序列可能有多个</li>
+<li>在分配了资源后,系统找不到任何一个安全序列,系统就进入不安全状态,意味着之后<strong>可能</strong>所有进程都无法顺利的执行下去,但如果有进程提前归还一些资源,<strong>系统有可能回到安全状态</strong>,不过分配钱总是要考虑最坏情况<br>
+<strong>注:1. 如果系统处于安全状态,就一定不会发生死锁</strong><br>
+<strong>2. 如果系统进入不安全状态,就可能发生死锁</strong><br>
+<strong>3. 处于不安全状态未必就是发生了死锁(可能还没有去竞争某一资源),但死锁发生时一定是不安全状态</strong><br>
+<strong>4. 银行家算法的核心思想:在资源分配前预先判断这次分配是否会导致系统进入不安全状态,以此来决定是否答应资源分配请求</strong></li>
 </ol>
-<blockquote>
-<p>证明:<br>
-上一节可知:总的度+1=各种结点数量之和<br>
-这里有1+0*n<sub>0</sub>+1n<sub>1</sub>+2n<sub>2</sub>=n<sub>0</sub>+n<sub>1</sub>+n<sub>2</sub><br>
-得到:n<sub>0</sub>=n<sub>2</sub>+1</p>
-</blockquote>
-<ol start="2">
-<li>非空二叉树上第k层至多有2<sup>k-1</sup>个结点(不证了,显然)</li>
-<li>高度为h的二叉树至多有2<sup>h</sup>-1个结点(h≥1):满二叉树前n项和</li>
-<li>对完全二叉树按从上到下、从左到右的顺序依次编号1，2…，n，则有以下关系：<br>
-①当i&gt;1时，结点i的双亲的编号为i/2(下取整)，即当i为偶数时，其双亲的编号为i/2，它是双亲的左孩子；当i为奇数时，其双亲的编号为（i-1）/2，它是双亲的右孩子。<br>
-②当2i≤n时，结点i的左孩子编号为2i，否则无左孩子。<br>
-③当2i+1≤n时，结点i的右孩子编号为2i+1，否则无右孩子。<br>
-④结点i所在层次（深度）为log<sub>2</sub>i(下取整)+1。</li>
-<li>具有n个（n&gt;0）结点的完全二叉树的高度为log<sub>2</sub>(n+1)(上取整)或log<sub>2</sub>n(下取整)+1。<br>
-设高度为h，根据性质3和完全二又树的定义有<br>
-<img src="https://s1.ax1x.com/2020/08/21/dtMZGQ.png" alt="dtMZGQ.png" loading="lazy"></li>
-</ol>
-<h2 id="14-二叉树的存储结构">1.4 二叉树的存储结构</h2>
-<h3 id="141顺序存储结构">1.4.1顺序存储结构</h3>
+<h3 id="2-银行家算法">2 银行家算法</h3>
+<h2 id="4-死锁检测和解除">4 死锁检测和解除</h2>
 <ol>
-<li>定义:</li>
+<li>S为死锁的条件是当且仅当S的状态的资源分配图是不可完全花间的,该条件为死锁定理</li>
+<li>化简之后还连着边的是死锁进程</li>
 </ol>
-<blockquote>
-<p>二叉树的顺序存储是指用一组地址连续的存储单元依次自上而下、自左至右存储完全二叉树上的结点元素，即将完全二叉树上编号为i的结点元素存储在一维数组下标为i-1的分量中。</p>
-</blockquote>
-<ol start="2">
-<li>依据二叉树的性质，完全二叉树和满二叉树采用顺序存储比较合适，树中结点的序号可以唯一地反映结点之间的逻辑关系，这样既能最大可能地节省存储空间，又能利用数组元素的下标值确定结点在二叉树中的位置，以及结点之间的关系。</li>
-<li>对于一般的二叉树，为了让数组下标能反映二叉树中结点之间的逻辑关系，只能添加一些并不存在的空结点，让其每个结点与完全二叉树上的结点相对照，再存储到一维数组的相应分量中。然而，在最坏情况下，一个高度为h且只有h个结点的单支树却需要占据近2<sup>h</sup>-1个存储单元。二叉树的顺序存储结构如图5.4所示，其中0表示并不存在的空结点。</li>
-</ol>
-<blockquote>
-<p>注意：这种存储结构建议从数组下标1开始存储树中的结点，若从数组下标0开始存储，则不满足性质4的描述（比如结点A存储在0下标位置上时，无法根据性质4来计算出其孩子结点在数组中的位置），这是考生在书写程序时容易忽略的。<br>
-<img src="https://s1.ax1x.com/2020/08/21/dt81C8.png" alt="dt81C8.png" loading="lazy"></p>
-</blockquote>
-<h3 id="142链式存储结构">1.4.2链式存储结构</h3>
+<h3 id="死锁解除">死锁解除:</h3>
+<p>方法:</p>
 <ol>
-<li>由于顺序存储的空间利用率比较低,一般采用链式存储结构.</li>
-<li>结点结构通常包含若干数据域和若干指针域
-<ol>
-<li>至少包含3个域:数据域data,左指针域lchild,右指针域rchild</li>
-</ol>
-</li>
-<li>在某些应用中还可加入指向父亲结点的指针,变成三叉链表的存储结构<br>
-<img src="https://s1.ax1x.com/2020/08/21/dtJvjg.png" alt="dtJvjg.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/08/21/dtYnb9.png" alt="dtYnb9.png" loading="lazy"></li>
-<li>链式存储结构描述</li>
-</ol>
-<pre><code>typdef struct BiTNode{
-    ElemType data;  //数据域
-    struct BiTNode *lchild,*rchild;  //左右子树
-}BiTNode,*BiTree;
-</code></pre>
-<ol start="5">
-<li>注意:含有n个结点的二叉链表中,含有n+1个空链域</li>
-</ol>
-<blockquote>
-<p>n个结点可以带有2n个指针,除去根结点外,每个都消耗掉1个,故而:2n-(n-1)=n+1;</p>
-</blockquote>
-<h2 id="15-错题及重点整理">1.5 错题及重点整理</h2>
-<ol>
-<li>4.设高度为h的二又树上只有度为0和度为2的结点，则此类二又树中所包含的结点数至少为（）。<br>
-<strong>2h-1</strong><br>
-<img src="https://s1.ax1x.com/2020/08/22/daxW38.png" alt="daxW38.png" loading="lazy"><br>
-<strong>经常要注意这种特殊情况</strong></li>
-<li>满二叉树和完全二叉树的几个层与结点个数的性质一定要记牢</li>
-<li><strong>满k叉树的性质</strong>
-<ol>
-<li>各层的结点个数:k<sup>i-1</sup></li>
-<li>编号为i的孩子结点<br>
-<img src="https://s1.ax1x.com/2020/08/22/ddixWn.png" alt="ddixWn.png" loading="lazy"><br>
-可以观察到第i个结点的底下的最左边的结点为:k(i-1)+2<br>
-最右边为:k(i-1)+2+k-1=ki+1<br>
-第j个子女:k(i-1)+j+1</li>
-<li>根据孩子结点反推双亲结点(若存在):j=k(i-1)+2 ==&gt; i=(j-2)/k+1 ==&gt; ((j-2)/k)下取整+1</li>
-<li>i有右兄弟的条件<br>
-<img src="https://s1.ax1x.com/2020/08/22/ddAOoD.png" alt="ddAOoD.png" loading="lazy"></li>
-</ol>
-</li>
+<li>资源剥夺法</li>
+<li>撤销进程法</li>
+<li>进程回退法<br>
+对谁动手相对而言:</li>
+<li>优先级低的</li>
+<li>已执行时间短的</li>
+<li>还有较长时间才能完成的</li>
+<li>持有资源多的</li>
+<li>交互式的先不干掉,批处理的先<br>
+注意点:</li>
+<li>死锁检测时检查的是资源有向图</li>
+<li>死锁定理是用于处理死锁的<strong>检测死锁</strong>的方法</li>
 </ol>
 
             </div>
@@ -701,7 +662,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/" title="第五章 二叉树">https://songdlut.github.io/post/di-wu-zhang-er-cha-shu/</a>
+      <a href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/" title=" 死锁的处理策略">https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -715,14 +676,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第五章 二叉树的遍历" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">第五章 二叉树的遍历</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第五章 二叉树的遍历" href="https://songdlut.github.io/post/di-wu-zhang-er-cha-shu-de-bian-li-he-xian-suo-er-cha-shu/">上一篇</a>
+        <a class="nav-pc-next" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">死锁部分的题目</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第五章 树的基本概念及错题重点整理" href="https://songdlut.github.io/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/">第五章 树的基本概念及错题重点整理</a>
-        <a class="nav-mobile-next" title="第五章 树的基本概念及错题重点整理" href="https://songdlut.github.io/post/di-wu-zhang-shu-de-ji-ben-gai-nian-ji-cuo-ti-chong-dian-zheng-li/">下一篇</a>
+        <a class="nav-pc-next" title=" 政治知识点随手记" href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/"> 政治知识点随手记</a>
+        <a class="nav-mobile-next" title=" 政治知识点随手记" href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
