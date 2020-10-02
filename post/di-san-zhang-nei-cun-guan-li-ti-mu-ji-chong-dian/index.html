@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第一章错题及重点问题整理 | 宋宇航的博客</title>
+<title>第三章 内存管理题目及重点 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1601624361178">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="第一章错题及重点问题整理" />
-  <meta name="keywords" content="操作系统" />
+  <meta name="description" content="第三章 内存管理题目及重点" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -256,9 +256,7 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#1%E6%A6%82%E5%BF%B5">1.概念</a></li>
-<li><a href="#2%E4%B8%AD%E6%96%AD%E7%AD%89">2.中断等</a></li>
-<li><a href="#3%E6%9C%AC%E7%AB%A0%E7%96%91%E9%9A%BE%E7%82%B9">3.本章疑难点</a></li>
+<li><a href="#1-%E6%A6%82%E5%BF%B5">1 概念</a></li>
 </ul>
 </li>
 </ul>
@@ -526,8 +524,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/">
-      第一章错题及重点问题整理
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/">
+      第三章 内存管理题目及重点
     </a>
   </h1>
   <div class="post-meta">
@@ -535,36 +533,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-06-30</span>
+      <span>2020-10-02</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
-        <span>操作系统</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>12<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3237<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>3<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/" data-flag-title="第一章错题及重点问题整理" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/" data-flag-title="第三章 内存管理题目及重点" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -573,163 +558,7 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="1概念">1.概念</h2>
-<ul>
-<li>高级程序设计语言的__编译器不是__操作系统关心的问题
-<ul>
-<li>用户界面并非是必须的,但却包含在操作系统范畴内</li>
-</ul>
-</li>
-<li>OS基本功能是__控制管理系统内的各种资源__
-<ul>
-<li>注意网络管理,用户界面,可视化编辑程序都不是最基本的功能</li>
-</ul>
-</li>
-<li>用户可以通过__命令接口和系统调用__来使用计算机</li>
-<li>系统调用只能通过用户程序间接使用</li>
-<li>系统调用的目的是__请求系统服务__
-<ul>
-<li>不是什么申请/释放资源,终止服务啥的</li>
-</ul>
-</li>
-<li>OS与用户通信接口通常不包括__缓存管理指令__
-<ul>
-<li>系统中的缓存全部由OS管理,对用户是透明的</li>
-<li>shell(命令解析器),命令解释器,广义指令(系统调用)都是通信接口</li>
-</ul>
-</li>
-<li><strong>库函数与系统调用的区别与联系</strong>
-<ul>
-<li>库函数是语言或应用程序的一部分,可以运行在用户空间中</li>
-<li>系统调用是操作系统的一部分,是内核为用户提供的程序接口,运行在内核空间中</li>
-<li>许多库函数会使用系统调用来实现功能</li>
-<li>未使用系统调用的库函数执行效率通常要比系统调用的高</li>
-<li>因为使用系统调用需要上下文切换以及状态的转换(由用户态转移到核心态)</li>
-</ul>
-</li>
-<li>各技术所解决的问题
-<ul>
-<li>脱机技术用于解决独占设备问题。</li>
-<li>虚拟技术与交换技术以多道程序设计技术为前提。</li>
-<li>多道程序设计技术由于同时在主存中运行多个程序，在一个程序等待时，可以去执行其他程序，因此提高了系统咨源的利用率。</li>
-</ul>
-</li>
-<li>引入多道程序后,程序的执行就失去了顺序性和封闭性,执行的程序是断续的</li>
-<li>操作系统的基本主要类型:
-<ul>
-<li>批处理OS</li>
-<li>分时OS</li>
-<li>实时OS</li>
-</ul>
-</li>
-<li>中断技术使得多道批处理系统和I/O设备可与CPU并行工作</li>
-<li>实时系统的进度调度通常采用__抢占式的优先级高者优先__算法</li>
-<li>实时OS的主要目标不包括__资源利用率__</li>
-<li>分时OS的主要目标是__比较快速响应用户__</li>
-<li>分时OS响应时间T≈QN,Q:时间片;N:用户数</li>
-<li>批处理OS,分时OS,实时OS的各自特点
-<ul>
-<li>批处理操作系统的用户脱机使用计算机，作业是成批处理的，系统内多道程序并发执行，交互能力差。</li>
-<li>分时操作系统可让多个用户同时使用计算机，人机交互性较强，具有每个用户独立使用计算机的独占性，系统响应及时</li>
-<li>实时操作系统能对控制对象做出及时反应，可靠性高，响应及时，但资源利用率低。</li>
-</ul>
-</li>
-</ul>
-<h2 id="2中断等">2.中断等</h2>
-<ul>
-<li>进程调度可以不需要硬件支持,而时钟管理,地址映射,中断系统都需要硬件的支持</li>
-<li>用户态到核心态的转换由__硬件__完成</li>
-<li>中断处理程序一般在核心态执行,因此无法完成&quot;转换成核心态&quot;这一任务</li>
-<li>命令解释程序是运行在用户态的</li>
-<li>注意区分在__用户态执行和发生的区别__
-<ul>
-<li>例如系统调用发生在用户态,而被调用程序在核心态下执行</li>
-<li>外部中断是用户态到核心态的&quot;门&quot;,发生在用户态,但是在核心态完成中断过程</li>
-<li>进程切换术语系统调用的执行过程中的事件,只能发生在核心态</li>
-<li>缺页产生后,在用户态发生缺页中断,然后进入核心态执行缺页程序中断服务程序</li>
-</ul>
-</li>
-<li><strong>只能在核心态下执行的指令</strong>(继续补充)
-<ul>
-<li>置时钟指令</li>
-<li>广义指令</li>
-</ul>
-</li>
-<li><strong>不是只能在核心态下&quot;执行&quot;的指令</strong>(继续补充)
-<ul>
-<li>读时钟指令</li>
-<li>取数指令</li>
-<li>寄存器清零</li>
-</ul>
-</li>
-<li><strong>陷入指令是唯一一个只能在用户态下执行而不能在核心态下执行的指令</strong></li>
-<li>中断处理和子程序调用的区别(重要)
-<ul>
-<li>子程序调用只需保存程序断点，即该指令的下一条指令的地址；</li>
-<li>中断调用子程序不仅要保存断点（PC的内容），还要保存程序状态字寄存器（PSW）的内容。在中断处理中，最重要的两个寄存器是PC和PSWR。</li>
-</ul>
-</li>
-<li>关中断指令是权限非常大的指令,必须在核心态才能执行
-<ul>
-<li>trap指令,跳转指令,压栈指令均可在用户态下执行</li>
-</ul>
-</li>
-<li>有关内部异常的叙述
-<ul>
-<li>内部异常的产生与当前执行指令相关</li>
-<li>内部异常的检测由CPU内部逻辑实现</li>
-<li>内部异常的响应发生在指令执行过程中
-<ul>
-<li>内中断是指来自CPU和内存内部产生的中断，包括程序运算引起的各种错误，如地址非法、校验错、页面失效、非法指令、用户程序执行特权指令自行中断（INT）和除数为零等，以上都是在指令的执行过程中产生的，因此A正确。这种检测异常的工作肯定是由CPU（包括控制器和运算器）实现的，因此B正确。内中断不能被屏蔽，一旦出现应立即处理，C正确。</li>
-</ul>
-</li>
-<li>(<strong>错误</strong>)内部异常处理后返回到发生异常的指令继续执行
-<ul>
-<li>考虑到特殊情况，如除数为零和自行中断（INT）都会自动跳过中断指令，所以不会返回到发生异常的指令继续执行，因此错误。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>注意狭义中断和广义中断
-<ul>
-<li>广义上,异常(内中断)和外部中断都叫</li>
-</ul>
-</li>
-<li>外部中断处理过程，PC值由中断隐指令自动保存，而通用寄存器内容由操作系统保存。(重要)</li>
-<li>MOV R0,addr:有可能出现缺页异常的可能</li>
-<li><strong>执行系统调用的过程如下</strong>：
-<ul>
-<li>正在运行的进程先传递系统调用参数，然后由陷入（trap）指令负责将用户态转换为内核态，并将返回地址压入堆栈以备后用，接下来CPU执行相应的内核态服务程序，最后返回用户态。所以选项C正确。</li>
-</ul>
-</li>
-<li>时钟中断的主要工作是处理和时间有关的信息及决定是否执行调度程序。和时间有关的所有信息包括系统时间、进程的时间片、延时、使用CPU的时间、各种定时器，因此I、Ⅱ、IⅢ均正确。</li>
-<li>不同的操作系统为应用程序提供的系统调用接口也不同</li>
-<li>设备管理属于操作系统的职能之一，包括对输入/输出设备的分配、初始化、维护等，用户程序需要通过系统调用使用操作系统的设备管理服务(重要)</li>
-<li><strong>区分执行态的主要目的是保护系统程序</strong></li>
-<li>用户态到核心态的转换发生在中断产生时，而核心态到用户态的转换则发生在中断返回用户程序时。</li>
-<li>为什么说直到出现中断和通道技术之后,多道程序概念才变得有用?
-<ul>
-<li>多道程序并发执行是指有的程序正在CPU上执行，而另一些程序正在I/O设备上进行传输，即通过CPU操作与外设传输在时间上的重叠必须有中断和通道技术的支持，原因如下：<br>
-1）通道是一种控制一台或多台外部设备的硬件机构，它一旦被启动就独立于CPU运行，因而做到了输入/输出操作与CPU并行工作。但早期CPU与通道的联络方法是由CPU向通道发出询问指令来了解通道工作是否完成的。若未完成，则主机就循环询问直到通道工作结束为止。因此，这种询问方式是无法真正做到CPU与I/O设备并行工作的。<br>
-2）在硬件上引入了中断技术。所谓中断，就是在输入/输出结束时，或硬件发生某种故障时，由相应的硬件（即中断机构）向CPU发出信号，这时CPU立即停下工作而转向处理中断请求，待处理完中断后再继续原来的工作。<br>
-因此，通道技术和中断技术结合起来就可实现CPU与I/O设备并行工作，即CPU启动通道传输数据后便去执行其他程序的计算工作，而通道则进行输入/输出操作；当通道工作结束时，再通过中断机构向CPU发出中断请求，CPU则暂停正在执行的操作，对出现的中断进行处理，处理完后再继续原来的工作。这样，就真正做到了CPU与IVO设备并行工作。此时，多道程序的概念才变为现实。</li>
-</ul>
-</li>
-</ul>
-<h2 id="3本章疑难点">3.本章疑难点</h2>
-<ol>
-<li>并行性与并发性的区别和联系<br>
-并行性和并发性是既相似又有区别的两个概念。并行性是指两个或多个事件在同一时刻发生，并发性是指两个或多个事件在同一时间间隔内发生。<br>
-在多道程序环境下，并发性是指在一段时间内，宏观上有多个程序同时运行，但在单处理器系统中每个时刻却仅能有一道程序执行，因此微观上这些程序只能分时地交替执行。若在计算机系统中有多个处理器，则这些可以并发执行的程序便被分配到多个处理器上，实现并行执行，即利用每个处理器来处理一个可并发执行的程序。</li>
-<li>特权指令与非特权指令<br>
-所谓特权指令，是指有特殊权限的指令，由于这类指令的权限最大，使用不当将导致整个系统崩溃，如清内存、置时钟、分配系统资源、修改虚存的段表或页表、修改用户的访问权限等。若所有程序都能使用这些指令，则系统一天死机n次就不足为奇。为保证系统安全，这类指令只能用于操作系统或其他系统软件，不直接提供给用户使用。因此，特权指令必须在核心态执行。<br>
-实际上，CPU在核心态下可以执行指令系统的全集。形象地说，特权指令是那些儿童不宜的东西，而非特权指令是老少皆宜的东西。<br>
-为了防止用户程序中使用特权指令，用户态下只能使用非特权指令，核心态下可以使用全部指令。在用户态下使用特权指令时，将产生中断以阻止用户使用特权指令。所以把用户程序放在用户态下运行，而操作系统中必须使用特权指令的那部分程序在核心态下运行，保证了计算机系统的安全可靠。从用户态转换为核心态的唯一途径是中断或异常。</li>
-<li>访管指令与访管中断<br>
-访管指令是一条可以在用户态下执行的指令。在用户程序中，因要求操作系统提供服务而有意识地使用访管指令，从而产生一个中断事件（自愿中断），将操作系统转换为核心态，称为访管中断。访管中断由访管指令产生，程序员使用访管指令向操作系统请求服务。<br>
-为什么要在程序中引入访管指令呢？这是因为用户程序只能在用户态下运行。若用户程序想要完成在用户态下无法完成的工作，该怎么办？解决这个问题要靠访管指令。访管指令本身不是特权指令，其基本功能是让程序拥有“自愿进管”的手段，从而引起访管中断。<br>
-处于用户态的用户程序使用访管指令时，系统根据访管指令的操作数执行访管中断处理程序，访管中断处理程序将按系统调用的操作数和参数转到相应的例行子程序。完成服务功能后，退出中断，返回到用户程序断点继续执行。</li>
-</ol>
+              <h2 id="1-概念">1 概念</h2>
 
             </div>
             
@@ -742,7 +571,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/" title="第一章错题及重点问题整理">https://songdlut.github.io/post/di-yi-zhang-cuo-ti-ji-chong-dian-wen-ti-zheng-li/</a>
+      <a href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/" title="第三章 内存管理题目及重点">https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -751,21 +580,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/"># 操作系统</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="中断的概念及作用" href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/">中断的概念及作用</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="中断的概念及作用" href="https://songdlut.github.io/post/zhong-duan-de-gai-nian-ji-zuo-yong/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第一章 计算机系统引论" href="https://songdlut.github.io/post/di-yi-zhang-ji-suan-ji-xi-tong-yin-lun/">第一章 计算机系统引论</a>
-        <a class="nav-mobile-next" title="第一章 计算机系统引论" href="https://songdlut.github.io/post/di-yi-zhang-ji-suan-ji-xi-tong-yin-lun/">下一篇</a>
+        <a class="nav-pc-next" title="阅读的一些思路" href="https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/">阅读的一些思路</a>
+        <a class="nav-mobile-next" title="阅读的一些思路" href="https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
