@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-10-02T10:06:09.494Z</updated>
+    <updated>2020-10-03T13:41:21.257Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -11,12 +11,109 @@
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
     <entry>
+        <title type="html"><![CDATA[第三章 内存管理之虚拟内存管理]]></title>
+        <id>https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/</id>
+        <link href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/">
+        </link>
+        <updated>2020-10-03T11:01:45.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-基本概念">1 基本概念</h2>
+<h3 id="总览">总览</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/03/0329rn.png" alt="0329rn.png" loading="lazy"></figure>
+<h2 id="传统存储管理的特征">传统存储管理的特征</h2>
+<ol>
+<li>一次性</li>
+<li>驻留性</li>
+</ol>
+<h3 id="局部性原理">局部性原理</h3>
+<ol>
+<li>时间局部性原理</li>
+<li>空间局部性原理</li>
+</ol>
+<h3 id="虚拟存储器的定义和特征">虚拟存储器的定义和特征</h3>
+<ol>
+<li>多次性</li>
+<li>对换性</li>
+<li>虚拟性</li>
+</ol>
+<h3 id="虚拟存储技术的实现">虚拟存储技术的实现</h3>
+<p>需要的功能:请求调页(段)功能,页面置换功能</p>
+<ol>
+<li>请求分页存储管理</li>
+<li>请求分段存储管理</li>
+<li>请求段页式存储管理<br>
+注意前面传统的都叫<strong>基本XXXX</strong><br>
+需要的支持:</li>
+<li>一定容量的内存和外存</li>
+<li>页表机制(或段表机制),作为主要数据结构</li>
+<li>中断机制</li>
+<li>地址变换机构</li>
+</ol>
+<h2 id="2-请求分页管理方式">2 请求分页管理方式</h2>
+<h3 id="1-页表机制">1 页表机制</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/03/035VG6.png" alt="035VG6.png" loading="lazy"></figure>
+<h3 id="2-缺页中断机构">2 缺页中断机构</h3>
+<p><img src="https://s1.ax1x.com/2020/10/03/03omHH.png" alt="03omHH.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/03/08pP1g.png" alt="08pP1g.png" loading="lazy"></p>
+<h3 id="3-地址变换机构">3 地址变换机构</h3>
+<p><img src="https://s1.ax1x.com/2020/10/03/08pmNV.png" alt="08pmNV.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/03/08pYAx.png" alt="08pYAx.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/03/08pHU0.png" alt="08pHU0.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/03/089A2D.png" alt="089A2D.png" loading="lazy"><br>
+注意:调页后还是再次查快表</p>
+<h3 id="4-小结">4 小结</h3>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/03/08Cot0.png" alt="08Cot0.png" loading="lazy"></figure>
+<h2 id="3-页面置换算法">3 页面置换算法</h2>
+<h3 id="1-最佳opt置换算法">1 最佳(OPT)置换算法</h3>
+<h3 id="2-先进先出fifo页面置换算法">2 先进先出(FIFO)页面置换算法</h3>
+<h3 id="3-最近最久未使用lru置换算法">3 最近最久未使用(LRU)置换算法</h3>
+<h3 id="时钟clock置换算法">时钟(CLOCK)置换算法</h3>
+<h2 id="4-页面分配策略">4 页面分配策略</h2>
+<h2 id="5-抖动">5 抖动</h2>
+<h2 id="6-工作集">6 工作集</h2>
+<h2 id="7-地址翻译">7 地址翻译</h2>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[第三章 内存管理题目及重点]]></title>
         <id>https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/</id>
         <link href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/">
         </link>
         <updated>2020-10-02T07:32:34.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-概念">1 概念</h2>
+<ol>
+<li>在虚拟内存管理中,地址板换机构将逻辑地址变换为物理地址,形成改逻辑地址的阶段为<strong>链接</strong>,若是&quot;完成该变化过程的阶段是&quot;,则为装载<br>
+<img src="https://s1.ax1x.com/2020/10/02/0l0JCq.png" alt="0l0JCq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/02/0l0kEd.png" alt="0l0kEd.png" loading="lazy"></li>
+<li>I/O操作时,进程不能交换出主存,但是如果有I/O缓冲则可以</li>
+<li>分区分配内存管理方式主要保护措施是界地址保护</li>
+<li>内存保护需要由操作系统和硬件机构完成</li>
+<li>单一连续存储管理和固定分区可以用覆盖技术</li>
+<li>紧凑技术就是拼接技术,采用拼接技术的目的是<strong>合并空闲区</strong>,其实我觉得形式上也合并了分配区,这样才有了空闲的,手段是移动已用的部分,让空闲区得以合并,因此目的是合并空闲区</li>
+<li>动态重定位虽说是装入的手段,但是如果问是啥时候发生的,应该是<strong>运行时</strong></li>
+<li>固定分区可采用静态重定位,可变(动态)分区,页式和段式都不可以,页式段式显然不可以,动态分配是因为其中会使用交换技术</li>
+<li>由于分页和分段管理中页表和段表也占用物理空间,因此提供给用户的物理空间不知道</li>
+<li><strong>页面是为操作系统所感知的,用户,编译系统,连接装配程序都是上层应用,均不可感知,不要看到装配就是感觉很底层,相对操作系统还是高层</strong></li>
+<li>整个系统只设置一个重定位寄存器,运行的只会是一个进程,因此多的也没啥用,切换进程后重置寄存器即可</li>
+<li>分段是用户编程(或者说编译器完成的,总之是上层)时,按逻辑将程序划段</li>
+<li>程序的动态链接是和程序的逻辑结构有关的,而采用分段管理是按逻辑将程序分段,因此有利于程序的动态链接</li>
+<li>分区管理虽说利用率可能不高,但是代价小,没哟额外数据结构支持(段表,页表啥的),因为简单</li>
+<li>对外存对换区的管理以<strong>提高换入,换出速度</strong>为主要目标,注意是对他的管理,而他自身目的肯定是提高存储空间利用率,因为换出换入很消耗处理机的时间,故而对其管理是为了节约时间成本</li>
+<li>注意问的是对内存的访问还是分配,如果是对内存的访问,是以字节或字为单位的,如果是对内存的分配是根据系统来的</li>
+<li>把作业空间中使用的逻辑地址变为内存中的物理地址称为<strong>重定位</strong></li>
+<li>注意分页管理的越界判断只有页号和页表长度的比较,而分段管理越界判断是两部分:段号和段表长度,偏移量和段长的比较</li>
+</ol>
+<h3 id="是否产生碎片">是否产生碎片</h3>
+<blockquote>
+<p>通俗讲:内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。</p>
+</blockquote>
+<p>分段式管理没有内部碎片,但是有外部碎片<br>
+分页式管理有内部碎片,无外部碎片<br>
+固定分区管理有内部碎片,无外部碎片<br>
+动态无内部碎片,有外部碎片<br>
+段页式管理有内部碎片,也有外部碎片</p>
+<h3 id="地址结构">地址结构</h3>
+<p>页式管理中的地址空间是一维的,给了一个整数(逻辑地址),就可以用整除和取余来找到对应的物理地址<br>
+段式管理是二维的,一个数,你没办法通过什么办法得到段号和偏移量,即便说定了32位,前多少是段号,后面是偏移量,这也是二维的,而对于页式的地址虽说计算机实际使用的时候是前多少是页号,后面的是偏移量,可以直接得到实际物理地址,但这只是为了快点访问的,如果只是一个数,也可通过整除取余等操作找到,因此是一维的</p>
 ]]></content>
     </entry>
     <entry>
@@ -117,7 +214,19 @@ inherently:固有的,内在的<br>
 perceive:察觉认识到<br>
 unresonable:不可理喻的<br>
 rip off:撕掉<br>
-tuck:塞入</p>
+tuck:塞入<br>
+kick back:放松<br>
+nonparents:无子女者,不是无双亲<br>
+cortisol:皮质醇<br>
+refuge:避难,庇护<br>
+blurring:模糊的<br>
+life-sustaining:维持生命的<br>
+bargain:协议<br>
+pretty much:几乎,差不多是<br>
+clinically:不偏不倚地<br>
+methodically:有条不紊地<br>
+talk into:说服<br>
+apparently:显然地;似乎</p>
 ]]></content>
     </entry>
     <entry>
@@ -432,6 +541,11 @@ tuck:塞入</p>
 <li>辩证否定的实质是扬弃,形而上学要么肯定一切要么否定一切</li>
 <li>时空是事物存在的形式,但如果说:时间是物质存在的形式也是对的,或者说是空间也对,尤其是结合实例(很多时间变化的词)</li>
 <li>不能将客观辩证法等同唯物辩证法,将主观辩证法等同唯心,两个都是唯物的</li>
+<li>凡事预则立,不预则废:原因与结果</li>
+<li>主体是人,但不是所有的人都是主体</li>
+<li>认识总是滞后于实践是<strong>错误的</strong>,错在总是,实践,-&gt;认识-&gt;实践</li>
+<li>实践先于认识是对的,但是不能说实践是认识的先导,因为先导是指导,实践并不能指导认识,而是认识指导实践</li>
+<li>实践和认识是合一的:错误,合一是知行合一,是王阳明的唯心主义,应该是同一,但是今天看到知行合一不能算错,因为总书记在16年讲过,题目中如果特地强调是王阳明说的,就是错的,如果只是简单提一下就是对的</li>
 <li></li>
 </ul>
 ]]></content>
@@ -592,189 +706,6 @@ void DFS(Graph G,int v,int &amp;flag)
     }
 }
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 图的应用]]></title>
-        <id>https://songdlut.github.io/post/tu-de-ying-yong/</id>
-        <link href="https://songdlut.github.io/post/tu-de-ying-yong/">
-        </link>
-        <updated>2020-09-24T14:26:26.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-最小生成树">1 最小生成树</h2>
-<h3 id="1-概念及注意">1 概念及注意</h3>
-<ul>
-<li>针对的是带权无向图</li>
-<li>如果本身就是一棵树,则它的最小生成树就是本身</li>
-<li>只有连通图才有生成树,非连通图只有生成森林</li>
-</ul>
-<h2 id="2-实现算法">2 实现算法</h2>
-<h3 id="1-prim算法">1 Prim算法</h3>
-<p>从某一顶点开始构建生成树;每次将代价最小的新顶点纳入生成树,直到所有顶点都纳入为止</p>
-<p>时间复杂度:O(|V|²)</p>
-<p>适合边稠密的图</p>
-<h3 id="2-kruskal算法">2 Kruskal算法</h3>
-<p>每次选择一条权值最小的边,使这条边的两头连通(已经连通的就不选)直到所有的结点都连通</p>
-<p>时间复杂度:O(|E|log<sub>2</sub>|E|)</p>
-<p>适合边稀疏而顶点较多的图</p>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/21/wbOhBF.png" alt="wbOhBF.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/21/wbOXnO.png" alt="wbOXnO.png" loading="lazy"></figure>
-<h2 id="2-最短路径">2 最短路径</h2>
-<h3 id="分类">分类</h3>
-<p>单源最短路径:BFS(无权图),Dijkstra算法(无权/带权)</p>
-<p>各顶点之间的最短路径:Floyd算法(无权/带权)</p>
-<p><strong>当图是带权图时,一条路径上所有边的权值之和称为带权路径长度</strong></p>
-<h3 id="1-bfs求最短路径">1 BFS求最短路径</h3>
-<pre><code class="language-c">void BFS_Min_Distance(Graph G,int u)
-{
-    for(int i=0;i&lt;G.vexnum;i++)
-    {
-        visited[i]=false;
-        d[i]=∞;
-        p[i]=-1;
-    }
-    d[u]=0;visited[u]=true;
-    Queue Q;
-    EnQueue(Q,u);
-    for(w=FirstNeighbor(G,u);w&gt;=0;w=NextNeighbor(G,u,w))
-    {
-        DeQueue(Q,u);
-        if(!visited[u])
-        {
-            d[w]=d[u]+1;
-            p[w]=u;
-            visited=true;
-            EnQueue(Q,w);
-        }
-    }
-}
-</code></pre>
-<h3 id="2-dijkstra算法">2 DijKstra算法</h3>
-<ul>
-<li>
-<p>不适用于带有负权值的图</p>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/09/21/wqe4bQ.png" alt="wqe4bQ.png" loading="lazy"></figure>
-</li>
-</ul>
-<h3 id="3-floyd算法">3 Floyd算法</h3>
-<p>若 A<sup>(k-1)</sup>[i] [j]&gt; A<sup>(k-1)</sup>[i] [k]+ A<sup>(k-1)</sup>[k] [j]</p>
-<p>则 A<sup>(k)</sup>[i] [j]=A<sup>(k-1)</sup>[i] [k]+ A<sup>(k-1)</sup>[k] [j]</p>
-<p>Path<sup>(k)</sup>=k</p>
-<p>否则A<sup>(k)</sup>[i] [j]和Path<sup>(k)</sup>保持原值</p>
-<h4 id="算法代码实现">算法代码实现</h4>
-<pre><code class="language-c">void Floyd_Min_Distance(Graph G)
-{
-    for(k=0;k&lt;n;k++)
-        for(i=0;i&lt;n;i++)
-            for(j=0;j&lt;n;j++)
-            {
-                if(A[i][j]&gt;A[i][k]+A[k][j])
-                    A[i][j]=A[i][k]+A[k][j];
-            }
-}
-</code></pre>
-<p>开销:</p>
-<p>时间复杂度:O(|V|³)</p>
-<p>空间复杂度:O(|V|²)</p>
-<p>可以用于负权值的图,但是<strong>不可以用于</strong>带负权值的回路</p>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/09/23/wjiWfx.png" alt="wjiWfx.png" loading="lazy"></figure>
-<h3 id="4-总结">4 总结</h3>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/09/23/wjFwEd.png" alt="wjFwEd.png" loading="lazy"></figure>
-<h3 id="5-有向无环图dagdirected-acyclic-graph描述表达式">5 有向无环图(DAG:Directed Acyclic Graph)描述表达式</h3>
-<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/09/23/wjmgWd.png" alt="wjmgWd.png" loading="lazy"></figure>
-<h3 id="6-拓扑排序">6 拓扑排序</h3>
-<h4 id="1aov网activity-on-vertex-network用顶点表示活动的网">1.AOV网(Activity On Vertex Network):用顶点表示活动的网</h4>
-<h4 id="2-拓扑排序代码实现">2. 拓扑排序代码实现</h4>
-<pre><code class="language-c">bool TopoLogicalSort(Graph G)
-{
-    Stack S;
-    for(int i=0;i&lt;G.vexnum;i++)
-    {
-        if(indegree[i]==0)//入度为0的进栈
-            S.Push(i);
-    }
-    int count=0;
-    while(!S.isEmpty())
-    {
-        i=S.Pop();//栈顶元素出栈
-        print[count++]=i;//记录出栈序列,即为拓扑排序
-        for(p=G.verticle[i].firstarc;p;p=p-&gt;nextarc)//遍历所有与i顶点所连的边
-        {
-            v=p-&gt;adjvex;//v是顶点i指向的点
-            if(!(--index[v]))//所有i指向的点的入度都减一
-            {
-                S.Push(v);//减完之后入度为0的说明又可以作为下一个入栈的点
-            }
-            
-        }//for
-    }//while
-    if(count&lt;G.vexnum)//手动画一遍即可知如果有环,会在遍历完所有结点前,栈就空了,因此会提前跳出while循环而导致count值小于G.vexnum
-    {
-        return false;//有环
-    }
-    else
-        return true;
-}
-</code></pre>
-<p>这是邻接表存储的,时间复杂度为O(|V|+|E|);</p>
-<p>如果采用的是邻接矩阵存储则为O(|V|²);</p>
-<h4 id="3逆拓扑排序">3.逆拓扑排序</h4>
-<ol>
-<li>
-<p>倒过来,找出度为0的,用临界矩阵或逆邻接表</p>
-</li>
-<li>
-<p>DFS</p>
-<ul>
-<li>不带判断环的只要在DFS的最后打印顶点就行</li>
-<li>带判断的</li>
-</ul>
-<pre><code class="language-c">bool isTree(Graph G)
-{
-    for(v=0;v&lt;G.vexnum;v++)
-        visited[v]=false;
-    int c=0;
-    int flag=0;
-    for(v=0;v&lt;G.vexnum;v++)
-    {
-        if(!visited[v])
-        {
-            if(c=1)//说明调用过一次了,再调用就是非连通的,不是一棵树
-                return false;
-            else
-            {
-                DFS(G,v,&amp;flag);
-                c++;
-            }
-        }
-    }
-    if(flag==1) return false;
-    return true;
-}
-void DFS(Graph G,int v,int &amp;flag)
-{
-    //visit(v);
-    visited[v]=true;
-    for(w=FirstNeighbor(G,v);w&gt;=0;w=NextNeighbor(G,v,w))
-    {
-        if(visited[w])//访问过,说明有环
-        {
-            flag=1;
-        }
-        else
-        {
-            DFS(G,w,flag);
-        }
-    }
-    print(v);
-}
-</code></pre>
-</li>
-</ol>
-<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/09/25/0CkpHP.png" alt="0CkpHP.png" loading="lazy"></figure>
-<h3 id="7-关键路径">7 关键路径</h3>
-<h3 id="1-aoe网">1 AOE网</h3>
-<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/09/23/wvft0J.png" alt="wvft0J.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/09/23/wvfBp6.png" alt="wvfBp6.png" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>

@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title> 图的应用 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1601633158233">
+<link rel="shortcut icon" href="/favicon.ico?v=1601732455993">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">35</span>
+        <span class="site-item-stat-count">36</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1843,8 +1843,102 @@ void DFS(Graph G,int v,int &amp;flag)
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/"" data-c="
+          &lt;h2 id=&#34;1-基本概念&#34;&gt;1 基本概念&lt;/h2&gt;
+&lt;h3 id=&#34;总览&#34;&gt;总览&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/0329rn.png&#34; alt=&#34;0329rn.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;传统存储管理的特征&#34;&gt;传统存储管理的特征&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;一次性&lt;/li&gt;
+&lt;li&gt;驻留性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;局部性原理&#34;&gt;局部性原理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;时间局部性原理&lt;/li&gt;
+&lt;li&gt;空间局部性原理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;虚拟存储器的定义和特征&#34;&gt;虚拟存储器的定义和特征&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;多次性&lt;/li&gt;
+&lt;li&gt;对换性&lt;/li&gt;
+&lt;li&gt;虚拟性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;虚拟存储技术的实现&#34;&gt;虚拟存储技术的实现&lt;/h3&gt;
+&lt;p&gt;需要的功能:请求调页(段)功能,页面置换功能&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请求分页存储管理&lt;/li&gt;
+&lt;li&gt;请求分段存储管理&lt;/li&gt;
+&lt;li&gt;请求段页式存储管理&lt;br&gt;
+注意前面传统的都叫&lt;strong&gt;基本XXXX&lt;/strong&gt;&lt;br&gt;
+需要的支持:&lt;/li&gt;
+&lt;li&gt;一定容量的内存和外存&lt;/li&gt;
+&lt;li&gt;页表机制(或段表机制),作为主要数据结构&lt;/li&gt;
+&lt;li&gt;中断机制&lt;/li&gt;
+&lt;li&gt;地址变换机构&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-请求分页管理方式&#34;&gt;2 请求分页管理方式&lt;/h2&gt;
+&lt;h3 id=&#34;1-页表机制&#34;&gt;1 页表机制&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/035VG6.png&#34; alt=&#34;035VG6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;2-缺页中断机构&#34;&gt;2 缺页中断机构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/03omHH.png&#34; alt=&#34;03omHH.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08pP1g.png&#34; alt=&#34;08pP1g.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-地址变换机构&#34;&gt;3 地址变换机构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08pmNV.png&#34; alt=&#34;08pmNV.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08pYAx.png&#34; alt=&#34;08pYAx.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08pHU0.png&#34; alt=&#34;08pHU0.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/089A2D.png&#34; alt=&#34;089A2D.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+注意:调页后还是再次查快表&lt;/p&gt;
+&lt;h3 id=&#34;4-小结&#34;&gt;4 小结&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08Cot0.png&#34; alt=&#34;08Cot0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;3-页面置换算法&#34;&gt;3 页面置换算法&lt;/h2&gt;
+&lt;h3 id=&#34;1-最佳opt置换算法&#34;&gt;1 最佳(OPT)置换算法&lt;/h3&gt;
+&lt;h3 id=&#34;2-先进先出fifo页面置换算法&#34;&gt;2 先进先出(FIFO)页面置换算法&lt;/h3&gt;
+&lt;h3 id=&#34;3-最近最久未使用lru置换算法&#34;&gt;3 最近最久未使用(LRU)置换算法&lt;/h3&gt;
+&lt;h3 id=&#34;时钟clock置换算法&#34;&gt;时钟(CLOCK)置换算法&lt;/h3&gt;
+&lt;h2 id=&#34;4-页面分配策略&#34;&gt;4 页面分配策略&lt;/h2&gt;
+&lt;h2 id=&#34;5-抖动&#34;&gt;5 抖动&lt;/h2&gt;
+&lt;h2 id=&#34;6-工作集&#34;&gt;6 工作集&lt;/h2&gt;
+&lt;h2 id=&#34;7-地址翻译&#34;&gt;7 地址翻译&lt;/h2&gt;
+">第三章 内存管理之虚拟内存管理</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/"" data-c="
           &lt;h2 id=&#34;1-概念&#34;&gt;1 概念&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在虚拟内存管理中,地址板换机构将逻辑地址变换为物理地址,形成改逻辑地址的阶段为&lt;strong&gt;链接&lt;/strong&gt;,若是&amp;quot;完成该变化过程的阶段是&amp;quot;,则为装载&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/02/0l0JCq.png&#34; alt=&#34;0l0JCq.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/02/0l0kEd.png&#34; alt=&#34;0l0kEd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;I/O操作时,进程不能交换出主存,但是如果有I/O缓冲则可以&lt;/li&gt;
+&lt;li&gt;分区分配内存管理方式主要保护措施是界地址保护&lt;/li&gt;
+&lt;li&gt;内存保护需要由操作系统和硬件机构完成&lt;/li&gt;
+&lt;li&gt;单一连续存储管理和固定分区可以用覆盖技术&lt;/li&gt;
+&lt;li&gt;紧凑技术就是拼接技术,采用拼接技术的目的是&lt;strong&gt;合并空闲区&lt;/strong&gt;,其实我觉得形式上也合并了分配区,这样才有了空闲的,手段是移动已用的部分,让空闲区得以合并,因此目的是合并空闲区&lt;/li&gt;
+&lt;li&gt;动态重定位虽说是装入的手段,但是如果问是啥时候发生的,应该是&lt;strong&gt;运行时&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;固定分区可采用静态重定位,可变(动态)分区,页式和段式都不可以,页式段式显然不可以,动态分配是因为其中会使用交换技术&lt;/li&gt;
+&lt;li&gt;由于分页和分段管理中页表和段表也占用物理空间,因此提供给用户的物理空间不知道&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;页面是为操作系统所感知的,用户,编译系统,连接装配程序都是上层应用,均不可感知,不要看到装配就是感觉很底层,相对操作系统还是高层&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;整个系统只设置一个重定位寄存器,运行的只会是一个进程,因此多的也没啥用,切换进程后重置寄存器即可&lt;/li&gt;
+&lt;li&gt;分段是用户编程(或者说编译器完成的,总之是上层)时,按逻辑将程序划段&lt;/li&gt;
+&lt;li&gt;程序的动态链接是和程序的逻辑结构有关的,而采用分段管理是按逻辑将程序分段,因此有利于程序的动态链接&lt;/li&gt;
+&lt;li&gt;分区管理虽说利用率可能不高,但是代价小,没哟额外数据结构支持(段表,页表啥的),因为简单&lt;/li&gt;
+&lt;li&gt;对外存对换区的管理以&lt;strong&gt;提高换入,换出速度&lt;/strong&gt;为主要目标,注意是对他的管理,而他自身目的肯定是提高存储空间利用率,因为换出换入很消耗处理机的时间,故而对其管理是为了节约时间成本&lt;/li&gt;
+&lt;li&gt;注意问的是对内存的访问还是分配,如果是对内存的访问,是以字节或字为单位的,如果是对内存的分配是根据系统来的&lt;/li&gt;
+&lt;li&gt;把作业空间中使用的逻辑地址变为内存中的物理地址称为&lt;strong&gt;重定位&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;注意分页管理的越界判断只有页号和页表长度的比较,而分段管理越界判断是两部分:段号和段表长度,偏移量和段长的比较&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;是否产生碎片&#34;&gt;是否产生碎片&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通俗讲:内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;分段式管理没有内部碎片,但是有外部碎片&lt;br&gt;
+分页式管理有内部碎片,无外部碎片&lt;br&gt;
+固定分区管理有内部碎片,无外部碎片&lt;br&gt;
+动态无内部碎片,有外部碎片&lt;br&gt;
+段页式管理有内部碎片,也有外部碎片&lt;/p&gt;
+&lt;h3 id=&#34;地址结构&#34;&gt;地址结构&lt;/h3&gt;
+&lt;p&gt;页式管理中的地址空间是一维的,给了一个整数(逻辑地址),就可以用整除和取余来找到对应的物理地址&lt;br&gt;
+段式管理是二维的,一个数,你没办法通过什么办法得到段号和偏移量,即便说定了32位,前多少是段号,后面是偏移量,这也是二维的,而对于页式的地址虽说计算机实际使用的时候是前多少是页号,后面的是偏移量,可以直接得到实际物理地址,但这只是为了快点访问的,如果只是一个数,也可通过整除取余等操作找到,因此是一维的&lt;/p&gt;
 ">第三章 内存管理题目及重点</a>
       </div>
       
@@ -1939,7 +2033,19 @@ inherently:固有的,内在的&lt;br&gt;
 perceive:察觉认识到&lt;br&gt;
 unresonable:不可理喻的&lt;br&gt;
 rip off:撕掉&lt;br&gt;
-tuck:塞入&lt;/p&gt;
+tuck:塞入&lt;br&gt;
+kick back:放松&lt;br&gt;
+nonparents:无子女者,不是无双亲&lt;br&gt;
+cortisol:皮质醇&lt;br&gt;
+refuge:避难,庇护&lt;br&gt;
+blurring:模糊的&lt;br&gt;
+life-sustaining:维持生命的&lt;br&gt;
+bargain:协议&lt;br&gt;
+pretty much:几乎,差不多是&lt;br&gt;
+clinically:不偏不倚地&lt;br&gt;
+methodically:有条不紊地&lt;br&gt;
+talk into:说服&lt;br&gt;
+apparently:显然地;似乎&lt;/p&gt;
 ">做题词汇积累</a>
       </div>
       
@@ -2242,6 +2348,11 @@ tuck:塞入&lt;/p&gt;
 &lt;li&gt;辩证否定的实质是扬弃,形而上学要么肯定一切要么否定一切&lt;/li&gt;
 &lt;li&gt;时空是事物存在的形式,但如果说:时间是物质存在的形式也是对的,或者说是空间也对,尤其是结合实例(很多时间变化的词)&lt;/li&gt;
 &lt;li&gt;不能将客观辩证法等同唯物辩证法,将主观辩证法等同唯心,两个都是唯物的&lt;/li&gt;
+&lt;li&gt;凡事预则立,不预则废:原因与结果&lt;/li&gt;
+&lt;li&gt;主体是人,但不是所有的人都是主体&lt;/li&gt;
+&lt;li&gt;认识总是滞后于实践是&lt;strong&gt;错误的&lt;/strong&gt;,错在总是,实践,-&amp;gt;认识-&amp;gt;实践&lt;/li&gt;
+&lt;li&gt;实践先于认识是对的,但是不能说实践是认识的先导,因为先导是指导,实践并不能指导认识,而是认识指导实践&lt;/li&gt;
+&lt;li&gt;实践和认识是合一的:错误,合一是知行合一,是王阳明的唯心主义,应该是同一,但是今天看到知行合一不能算错,因为总书记在16年讲过,题目中如果特地强调是王阳明说的,就是错的,如果只是简单提一下就是对的&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 "> 政治知识点随手记</a>
