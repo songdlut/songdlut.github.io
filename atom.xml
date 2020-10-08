@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-10-03T13:41:21.257Z</updated>
+    <updated>2020-10-08T12:35:38.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,252 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[计算机网络 第二章 物理层]]></title>
+        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/</id>
+        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/">
+        </link>
+        <updated>2020-10-08T07:45:36.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="总览">总览</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/08/0wztSA.png" alt="0wztSA.png" loading="lazy"></figure>
+<h2 id="通信基础">通信基础</h2>
+<p><img src="https://s1.ax1x.com/2020/10/08/0wzzkD.png" alt="0wzzkD.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/08/0090w6.png" alt="0090w6.png" loading="lazy"><br>
+k进制码元<br>
+例如4进制码元,码元的离散状态有4个,代表4种高低不同的信号波形<br>
+00  01  10  11<br>
+那么一个码元就带有2b的信息<br>
+同理,16进制的码元,离散状态有16个,代表16种高低不同的信号波形<br>
+0000  0001  0010 0011 0100  0101  0110  0111.....16个<br>
+因此每个码元带有4b的信息</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[英语翻译笔记]]></title>
+        <id>https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/</id>
+        <link href="https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/">
+        </link>
+        <updated>2020-10-08T01:22:04.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-一些单词的误译">1 一些单词的误译</h2>
+<p>town:是城镇,而不是乡下</p>
+<h2 id="2-常见的短语">2 常见的短语</h2>
+<p>think about:一般开头作为祈使句时,想带读者进入虚拟场景,翻译成<strong>试想</strong><br>
+twist and turn:曲曲弯弯,迂回曲折<br>
+know...like the back of one's hand:对...十分熟悉,<strong>了如指掌</strong><br>
+well-travelled:经常旅行的,去过很多地方的(指人),频繁经过的<br>
+come to:偏口语化的表达,翻译时弱化或省去</p>
+<h2 id="3-一些转折的连词">3 一些转折的,连词</h2>
+<p>afterwards:以后,后来<br>
+after all:毕竟,终究</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[计算机网络 第一章 题目整理]]></title>
+        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/</id>
+        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/">
+        </link>
+        <updated>2020-10-07T13:08:36.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-概念部分">1 概念部分</h2>
+<ul>
+<li>局域网接入广域网是通过路由器实现的</li>
+<li>附加信息开销大事分组交换网络的缺点</li>
+<li>计算机网络的拓扑结构主要取决于它的<strong>通信子网</strong></li>
+<li>城域网采用的技术与局域网相似,只是大一些</li>
+<li>局域网和广域网的差异:
+<ul>
+<li>覆盖范围不同</li>
+<li>使用的协议不同,局域网只要下两层就行,没有路由器</li>
+<li>采用的技术不同:局域网:广播技术,广域网:交换技术</li>
+<li><strong>没有特地强调通信容量的差别</strong></li>
+</ul>
+</li>
+<li>计算机网络中的资源一定要选全,硬件软件都要包含</li>
+<li>计算机网络中可以没有数据库管理系统</li>
+</ul>
+<h2 id="2-参考模型部分">2 参考模型部分</h2>
+<ol>
+<li><strong>定义功能执行的方法</strong>不是对网络模型进行分层的目标
+<ol>
+<li>注意:具体内部细节实现的都不属于体系结构中</li>
+</ol>
+</li>
+<li>因特网采用的核心技术是<strong>TCP/IP</strong></li>
+<li>集线器应用在物理层</li>
+<li>(☆)噪声使得传输链路上的一个0变成1,或1变0这样的差错<strong>发生在物理层</strong>,<strong>纠正在数据链路层</strong></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[计算机网络 第一章 计算机网络体系结构]]></title>
+        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/</id>
+        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/">
+        </link>
+        <updated>2020-10-07T06:41:52.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/10/07/0aIHKA.png" alt="0aIHKA.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/07/0dSf9s.png" alt="0dSf9s.png" loading="lazy"></p>
+<h2 id="1-计算机网络概述">1 计算机网络概述</h2>
+<h3 id="1-计算机网络的概念">1 计算机网络的概念</h3>
+<p><img src="https://s1.ax1x.com/2020/10/07/0aINBq.png" alt="0aINBq.png" loading="lazy"><br>
+ISP:因特网服务提供商<br>
+<img src="https://s1.ax1x.com/2020/10/07/0aIfUK.png" alt="0aIfUK.png" loading="lazy"></p>
+<h3 id="2-组成功能分类">2 组成,功能,分类</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/07/0aqyvD.png" alt="0aqyvD.png" loading="lazy"></figure>
+<ul>
+<li>终端,服务器,工作站,共享的打印机等设备以及相关软件都属于资源子网</li>
+<li>网卡,线缆,路由器,网桥等都是通信子网</li>
+</ul>
+<h3 id="3-计算机网络的标准化工作及相关组织">3 计算机网络的标准化工作及相关组织</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/07/0a7FhT.png" alt="0a7FhT.png" loading="lazy"></figure>
+<h3 id="4-性能指标">4 性能指标</h3>
+<ol>
+<li>
+<p>速率<br>
+<img src="https://s1.ax1x.com/2020/10/07/0a7I8U.png" alt="0a7I8U.png" loading="lazy"><br>
+注意:换算比例</p>
+</li>
+<li>
+<p>带宽</p>
+</li>
+<li>
+<p>吞吐量</p>
+</li>
+<li>
+<p>时延</p>
+<ol>
+<li>发送时延</li>
+<li>传播时延</li>
+<li>处理时延</li>
+<li>排队时延</li>
+</ol>
+</li>
+<li>
+<p>时延带宽积<br>
+以比特为单位的链路长度</p>
+</li>
+<li>
+<p>往返时延RTT<br>
+2*传播时延+题目给的其他的</p>
+</li>
+<li>
+<p>信道利用率<br>
+<img src="https://s1.ax1x.com/2020/10/07/0dCUNF.png" alt="0dCUNF.png" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="2-osi七层模型tcpip模型">2 OSI七层模型,TCP/IP模型</h2>
+<h3 id="osi">OSI</h3>
+<h4 id="1-应用层">1 应用层</h4>
+<ol>
+<li>用户与网络的界面,所有能和用户交互产生网络流量的程序</li>
+<li>协议:SMTP,FTP,HTTP</li>
+</ol>
+<h4 id="2-表示层">2 表示层</h4>
+<ol>
+<li>主要处理在两个通信系统中交换信息的表示方式</li>
+<li>功能:
+<ol>
+<li>数据格式转化:01010001=&gt;XXXX</li>
+<li>数据加解密</li>
+<li>数据压缩和恢复</li>
+</ol>
+</li>
+<li>主要协议:JPEG,ASCII</li>
+</ol>
+<h4 id="3-会话层">3 会话层</h4>
+<ol>
+<li>向表示层实体/用户进程提供建立连接并在连接上有序地传输数据</li>
+<li>功能:
+<ol>
+<li>建立,管理,终止会话</li>
+<li>使用校验点使会话在通信失效时从校验点继续恢复通信,实现数据同步</li>
+</ol>
+</li>
+<li>协议:ADSP,ASP</li>
+</ol>
+<h4 id="4-传输层">4 传输层</h4>
+<ol>
+<li>负责主机中两个<strong>进程间的</strong>通信,即实现端到端的通信.传输单位是报文段或用户数据段.</li>
+<li>功能:
+<ol>
+<li>可靠传播,不可靠传播</li>
+<li>差错控制</li>
+<li>流量控制(速度时都匹配)</li>
+<li>复用分用
+<ol>
+<li>多个应用层进程同时使用传输层的服务</li>
+<li>传输层把收到的信息分别给应用层的相应进程</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>协议:TCP,UDP</li>
+</ol>
+<h4 id="5-网络层">5 网络层</h4>
+<ol>
+<li>主要任务是把<strong>分组</strong>从源端传到目的端,为分组交换网上的主机提供通信服务,传输单位是数据报</li>
+<li>功能:
+<ol>
+<li>路由选择(最佳路径)</li>
+<li>流量控制</li>
+<li>差错控制</li>
+<li>拥塞控制:拥塞状态:所有结点都来不及接受分组,而要丢弃大量分组的话,网络就处于拥塞状态</li>
+</ol>
+</li>
+<li>协议:IP,IPX,ICMP,IGMP,ARP,PARP,OSPF</li>
+</ol>
+<h4 id="6-数据链路层">6 数据链路层</h4>
+<ol>
+<li>主要把网络层的数据报组装成帧</li>
+<li>功能:
+<ol>
+<li>成帧(定义帧的开始和结束)</li>
+<li>差错控制:帧错+位错</li>
+<li>流量控制</li>
+<li>访问(接入)控制:控制对信道的访问(广播式的网络中)</li>
+</ol>
+</li>
+<li>协议:HDLC,SDLC,PPP,STP</li>
+</ol>
+<h4 id="7-物理层">7 物理层</h4>
+<ol>
+<li>在物理媒体上实现比特流的<strong>透明传输</strong>,传输单位是比特
+<ol>
+<li>透明传输:指不管所传数据是什么样的比特组合,都应当能在链路上传送</li>
+</ol>
+</li>
+<li>功能:
+<ol>
+<li>定义接口特性</li>
+<li>定义传输模式:单工,双工,半双工</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ol>
+</li>
+<li>协议:Rj45,802.3</li>
+<li>DCE/DTE[https://blog.csdn.net/kunkliu/article/details/79807673]</li>
+</ol>
+<h3 id="tcpip">TCP/IP</h3>
+<h4 id="概念">概念</h4>
+<h4 id="与osi相同">与OSI相同</h4>
+<ol>
+<li>都分层</li>
+<li>都基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联</li>
+</ol>
+<h4 id="与osi差异">与OSI差异</h4>
+<ol>
+<li>OSI定义了:协议,接口,服务</li>
+<li>OSI先出现,参考模型先于协议发明,不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题,将IP作为重要层次</li>
+<li><img src="https://s1.ax1x.com/2020/10/08/0wTjje.png" alt="0wTjje.png" loading="lazy"></li>
+</ol>
+<h3 id="五层参考模型">五层参考模型</h3>
+<p><img src="https://s1.ax1x.com/2020/10/08/0w7AgS.png" alt="0w7AgS.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/08/0w7W5t.png" alt="0w7W5t.png" loading="lazy"></p>
+<h2 id="总结">总结</h2>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/08/0wHHSK.png" alt="0wHHSK.png" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第三章 内存管理之虚拟内存管理]]></title>
         <id>https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/</id>
@@ -226,7 +472,23 @@ pretty much:几乎,差不多是<br>
 clinically:不偏不倚地<br>
 methodically:有条不紊地<br>
 talk into:说服<br>
-apparently:显然地;似乎</p>
+apparently:显然地;似乎<br>
+lingua franca:(母语不同的人之间使用的)通用语,交际语<br>
+spin:旋转<br>
+parachute:空投,空降<br>
+explicitly:清楚地<br>
+infuse:把...注入,灌输<br>
+amid:在...中间,当中<br>
+prompt:促进,激起<br>
+buzzword:某一领域的时髦用语<br>
+in its own right:凭自身的能力<br>
+linguist:语言学家<br>
+nonsense:无稽之谈,胡说,荒谬的想法<br>
+buy into it:买账,认可<br>
+irony:讽刺<br>
+oriented:朝向,面向,导向,适应;确定方位;认识方向;熟悉;适应<br>
+importation:引进,输入<br>
+cover:投保</p>
 ]]></content>
     </entry>
     <entry>
@@ -426,286 +688,6 @@ apparently:显然地;似乎</p>
 <li>关于三种策略对进程并发性的影响:并发性由大到小::无策略&gt;死锁检测与解除&gt;死锁避免&gt;死锁预防,是与对分配干预的程度相一致的</li>
 <li></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 死锁的处理策略]]></title>
-        <id>https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/</id>
-        <link href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/">
-        </link>
-        <updated>2020-09-25T10:39:26.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-总览">1 总览</h2>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/24/wzjCQg.png" alt="wzjCQg.png" loading="lazy"></figure>
-<h2 id="2-死锁预防">2 死锁预防</h2>
-<h3 id="1-破坏互斥条件">1 破坏互斥条件</h3>
-<p>使用SPOOLing技术<br>
-<img src="https://s1.ax1x.com/2020/09/24/wzvK4P.png" alt="wzvK4P.png" loading="lazy"><br>
-缺点:并不是所有资源都可以改成可共享的资源,并且为了系统安全,很多时候必须保持这种互斥性,因此很多时候都无法破坏互斥条件</p>
-<h3 id="2-破坏不剥夺条件">2 破坏不剥夺条件</h3>
-<p>两种策略:</p>
-<ol>
-<li>我得不到想要的,就把我占有的释放(无私,成全别人)</li>
-<li>借助操作系统协助,将想要的资源强行抢来,一般需要考虑各进程的优先级<br>
-缺点:</li>
-<li>实现起来比较复杂</li>
-<li>释放已获得的资源可能会造成前一阶段工作的失效,因此这种方法只适用于易保存和恢复状态的资源,如cpu</li>
-<li>反复申请和释放资源会增加系统开销,降低系统吞吐量</li>
-<li>若采用方案一,意味着只要暂时得不到某个资源,之前获得的都要放弃,以后重新申请,如果一直发生就会导致进程饥饿</li>
-</ol>
-<h3 id="3-破坏请求并保持条件">3 破坏请求并保持条件</h3>
-<p>策略:<br>
-进程在运行之前一次申请完所有需要的资源,在资源未满足之前不让它投入运行,一旦运行,这些字眼就一直归他所有,<strong>该进程就不会申请别的任何资源</strong><br>
-缺点:</p>
-<ol>
-<li>有些资源可能只要使用很短的时间,因此如果进程的整个运行期间都一直保持着所有资源,就会造成严重的资源浪费,<strong>资源利用率低</strong>,也可能导致某些进程饥饿<br>
-造成饥饿:A类用R1,B类用R2,C类俩都用,AB的不断用,C的就可能弄不着用</li>
-</ol>
-<h3 id="4-破坏循环等待条件">4 破坏循环等待条件</h3>
-<p>策略:<br>
-顺序资源分配法:先给系统中的资源编号,规定每个进程必须按编号递增的顺序请求资源,同类资源(即编号相同的资源)一次申请完<br>
-一个进程只有已占有小编号的资源时,才有资格申请更大编号的资源,按此规则,已持有大编号资源的进程不可能逆向回来申请小编号的资源,从而就不会产生循环等待的现象<br>
-<img src="https://s1.ax1x.com/2020/09/24/0SF9N4.png" alt="0SF9N4.png" loading="lazy"><br>
-缺点:</p>
-<ol>
-<li>不方便添加新的设备,因为可能需要重新分配所有的编号</li>
-<li>进程实际使用资源的顺序可能和编号递增的顺序不一直,会导致资源的浪费,如,我要先用5,很久后用3,只能把3先申请占着,就浪费了.</li>
-</ol>
-<h3 id="5-总结">5 总结</h3>
-<p><img src="https://s1.ax1x.com/2020/09/24/0SAA0K.png" alt="0SAA0K.png" loading="lazy"><br>
-注意去分析哲学家进餐中策略避免死锁所对应的方法</p>
-<h2 id="3-死锁避免">3 死锁避免</h2>
-<h3 id="1-安全序列不安全状态死锁的联系">1 安全序列,不安全状态,死锁的联系</h3>
-<ol>
-<li>安全序列:指系统如果按照这种序列分配资源,则每个进程都能顺利完成</li>
-<li>只要能找到一个安全序列,系统就是安全状态,安全序列可能有多个</li>
-<li>在分配了资源后,系统找不到任何一个安全序列,系统就进入不安全状态,意味着之后<strong>可能</strong>所有进程都无法顺利的执行下去,但如果有进程提前归还一些资源,<strong>系统有可能回到安全状态</strong>,不过分配钱总是要考虑最坏情况<br>
-<strong>注:1. 如果系统处于安全状态,就一定不会发生死锁</strong><br>
-<strong>2. 如果系统进入不安全状态,就可能发生死锁</strong><br>
-<strong>3. 处于不安全状态未必就是发生了死锁(可能还没有去竞争某一资源),但死锁发生时一定是不安全状态</strong><br>
-<strong>4. 银行家算法的核心思想:在资源分配前预先判断这次分配是否会导致系统进入不安全状态,以此来决定是否答应资源分配请求</strong></li>
-</ol>
-<h3 id="2-银行家算法">2 银行家算法</h3>
-<h2 id="4-死锁检测和解除">4 死锁检测和解除</h2>
-<ol>
-<li>S为死锁的条件是当且仅当S的状态的资源分配图是不可完全花间的,该条件为死锁定理</li>
-<li>化简之后还连着边的是死锁进程</li>
-</ol>
-<h3 id="死锁解除">死锁解除:</h3>
-<p>方法:</p>
-<ol>
-<li>资源剥夺法</li>
-<li>撤销进程法</li>
-<li>进程回退法<br>
-对谁动手相对而言:</li>
-<li>优先级低的</li>
-<li>已执行时间短的</li>
-<li>还有较长时间才能完成的</li>
-<li>持有资源多的</li>
-<li>交互式的先不干掉,批处理的先<br>
-注意点:</li>
-<li>死锁检测时检查的是资源有向图</li>
-<li>死锁定理是用于处理死锁的<strong>检测死锁</strong>的方法</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 政治知识点随手记]]></title>
-        <id>https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/</id>
-        <link href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/">
-        </link>
-        <updated>2020-09-24T14:33:34.000Z</updated>
-        <content type="html"><![CDATA[<ul>
-<li>机械唯物主义和形而上学唯物主义是一个,庸俗唯物主义(把意识直接归于物质)是一个</li>
-<li>有一元论也有二元论(认为世界的本质有物质和意识两种)</li>
-<li>唯心主义分为客观(归结为超自然的超人类的客观精神)和主观(把本源归结为个人的感觉或意识)的</li>
-<li>人的本质属性是社会属性,不是什么创造性之类的</li>
-<li>人是不能摆脱必然性的制约,不能超出必然性规定的范围去寻找自由,这是人的自由的限度</li>
-<li>感性认识和理性认识都是人的主观世界所特有的,说什么人工智能可以认识都是错的</li>
-<li>实践也是人所特有的对象化活动,说别的动物,人工智能都是错的</li>
-<li>静止是运动的衡量尺度,注意不要反了</li>
-<li>运动是物质的根本属性和存在方式,不要看到存在方式就感觉错了</li>
-<li>物质的唯一特性是客观实在性</li>
-<li>意识是连接主体和客体的中介<strong>是错的</strong></li>
-<li>唯心主义有辩证的,也有不辩证的,旧唯物主义是不辩证的,完全的形而上学</li>
-<li>实践是马哲独有的,旧唯物没有</li>
-<li>旧唯物在自然观上唯物,历史观上唯心</li>
-<li>发展不是绝对的,无条件的,但发展是永恒的</li>
-<li>新事物一定产生于旧事物之前是错的,但换成<strong>往往</strong>是对的</li>
-<li>前后相继未必是因果,因为我发生在你之前未必是我导致的你</li>
-<li>闪电和打雷不是因果关系,大气摩擦导致闪电和打雷</li>
-<li>有其因必有其果是错的,有因必有果是对的</li>
-<li>真和假象都是客观存在的,就<strong>不能用正确和错误来形容</strong></li>
-<li>错觉是错误的观念是对的,但真象是正确的现象是错的</li>
-<li>真象和假象都是现象,因此都是外露的,说任意一个是隐藏的都是错的</li>
-<li>辩证否定是是<strong>自我否定</strong>,形而上学是外部力量对事物的否定和消灭</li>
-<li>辩证否定的实质是扬弃,形而上学要么肯定一切要么否定一切</li>
-<li>时空是事物存在的形式,但如果说:时间是物质存在的形式也是对的,或者说是空间也对,尤其是结合实例(很多时间变化的词)</li>
-<li>不能将客观辩证法等同唯物辩证法,将主观辩证法等同唯心,两个都是唯物的</li>
-<li>凡事预则立,不预则废:原因与结果</li>
-<li>主体是人,但不是所有的人都是主体</li>
-<li>认识总是滞后于实践是<strong>错误的</strong>,错在总是,实践,-&gt;认识-&gt;实践</li>
-<li>实践先于认识是对的,但是不能说实践是认识的先导,因为先导是指导,实践并不能指导认识,而是认识指导实践</li>
-<li>实践和认识是合一的:错误,合一是知行合一,是王阳明的唯心主义,应该是同一,但是今天看到知行合一不能算错,因为总书记在16年讲过,题目中如果特地强调是王阳明说的,就是错的,如果只是简单提一下就是对的</li>
-<li></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[死锁概念部分]]></title>
-        <id>https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/</id>
-        <link href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/">
-        </link>
-        <updated>2020-09-24T14:32:09.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-死锁饥饿死循环的区别">1 死锁,饥饿,死循环的区别</h2>
-<p><strong>死锁的定义:多个进程因竞争资源而造成的一种僵局(互相等待),若无外力作用,这些进程多无法向前推进</strong></p>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/25/0CFrmq.png" alt="0CFrmq.png" loading="lazy"></figure>
-<h2 id="2-死锁产生的必要条件">2 死锁产生的必要条件</h2>
-<ol>
-<li>互斥条件</li>
-<li>不剥夺条件</li>
-<li>请求并保持条件</li>
-<li>循环等待条件</li>
-</ol>
-<p><strong>循环等待条件不是充要条件的原因是:即使循环等待,但其中一个可能需要的资源可以来自链里,也可以来自链外,此时如果链外的那个资源释放了,就不用等待了,但是死锁的时候,一定在循环等待</strong></p>
-<h2 id="3-死锁产生的原因">3 死锁产生的原因</h2>
-<ol>
-<li>
-<p>系统资源的竞争:只有对不可剥夺的资源竞争才会产生死锁</p>
-</li>
-<li>
-<p>进程推进顺序非法:请求和释放资源的顺序不当,P1,P2分别保持R1,R2,P1申请R2,P2申请R1</p>
-</li>
-<li>
-<p>信号量使用不当:进程间彼此互等对方发来消息</p>
-<p><strong>总之对不可剥夺的资源分配不合理时就会导致死锁</strong></p>
-</li>
-</ol>
-<h2 id="4-死锁的处理策略">4 死锁的处理策略</h2>
-<ol>
-<li>
-<p>死锁预防</p>
-</li>
-<li>
-<p>避免死锁</p>
-</li>
-<li>
-<p>死锁的检测和解除</p>
-<p><strong>注:前两种不会产生死锁,后一种是死锁产生后的解决</strong></p>
-</li>
-</ol>
-<h2 id="5-总结">5 总结</h2>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/24/wzXPV1.png" alt="wzXPV1.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BFS/DFS的一些题和知识点]]></title>
-        <id>https://songdlut.github.io/post/bfsdfs-de-yi-xie-ti-he-zhi-shi-dian/</id>
-        <link href="https://songdlut.github.io/post/bfsdfs-de-yi-xie-ti-he-zhi-shi-dian/">
-        </link>
-        <updated>2020-09-24T14:28:14.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="bfsdfs的算法开销">BFS/DFS的算法开销</h2>
-<ol>
-<li>时间复杂度</li>
-</ol>
-<p>来源:访问顶点以及查找顶点的邻接点</p>
-<ul>
-<li>
-<p>对于BFS/DFS,如果邻接矩阵表示,则访问顶点为O(|V|),查找顶点邻接点(需要遍历整个矩阵)为O(|V|²)</p>
-</li>
-<li>
-<p>如果是邻接表,则前者为O(|V|),后者为2|E|,也就是O(|E|)</p>
-</li>
-</ul>
-<p><strong>分析的时候不要一味的看代码找循环</strong></p>
-<ol start="2">
-<li>空间复杂度</li>
-</ol>
-<p>BFS:O(|V|):最坏发散的</p>
-<p>DFS:O(|V|):最坏连着一串的,最好发散的</p>
-<h2 id="bfsdfs调用次数">BFS/DFS调用次数</h2>
-<ol>
-<li>无向图:</li>
-</ol>
-<p>几个连通分量就调用几次</p>
-<p>若是连通图,则调用一次即可</p>
-<ol start="2">
-<li>有向图:</li>
-</ol>
-<ul>
-<li>
-<p>具体分析</p>
-</li>
-<li>
-<p>如果起始顶点到其他顶点都有路径,则只调用一次</p>
-</li>
-<li>
-<p>如果是强连通图,则从任意顶点出发都只调用一次</p>
-</li>
-</ul>
-<p><strong>注意:DFS可以用于判断G是否有环:无向图在DFS中遇到回边则说明有环,有向图中回边可能是生成树森林中别的树指向的,也可能是环,因此需要判断一下,但是可以用</strong></p>
-<h2 id=""></h2>
-<p>2 判断无向图为树</p>
-<pre><code class="language-c">bool isTree(Graph G)
-{
-    for(v=0;v&lt;G.vexnum;v++)
-        visited[v]=false;
-    int c=0;
-    int flag=0;
-    for(v=0;v&lt;G.vexnum;v++)
-    {
-        if(!visited[v])
-        {
-            if(c=1)//说明调用过一次了,再调用就是非连通的,不是一棵树
-                return false;
-            else
-            {
-                DFS(G,v,&amp;flag);
-                c++;
-            }
-        }
-    }
-    if(flag==1) return false;
-    return true;
-}
-void DFS(Graph G,int v,int &amp;flag)
-{
-    visit(v);
-    visited[v]=true;
-    for(w=FirstNeighbor(G,v);w&gt;=0;w=NextNeighbor(G,v,w))
-    {
-        if(visited[w])//访问过,说明有环
-        {
-            flag=1;
-        }
-        else
-        {
-            DFS(G,w,flag);
-        }
-    }
-}
-</code></pre>
-<h3 id="3-dfs的非递归实现">3 DFS的非递归实现</h3>
-<pre><code class="language-c">void DFS_NotRC(Graph G,int v)
-{
-    int w;
-    Stack S;
-    for(w=0;w&lt;G.vexnum;w++)
-        visited[w]=false;
-    S.Push(v);visited[v]=true;
-    while(!S.Isempty())
-    {
-        int k=S.Pop();
-        for(w=FirstNeighbor(G,k);w&gt;=0;w=NextNeighbor(G,k,w))
-        {
-            if(!visited[w])//未被访问过,入栈,置位true
-            {
-                S.Push(w);
-                visited[w]=true;
-            }
-        }
-    }
-}
-</code></pre>
 ]]></content>
     </entry>
 </feed>

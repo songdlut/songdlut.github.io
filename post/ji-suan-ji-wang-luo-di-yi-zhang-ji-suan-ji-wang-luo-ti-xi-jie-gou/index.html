@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>宋宇航的博客</title>
+<title>计算机网络 第一章 计算机网络体系结构 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1602160528057">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,6 +38,8 @@
 
 
 
+  <meta name="description" content="计算机网络 第一章 计算机网络体系结构" />
+  <meta name="keywords" content="计算机网络" />
 </head>
 
 <body>
@@ -172,8 +174,24 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -235,256 +253,312 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0">1 计算机网络概述</a>
+<ul>
+<li><a href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A6%82%E5%BF%B5">1 计算机网络的概念</a></li>
+<li><a href="#2-%E7%BB%84%E6%88%90%E5%8A%9F%E8%83%BD%E5%88%86%E7%B1%BB">2 组成,功能,分类</a></li>
+<li><a href="#3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%A0%87%E5%87%86%E5%8C%96%E5%B7%A5%E4%BD%9C%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%BB%84%E7%BB%87">3 计算机网络的标准化工作及相关组织</a></li>
+<li><a href="#4-%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87">4 性能指标</a></li>
+</ul>
+</li>
+<li><a href="#2-osi%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8Btcpip%E6%A8%A1%E5%9E%8B">2 OSI七层模型,TCP/IP模型</a>
+<ul>
+<li><a href="#osi">OSI</a>
+<ul>
+<li><a href="#1-%E5%BA%94%E7%94%A8%E5%B1%82">1 应用层</a></li>
+<li><a href="#2-%E8%A1%A8%E7%A4%BA%E5%B1%82">2 表示层</a></li>
+<li><a href="#3-%E4%BC%9A%E8%AF%9D%E5%B1%82">3 会话层</a></li>
+<li><a href="#4-%E4%BC%A0%E8%BE%93%E5%B1%82">4 传输层</a></li>
+<li><a href="#5-%E7%BD%91%E7%BB%9C%E5%B1%82">5 网络层</a></li>
+<li><a href="#6-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82">6 数据链路层</a></li>
+<li><a href="#7-%E7%89%A9%E7%90%86%E5%B1%82">7 物理层</a></li>
+</ul>
+</li>
+<li><a href="#tcpip">TCP/IP</a>
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E4%B8%8Eosi%E7%9B%B8%E5%90%8C">与OSI相同</a></li>
+<li><a href="#%E4%B8%8Eosi%E5%B7%AE%E5%BC%82">与OSI差异</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B">五层参考模型</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini">
-          <section class="section  posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/">
-      背单词时遇到到意思相近的词
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item">
-      <i class="fa fa-thumb-tack"></i>
-      <span class="language" data-lan="top">置顶</span>
-      <span class="post-meta-divider">|</span>
-    </span>
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-06-25</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/jZBTGhI0d/">
-        <span>英语</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>31<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>8011<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/bei-dan-ci-shi-yu-dao-dao-yi-si-xiang-jin-de-ci/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
       </div>
-      
     </div>
-  </article>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/">
-      计算机网络 第二章 物理层
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-10-08</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>108<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/">
-      英语翻译笔记
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-10-08</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/jZBTGhI0d/">
-        <span>英语</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>135<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/">
-      计算机网络 第一章 题目整理
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-10-07</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/">
-        <span>计算机网络</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>299<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/">
       计算机网络 第一章 计算机网络体系结构
@@ -522,368 +596,247 @@
       <span>845<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/">
-      第三章 内存管理之虚拟内存管理
-    </a>
-  </h1>
-  <div class="post-meta">
     
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-10-03</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
     
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
-        <span>操作系统</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
+    <span id="/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/" data-flag-title="计算机网络 第一章 计算机网络体系结构" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>276<span class="pc-show language" data-lan="words">字数</span></span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
     </span>
     
   </div>
 </header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+            <div class="post-body next-md-body" id="post_body">
+              <p><img src="https://s1.ax1x.com/2020/10/07/0aIHKA.png" alt="0aIHKA.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/07/0dSf9s.png" alt="0dSf9s.png" loading="lazy"></p>
+<h2 id="1-计算机网络概述">1 计算机网络概述</h2>
+<h3 id="1-计算机网络的概念">1 计算机网络的概念</h3>
+<p><img src="https://s1.ax1x.com/2020/10/07/0aINBq.png" alt="0aINBq.png" loading="lazy"><br>
+ISP:因特网服务提供商<br>
+<img src="https://s1.ax1x.com/2020/10/07/0aIfUK.png" alt="0aIfUK.png" loading="lazy"></p>
+<h3 id="2-组成功能分类">2 组成,功能,分类</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/07/0aqyvD.png" alt="0aqyvD.png" loading="lazy"></figure>
+<ul>
+<li>终端,服务器,工作站,共享的打印机等设备以及相关软件都属于资源子网</li>
+<li>网卡,线缆,路由器,网桥等都是通信子网</li>
+</ul>
+<h3 id="3-计算机网络的标准化工作及相关组织">3 计算机网络的标准化工作及相关组织</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/07/0a7FhT.png" alt="0a7FhT.png" loading="lazy"></figure>
+<h3 id="4-性能指标">4 性能指标</h3>
+<ol>
+<li>
+<p>速率<br>
+<img src="https://s1.ax1x.com/2020/10/07/0a7I8U.png" alt="0a7I8U.png" loading="lazy"><br>
+注意:换算比例</p>
+</li>
+<li>
+<p>带宽</p>
+</li>
+<li>
+<p>吞吐量</p>
+</li>
+<li>
+<p>时延</p>
+<ol>
+<li>发送时延</li>
+<li>传播时延</li>
+<li>处理时延</li>
+<li>排队时延</li>
+</ol>
+</li>
+<li>
+<p>时延带宽积<br>
+以比特为单位的链路长度</p>
+</li>
+<li>
+<p>往返时延RTT<br>
+2*传播时延+题目给的其他的</p>
+</li>
+<li>
+<p>信道利用率<br>
+<img src="https://s1.ax1x.com/2020/10/07/0dCUNF.png" alt="0dCUNF.png" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="2-osi七层模型tcpip模型">2 OSI七层模型,TCP/IP模型</h2>
+<h3 id="osi">OSI</h3>
+<h4 id="1-应用层">1 应用层</h4>
+<ol>
+<li>用户与网络的界面,所有能和用户交互产生网络流量的程序</li>
+<li>协议:SMTP,FTP,HTTP</li>
+</ol>
+<h4 id="2-表示层">2 表示层</h4>
+<ol>
+<li>主要处理在两个通信系统中交换信息的表示方式</li>
+<li>功能:
+<ol>
+<li>数据格式转化:01010001=&gt;XXXX</li>
+<li>数据加解密</li>
+<li>数据压缩和恢复</li>
+</ol>
+</li>
+<li>主要协议:JPEG,ASCII</li>
+</ol>
+<h4 id="3-会话层">3 会话层</h4>
+<ol>
+<li>向表示层实体/用户进程提供建立连接并在连接上有序地传输数据</li>
+<li>功能:
+<ol>
+<li>建立,管理,终止会话</li>
+<li>使用校验点使会话在通信失效时从校验点继续恢复通信,实现数据同步</li>
+</ol>
+</li>
+<li>协议:ADSP,ASP</li>
+</ol>
+<h4 id="4-传输层">4 传输层</h4>
+<ol>
+<li>负责主机中两个<strong>进程间的</strong>通信,即实现端到端的通信.传输单位是报文段或用户数据段.</li>
+<li>功能:
+<ol>
+<li>可靠传播,不可靠传播</li>
+<li>差错控制</li>
+<li>流量控制(速度时都匹配)</li>
+<li>复用分用
+<ol>
+<li>多个应用层进程同时使用传输层的服务</li>
+<li>传输层把收到的信息分别给应用层的相应进程</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>协议:TCP,UDP</li>
+</ol>
+<h4 id="5-网络层">5 网络层</h4>
+<ol>
+<li>主要任务是把<strong>分组</strong>从源端传到目的端,为分组交换网上的主机提供通信服务,传输单位是数据报</li>
+<li>功能:
+<ol>
+<li>路由选择(最佳路径)</li>
+<li>流量控制</li>
+<li>差错控制</li>
+<li>拥塞控制:拥塞状态:所有结点都来不及接受分组,而要丢弃大量分组的话,网络就处于拥塞状态</li>
+</ol>
+</li>
+<li>协议:IP,IPX,ICMP,IGMP,ARP,PARP,OSPF</li>
+</ol>
+<h4 id="6-数据链路层">6 数据链路层</h4>
+<ol>
+<li>主要把网络层的数据报组装成帧</li>
+<li>功能:
+<ol>
+<li>成帧(定义帧的开始和结束)</li>
+<li>差错控制:帧错+位错</li>
+<li>流量控制</li>
+<li>访问(接入)控制:控制对信道的访问(广播式的网络中)</li>
+</ol>
+</li>
+<li>协议:HDLC,SDLC,PPP,STP</li>
+</ol>
+<h4 id="7-物理层">7 物理层</h4>
+<ol>
+<li>在物理媒体上实现比特流的<strong>透明传输</strong>,传输单位是比特
+<ol>
+<li>透明传输:指不管所传数据是什么样的比特组合,都应当能在链路上传送</li>
+</ol>
+</li>
+<li>功能:
+<ol>
+<li>定义接口特性</li>
+<li>定义传输模式:单工,双工,半双工</li>
+<li>定义传输速率</li>
+<li>比特同步</li>
+<li>比特编码</li>
+</ol>
+</li>
+<li>协议:Rj45,802.3</li>
+<li>DCE/DTE[https://blog.csdn.net/kunkliu/article/details/79807673]</li>
+</ol>
+<h3 id="tcpip">TCP/IP</h3>
+<h4 id="概念">概念</h4>
+<h4 id="与osi相同">与OSI相同</h4>
+<ol>
+<li>都分层</li>
+<li>都基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联</li>
+</ol>
+<h4 id="与osi差异">与OSI差异</h4>
+<ol>
+<li>OSI定义了:协议,接口,服务</li>
+<li>OSI先出现,参考模型先于协议发明,不偏向特定协议</li>
+<li>TCP/IP设计之初就考虑到异构网互联问题,将IP作为重要层次</li>
+<li><img src="https://s1.ax1x.com/2020/10/08/0wTjje.png" alt="0wTjje.png" loading="lazy"></li>
+</ol>
+<h3 id="五层参考模型">五层参考模型</h3>
+<p><img src="https://s1.ax1x.com/2020/10/08/0w7AgS.png" alt="0w7AgS.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/08/0w7W5t.png" alt="0w7W5t.png" loading="lazy"></p>
+<h2 id="总结">总结</h2>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/08/0wHHSK.png" alt="0wHHSK.png" loading="lazy"></figure>
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/">
-      第三章 内存管理题目及重点
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-10-02</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
-        <span>操作系统</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>4<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1125<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/">
-      阅读的一些思路
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-28</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/jZBTGhI0d/">
-        <span>英语</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>73<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/">
-      做题词汇积累
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-27</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/1V2VCIBjPG/">
-        <span>单词</span>
-      </a>、
-      
-      
-      
-      <a href="https://songdlut.github.io/tag/jZBTGhI0d/">
-        <span>英语</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>767<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/">
-      第三章 内存管理概念部分
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-26</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
-        <span>操作系统</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>5<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1423<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-  
+            </div>
             
             
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/2">
-              2
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/3">
-              3
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/4">
-              4
-            </a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/2">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      宋宇航
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/" title="计算机网络 第一章 计算机网络体系结构">https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
   </ul>
+  <div class="tags">
+    
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/"># 计算机网络</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="计算机网络 第一章 题目整理" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/">计算机网络 第一章 题目整理</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="计算机网络 第一章 题目整理" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="第三章 内存管理之虚拟内存管理" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/">第三章 内存管理之虚拟内存管理</a>
+        <a class="nav-mobile-next" title="第三章 内存管理之虚拟内存管理" href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
 </div>
-          </section>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '293a9ce2fed12e5929b8',
+    clientSecret: 'd7bfd198c2befcba2cf59326be85e9b9d5bcba5f',
+    repo: 'songdlut.github.io',
+    owner: 'songdlut',
+    admin: ['songdlut'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1640,6 +1593,223 @@
     }
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -6442,6 +6612,5 @@ T(n) = aT(n/b) + f(n)&lt;br&gt;
 
 
 <script src="/media/js/cool.js"></script>
-
 
 </html>
