@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title> 政治知识点随手记 | 宋宇航的博客</title>
+<title>计算机网络 第三章 数据链路层 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1602828675127">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content=" 政治知识点随手记" />
-  <meta name="keywords" content="政治" />
+  <meta name="description" content="计算机网络 第三章 数据链路层" />
+  <meta name="keywords" content="计算机网络" />
 </head>
 
 <body>
@@ -190,7 +190,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,6 +253,240 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E5%8A%9F%E8%83%BD">1 数据链路层功能</a></li>
+<li><a href="#%E6%88%90%E5%B8%A7">成帧</a></li>
+<li><a href="#%E5%B7%AE%E9%94%99%E6%8E%A7%E5%88%B6">差错控制</a></li>
+<li><a href="#%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6">流量控制</a>
+<ul>
+<li><a href="#%E5%8D%95%E5%B8%A7%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E4%B8%8E%E5%81%9C%E6%AD%A2%E7%AD%89%E5%BE%85%E5%8D%8F%E8%AE%AE">单帧滑动窗口与停止等待协议</a></li>
+<li><a href="#%E5%A4%9A%E5%B8%A7%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E4%B8%8E%E5%90%8E%E9%80%80n%E5%B8%A7%E5%8D%8F%E8%AE%AEgbn">多帧滑动窗口与后退N帧协议(GBN)</a></li>
+<li><a href="#%E5%A4%9A%E5%B8%A7%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E4%B8%8E%E9%80%89%E6%8B%A9%E9%87%8D%E4%BC%A0%E5%8D%8F%E8%AE%AEsr">多帧滑动窗口与选择重传协议(SR)</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6">介质访问控制</a>
+<ul>
+<li><a href="#%E4%BF%A1%E9%81%93%E5%88%92%E5%88%86%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6">信道划分介质访问控制</a></li>
+<li><a href="#%E9%9A%8F%E6%9C%BA%E8%AE%BF%E9%97%AE%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6">随机访问介质访问控制</a>
+<ul>
+<li><a href="#aloha%E5%8D%8F%E8%AE%AE">ALOHA协议</a></li>
+<li><a href="#csma%E5%8D%8F%E8%AE%AEcarrier-sense-multiple-access%E8%BD%BD%E6%B3%A2%E4%BE%A6%E5%90%AC%E5%A4%9A%E8%B7%AF%E8%AE%BF%E9%97%AE">CSMA协议(Carrier Sense Multiple Access,载波侦听多路访问)</a></li>
+<li><a href="#csmacdcollision-detection">CSMA/CD(Collision Detection)</a></li>
+<li><a href="#csmacacollision-avoidance">CSMA/CA(Collision Avoidance)</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BD%AE%E8%AF%A2%E8%AE%BF%E9%97%AE%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E4%BB%A4%E7%89%8C%E4%BC%A0%E9%80%92%E5%8D%8F%E8%AE%AE">轮询访问介质访问控制:令牌传递协议</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B1%80%E5%9F%9F%E7%BD%91">局域网</a>
+<ul>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E7%BD%91">以太网</a></li>
+<li><a href="#ieee-80211">IEEE 802.11</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B9%BF%E5%9F%9F%E7%BD%91">广域网</a>
+<ul>
+<li><a href="#ppp%E5%8D%8F%E8%AE%AE">PPP协议</a></li>
+<li><a href="#hdlc%E5%8F%8A%E5%AF%B9%E6%AF%94%E6%80%BB%E7%BB%93">HDLC及对比总结</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E5%B1%82%E8%AE%BE%E5%A4%87">数据链层设备</a>
+<ul>
+<li><a href="#%E7%89%A9%E7%90%86%E5%B1%82%E6%89%A9%E5%B1%95">物理层扩展</a></li>
+<li><a href="#%E7%BD%91%E6%A1%A5%E6%95%B0%E6%8D%AE%E9%93%BE%E5%B1%82%E6%89%A9%E5%B1%95">网桥(数据链层扩展)</a></li>
+<li><a href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA">交换机</a></li>
+<li><a href="#%E5%86%B2%E7%AA%81%E5%9F%9F%E4%B8%8E%E5%B9%BF%E6%92%AD%E5%9F%9F">冲突域与广播域</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93-2">小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -339,8 +574,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/">
-       政治知识点随手记
+    <a class="post-title-link" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/">
+      计算机网络 第三章 数据链路层
     </a>
   </h1>
   <div class="post-meta">
@@ -348,7 +583,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-24</span>
+      <span>2020-10-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -357,8 +592,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://songdlut.github.io/tag/7Zd_WucOH/">
-        <span>政治</span>
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/">
+        <span>计算机网络</span>
       </a>
       
       
@@ -367,17 +602,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1637<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>355<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/" data-flag-title=" 政治知识点随手记" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/" data-flag-title="计算机网络 第三章 数据链路层" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -386,84 +621,121 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <ul>
-<li>机械唯物主义和形而上学唯物主义是一个,庸俗唯物主义(把意识直接归于物质)是一个</li>
-<li>有一元论也有二元论(认为世界的本质有物质和意识两种)</li>
-<li>唯心主义分为客观(归结为超自然的超人类的客观精神)和主观(把本源归结为个人的感觉或意识)的</li>
-<li>人的本质属性是社会属性,不是什么创造性之类的</li>
-<li>人是不能摆脱必然性的制约,不能超出必然性规定的范围去寻找自由,这是人的自由的限度</li>
-<li>感性认识和理性认识都是人的主观世界所特有的,说什么人工智能可以认识都是错的</li>
-<li>实践也是人所特有的对象化活动,说别的动物,人工智能都是错的</li>
-<li>静止是运动的衡量尺度,注意不要反了</li>
-<li>运动是物质的根本属性和存在方式,不要看到存在方式就感觉错了</li>
-<li>物质的唯一特性是客观实在性</li>
-<li>意识是连接主体和客体的中介<strong>是错的</strong></li>
-<li>唯心主义有辩证的,也有不辩证的,旧唯物主义是不辩证的,完全的形而上学</li>
-<li>实践是马哲独有的,旧唯物没有</li>
-<li>旧唯物在自然观上唯物,历史观上唯心</li>
-<li>发展不是绝对的,无条件的,但发展是永恒的</li>
-<li>新事物一定产生于旧事物之前是错的,但换成<strong>往往</strong>是对的</li>
-<li>前后相继未必是因果,因为我发生在你之前未必是我导致的你</li>
-<li>闪电和打雷不是因果关系,大气摩擦导致闪电和打雷</li>
-<li>有其因必有其果是错的,有因必有果是对的</li>
-<li>真和假象都是客观存在的,就<strong>不能用正确和错误来形容</strong></li>
-<li>错觉是错误的观念是对的,但真象是正确的现象是错的</li>
-<li>真象和假象都是现象,因此都是外露的,说任意一个是隐藏的都是错的</li>
-<li>辩证否定是是<strong>自我否定</strong>,形而上学是外部力量对事物的否定和消灭</li>
-<li>辩证否定的实质是扬弃,形而上学要么肯定一切要么否定一切</li>
-<li>时空是事物存在的形式,但如果说:时间是物质存在的形式也是对的,或者说是空间也对,尤其是结合实例(很多时间变化的词)</li>
-<li>不能将客观辩证法等同唯物辩证法,将主观辩证法等同唯心,两个都是唯物的</li>
-<li>凡事预则立,不预则废:原因与结果</li>
-<li>主体是人,但不是所有的人都是主体</li>
-<li>认识总是滞后于实践是<strong>错误的</strong>,错在总是,实践,-&gt;认识-&gt;实践</li>
-<li>实践先于认识是对的,但是不能说实践是认识的先导,因为先导是指导,实践并不能指导认识,而是认识指导实践</li>
-<li>实践和认识是合一的:错误,合一是知行合一,是王阳明的唯心主义,应该是同一,但是今天看到知行合一不能算错,因为总书记在16年讲过,题目中如果特地强调是王阳明说的,就是错的,如果只是简单提一下就是对的</li>
-<li>无论是虚幻的还是真实的观念都是对事物的反映,但如果说是<strong>事物本质</strong>的反映就是错的</li>
-<li>任何观念都能在现实世界中找到物质&quot;原型&quot;是对的</li>
-<li>空口说感性认识和理性认识哪个更更重要是不对的,如果给了一个案例说反映了哪个更重要是可以的</li>
-<li>有用即真理是错的,但说真理一定是有用的是正确的</li>
-<li>有价值的就是真理是错的,真理一定有价值是对的</li>
-<li>实践是客观规律性与主观能动性统一的基础,而不是认识</li>
-<li>实践是认识的起点也是认识的归宿,不要后一句记反了</li>
-<li>不论是感性认识还是理性认识,他们的来源都是实践</li>
-<li>感性认识反映事物的现象,理性认识反映事物的本质</li>
-<li>切记不要看到实践是检验真理的唯一标准就选,尤其是题目前面还有限定的
-<ul>
-<li>如:在真理标准问题上坚持辩证法,就是要坚持<strong>实践标准的确定性与不确定性的统一</strong></li>
-</ul>
+              <h2 id="1-数据链路层功能">1 数据链路层功能</h2>
+<h2 id="成帧">成帧</h2>
+<h2 id="差错控制">差错控制</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/10/0ySkIx.png" alt="0ySkIx.png" loading="lazy"></figure>
+<h2 id="流量控制">流量控制</h2>
+<p><img src="https://s1.ax1x.com/2020/10/10/0yZuVO.png" alt="0yZuVO.png" loading="lazy"><br>
+<strong>窗口大小都是固定的</strong></p>
+<h3 id="单帧滑动窗口与停止等待协议">单帧滑动窗口与停止等待协议</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/10/0yaSL8.png" alt="0yaSL8.png" loading="lazy"></figure>
+<h3 id="多帧滑动窗口与后退n帧协议gbn">多帧滑动窗口与后退N帧协议(GBN)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/10/06PWSP.png" alt="06PWSP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06iKkd.png" alt="06iKkd.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06Fy8I.png" alt="06Fy8I.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06kuRI.png" alt="06kuRI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06AD1I.png" alt="06AD1I.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06A53n.png" alt="06A53n.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06AON4.png" alt="06AON4.png" loading="lazy"></p>
+<h3 id="多帧滑动窗口与选择重传协议sr">多帧滑动窗口与选择重传协议(SR)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/10/06VZoF.png" alt="06VZoF.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06eJ8H.png" alt="06eJ8H.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06eOqx.png" alt="06eOqx.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06mVdf.png" alt="06mVdf.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06nm0x.png" alt="06nm0x.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06mgYD.png" alt="06mgYD.png" loading="lazy"></p>
+<h2 id="介质访问控制">介质访问控制</h2>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/11/0g89S0.png" alt="0g89S0.png" loading="lazy"></figure>
+<h3 id="信道划分介质访问控制">信道划分介质访问控制</h3>
+<ol>
+<li>FDM</li>
+<li>TDM
+<ol>
+<li>注意STDM,使用集中器</li>
+</ol>
 </li>
-<li>实践之所以成为检验真理的唯一标准是因为<strong>真理的本性和实践的特点所决定的</strong>
-<ul>
-<li>说的是<strong>本性</strong>,不是属性啥的,本性在于主观和客观相符合</li>
-<li>特点是直接现实性</li>
-</ul>
-</li>
-<li>真理是一元的,价值是多元的</li>
-<li>所有的意识<strong>都是</strong>物质的反映</li>
-<li>生产力中包含科技是对的,但说科技是生产力中的独立要素是错的,生产力的要素只有3个:劳动资料,劳动对象,劳动者</li>
-<li>说科技是生产劳动中的决定性因素是对的,说是社会历史中的决定性因素是错的</li>
-<li><img src="https://s1.ax1x.com/2020/10/12/024O1A.png" alt="024O1A.png" loading="lazy"></li>
-<li>属于上层建筑的社会意识就是意识形态</li>
-<li>判断生产关系是不是先进就看能不能适应生产力发展,而<strong>判断上层建筑是不是先进要看他服务的经济基础是否适应生产力发展,如果适应,它就是先进的</strong></li>
-<li>不能说社会规律与自然规律都是自觉的
-<ul>
-<li>社会规律是自觉的</li>
-<li>自然规律是<strong>自发的</strong>,没有人参与其中</li>
-</ul>
-</li>
-<li>人类的总体历史进程是不可超越的(不要觉得是错的)</li>
-<li>剥削阶级也可以是人名群众</li>
-<li>各种社会关系中，生产关系属于社会存在，政治关系、思想关系是社会存在的反映，不能列为社会存在
-<ul>
-<li>因此说社会存在不包括社会关系</li>
-</ul>
-</li>
-<li><img src="https://s1.ax1x.com/2020/10/13/0fDQHJ.png" alt="0fDQHJ.png" loading="lazy"></li>
-<li>物质资料的<strong>生产方式</strong>构成了人类社会存在和发展的基础,集中体现着人类社会的<strong>物质性</strong></li>
-<li>区分社会经济时代的客观依据是生产工具的状况</li>
-<li>社会发展是由多种力量决定的是错的,社会发展的决定力量是生产力</li>
-<li></li>
-</ul>
+<li>WDM</li>
+<li>CDM</li>
+</ol>
+<h3 id="随机访问介质访问控制">随机访问介质访问控制</h3>
+<h4 id="aloha协议">ALOHA协议</h4>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/11/0gUBn0.png" alt="0gUBn0.png" loading="lazy"></figure>
+<h4 id="csma协议carrier-sense-multiple-access载波侦听多路访问">CSMA协议(Carrier Sense Multiple Access,载波侦听多路访问)</h4>
+<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/10/11/0gakgs.png" alt="0gakgs.png" loading="lazy"></figure>
+<ol>
+<li>1-坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gaJDx.png" alt="0gaJDx.png" loading="lazy"></li>
+<li>非坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gy4u4.png" alt="0gy4u4.png" loading="lazy"></li>
+<li>p-坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gyetx.png" alt="0gyetx.png" loading="lazy"><br>
+缺点:冲突了还是会把数据发完,造成浪费</li>
+<li>对比<br>
+<img src="https://s1.ax1x.com/2020/10/11/0g6C5t.png" alt="0g6C5t.png" loading="lazy"></li>
+</ol>
+<h4 id="csmacdcollision-detection">CSMA/CD(Collision Detection)</h4>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gcGfP.png" alt="0gcGfP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0RUEkT.png" alt="0RUEkT.png" loading="lazy"><br>
+书上的图只是为了得到2τ,CSMA/CD的根本目的为了在传输完成前就可以检测到碰撞进而停止发送,而不是让他们发送出去之后检测到碰撞<br>
+<img src="https://s1.ax1x.com/2020/10/12/0Rw4HI.png" alt="0Rw4HI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0R0mUx.png" alt="0R0mUx.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0R03KH.png" alt="0R03KH.png" loading="lazy"></p>
+<h4 id="csmacacollision-avoidance">CSMA/CA(Collision Avoidance)</h4>
+<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/10/12/0Rs4t1.png" alt="0Rs4t1.png" loading="lazy"></figure>
+<h3 id="轮询访问介质访问控制令牌传递协议">轮询访问介质访问控制:令牌传递协议</h3>
+<p><img src="https://s1.ax1x.com/2020/10/12/0R2YZD.png" alt="0R2YZD.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0RWoaF.png" alt="0RWoaF.png" loading="lazy"></p>
+<h3 id="小结">小结</h3>
+<p><img src="https://s1.ax1x.com/2020/10/12/0RgUg0.png" alt="0RgUg0.png" loading="lazy"><br>
+只有第二类随机访问介质访问控制会产生冲突<br>
+<img src="https://s1.ax1x.com/2020/10/12/0RfCPH.png" alt="0RfCPH.png" loading="lazy"></p>
+<h2 id="局域网">局域网</h2>
+<p><img src="https://s1.ax1x.com/2020/10/12/0WlOL8.png" alt="0WlOL8.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W1mFJ.png" alt="0W1mFJ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W3YuV.png" alt="0W3YuV.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W333n.png" alt="0W333n.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W8Svq.png" alt="0W8Svq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W8txI.png" alt="0W8txI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W86Rs.png" alt="0W86Rs.png" loading="lazy"></p>
+<h3 id="以太网">以太网</h3>
+<p><img src="https://s1.ax1x.com/2020/10/13/0f7qb9.png" alt="0f7qb9.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHQbj.png" alt="0fHQbj.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHaMF.png" alt="0fHaMF.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHOsg.png" alt="0fHOsg.png" loading="lazy"></p>
+<h3 id="ieee-80211">IEEE 802.11</h3>
+<p><img src="https://s1.ax1x.com/2020/10/13/0hpzGQ.png" alt="0hpzGQ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0h98IO.png" alt="0h98IO.png" loading="lazy"></p>
+<h2 id="广域网">广域网</h2>
+<h3 id="ppp协议">PPP协议</h3>
+<ol>
+<li>只支持全双工</li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05wDWq.png" alt="05wDWq.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05wcOU.png" alt="05wcOU.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05yVSA.png" alt="05yVSA.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05yDfJ.png" alt="05yDfJ.png" loading="lazy"></li>
+</ol>
+<h3 id="hdlc及对比总结">HDLC及对比总结</h3>
+<ol>
+<li><img src="https://s1.ax1x.com/2020/10/14/05gAW4.png" alt="05gAW4.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05guex.png" alt="05guex.png" loading="lazy"></li>
+</ol>
+<h2 id="数据链层设备">数据链层设备</h2>
+<h3 id="物理层扩展">物理层扩展</h3>
+<figure data-type="image" tabindex="13"><img src="https://s1.ax1x.com/2020/10/14/0IavwQ.png" alt="0IavwQ.png" loading="lazy"></figure>
+<h3 id="网桥数据链层扩展">网桥(数据链层扩展)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0IwSBD.png" alt="0IwSBD.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/14/0I0tzt.png" alt="0I0tzt.png" loading="lazy"></p>
+<h3 id="交换机">交换机</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0I0jeO.png" alt="0I0jeO.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/14/0IBEm8.png" alt="0IBEm8.png" loading="lazy"></p>
+<h3 id="冲突域与广播域">冲突域与广播域</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0IDdUg.png" alt="0IDdUg.png" loading="lazy"><br>
+广播域看路由器<br>
+冲突域看交换机,几个口就几个冲突域<br>
+VLAN可以隔离冲突域也可以隔离广播域</p>
+<h3 id="小结-2">小结</h3>
+<figure data-type="image" tabindex="14"><img src="https://s1.ax1x.com/2020/10/14/0IDgbT.png" alt="0IDgbT.png" loading="lazy"></figure>
 
             </div>
             
@@ -476,7 +748,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/" title=" 政治知识点随手记">https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/</a>
+      <a href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/" title="计算机网络 第三章 数据链路层">https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -485,21 +757,21 @@
   </ul>
   <div class="tags">
     
-      <a href="https://songdlut.github.io/tag/7Zd_WucOH/"># 政治</a>
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/"># 计算机网络</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title=" 死锁的处理策略" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/"> 死锁的处理策略</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title=" 死锁的处理策略" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/">上一篇</a>
+        <a class="nav-pc-next" title="第三章 数据链路层练习" href="https://songdlut.github.io/post/di-san-zhang-shu-ju-lian-lu-ceng-lian-xi/">第三章 数据链路层练习</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第三章 数据链路层练习" href="https://songdlut.github.io/post/di-san-zhang-shu-ju-lian-lu-ceng-lian-xi/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="死锁概念部分" href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/">死锁概念部分</a>
-        <a class="nav-mobile-next" title="死锁概念部分" href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/">下一篇</a>
+        <a class="nav-pc-next" title="物理层练习" href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/">物理层练习</a>
+        <a class="nav-mobile-next" title="物理层练习" href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

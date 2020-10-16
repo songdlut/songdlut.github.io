@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-10-08T12:35:38.665Z</updated>
+    <updated>2020-10-16T06:11:26.025Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,318 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[第四章 网络层知识点及错题整理]]></title>
+        <id>https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/</id>
+        <link href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/">
+        </link>
+        <updated>2020-10-15T07:51:51.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>在路由器连接的多个局域网的结构中,要求每个局域网<strong>物理层,数据链路层,网络层协议可以不同,而网络层以上的协议必须相同</strong></li>
+<li>网络中发生了拥塞根据是随着通信子网负载的增加,吞吐量反而降低</li>
+<li>网络的异构性是指传输介质,数据编码方式,链路控制协议及不同的数据单元格式和转发机制,这些都是在数据链路层和物理层</li>
+<li>MTU不是帧长度,而是帧的数据部分1500那个</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第四章 网络层]]></title>
+        <id>https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng/</id>
+        <link href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng/">
+        </link>
+        <updated>2020-10-15T07:27:32.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="ipv4">IPv4</h2>
+<h3 id="格式">格式</h3>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TqHIS.png" alt="0TqHIS.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/15/0TjNe1.png" alt="0TjNe1.png" loading="lazy"><br>
+这一章网络层里暂时先把数据报当成分组,只是过大的时候要分片<br>
+首部长度单位是4B,总长度单位是1B,片偏移长度是8B</p>
+<h3 id="ip数据报分片">IP数据报分片</h3>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TLZs1.png" alt="0TLZs1.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/15/0Tv5Ax.png" alt="0Tv5Ax.png" loading="lazy"></p>
+<h3 id="ip地址">IP地址</h3>
+<p><img src="https://s1.ax1x.com/2020/10/15/07PUPI.png" alt="07PUPI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/15/07P7dJ.png" alt="07P7dJ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/15/07iKoj.png" alt="07iKoj.png" loading="lazy"></p>
+<h3 id="子网划分">子网划分</h3>
+<p><img src="https://s1.ax1x.com/2020/10/15/07mLYF.png" alt="07mLYF.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0H9jPI.png" alt="0H9jPI.png" loading="lazy"></p>
+<h3 id="cidrclassless-interdomain-routing">CIDR(classless interdomain routing)</h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/16/0HCCqg.png" alt="0HCCqg.png" loading="lazy"></figure>
+<h3 id="arpaddress-resolution-protocol">ARP(Address resolution protocol)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/16/0HVR9H.png" alt="0HVR9H.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0HZdIS.png" alt="0HZdIS.png" loading="lazy"></p>
+<h3 id="dhcpdynamic-host-configuration-protocol">DHCP(Dynamic Host Configuration Protocol)</h3>
+<p>应用层协议<br>
+<img src="https://s1.ax1x.com/2020/10/16/0HeKLq.png" alt="0HeKLq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0Hm8Bt.png" alt="0Hm8Bt.png" loading="lazy"><br>
+注意全都是广播</p>
+<h3 id="icmpinternet-control-message-protocol">ICMP(Internet Control Message Protocol)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/16/0HKcUP.png" alt="0HKcUP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0HKxKJ.png" alt="0HKxKJ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0Hdb3d.png" alt="0Hdb3d.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/16/0HKK9U.png" alt="0HKK9U.png" loading="lazy"><br>
+ICMP差错报告报文就是IP数据报的数据部分<br>
+有5种差错报告报文和4种询问报文<br>
+<img src="https://s1.ax1x.com/2020/10/16/0H0mLt.png" alt="0H0mLt.png" loading="lazy"><br>
+最后两种不再使用了<br>
+<img src="https://s1.ax1x.com/2020/10/16/0H0tLq.png" alt="0H0tLq.png" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第三章 数据链路层练习]]></title>
+        <id>https://songdlut.github.io/post/di-san-zhang-shu-ju-lian-lu-ceng-lian-xi/</id>
+        <link href="https://songdlut.github.io/post/di-san-zhang-shu-ju-lian-lu-ceng-lian-xi/">
+        </link>
+        <updated>2020-10-09T13:09:21.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>出错控制的几个功能
+<ol>
+<li>CRC/汉明码=&gt;位错</li>
+<li>计时器超时重发=&gt;避免传输过程中帧的丢失</li>
+<li>枕编号=&gt;不会受到重复帧</li>
+</ol>
+</li>
+<li>物理信道传输成功率为X,一个网络层分组分成N个数据链路层帧,则发送分组成功率为X<sup>N</sup>,因为要保证每一个都成功</li>
+<li>奇偶校验码和CRC只能检查出奇数个比特错误,汉明码是可以发现双比特错误,纠正单比特错误</li>
+<li>链路层能提供差错检测,也能纠正(汉明码)</li>
+<li>通过提高信噪比可以减弱随机差错的影响</li>
+<li><img src="https://s1.ax1x.com/2020/10/10/0szHqs.png" alt="0szHqs.png" loading="lazy"></li>
+<li>发送窗口大小≤窗口大小-1
+<ol>
+<li>我觉得减一是因为接收窗口至少为1</li>
+<li>在SR协议中,接收窗口+发送窗口≤2<sup>n</sup></li>
+</ol>
+</li>
+<li>FDM比TDM应用多是因为<strong>TDM可用于数字传输而FDM不可以</strong></li>
+<li>注意题目经常用FDMA,TDMA:frequency division multiple access</li>
+<li>随机访问介质访问控制有冲突,其他都没有</li>
+<li>CSMA/CD做题的时候抓住核心就是一切为了避免<strong>帧在传输完之前,上一个返回,也就是传输的时间得大于2τ</strong>
+<ol>
+<li>帧长度减少了,那么要么传输速率减小,要么2τ减小(即线路变短,使帧在传输完之前,能赶回来)</li>
+</ol>
+</li>
+<li>使用二进制回退算法考虑了网络负载对冲突的影响,k越大,发生冲突的概率越小</li>
+<li>CSMA/CA有确认</li>
+<li>令牌环网更适合负载重的,也不存在冲突</li>
+<li>多路复用转换器的主要功能是结合来自两条或多条线路的传输</li>
+</ol>
+<h2 id="关于局域网">关于局域网</h2>
+<ol>
+<li>令牌环网中,一个站点最坏情况下等待获得令牌和发送数据帧的时间是<strong>所有发送站点传送令牌和发送帧的时间的总和</strong></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05GZfU.png" alt="05GZfU.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05G8k6.png" alt="05G8k6.png" loading="lazy">
+<ol>
+<li>不需要在发送过程中进行碰撞检测</li>
+</ol>
+</li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05JC9O.png" alt="05JC9O.png" loading="lazy"></li>
+<li>大量的广播信息会降低整个网络性能的原因是:每台计算机都必须处理每个广播信息</li>
+<li>a,b,c,d四台计算机,a向b发送数据,每台都能1接收到</li>
+</ol>
+<h2 id="关于广域网">关于广域网</h2>
+<ol>
+<li>广域网采用的传输方式是<strong>存储转发式</strong></li>
+</ol>
+<h2 id="关于广播域和冲突域">关于广播域和冲突域</h2>
+<ol>
+<li>广播域看路由器</li>
+<li>冲突域看交换机,几个口就几个冲突域</li>
+<li>VLAN可以隔离冲突域也可以隔离广播域</li>
+<li>网桥可以互联不同的物理层,不同的MAC子层及不同速率的以太网</li>
+<li>网桥可以过滤网段之间的数据但是不能过滤并有效阻止广播数据
+<ol>
+<li>第二层设备没法解决广播域的问题</li>
+</ol>
+</li>
+<li>网络层设备既可以隔离广播域又可以隔离冲突域</li>
+</ol>
+<h2 id="交换机">交换机</h2>
+<ol>
+<li>直通式交换机只检查帧的目的地址,转发时延就是地址大小/带宽</li>
+<li>交换机比集线器提供更好的网络性能的原因是交换机支持多对用户同时通信
+<ol>
+<li>交换机是隔离冲突域的,且是半双工通信,因此可以多对同时通信,而集线器下,都是一个冲突域,不能同时通信</li>
+</ol>
+</li>
+<li>对于10Mb/s的端口,半双工带宽为10Mb/s,全双工是20Mb/s</li>
+<li><img src="https://s1.ax1x.com/2020/10/15/0TAnDU.png" alt="0TAnDU.png" loading="lazy">
+<ol>
+<li>如果是全双工,每个连接点获得的带宽值就是20</li>
+</ol>
+</li>
+<li>如果一个结点向某个结点发送信息,所有的结点(包括自己)都能收到信息,但是如果各自连在某个交换机的口上,那么交换机只会向这个端口以外的端口转发(没有转发表)</li>
+<li></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[计算机网络 第三章 数据链路层]]></title>
+        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/</id>
+        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/">
+        </link>
+        <updated>2020-10-09T13:08:39.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-数据链路层功能">1 数据链路层功能</h2>
+<h2 id="成帧">成帧</h2>
+<h2 id="差错控制">差错控制</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/10/0ySkIx.png" alt="0ySkIx.png" loading="lazy"></figure>
+<h2 id="流量控制">流量控制</h2>
+<p><img src="https://s1.ax1x.com/2020/10/10/0yZuVO.png" alt="0yZuVO.png" loading="lazy"><br>
+<strong>窗口大小都是固定的</strong></p>
+<h3 id="单帧滑动窗口与停止等待协议">单帧滑动窗口与停止等待协议</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/10/0yaSL8.png" alt="0yaSL8.png" loading="lazy"></figure>
+<h3 id="多帧滑动窗口与后退n帧协议gbn">多帧滑动窗口与后退N帧协议(GBN)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/10/06PWSP.png" alt="06PWSP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06iKkd.png" alt="06iKkd.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06Fy8I.png" alt="06Fy8I.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06kuRI.png" alt="06kuRI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06AD1I.png" alt="06AD1I.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06A53n.png" alt="06A53n.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06AON4.png" alt="06AON4.png" loading="lazy"></p>
+<h3 id="多帧滑动窗口与选择重传协议sr">多帧滑动窗口与选择重传协议(SR)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/10/06VZoF.png" alt="06VZoF.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06eJ8H.png" alt="06eJ8H.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06eOqx.png" alt="06eOqx.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06mVdf.png" alt="06mVdf.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06nm0x.png" alt="06nm0x.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/10/06mgYD.png" alt="06mgYD.png" loading="lazy"></p>
+<h2 id="介质访问控制">介质访问控制</h2>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/11/0g89S0.png" alt="0g89S0.png" loading="lazy"></figure>
+<h3 id="信道划分介质访问控制">信道划分介质访问控制</h3>
+<ol>
+<li>FDM</li>
+<li>TDM
+<ol>
+<li>注意STDM,使用集中器</li>
+</ol>
+</li>
+<li>WDM</li>
+<li>CDM</li>
+</ol>
+<h3 id="随机访问介质访问控制">随机访问介质访问控制</h3>
+<h4 id="aloha协议">ALOHA协议</h4>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/11/0gUBn0.png" alt="0gUBn0.png" loading="lazy"></figure>
+<h4 id="csma协议carrier-sense-multiple-access载波侦听多路访问">CSMA协议(Carrier Sense Multiple Access,载波侦听多路访问)</h4>
+<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/10/11/0gakgs.png" alt="0gakgs.png" loading="lazy"></figure>
+<ol>
+<li>1-坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gaJDx.png" alt="0gaJDx.png" loading="lazy"></li>
+<li>非坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gy4u4.png" alt="0gy4u4.png" loading="lazy"></li>
+<li>p-坚持CSMA<br>
+<img src="https://s1.ax1x.com/2020/10/11/0gyetx.png" alt="0gyetx.png" loading="lazy"><br>
+缺点:冲突了还是会把数据发完,造成浪费</li>
+<li>对比<br>
+<img src="https://s1.ax1x.com/2020/10/11/0g6C5t.png" alt="0g6C5t.png" loading="lazy"></li>
+</ol>
+<h4 id="csmacdcollision-detection">CSMA/CD(Collision Detection)</h4>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gcGfP.png" alt="0gcGfP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0RUEkT.png" alt="0RUEkT.png" loading="lazy"><br>
+书上的图只是为了得到2τ,CSMA/CD的根本目的为了在传输完成前就可以检测到碰撞进而停止发送,而不是让他们发送出去之后检测到碰撞<br>
+<img src="https://s1.ax1x.com/2020/10/12/0Rw4HI.png" alt="0Rw4HI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0R0mUx.png" alt="0R0mUx.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0R03KH.png" alt="0R03KH.png" loading="lazy"></p>
+<h4 id="csmacacollision-avoidance">CSMA/CA(Collision Avoidance)</h4>
+<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/10/12/0Rs4t1.png" alt="0Rs4t1.png" loading="lazy"></figure>
+<h3 id="轮询访问介质访问控制令牌传递协议">轮询访问介质访问控制:令牌传递协议</h3>
+<p><img src="https://s1.ax1x.com/2020/10/12/0R2YZD.png" alt="0R2YZD.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0RWoaF.png" alt="0RWoaF.png" loading="lazy"></p>
+<h3 id="小结">小结</h3>
+<p><img src="https://s1.ax1x.com/2020/10/12/0RgUg0.png" alt="0RgUg0.png" loading="lazy"><br>
+只有第二类随机访问介质访问控制会产生冲突<br>
+<img src="https://s1.ax1x.com/2020/10/12/0RfCPH.png" alt="0RfCPH.png" loading="lazy"></p>
+<h2 id="局域网">局域网</h2>
+<p><img src="https://s1.ax1x.com/2020/10/12/0WlOL8.png" alt="0WlOL8.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W1mFJ.png" alt="0W1mFJ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W3YuV.png" alt="0W3YuV.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W333n.png" alt="0W333n.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W8Svq.png" alt="0W8Svq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W8txI.png" alt="0W8txI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/12/0W86Rs.png" alt="0W86Rs.png" loading="lazy"></p>
+<h3 id="以太网">以太网</h3>
+<p><img src="https://s1.ax1x.com/2020/10/13/0f7qb9.png" alt="0f7qb9.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHQbj.png" alt="0fHQbj.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHaMF.png" alt="0fHaMF.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0fHOsg.png" alt="0fHOsg.png" loading="lazy"></p>
+<h3 id="ieee-80211">IEEE 802.11</h3>
+<p><img src="https://s1.ax1x.com/2020/10/13/0hpzGQ.png" alt="0hpzGQ.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/13/0h98IO.png" alt="0h98IO.png" loading="lazy"></p>
+<h2 id="广域网">广域网</h2>
+<h3 id="ppp协议">PPP协议</h3>
+<ol>
+<li>只支持全双工</li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05wDWq.png" alt="05wDWq.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05wcOU.png" alt="05wcOU.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05yVSA.png" alt="05yVSA.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05yDfJ.png" alt="05yDfJ.png" loading="lazy"></li>
+</ol>
+<h3 id="hdlc及对比总结">HDLC及对比总结</h3>
+<ol>
+<li><img src="https://s1.ax1x.com/2020/10/14/05gAW4.png" alt="05gAW4.png" loading="lazy"></li>
+<li><img src="https://s1.ax1x.com/2020/10/14/05guex.png" alt="05guex.png" loading="lazy"></li>
+</ol>
+<h2 id="数据链层设备">数据链层设备</h2>
+<h3 id="物理层扩展">物理层扩展</h3>
+<figure data-type="image" tabindex="13"><img src="https://s1.ax1x.com/2020/10/14/0IavwQ.png" alt="0IavwQ.png" loading="lazy"></figure>
+<h3 id="网桥数据链层扩展">网桥(数据链层扩展)</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0IwSBD.png" alt="0IwSBD.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/14/0I0tzt.png" alt="0I0tzt.png" loading="lazy"></p>
+<h3 id="交换机">交换机</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0I0jeO.png" alt="0I0jeO.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/14/0IBEm8.png" alt="0IBEm8.png" loading="lazy"></p>
+<h3 id="冲突域与广播域">冲突域与广播域</h3>
+<p><img src="https://s1.ax1x.com/2020/10/14/0IDdUg.png" alt="0IDdUg.png" loading="lazy"><br>
+广播域看路由器<br>
+冲突域看交换机,几个口就几个冲突域<br>
+VLAN可以隔离冲突域也可以隔离广播域</p>
+<h3 id="小结-2">小结</h3>
+<figure data-type="image" tabindex="14"><img src="https://s1.ax1x.com/2020/10/14/0IDgbT.png" alt="0IDgbT.png" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[物理层练习]]></title>
+        <id>https://songdlut.github.io/post/wu-li-ceng-lian-xi/</id>
+        <link href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/">
+        </link>
+        <updated>2020-10-09T09:44:59.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-概念">1 概念</h2>
+<ol>
+<li>同步异步传输是通信方式不是传输方式,并行传输距离短速度快,串行传输距离长速度慢,计算机内部采用并行传输</li>
+<li>以太网使用曼彻斯特编码,因此每位数据需要两个电平</li>
+<li>为保证数据无差错地传送,不用选用的交换方式是电路交换</li>
+<li>分组交换是对报文交换的改进,这种改进的直接结果是减少了传输时延</li>
+<li><strong>利用模拟通信信道传输数字信号的方法叫频带传输</strong></li>
+<li>报文交换不可以用于语音数据传输</li>
+<li>利用一根同轴电缆,互连主机成以太网,通信方式为半双工</li>
+<li>同轴电缆较双绞线带宽更高得益于它的高屏蔽性</li>
+<li>中继器试讲衰减的信号进行还原和再生而<strong>并非简单的放大</strong></li>
+<li>两个网段在<strong>物理层</strong>进行互联时要求数据传输率相同,但<strong>数据链路层的协议可以不同</strong>
+<ol>
+<li>数据传输率是对于物理层来说的</li>
+<li>本层互联时只要求本层及本层以下的协议必须相同,本层及本层以上的协议可以不同</li>
+<li>这一层相通只代表可以传输这一层的信号,以上层的不可以</li>
+<li>如果说物理层设备连接的几个网段仍是一个局域网,就要求不能连接具有不同数据链路层协议的网段</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-计算">2 计算</h2>
+<ol>
+<li>计算时注意奈氏准则和香农定理的共同限制,奈氏的可能隐藏信息(如出现多少进制)</li>
+<li>P43/22注意一下</li>
+<li><img src="https://s1.ax1x.com/2020/10/09/0rukef.png" alt="0rukef.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>这两题本质是一样的,都是将所有分组从发送端发送完后,分析最后一个分组,此时只要看最后一个分组需要再存储转发几次就可以</p>
+</blockquote>
+<ol start="4">
+<li>数据率=数据大小/时间
+<ol>
+<li>采样采的是帧</li>
+</ol>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[计算机网络 第二章 物理层]]></title>
         <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/</id>
@@ -28,6 +340,28 @@ k进制码元<br>
 同理,16进制的码元,离散状态有16个,代表16种高低不同的信号波形<br>
 0000  0001  0010 0011 0100  0101  0110  0111.....16个<br>
 因此每个码元带有4b的信息</p>
+<h2 id="奈氏与香农">奈氏与香农</h2>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/08/00jecq.png" alt="00jecq.png" loading="lazy"></figure>
+<h2 id="基带信号与宽带信号">基带信号与宽带信号</h2>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/08/00vnGd.png" alt="00vnGd.png" loading="lazy"></figure>
+<h2 id="编码与调制">编码与调制</h2>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/08/00xYm6.png" alt="00xYm6.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/10/09/0BOTN4.png" alt="0BOTN4.png" loading="lazy"></figure>
+<h2 id="电路交换报文交换分组交换">电路交换,报文交换,分组交换</h2>
+<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/10/09/0BjBFg.png" alt="0BjBFg.png" loading="lazy"></figure>
+<h3 id="数据报虚电路">数据报,虚电路</h3>
+<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/10/09/0BxGrt.png" alt="0BxGrt.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/10/09/0BxgaT.png" alt="0BxgaT.png" loading="lazy"></figure>
+<h2 id="传输介质">传输介质</h2>
+<p><img src="https://s1.ax1x.com/2020/10/09/0rNchq.png" alt="0rNchq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/09/0rtJzT.png" alt="0rtJzT.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/09/0rNSf0.png" alt="0rNSf0.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/09/0rNdc8.png" alt="0rNdc8.png" loading="lazy"></p>
+<h2 id="物理层设备">物理层设备</h2>
+<p><img src="https://s1.ax1x.com/2020/10/09/0rdOg0.png" alt="0rdOg0.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/09/0rwYqS.png" alt="0rwYqS.png" loading="lazy"></p>
+<h2 id="物理层部分总结">物理层部分总结</h2>
+<figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/10/09/0rBH4H.png" alt="0rBH4H.png" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -317,377 +651,6 @@ ISP:因特网服务提供商<br>
 <h2 id="5-抖动">5 抖动</h2>
 <h2 id="6-工作集">6 工作集</h2>
 <h2 id="7-地址翻译">7 地址翻译</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第三章 内存管理题目及重点]]></title>
-        <id>https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/</id>
-        <link href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-ti-mu-ji-chong-dian/">
-        </link>
-        <updated>2020-10-02T07:32:34.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-概念">1 概念</h2>
-<ol>
-<li>在虚拟内存管理中,地址板换机构将逻辑地址变换为物理地址,形成改逻辑地址的阶段为<strong>链接</strong>,若是&quot;完成该变化过程的阶段是&quot;,则为装载<br>
-<img src="https://s1.ax1x.com/2020/10/02/0l0JCq.png" alt="0l0JCq.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/02/0l0kEd.png" alt="0l0kEd.png" loading="lazy"></li>
-<li>I/O操作时,进程不能交换出主存,但是如果有I/O缓冲则可以</li>
-<li>分区分配内存管理方式主要保护措施是界地址保护</li>
-<li>内存保护需要由操作系统和硬件机构完成</li>
-<li>单一连续存储管理和固定分区可以用覆盖技术</li>
-<li>紧凑技术就是拼接技术,采用拼接技术的目的是<strong>合并空闲区</strong>,其实我觉得形式上也合并了分配区,这样才有了空闲的,手段是移动已用的部分,让空闲区得以合并,因此目的是合并空闲区</li>
-<li>动态重定位虽说是装入的手段,但是如果问是啥时候发生的,应该是<strong>运行时</strong></li>
-<li>固定分区可采用静态重定位,可变(动态)分区,页式和段式都不可以,页式段式显然不可以,动态分配是因为其中会使用交换技术</li>
-<li>由于分页和分段管理中页表和段表也占用物理空间,因此提供给用户的物理空间不知道</li>
-<li><strong>页面是为操作系统所感知的,用户,编译系统,连接装配程序都是上层应用,均不可感知,不要看到装配就是感觉很底层,相对操作系统还是高层</strong></li>
-<li>整个系统只设置一个重定位寄存器,运行的只会是一个进程,因此多的也没啥用,切换进程后重置寄存器即可</li>
-<li>分段是用户编程(或者说编译器完成的,总之是上层)时,按逻辑将程序划段</li>
-<li>程序的动态链接是和程序的逻辑结构有关的,而采用分段管理是按逻辑将程序分段,因此有利于程序的动态链接</li>
-<li>分区管理虽说利用率可能不高,但是代价小,没哟额外数据结构支持(段表,页表啥的),因为简单</li>
-<li>对外存对换区的管理以<strong>提高换入,换出速度</strong>为主要目标,注意是对他的管理,而他自身目的肯定是提高存储空间利用率,因为换出换入很消耗处理机的时间,故而对其管理是为了节约时间成本</li>
-<li>注意问的是对内存的访问还是分配,如果是对内存的访问,是以字节或字为单位的,如果是对内存的分配是根据系统来的</li>
-<li>把作业空间中使用的逻辑地址变为内存中的物理地址称为<strong>重定位</strong></li>
-<li>注意分页管理的越界判断只有页号和页表长度的比较,而分段管理越界判断是两部分:段号和段表长度,偏移量和段长的比较</li>
-</ol>
-<h3 id="是否产生碎片">是否产生碎片</h3>
-<blockquote>
-<p>通俗讲:内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。</p>
-</blockquote>
-<p>分段式管理没有内部碎片,但是有外部碎片<br>
-分页式管理有内部碎片,无外部碎片<br>
-固定分区管理有内部碎片,无外部碎片<br>
-动态无内部碎片,有外部碎片<br>
-段页式管理有内部碎片,也有外部碎片</p>
-<h3 id="地址结构">地址结构</h3>
-<p>页式管理中的地址空间是一维的,给了一个整数(逻辑地址),就可以用整除和取余来找到对应的物理地址<br>
-段式管理是二维的,一个数,你没办法通过什么办法得到段号和偏移量,即便说定了32位,前多少是段号,后面是偏移量,这也是二维的,而对于页式的地址虽说计算机实际使用的时候是前多少是页号,后面的是偏移量,可以直接得到实际物理地址,但这只是为了快点访问的,如果只是一个数,也可通过整除取余等操作找到,因此是一维的</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[阅读的一些思路]]></title>
-        <id>https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/</id>
-        <link href="https://songdlut.github.io/post/yue-du-de-yi-xie-si-lu/">
-        </link>
-        <updated>2020-09-28T00:54:11.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>说XX失去XX或承担XX,一定要看清程度,或者是不是明确说了,可能前面有一些句子,别人说啊或者什么的</li>
-<li>取标题的<strong>不要</strong>被最后一段作者升华的部分影响了,除非是全篇都有这个意味</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[做题词汇积累]]></title>
-        <id>https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/</id>
-        <link href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/">
-        </link>
-        <updated>2020-09-27T00:32:42.000Z</updated>
-        <content type="html"><![CDATA[<p>meritocracy:精英领导体制</p>
-<p>vice:副的</p>
-<p>evade:逃避</p>
-<p>summit:最高阶层,顶点</p>
-<p>overwhelmingly:压倒性地,不可抵抗地</p>
-<p>run counter to:与...背道而驰</p>
-<p>anonymity:匿名,不知名</p>
-<p>chiller:冷却装置</p>
-<p>greengrocer:蔬菜水果商</p>
-<p>come in handy:派的上用场</p>
-<p>on a budget:避免不必要的开支,节省费用</p>
-<p>burn out:出故障,烧尽,熄灭,精疲力尽</p>
-<p>chronicle:按事件发展顺序记载</p>
-<p>council flat:公营公寓(感觉是廉租房类似的)</p>
-<p>impulsive:冲动的,任性的</p>
-<p>ingredient:原料,材料,食材</p>
-<p>extra:额外的</p>
-<p>exact:精确的</p>
-<p>peasant:农民</p>
-<p>leftover:残羹剩饭</p>
-<p>stock:高汤</p>
-<p>surplus:过剩的,剩余的</p>
-<p>frugal:节俭的,朴素的</p>
-<p>deli:熟食店</p>
-<p>knuckle:关节骨</p>
-<p>carcass:尸体,兽体</p>
-<p>collegiate:学院的,学院学生的</p>
-<p>moderately:适度地,不过分地</p>
-<p>in turn:转而,相应的</p>
-<p>conservative:传统的,保守的</p>
-<p>in essence:本质上的,实质上的</p>
-<p>disgrace:耻辱,丢脸的事,出丑</p>
-<p>harbor:心怀,怀有(某种想法)</p>
-<p>stimulate:促进,刺激</p>
-<p>institute:开始(某进程),建立制定</p>
-<p>initiative:新倡议,行动方案</p>
-<p>obsolete:过时</p>
-<p>obsession:痴迷,着迷,注意和上一个区别</p>
-<p>rarity:稀缺,缺少</p>
-<p>submission:屈服,投降,提交</p>
-<p>scarcity:缺乏</p>
-<p>could do worse than:不妨试试<br>
-doctor:篡改,伪造<br>
-profound:tmd这个老师忘记,深刻的,极大的,严重的<br>
-delusion:错觉,谬见,妄想<br>
-make up for:弥补<br>
-correspond with:符合一致<br>
-oversea:监管,监督<br>
-esteem:尊重尊敬<br>
-stalk:高视阔步走<br>
-hot stuff:奇才,非凡的人物<br>
-deep-seated:深层的,根深蒂固的<br>
-amass:聚集(由指大量)<br>
-profile和profit别再混了:profile:印象,形象;profit:利益<br>
-the cream of:...的精华部分<br>
-cover up:掩饰<br>
-instinctively:本能地<br>
-withhold:掩藏<br>
-review:复查;重新考虑;回顾;反思;写(关于书籍、戏剧、电影等的)评论;评介<br>
-rectify:纠正<br>
-be down to sb:是某人的责任<br>
-grant:拨款<br>
-expire:期满,终止<br>
-hint:暗示<br>
-comprehensive:综合的,全部的,详尽的<br>
-comprehension:理解力,领悟力<br>
-inevitable:看到好多次了,tmd总是忘:不可避免的,必然的<br>
-reinvent:彻底改造<br>
-formula:方案,方法<br>
-reframe:重新组织<br>
-vulnerable:易受攻击的,有弱点的<br>
-hail from:来自<br>
-lecture:演讲,讲座,上课<br>
-literature:文学作品,文献,著作<br>
-virtually:几乎<br>
-weird:怪异的<br>
-inherently:固有的,内在的<br>
-perceive:察觉认识到<br>
-unresonable:不可理喻的<br>
-rip off:撕掉<br>
-tuck:塞入<br>
-kick back:放松<br>
-nonparents:无子女者,不是无双亲<br>
-cortisol:皮质醇<br>
-refuge:避难,庇护<br>
-blurring:模糊的<br>
-life-sustaining:维持生命的<br>
-bargain:协议<br>
-pretty much:几乎,差不多是<br>
-clinically:不偏不倚地<br>
-methodically:有条不紊地<br>
-talk into:说服<br>
-apparently:显然地;似乎<br>
-lingua franca:(母语不同的人之间使用的)通用语,交际语<br>
-spin:旋转<br>
-parachute:空投,空降<br>
-explicitly:清楚地<br>
-infuse:把...注入,灌输<br>
-amid:在...中间,当中<br>
-prompt:促进,激起<br>
-buzzword:某一领域的时髦用语<br>
-in its own right:凭自身的能力<br>
-linguist:语言学家<br>
-nonsense:无稽之谈,胡说,荒谬的想法<br>
-buy into it:买账,认可<br>
-irony:讽刺<br>
-oriented:朝向,面向,导向,适应;确定方位;认识方向;熟悉;适应<br>
-importation:引进,输入<br>
-cover:投保</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第三章 内存管理概念部分]]></title>
-        <id>https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/</id>
-        <link href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/">
-        </link>
-        <updated>2020-09-26T02:42:58.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-基本原理和要求">1 基本原理和要求</h2>
-<h3 id="1-内存管理的功能">1 内存管理的功能</h3>
-<ol>
-<li>内存空间的分配与回收</li>
-<li>地址转换</li>
-<li>内存空间的扩充</li>
-<li>存储保护<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PHSu4.png" alt="0PHSu4.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0P7j3T.png" alt="0P7j3T.png" loading="lazy"></li>
-</ol>
-<h3 id="2-程序装入和链接">2 程序装入和链接</h3>
-<ol>
-<li>静态链接</li>
-<li>装入时动态链接</li>
-<li>运行时动态链接</li>
-</ol>
-<h3 id="3-装入内存的三种方式">3 装入内存的三种方式</h3>
-<ol>
-<li>绝对装入
-<ul>
-<li>编译时,编译程序产生绝对地址的目标代码,</li>
-<li>只适用于单道程序环境</li>
-<li>绝对地址可在编译或汇编时给出,也可由程序员直接赋予</li>
-<li>通常情况下,程序中采用的是符号地址,然后再转换为绝对地址</li>
-</ul>
-</li>
-<li>可重定位装入
-<ul>
-<li>指令中使用的地址,数据的地址都是相对于起始地址的逻辑地址</li>
-<li>装入时才重新定位,将逻辑地址转换为物理地址(地址变换是在装入时一次完成的)</li>
-<li>一个作业装入内存时必须分配完所有的内存空间,若果不足,就不能装入</li>
-<li>在运行期间不能移动,也不可再申请新的内存</li>
-</ul>
-</li>
-<li>动态运行时装入
-<ul>
-<li>编译链接后的装入模块的地址都是从0开始的</li>
-<li>装入模块装入内存后不会立刻把逻辑地址转换为物理地址,而是把逻辑地址转换为物理地址的过程推迟到程序真正运行时</li>
-<li>需要重定位寄存器,存放装入模块存放的起始地址</li>
-<li>允许程序在内存中移动</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-关于链接和装入的理解">4 关于链接和装入的理解(☆)</h3>
-<p>不是说上面的链接和装入是一一对应的,静态链接不是说就非得和静态装入(绝对装入)是一块儿的,绝对装入现在都不用了,但是静态链接我们还是用的就可以说明这一问题.<br>
-链接是针对程序在磁盘中的,比如静态链接的程序是用到的模块已经固定好啥样了,就像这样<br>
-<img src="https://s1.ax1x.com/2020/09/26/0P2zTS.png" alt="0P2zTS.png" loading="lazy"><br>
-然后怎么装入就看哪种方式,现在的应该都是动态装入<br>
-静态装入:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PWWVK.png" alt="0PWWVK.png" loading="lazy"><br>
-假设有一个没有错误(err.o),使用动态装入:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PWqqP.png" alt="0PWqqP.png" loading="lazy"><br>
-如果动态链接:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PoVgg.png" alt="0PoVgg.png" loading="lazy"><br>
-装入后:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0Po3CT.png" alt="0Po3CT.png" loading="lazy"><br>
-装入是怎样将链接好后的程序装入到内存里,当然也可能是没有链接好,但是编译通过了(毕竟动态链接)<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PTcWT.png" alt="0PTcWT.png" loading="lazy"></p>
-<h2 id="2-覆盖和交换">2 覆盖和交换</h2>
-<p>覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法<br>
-<img src="https://s1.ax1x.com/2020/09/26/0POkee.png" alt="0POkee.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0PLbsU.png" alt="0PLbsU.png" loading="lazy"></p>
-<h2 id="3-连续分配管理方式">3 连续分配管理方式</h2>
-<p>连续分配:系统为用户进程分配的必须是一个连续的内存空间</p>
-<h3 id="1-单一连续分配">1 单一连续分配</h3>
-<p>一般无需内存保护<br>
-优点:简单,无外部碎片,可采用覆盖技术,不需要额外的技术支持<br>
-缺点:只适用于单用户,单任务,有内部碎片,利用率低</p>
-<h3 id="2-固定分区分配">2 固定分区分配</h3>
-<p>分类:</p>
-<ol>
-<li>分区大小相等</li>
-<li>分区大小不等<br>
-优点:可用于多道程序的最简单的存储分配,无外部碎片<br>
-缺点:不能实现多进程共享一个主存区,所以利用率低,存在内部碎片(当程序小于固定分区大小,也占用一个完整的内存分区,这样分区内部就存在空间浪费,这种现象称为内部碎片);程序可能太大而放不进任意一个分区中,此时用户不得不使用覆盖技术来使用内存空间</li>
-</ol>
-<h3 id="3-动态分区分配">3 动态分区分配</h3>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/26/0it6pD.png" alt="0it6pD.png" loading="lazy"></figure>
-<h4 id="内部碎片外部碎片">内部碎片,外部碎片</h4>
-<p>动态分配没有内部碎片<br>
-<img src="https://s1.ax1x.com/2020/09/26/0ikxxg.png" alt="0ikxxg.png" loading="lazy"><br>
-当剩余的内存空间可以满足某进程,但是由于是不连续的碎片,可以采用紧凑(拼凑Compaction)技术来解决</p>
-<h4 id="1-使用的数据结构">1 使用的数据结构</h4>
-<ol>
-<li>空闲分区表</li>
-<li>空闲分区链<br>
-<img src="https://s1.ax1x.com/2020/09/26/0iFZkV.png" alt="0iFZkV.png" loading="lazy"></li>
-</ol>
-<h4 id="2-分配与回收">2 分配与回收</h4>
-<ol>
-<li>分配
-<ol>
-<li>如果那一块未满就更新一下</li>
-<li>如果恰好那一块一样大,就删除表项或结点</li>
-</ol>
-</li>
-<li>回收
-<ol>
-<li>回收区前面有就俩合并,后面有也是,如果前后都有,就三个都合并</li>
-<li>前后都没,插入一个表项</li>
-</ol>
-</li>
-<li>适合重定位装入方式,因为连续,且可以移动</li>
-</ol>
-<h3 id="动态分区分配算法">动态分区分配算法</h3>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/26/0iaEY6.png" alt="0iaEY6.png" loading="lazy"></figure>
-<h2 id="4-非连续分配管理方式">4 非连续分配管理方式</h2>
-<h3 id="1-基本分页存储管理方式">1 基本分页存储管理方式</h3>
-<h4 id="1-分页存储知识点">1 分页存储知识点:</h4>
-<p><img src="https://s1.ax1x.com/2020/09/26/0iIUiV.png" alt="0iIUiV.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4neI.png" alt="0i4neI.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i48Sg.png" alt="0i48Sg.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4Nmn.png" alt="0i4Nmn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4BfU.png" alt="0i4BfU.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4fk6.png" alt="0i4fk6.png" loading="lazy"></p>
-<h4 id="2-基本地址变换机构">2 基本地址变换机构</h4>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/09/28/0A4sr4.png" alt="0A4sr4.png" loading="lazy"></figure>
-<h4 id="3-具有块表的地址变换机构">3 具有块表的地址变换机构</h4>
-<ol>
-<li>进程切换时,快表被清楚</li>
-<li>查询未命中,访问两次内存,查询命中访问一次</li>
-<li>快慢表同时注意以下:<br>
-<img src="https://s1.ax1x.com/2020/09/28/0A73He.png" alt="0A73He.png" loading="lazy"></li>
-<li>局部性原理<br>
-<img src="https://s1.ax1x.com/2020/09/28/0A7oE4.png" alt="0A7oE4.png" loading="lazy"></li>
-<li>总结<br>
-<img src="https://s1.ax1x.com/2020/09/28/0AHkxP.png" alt="0AHkxP.png" loading="lazy"></li>
-</ol>
-<h4 id="4-两级页表">4 两级页表</h4>
-<ol>
-<li>单级页表的问题
-<ol>
-<li>页表必须连续分配,当页表过大时,需要占用过多的连续页框</li>
-<li>没有必要让整个页表常驻内存,进程在一段时间内的运行可能只访问几个特定的页面</li>
-</ol>
-</li>
-<li>访问次数(没有块表机构):
-<ol>
-<li>n级页表,访问n+1次内存,如只有一个页表,则先访问页表,得到块号再访问内存单元(这个别忘了),如果2级则访问顶级页表一次,找到下一级页表所在的块号,访问该块号得到二级页表,找到要访问的内存块号,最后访问内存单元</li>
-</ol>
-</li>
-<li>一个页表最多只能占用一个页面,两级不够就继续分</li>
-<li>总结<br>
-<img src="https://s1.ax1x.com/2020/09/30/0uzIaQ.png" alt="0uzIaQ.png" loading="lazy"></li>
-</ol>
-<h3 id="2-基本分段存储管理">2 基本分段存储管理</h3>
-<h4 id="1-逻辑地址结构">1 逻辑地址结构</h4>
-<p>段号 段内偏移量</p>
-<h4 id="2-表项结构">2 表项结构</h4>
-<p>段号 段长 本段在主存的始址</p>
-<h4 id="3-寻址过程">3 寻址过程</h4>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/02/0lZdBQ.png" alt="0lZdBQ.png" loading="lazy"></figure>
-<h3 id="3-段页式管理方式">3 段页式管理方式</h3>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/09/30/0uzIaQ.png" alt="0uzIaQ.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[死锁部分的题目]]></title>
-        <id>https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/</id>
-        <link href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">
-        </link>
-        <updated>2020-09-25T13:15:23.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>死锁的四个必要条件中无法破坏的是<strong>互斥使用资源</strong><br>
-<img src="https://s1.ax1x.com/2020/09/25/0CBkjg.png" alt="0CBkjg.png" loading="lazy"></li>
-<li>引入多道程序技术的前提条件之一是系统具有<strong>中断功能</strong></li>
-<li>资源分配图中无法判断是否处于死锁状态:
-<ul>
-<li>出现了环路(只满足了循环等待这一必要条件,不是充分条件)</li>
-<li>每个进程结点至少有一条请求边(资源数未知因此不可以判断是否为死锁状态)</li>
-</ul>
-</li>
-<li>接上,可以用于判断是否处于死锁状态
-<ul>
-<li>没有环路(破坏了必要条件因此可以知道是非死锁的)</li>
-<li>每种资源只有一个,且出现环路(充要条件可知为死锁)</li>
-</ul>
-</li>
-<li><strong>关于定量判断是否发生死锁的题</strong>
-<ol>
-<li>不会发生死锁的最少资源数</li>
-<li>不会发生死锁的最大进程数</li>
-<li>公式:资源m个,n个进程,每个最大需求k,m≥n(k-1)+1时不会死锁</li>
-<li>解法都是先给到每个进程比最大请求量少一个的资源数,如果是求最少资源,则是刚刚分配的加上1(3个进程,每个都要四个资源,分成3,3,3,然后再来一个给谁都能安全),如果是求进程数,则看能分成几块(比如11个资源,X个进程,每个最多3个,则分成2,2,2,2,2,余一个,给谁都能安全)</li>
-</ol>
-</li>
-<li>限制用户申请资源的顺序的只有死锁预防,死锁避免和死锁检测与解除都不会限制</li>
-<li>死锁检测和解除时,系统为进程分配资源时不会采取任何措施来限制</li>
-<li>关于三种策略对进程并发性的影响:并发性由大到小::无策略&gt;死锁检测与解除&gt;死锁避免&gt;死锁预防,是与对分配干预的程度相一致的</li>
-<li></li>
-</ol>
 ]]></content>
     </entry>
 </feed>

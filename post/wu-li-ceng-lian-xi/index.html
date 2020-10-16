@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title> 政治知识点随手记 | 宋宇航的博客</title>
+<title>物理层练习 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1602828675127">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content=" 政治知识点随手记" />
-  <meta name="keywords" content="政治" />
+  <meta name="description" content="物理层练习" />
+  <meta name="keywords" content="计算机网络" />
 </head>
 
 <body>
@@ -190,7 +190,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,6 +253,196 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E6%A6%82%E5%BF%B5">1 概念</a></li>
+<li><a href="#2-%E8%AE%A1%E7%AE%97">2 计算</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -339,8 +530,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/">
-       政治知识点随手记
+    <a class="post-title-link" href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/">
+      物理层练习
     </a>
   </h1>
   <div class="post-meta">
@@ -348,7 +539,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-24</span>
+      <span>2020-10-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -357,8 +548,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://songdlut.github.io/tag/7Zd_WucOH/">
-        <span>政治</span>
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/">
+        <span>计算机网络</span>
       </a>
       
       
@@ -367,17 +558,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1637<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>503<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/" data-flag-title=" 政治知识点随手记" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/wu-li-ceng-lian-xi/" data-flag-title="物理层练习" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -386,84 +577,42 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <ul>
-<li>机械唯物主义和形而上学唯物主义是一个,庸俗唯物主义(把意识直接归于物质)是一个</li>
-<li>有一元论也有二元论(认为世界的本质有物质和意识两种)</li>
-<li>唯心主义分为客观(归结为超自然的超人类的客观精神)和主观(把本源归结为个人的感觉或意识)的</li>
-<li>人的本质属性是社会属性,不是什么创造性之类的</li>
-<li>人是不能摆脱必然性的制约,不能超出必然性规定的范围去寻找自由,这是人的自由的限度</li>
-<li>感性认识和理性认识都是人的主观世界所特有的,说什么人工智能可以认识都是错的</li>
-<li>实践也是人所特有的对象化活动,说别的动物,人工智能都是错的</li>
-<li>静止是运动的衡量尺度,注意不要反了</li>
-<li>运动是物质的根本属性和存在方式,不要看到存在方式就感觉错了</li>
-<li>物质的唯一特性是客观实在性</li>
-<li>意识是连接主体和客体的中介<strong>是错的</strong></li>
-<li>唯心主义有辩证的,也有不辩证的,旧唯物主义是不辩证的,完全的形而上学</li>
-<li>实践是马哲独有的,旧唯物没有</li>
-<li>旧唯物在自然观上唯物,历史观上唯心</li>
-<li>发展不是绝对的,无条件的,但发展是永恒的</li>
-<li>新事物一定产生于旧事物之前是错的,但换成<strong>往往</strong>是对的</li>
-<li>前后相继未必是因果,因为我发生在你之前未必是我导致的你</li>
-<li>闪电和打雷不是因果关系,大气摩擦导致闪电和打雷</li>
-<li>有其因必有其果是错的,有因必有果是对的</li>
-<li>真和假象都是客观存在的,就<strong>不能用正确和错误来形容</strong></li>
-<li>错觉是错误的观念是对的,但真象是正确的现象是错的</li>
-<li>真象和假象都是现象,因此都是外露的,说任意一个是隐藏的都是错的</li>
-<li>辩证否定是是<strong>自我否定</strong>,形而上学是外部力量对事物的否定和消灭</li>
-<li>辩证否定的实质是扬弃,形而上学要么肯定一切要么否定一切</li>
-<li>时空是事物存在的形式,但如果说:时间是物质存在的形式也是对的,或者说是空间也对,尤其是结合实例(很多时间变化的词)</li>
-<li>不能将客观辩证法等同唯物辩证法,将主观辩证法等同唯心,两个都是唯物的</li>
-<li>凡事预则立,不预则废:原因与结果</li>
-<li>主体是人,但不是所有的人都是主体</li>
-<li>认识总是滞后于实践是<strong>错误的</strong>,错在总是,实践,-&gt;认识-&gt;实践</li>
-<li>实践先于认识是对的,但是不能说实践是认识的先导,因为先导是指导,实践并不能指导认识,而是认识指导实践</li>
-<li>实践和认识是合一的:错误,合一是知行合一,是王阳明的唯心主义,应该是同一,但是今天看到知行合一不能算错,因为总书记在16年讲过,题目中如果特地强调是王阳明说的,就是错的,如果只是简单提一下就是对的</li>
-<li>无论是虚幻的还是真实的观念都是对事物的反映,但如果说是<strong>事物本质</strong>的反映就是错的</li>
-<li>任何观念都能在现实世界中找到物质&quot;原型&quot;是对的</li>
-<li>空口说感性认识和理性认识哪个更更重要是不对的,如果给了一个案例说反映了哪个更重要是可以的</li>
-<li>有用即真理是错的,但说真理一定是有用的是正确的</li>
-<li>有价值的就是真理是错的,真理一定有价值是对的</li>
-<li>实践是客观规律性与主观能动性统一的基础,而不是认识</li>
-<li>实践是认识的起点也是认识的归宿,不要后一句记反了</li>
-<li>不论是感性认识还是理性认识,他们的来源都是实践</li>
-<li>感性认识反映事物的现象,理性认识反映事物的本质</li>
-<li>切记不要看到实践是检验真理的唯一标准就选,尤其是题目前面还有限定的
-<ul>
-<li>如:在真理标准问题上坚持辩证法,就是要坚持<strong>实践标准的确定性与不确定性的统一</strong></li>
-</ul>
+              <h2 id="1-概念">1 概念</h2>
+<ol>
+<li>同步异步传输是通信方式不是传输方式,并行传输距离短速度快,串行传输距离长速度慢,计算机内部采用并行传输</li>
+<li>以太网使用曼彻斯特编码,因此每位数据需要两个电平</li>
+<li>为保证数据无差错地传送,不用选用的交换方式是电路交换</li>
+<li>分组交换是对报文交换的改进,这种改进的直接结果是减少了传输时延</li>
+<li><strong>利用模拟通信信道传输数字信号的方法叫频带传输</strong></li>
+<li>报文交换不可以用于语音数据传输</li>
+<li>利用一根同轴电缆,互连主机成以太网,通信方式为半双工</li>
+<li>同轴电缆较双绞线带宽更高得益于它的高屏蔽性</li>
+<li>中继器试讲衰减的信号进行还原和再生而<strong>并非简单的放大</strong></li>
+<li>两个网段在<strong>物理层</strong>进行互联时要求数据传输率相同,但<strong>数据链路层的协议可以不同</strong>
+<ol>
+<li>数据传输率是对于物理层来说的</li>
+<li>本层互联时只要求本层及本层以下的协议必须相同,本层及本层以上的协议可以不同</li>
+<li>这一层相通只代表可以传输这一层的信号,以上层的不可以</li>
+<li>如果说物理层设备连接的几个网段仍是一个局域网,就要求不能连接具有不同数据链路层协议的网段</li>
+</ol>
 </li>
-<li>实践之所以成为检验真理的唯一标准是因为<strong>真理的本性和实践的特点所决定的</strong>
-<ul>
-<li>说的是<strong>本性</strong>,不是属性啥的,本性在于主观和客观相符合</li>
-<li>特点是直接现实性</li>
-</ul>
+</ol>
+<h2 id="2-计算">2 计算</h2>
+<ol>
+<li>计算时注意奈氏准则和香农定理的共同限制,奈氏的可能隐藏信息(如出现多少进制)</li>
+<li>P43/22注意一下</li>
+<li><img src="https://s1.ax1x.com/2020/10/09/0rukef.png" alt="0rukef.png" loading="lazy"></li>
+</ol>
+<blockquote>
+<p>这两题本质是一样的,都是将所有分组从发送端发送完后,分析最后一个分组,此时只要看最后一个分组需要再存储转发几次就可以</p>
+</blockquote>
+<ol start="4">
+<li>数据率=数据大小/时间
+<ol>
+<li>采样采的是帧</li>
+</ol>
 </li>
-<li>真理是一元的,价值是多元的</li>
-<li>所有的意识<strong>都是</strong>物质的反映</li>
-<li>生产力中包含科技是对的,但说科技是生产力中的独立要素是错的,生产力的要素只有3个:劳动资料,劳动对象,劳动者</li>
-<li>说科技是生产劳动中的决定性因素是对的,说是社会历史中的决定性因素是错的</li>
-<li><img src="https://s1.ax1x.com/2020/10/12/024O1A.png" alt="024O1A.png" loading="lazy"></li>
-<li>属于上层建筑的社会意识就是意识形态</li>
-<li>判断生产关系是不是先进就看能不能适应生产力发展,而<strong>判断上层建筑是不是先进要看他服务的经济基础是否适应生产力发展,如果适应,它就是先进的</strong></li>
-<li>不能说社会规律与自然规律都是自觉的
-<ul>
-<li>社会规律是自觉的</li>
-<li>自然规律是<strong>自发的</strong>,没有人参与其中</li>
-</ul>
-</li>
-<li>人类的总体历史进程是不可超越的(不要觉得是错的)</li>
-<li>剥削阶级也可以是人名群众</li>
-<li>各种社会关系中，生产关系属于社会存在，政治关系、思想关系是社会存在的反映，不能列为社会存在
-<ul>
-<li>因此说社会存在不包括社会关系</li>
-</ul>
-</li>
-<li><img src="https://s1.ax1x.com/2020/10/13/0fDQHJ.png" alt="0fDQHJ.png" loading="lazy"></li>
-<li>物质资料的<strong>生产方式</strong>构成了人类社会存在和发展的基础,集中体现着人类社会的<strong>物质性</strong></li>
-<li>区分社会经济时代的客观依据是生产工具的状况</li>
-<li>社会发展是由多种力量决定的是错的,社会发展的决定力量是生产力</li>
-<li></li>
-</ul>
+</ol>
 
             </div>
             
@@ -476,7 +625,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/" title=" 政治知识点随手记">https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-sui-shou-ji/</a>
+      <a href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/" title="物理层练习">https://songdlut.github.io/post/wu-li-ceng-lian-xi/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -485,21 +634,21 @@
   </ul>
   <div class="tags">
     
-      <a href="https://songdlut.github.io/tag/7Zd_WucOH/"># 政治</a>
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/"># 计算机网络</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title=" 死锁的处理策略" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/"> 死锁的处理策略</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title=" 死锁的处理策略" href="https://songdlut.github.io/post/si-suo-de-chu-li-ce-lue/">上一篇</a>
+        <a class="nav-pc-next" title="计算机网络 第三章 数据链路层" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/">计算机网络 第三章 数据链路层</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="计算机网络 第三章 数据链路层" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="死锁概念部分" href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/">死锁概念部分</a>
-        <a class="nav-mobile-next" title="死锁概念部分" href="https://songdlut.github.io/post/si-suo-gai-nian-bu-fen/">下一篇</a>
+        <a class="nav-pc-next" title="计算机网络 第二章 物理层" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/">计算机网络 第二章 物理层</a>
+        <a class="nav-mobile-next" title="计算机网络 第二章 物理层" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

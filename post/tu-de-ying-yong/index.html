@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title> 图的应用 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1602160528057">
+<link rel="shortcut icon" href="/favicon.ico?v=1602828675127">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">40</span>
+        <span class="site-item-stat-count">45</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1843,6 +1843,303 @@ void DFS(Graph G,int v,int &amp;flag)
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;在路由器连接的多个局域网的结构中,要求每个局域网&lt;strong&gt;物理层,数据链路层,网络层协议可以不同,而网络层以上的协议必须相同&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;网络中发生了拥塞根据是随着通信子网负载的增加,吞吐量反而降低&lt;/li&gt;
+&lt;li&gt;网络的异构性是指传输介质,数据编码方式,链路控制协议及不同的数据单元格式和转发机制,这些都是在数据链路层和物理层&lt;/li&gt;
+&lt;li&gt;MTU不是帧长度,而是帧的数据部分1500那个&lt;/li&gt;
+&lt;/ol&gt;
+">第四章 网络层知识点及错题整理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng/"" data-c="
+          &lt;h2 id=&#34;ipv4&#34;&gt;IPv4&lt;/h2&gt;
+&lt;h3 id=&#34;格式&#34;&gt;格式&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/0TqHIS.png&#34; alt=&#34;0TqHIS.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/0TjNe1.png&#34; alt=&#34;0TjNe1.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+这一章网络层里暂时先把数据报当成分组,只是过大的时候要分片&lt;br&gt;
+首部长度单位是4B,总长度单位是1B,片偏移长度是8B&lt;/p&gt;
+&lt;h3 id=&#34;ip数据报分片&#34;&gt;IP数据报分片&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/0TLZs1.png&#34; alt=&#34;0TLZs1.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/0Tv5Ax.png&#34; alt=&#34;0Tv5Ax.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ip地址&#34;&gt;IP地址&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/07PUPI.png&#34; alt=&#34;07PUPI.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/07P7dJ.png&#34; alt=&#34;07P7dJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/07iKoj.png&#34; alt=&#34;07iKoj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;子网划分&#34;&gt;子网划分&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/07mLYF.png&#34; alt=&#34;07mLYF.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0H9jPI.png&#34; alt=&#34;0H9jPI.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cidrclassless-interdomain-routing&#34;&gt;CIDR(classless interdomain routing)&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HCCqg.png&#34; alt=&#34;0HCCqg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;arpaddress-resolution-protocol&#34;&gt;ARP(Address resolution protocol)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HVR9H.png&#34; alt=&#34;0HVR9H.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HZdIS.png&#34; alt=&#34;0HZdIS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dhcpdynamic-host-configuration-protocol&#34;&gt;DHCP(Dynamic Host Configuration Protocol)&lt;/h3&gt;
+&lt;p&gt;应用层协议&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HeKLq.png&#34; alt=&#34;0HeKLq.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0Hm8Bt.png&#34; alt=&#34;0Hm8Bt.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+注意全都是广播&lt;/p&gt;
+&lt;h3 id=&#34;icmpinternet-control-message-protocol&#34;&gt;ICMP(Internet Control Message Protocol)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HKcUP.png&#34; alt=&#34;0HKcUP.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HKxKJ.png&#34; alt=&#34;0HKxKJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0Hdb3d.png&#34; alt=&#34;0Hdb3d.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0HKK9U.png&#34; alt=&#34;0HKK9U.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+ICMP差错报告报文就是IP数据报的数据部分&lt;br&gt;
+有5种差错报告报文和4种询问报文&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0H0mLt.png&#34; alt=&#34;0H0mLt.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+最后两种不再使用了&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/16/0H0tLq.png&#34; alt=&#34;0H0tLq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">第四章 网络层</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-san-zhang-shu-ju-lian-lu-ceng-lian-xi/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;出错控制的几个功能
+&lt;ol&gt;
+&lt;li&gt;CRC/汉明码=&amp;gt;位错&lt;/li&gt;
+&lt;li&gt;计时器超时重发=&amp;gt;避免传输过程中帧的丢失&lt;/li&gt;
+&lt;li&gt;枕编号=&amp;gt;不会受到重复帧&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;物理信道传输成功率为X,一个网络层分组分成N个数据链路层帧,则发送分组成功率为X&lt;sup&gt;N&lt;/sup&gt;,因为要保证每一个都成功&lt;/li&gt;
+&lt;li&gt;奇偶校验码和CRC只能检查出奇数个比特错误,汉明码是可以发现双比特错误,纠正单比特错误&lt;/li&gt;
+&lt;li&gt;链路层能提供差错检测,也能纠正(汉明码)&lt;/li&gt;
+&lt;li&gt;通过提高信噪比可以减弱随机差错的影响&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/0szHqs.png&#34; alt=&#34;0szHqs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;发送窗口大小≤窗口大小-1
+&lt;ol&gt;
+&lt;li&gt;我觉得减一是因为接收窗口至少为1&lt;/li&gt;
+&lt;li&gt;在SR协议中,接收窗口+发送窗口≤2&lt;sup&gt;n&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;FDM比TDM应用多是因为&lt;strong&gt;TDM可用于数字传输而FDM不可以&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;注意题目经常用FDMA,TDMA:frequency division multiple access&lt;/li&gt;
+&lt;li&gt;随机访问介质访问控制有冲突,其他都没有&lt;/li&gt;
+&lt;li&gt;CSMA/CD做题的时候抓住核心就是一切为了避免&lt;strong&gt;帧在传输完之前,上一个返回,也就是传输的时间得大于2τ&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;帧长度减少了,那么要么传输速率减小,要么2τ减小(即线路变短,使帧在传输完之前,能赶回来)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用二进制回退算法考虑了网络负载对冲突的影响,k越大,发生冲突的概率越小&lt;/li&gt;
+&lt;li&gt;CSMA/CA有确认&lt;/li&gt;
+&lt;li&gt;令牌环网更适合负载重的,也不存在冲突&lt;/li&gt;
+&lt;li&gt;多路复用转换器的主要功能是结合来自两条或多条线路的传输&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;关于局域网&#34;&gt;关于局域网&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;令牌环网中,一个站点最坏情况下等待获得令牌和发送数据帧的时间是&lt;strong&gt;所有发送站点传送令牌和发送帧的时间的总和&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05GZfU.png&#34; alt=&#34;05GZfU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05G8k6.png&#34; alt=&#34;05G8k6.png&#34; loading=&#34;lazy&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;不需要在发送过程中进行碰撞检测&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05JC9O.png&#34; alt=&#34;05JC9O.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;大量的广播信息会降低整个网络性能的原因是:每台计算机都必须处理每个广播信息&lt;/li&gt;
+&lt;li&gt;a,b,c,d四台计算机,a向b发送数据,每台都能1接收到&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;关于广域网&#34;&gt;关于广域网&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;广域网采用的传输方式是&lt;strong&gt;存储转发式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;关于广播域和冲突域&#34;&gt;关于广播域和冲突域&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;广播域看路由器&lt;/li&gt;
+&lt;li&gt;冲突域看交换机,几个口就几个冲突域&lt;/li&gt;
+&lt;li&gt;VLAN可以隔离冲突域也可以隔离广播域&lt;/li&gt;
+&lt;li&gt;网桥可以互联不同的物理层,不同的MAC子层及不同速率的以太网&lt;/li&gt;
+&lt;li&gt;网桥可以过滤网段之间的数据但是不能过滤并有效阻止广播数据
+&lt;ol&gt;
+&lt;li&gt;第二层设备没法解决广播域的问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;网络层设备既可以隔离广播域又可以隔离冲突域&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;交换机&#34;&gt;交换机&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;直通式交换机只检查帧的目的地址,转发时延就是地址大小/带宽&lt;/li&gt;
+&lt;li&gt;交换机比集线器提供更好的网络性能的原因是交换机支持多对用户同时通信
+&lt;ol&gt;
+&lt;li&gt;交换机是隔离冲突域的,且是半双工通信,因此可以多对同时通信,而集线器下,都是一个冲突域,不能同时通信&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;对于10Mb/s的端口,半双工带宽为10Mb/s,全双工是20Mb/s&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/15/0TAnDU.png&#34; alt=&#34;0TAnDU.png&#34; loading=&#34;lazy&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;如果是全双工,每个连接点获得的带宽值就是20&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;如果一个结点向某个结点发送信息,所有的结点(包括自己)都能收到信息,但是如果各自连在某个交换机的口上,那么交换机只会向这个端口以外的端口转发(没有转发表)&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">第三章 数据链路层练习</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-san-zhang-shu-ju-lian-lu-ceng/"" data-c="
+          &lt;h2 id=&#34;1-数据链路层功能&#34;&gt;1 数据链路层功能&lt;/h2&gt;
+&lt;h2 id=&#34;成帧&#34;&gt;成帧&lt;/h2&gt;
+&lt;h2 id=&#34;差错控制&#34;&gt;差错控制&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/0ySkIx.png&#34; alt=&#34;0ySkIx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;流量控制&#34;&gt;流量控制&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/0yZuVO.png&#34; alt=&#34;0yZuVO.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;窗口大小都是固定的&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;单帧滑动窗口与停止等待协议&#34;&gt;单帧滑动窗口与停止等待协议&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/0yaSL8.png&#34; alt=&#34;0yaSL8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;多帧滑动窗口与后退n帧协议gbn&#34;&gt;多帧滑动窗口与后退N帧协议(GBN)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06PWSP.png&#34; alt=&#34;06PWSP.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06iKkd.png&#34; alt=&#34;06iKkd.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06Fy8I.png&#34; alt=&#34;06Fy8I.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06kuRI.png&#34; alt=&#34;06kuRI.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06AD1I.png&#34; alt=&#34;06AD1I.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06A53n.png&#34; alt=&#34;06A53n.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06AON4.png&#34; alt=&#34;06AON4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;多帧滑动窗口与选择重传协议sr&#34;&gt;多帧滑动窗口与选择重传协议(SR)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06VZoF.png&#34; alt=&#34;06VZoF.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06eJ8H.png&#34; alt=&#34;06eJ8H.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06eOqx.png&#34; alt=&#34;06eOqx.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06mVdf.png&#34; alt=&#34;06mVdf.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06nm0x.png&#34; alt=&#34;06nm0x.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/10/06mgYD.png&#34; alt=&#34;06mgYD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;介质访问控制&#34;&gt;介质访问控制&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0g89S0.png&#34; alt=&#34;0g89S0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;信道划分介质访问控制&#34;&gt;信道划分介质访问控制&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;FDM&lt;/li&gt;
+&lt;li&gt;TDM
+&lt;ol&gt;
+&lt;li&gt;注意STDM,使用集中器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;WDM&lt;/li&gt;
+&lt;li&gt;CDM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;随机访问介质访问控制&#34;&gt;随机访问介质访问控制&lt;/h3&gt;
+&lt;h4 id=&#34;aloha协议&#34;&gt;ALOHA协议&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gUBn0.png&#34; alt=&#34;0gUBn0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;csma协议carrier-sense-multiple-access载波侦听多路访问&#34;&gt;CSMA协议(Carrier Sense Multiple Access,载波侦听多路访问)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gakgs.png&#34; alt=&#34;0gakgs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;1-坚持CSMA&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gaJDx.png&#34; alt=&#34;0gaJDx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;非坚持CSMA&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gy4u4.png&#34; alt=&#34;0gy4u4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;p-坚持CSMA&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gyetx.png&#34; alt=&#34;0gyetx.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+缺点:冲突了还是会把数据发完,造成浪费&lt;/li&gt;
+&lt;li&gt;对比&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0g6C5t.png&#34; alt=&#34;0g6C5t.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;csmacdcollision-detection&#34;&gt;CSMA/CD(Collision Detection)&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/11/0gcGfP.png&#34; alt=&#34;0gcGfP.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0RUEkT.png&#34; alt=&#34;0RUEkT.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+书上的图只是为了得到2τ,CSMA/CD的根本目的为了在传输完成前就可以检测到碰撞进而停止发送,而不是让他们发送出去之后检测到碰撞&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0Rw4HI.png&#34; alt=&#34;0Rw4HI.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0R0mUx.png&#34; alt=&#34;0R0mUx.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0R03KH.png&#34; alt=&#34;0R03KH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;csmacacollision-avoidance&#34;&gt;CSMA/CA(Collision Avoidance)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0Rs4t1.png&#34; alt=&#34;0Rs4t1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;轮询访问介质访问控制令牌传递协议&#34;&gt;轮询访问介质访问控制:令牌传递协议&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0R2YZD.png&#34; alt=&#34;0R2YZD.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0RWoaF.png&#34; alt=&#34;0RWoaF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;小结&#34;&gt;小结&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0RgUg0.png&#34; alt=&#34;0RgUg0.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+只有第二类随机访问介质访问控制会产生冲突&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0RfCPH.png&#34; alt=&#34;0RfCPH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;局域网&#34;&gt;局域网&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0WlOL8.png&#34; alt=&#34;0WlOL8.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W1mFJ.png&#34; alt=&#34;0W1mFJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W3YuV.png&#34; alt=&#34;0W3YuV.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W333n.png&#34; alt=&#34;0W333n.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W8Svq.png&#34; alt=&#34;0W8Svq.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W8txI.png&#34; alt=&#34;0W8txI.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/0W86Rs.png&#34; alt=&#34;0W86Rs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;以太网&#34;&gt;以太网&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0f7qb9.png&#34; alt=&#34;0f7qb9.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0fHQbj.png&#34; alt=&#34;0fHQbj.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0fHaMF.png&#34; alt=&#34;0fHaMF.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0fHOsg.png&#34; alt=&#34;0fHOsg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ieee-80211&#34;&gt;IEEE 802.11&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0hpzGQ.png&#34; alt=&#34;0hpzGQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0h98IO.png&#34; alt=&#34;0h98IO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;广域网&#34;&gt;广域网&lt;/h2&gt;
+&lt;h3 id=&#34;ppp协议&#34;&gt;PPP协议&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;只支持全双工&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05wDWq.png&#34; alt=&#34;05wDWq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05wcOU.png&#34; alt=&#34;05wcOU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05yVSA.png&#34; alt=&#34;05yVSA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05yDfJ.png&#34; alt=&#34;05yDfJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;hdlc及对比总结&#34;&gt;HDLC及对比总结&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05gAW4.png&#34; alt=&#34;05gAW4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/05guex.png&#34; alt=&#34;05guex.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;数据链层设备&#34;&gt;数据链层设备&lt;/h2&gt;
+&lt;h3 id=&#34;物理层扩展&#34;&gt;物理层扩展&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0IavwQ.png&#34; alt=&#34;0IavwQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;网桥数据链层扩展&#34;&gt;网桥(数据链层扩展)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0IwSBD.png&#34; alt=&#34;0IwSBD.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0I0tzt.png&#34; alt=&#34;0I0tzt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;交换机&#34;&gt;交换机&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0I0jeO.png&#34; alt=&#34;0I0jeO.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0IBEm8.png&#34; alt=&#34;0IBEm8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;冲突域与广播域&#34;&gt;冲突域与广播域&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0IDdUg.png&#34; alt=&#34;0IDdUg.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+广播域看路由器&lt;br&gt;
+冲突域看交换机,几个口就几个冲突域&lt;br&gt;
+VLAN可以隔离冲突域也可以隔离广播域&lt;/p&gt;
+&lt;h3 id=&#34;小结-2&#34;&gt;小结&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/14/0IDgbT.png&#34; alt=&#34;0IDgbT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">计算机网络 第三章 数据链路层</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/wu-li-ceng-lian-xi/"" data-c="
+          &lt;h2 id=&#34;1-概念&#34;&gt;1 概念&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同步异步传输是通信方式不是传输方式,并行传输距离短速度快,串行传输距离长速度慢,计算机内部采用并行传输&lt;/li&gt;
+&lt;li&gt;以太网使用曼彻斯特编码,因此每位数据需要两个电平&lt;/li&gt;
+&lt;li&gt;为保证数据无差错地传送,不用选用的交换方式是电路交换&lt;/li&gt;
+&lt;li&gt;分组交换是对报文交换的改进,这种改进的直接结果是减少了传输时延&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;利用模拟通信信道传输数字信号的方法叫频带传输&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;报文交换不可以用于语音数据传输&lt;/li&gt;
+&lt;li&gt;利用一根同轴电缆,互连主机成以太网,通信方式为半双工&lt;/li&gt;
+&lt;li&gt;同轴电缆较双绞线带宽更高得益于它的高屏蔽性&lt;/li&gt;
+&lt;li&gt;中继器试讲衰减的信号进行还原和再生而&lt;strong&gt;并非简单的放大&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;两个网段在&lt;strong&gt;物理层&lt;/strong&gt;进行互联时要求数据传输率相同,但&lt;strong&gt;数据链路层的协议可以不同&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;数据传输率是对于物理层来说的&lt;/li&gt;
+&lt;li&gt;本层互联时只要求本层及本层以下的协议必须相同,本层及本层以上的协议可以不同&lt;/li&gt;
+&lt;li&gt;这一层相通只代表可以传输这一层的信号,以上层的不可以&lt;/li&gt;
+&lt;li&gt;如果说物理层设备连接的几个网段仍是一个局域网,就要求不能连接具有不同数据链路层协议的网段&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-计算&#34;&gt;2 计算&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;计算时注意奈氏准则和香农定理的共同限制,奈氏的可能隐藏信息(如出现多少进制)&lt;/li&gt;
+&lt;li&gt;P43/22注意一下&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rukef.png&#34; alt=&#34;0rukef.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这两题本质是一样的,都是将所有分组从发送端发送完后,分析最后一个分组,此时只要看最后一个分组需要再存储转发几次就可以&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;数据率=数据大小/时间
+&lt;ol&gt;
+&lt;li&gt;采样采的是帧&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+">物理层练习</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-er-zhang-wu-li-ceng/"" data-c="
           &lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/08/0wztSA.png&#34; alt=&#34;0wztSA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
@@ -1856,6 +2153,28 @@ k进制码元&lt;br&gt;
 同理,16进制的码元,离散状态有16个,代表16种高低不同的信号波形&lt;br&gt;
 0000  0001  0010 0011 0100  0101  0110  0111.....16个&lt;br&gt;
 因此每个码元带有4b的信息&lt;/p&gt;
+&lt;h2 id=&#34;奈氏与香农&#34;&gt;奈氏与香农&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/08/00jecq.png&#34; alt=&#34;00jecq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;基带信号与宽带信号&#34;&gt;基带信号与宽带信号&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/08/00vnGd.png&#34; alt=&#34;00vnGd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;编码与调制&#34;&gt;编码与调制&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/08/00xYm6.png&#34; alt=&#34;00xYm6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0BOTN4.png&#34; alt=&#34;0BOTN4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;电路交换报文交换分组交换&#34;&gt;电路交换,报文交换,分组交换&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0BjBFg.png&#34; alt=&#34;0BjBFg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;数据报虚电路&#34;&gt;数据报,虚电路&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0BxGrt.png&#34; alt=&#34;0BxGrt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0BxgaT.png&#34; alt=&#34;0BxgaT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;传输介质&#34;&gt;传输介质&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rNchq.png&#34; alt=&#34;0rNchq.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rtJzT.png&#34; alt=&#34;0rtJzT.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rNSf0.png&#34; alt=&#34;0rNSf0.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rNdc8.png&#34; alt=&#34;0rNdc8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;物理层设备&#34;&gt;物理层设备&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rdOg0.png&#34; alt=&#34;0rdOg0.png&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rwYqS.png&#34; alt=&#34;0rwYqS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;物理层部分总结&#34;&gt;物理层部分总结&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/09/0rBH4H.png&#34; alt=&#34;0rBH4H.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 ">计算机网络 第二章 物理层</a>
       </div>
       
@@ -2295,7 +2614,104 @@ buy into it:买账,认可&lt;br&gt;
 irony:讽刺&lt;br&gt;
 oriented:朝向,面向,导向,适应;确定方位;认识方向;熟悉;适应&lt;br&gt;
 importation:引进,输入&lt;br&gt;
-cover:投保&lt;/p&gt;
+cover:投保&lt;br&gt;
+sole:唯一的,仅有的&lt;br&gt;
+coax:劝诱,哄劝&lt;br&gt;
+bootcamp:训练营&lt;br&gt;
+chunk:厚块&lt;br&gt;
+brim:边缘&lt;br&gt;
+gear:齿轮,使适合于&lt;br&gt;
+curriculum:课程&lt;br&gt;
+pack:挤满,塞满&lt;br&gt;
+forge:形成,缔造(尤指与他人,团体或国家形成牢固的关系)&lt;br&gt;
+confrontational:对抗性的,挑起冲突的&lt;br&gt;
+designate:指定,认定&lt;br&gt;
+crack down on:严厉打击,镇压&lt;br&gt;
+prairie:(北美洲)大草原&lt;br&gt;
+stretch:延伸,绵延&lt;br&gt;
+prosecute:控告,指控&lt;br&gt;
+interim:临时的.过渡期的,暂时的&lt;br&gt;
+set aside:留出,省出&lt;br&gt;
+in the driver&#39;s seat:处于控制地位,主导地位&lt;br&gt;
+rhetoric:华而不实的言语,花言巧语,win-win ~:双赢的说辞&lt;br&gt;
+give-in:屈服的&lt;br&gt;
+mournfully:悲哀的,凄惨的&lt;br&gt;
+sufficient:足够的,充足的:别tm再忘了&lt;br&gt;
+cliché:陈词滥调,老生常谈&lt;br&gt;
+thorny:棘手的&lt;br&gt;
+odd:少量的,微少的&lt;br&gt;
+flywheel:飞轮,惯性轮&lt;br&gt;
+overwhelmingly:势不可挡地&lt;br&gt;
+incline:倾斜,倾向于&lt;br&gt;
+free up:腾出;时...可用&lt;br&gt;
+maximise:充分利用&lt;br&gt;
+instrumentally:起作用地,有帮助地&lt;br&gt;
+immerse:沉浸式的&lt;br&gt;
+conveyor belt:传送带&lt;br&gt;
+mind-set:思想倾向&lt;br&gt;
+slot in:安置,安排&lt;br&gt;
+ritualistic:仪式的,例行的&lt;br&gt;
+dip:浸,蘸&lt;br&gt;
+backdrop:背景:against a backdrop of:在...背景之下&lt;br&gt;
+poll:民意调查&lt;br&gt;
+strikingly:惹人注目地&lt;br&gt;
+generation line:代际线&lt;br&gt;
+prize:珍视,高度重视&lt;br&gt;
+prioritize:按优先顺序列出,确定(事项,问题)的优先顺序,优先考虑&lt;br&gt;
+aftermath:(战争,风暴,事故的)后果,余波&lt;br&gt;
+searing:炽热的,灼热的,剧痛的&lt;br&gt;
+converge:(观点,目标)趋同&lt;br&gt;
+somewhat:有点儿,有几分&lt;br&gt;
+signpost:路标,标志物&lt;br&gt;
+secure:(尤指经过努力)获得,取得,实现&lt;br&gt;
+technician:技师,技术人员&lt;br&gt;
+therapy:治疗,疗法&lt;br&gt;
+wellbeing:幸福&lt;br&gt;
+instinctively:本能地&lt;br&gt;
+have/get sth down to an art/a fine art = do sth very well&lt;br&gt;
+dictate:影响,决定,支配&lt;br&gt;
+suppress:抑制(感情)&lt;br&gt;
+take sth too far:将某事做的太过&lt;br&gt;
+end up doing:最终处于&lt;br&gt;
+brush/sweep sth under the carpet:掩盖某事,尤指错事&lt;br&gt;
+fiver:五美元&lt;br&gt;
+silver bullet:解决某一难题的良方,高招&lt;br&gt;
+indulge:沉溺于,沉湎于,纵情于&lt;br&gt;
+endorphin:内啡肽&lt;br&gt;
+fight off:抵挡,击退,竭力摆脱&lt;br&gt;
+spree:狂欢,作乐&lt;br&gt;
+side effect:副作用&lt;br&gt;
+an awful lot of:许多,多的可怕&lt;br&gt;
+have the luxury of:难的能享受某种机会&lt;br&gt;
+lure:诱使,引诱&lt;br&gt;
+volume:体积&lt;br&gt;
+sheer:十足的,彻底的,纯粹的&lt;br&gt;
+speculate:推测&lt;br&gt;
+capital:首都;国都;&lt;strong&gt;资本&lt;/strong&gt;;资金;启动资金;财富;财产adj.死刑的;大写的;顶好的;极好的&lt;br&gt;
+impoverished:贫困的&lt;br&gt;
+wasteland:荒地,不毛之地&lt;br&gt;
+the masses:普通老百姓&lt;br&gt;
+mutually exclusive:互相排斥&lt;br&gt;
+mortality:死亡人数&lt;br&gt;
+agonizing:痛苦难忍&lt;br&gt;
+follow from:是..的必然结果&lt;br&gt;
+vision:憧憬&lt;br&gt;
+end:目的&lt;br&gt;
+degrading:丧失体面的&lt;br&gt;
+overblow:夸张,过分渲染&lt;br&gt;
+lengthy:长时间的,冗长的&lt;br&gt;
+tricky:狡猾的&lt;br&gt;
+the demands of sth:困难的/烦人的/累人的事&lt;br&gt;
+counterbalance:使平衡,抵消&lt;/p&gt;
+&lt;h2 id=&#34;超高频&#34;&gt;超高频&lt;/h2&gt;
+&lt;p&gt;overwhelmingly:压倒性地,不可抵抗地&lt;br&gt;
+recession&lt;br&gt;
+prospect:前景,可能性,机会,希望&lt;br&gt;
+exclude:排除在外的&lt;br&gt;
+deny:否认&lt;br&gt;
+statistically:统计地&lt;br&gt;
+strikingly:惹人注目地&lt;br&gt;
+descent:体面的&lt;/p&gt;
 ">做题词汇积累</a>
       </div>
       
@@ -2624,6 +3040,30 @@ cover:投保&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;真理是一元的,价值是多元的&lt;/li&gt;
+&lt;li&gt;所有的意识&lt;strong&gt;都是&lt;/strong&gt;物质的反映&lt;/li&gt;
+&lt;li&gt;生产力中包含科技是对的,但说科技是生产力中的独立要素是错的,生产力的要素只有3个:劳动资料,劳动对象,劳动者&lt;/li&gt;
+&lt;li&gt;说科技是生产劳动中的决定性因素是对的,说是社会历史中的决定性因素是错的&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/12/024O1A.png&#34; alt=&#34;024O1A.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;属于上层建筑的社会意识就是意识形态&lt;/li&gt;
+&lt;li&gt;判断生产关系是不是先进就看能不能适应生产力发展,而&lt;strong&gt;判断上层建筑是不是先进要看他服务的经济基础是否适应生产力发展,如果适应,它就是先进的&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;不能说社会规律与自然规律都是自觉的
+&lt;ul&gt;
+&lt;li&gt;社会规律是自觉的&lt;/li&gt;
+&lt;li&gt;自然规律是&lt;strong&gt;自发的&lt;/strong&gt;,没有人参与其中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;人类的总体历史进程是不可超越的(不要觉得是错的)&lt;/li&gt;
+&lt;li&gt;剥削阶级也可以是人名群众&lt;/li&gt;
+&lt;li&gt;各种社会关系中，生产关系属于社会存在，政治关系、思想关系是社会存在的反映，不能列为社会存在
+&lt;ul&gt;
+&lt;li&gt;因此说社会存在不包括社会关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/13/0fDQHJ.png&#34; alt=&#34;0fDQHJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;物质资料的&lt;strong&gt;生产方式&lt;/strong&gt;构成了人类社会存在和发展的基础,集中体现着人类社会的&lt;strong&gt;物质性&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;区分社会经济时代的客观依据是生产工具的状况&lt;/li&gt;
+&lt;li&gt;社会发展是由多种力量决定的是错的,社会发展的决定力量是生产力&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 "> 政治知识点随手记</a>
       </div>
