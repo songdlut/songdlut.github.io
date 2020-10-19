@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-10-16T06:11:26.025Z</updated>
+    <updated>2020-10-19T06:45:28.608Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,190 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[第六章 应用层错题及知识点]]></title>
+        <id>https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng-cuo-ti-ji-zhi-shi-dian/</id>
+        <link href="https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng-cuo-ti-ji-zhi-shi-dian/">
+        </link>
+        <updated>2020-10-19T00:29:34.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>域名和IP地址,MAC地址,主机<strong>都不是</strong>一一对应关系</li>
+<li>采用迭代的方式查询,本地域名服务器最少查询0次,最多查询4次
+<ol>
+<li>有缓存,0次</li>
+<li>根-&gt;顶级-&gt;权限-&gt;权限:因为这里是www.abc.xyz.com所以2个权限域名服务器</li>
+</ol>
+</li>
+<li>采用递归方法解析,主机和本地域名服务器请求都是1次</li>
+<li>每台主机都必须在授权域名服务器登记,授权域名服务器总能将其管辖的主机名转换为该主机的IP地址</li>
+<li>DNS名字/名称就是指域名</li>
+<li>用LIST命令传回的列表信息也是通过数据连接返回的,不是控制连接</li>
+<li>FTP不适合两个计算机之间共享读写文件</li>
+<li>匿名FTP访问通常使用<strong>anonymous</strong>作为用户名</li>
+<li>POP协议,服务器的邮件删不删是由客户端决定的</li>
+<li>POP发送的东西是不加密的,密码也是</li>
+</ol>
+<h2 id="关于http部分的">关于HTTP部分的</h2>
+<ol>
+<li>HEAD方法,服务器可对HTTP报文进行响应,但不会返回请求对象,作用主要是调试</li>
+<li>Cookie是服务器产生的,存储在客户端</li>
+<li>非持续连接对于每次请求都建立一次TCP连接,一个页面包含100个图像,则建立了101次</li>
+<li>Connection:连接方式
+<ol>
+<li>close:非持续连接</li>
+<li>keep-alive:持续连接</li>
+</ol>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第六章 应用层]]></title>
+        <id>https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng/</id>
+        <link href="https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng/">
+        </link>
+        <updated>2020-10-18T12:59:30.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="网络模型">网络模型</h2>
+<p><img src="https://s1.ax1x.com/2020/10/18/0jJaAf.png" alt="0jJaAf.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0jYlV0.png" alt="0jYlV0.png" loading="lazy"></p>
+<h2 id="dns">DNS</h2>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/0jt8eI"><img src="https://s1.ax1x.com/2020/10/18/0jt8eI.png" alt="0jt8eI.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="2"><a href="https://imgchr.com/i/0jNk9S"><img src="https://s1.ax1x.com/2020/10/18/0jNk9S.png" alt="0jNk9S.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="3"><a href="https://imgchr.com/i/0jN4C8"><img src="https://s1.ax1x.com/2020/10/18/0jN4C8.png" alt="0jN4C8.png" loading="lazy"></a></figure>
+<h2 id="ftp">FTP</h2>
+<p>FTP:File Transfer Protocol<br>
+TFTP:Trivial File Transfer Protocol,简单文件传输协议</p>
+<figure data-type="image" tabindex="4"><a href="https://imgchr.com/i/0vn759"><img src="https://s1.ax1x.com/2020/10/19/0vn759.png" alt="0vn759.png" loading="lazy"></a></figure>
+<p><a href="https://imgchr.com/i/0vuOij"><img src="https://s1.ax1x.com/2020/10/19/0vuOij.png" alt="0vuOij.png" loading="lazy"></a><br>
+主动:建立连接后,S主动告诉C是20端口发送数据<br>
+被动:建立连接后,C问S,S告诉一个端口号<br>
+<a href="https://imgchr.com/i/0vKPwF"><img src="https://s1.ax1x.com/2020/10/19/0vKPwF.png" alt="0vKPwF.png" loading="lazy"></a></p>
+<h2 id="电子邮件">电子邮件</h2>
+<figure data-type="image" tabindex="5"><a href="https://imgchr.com/i/0v1GE8"><img src="https://s1.ax1x.com/2020/10/19/0v1GE8.png" alt="0v1GE8.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="6"><a href="https://imgchr.com/i/0v1p9J"><img src="https://s1.ax1x.com/2020/10/19/0v1p9J.png" alt="0v1p9J.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="7"><a href="https://imgchr.com/i/0v1ags"><img src="https://s1.ax1x.com/2020/10/19/0v1ags.png" alt="0v1ags.png" loading="lazy"></a></figure>
+<h3 id="smtpsimple-mail-transfer-protocol">SMTP:Simple Mail Transfer Protocol</h3>
+<figure data-type="image" tabindex="8"><a href="https://imgchr.com/i/0v3rQA"><img src="https://s1.ax1x.com/2020/10/19/0v3rQA.png" alt="0v3rQA.png" loading="lazy"></a></figure>
+<blockquote>
+<p>** 注意**<br>
+端口587只应用于提交（即，邮件客户端到邮件服务器）<br>
+端口25只应用于中继（即，邮件服务器到邮件服务器通信</p>
+</blockquote>
+<figure data-type="image" tabindex="9"><a href="https://imgchr.com/i/0v3IQs"><img src="https://s1.ax1x.com/2020/10/19/0v3IQs.png" alt="0v3IQs.png" loading="lazy"></a></figure>
+<h3 id="pop3post-office-protocol">POP3:Post Office Protocol</h3>
+<figure data-type="image" tabindex="10"><a href="https://imgchr.com/i/0v8SyR"><img src="https://s1.ax1x.com/2020/10/19/0v8SyR.png" alt="0v8SyR.png" loading="lazy"></a></figure>
+<h3 id="imapinternet-message-access-protocol因特网报文存取协议">IMAP:Internet Message Access Protocol(因特网报文存取协议)</h3>
+<figure data-type="image" tabindex="11"><a href="https://imgchr.com/i/0v8eld"><img src="https://s1.ax1x.com/2020/10/19/0v8eld.png" alt="0v8eld.png" loading="lazy"></a></figure>
+<h3 id="基于万维网的电子邮件">基于万维网的电子邮件</h3>
+<p><a href="https://imgchr.com/i/0v8amq"><img src="https://s1.ax1x.com/2020/10/19/0v8amq.png" alt="0v8amq.png" loading="lazy"></a><br>
+只有中继地时候才用SMTP,其余的是http协议</p>
+<h2 id="万维网wwwworld-wide-web">万维网(www):World Wide Web</h2>
+<p><a href="https://imgchr.com/i/0vGe4U"><img src="https://s1.ax1x.com/2020/10/19/0vGe4U.png" alt="0vGe4U.png" loading="lazy"></a><br>
+URL:Uniform Resource Locator:统一资源定位符<br>
+HTML:HyperText Makeup Language:超文本标记语言<br>
+HTTP:HyperText Transfer Protocol</p>
+<h3 id="http">HTTP</h3>
+<figure data-type="image" tabindex="12"><a href="https://imgchr.com/i/0v098P"><img src="https://s1.ax1x.com/2020/10/19/0v098P.png" alt="0v098P.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="13"><a href="https://imgchr.com/i/0v0ZUs"><img src="https://s1.ax1x.com/2020/10/19/0v0ZUs.png" alt="0v0ZUs.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="14"><a href="https://imgchr.com/i/0v0lKU"><img src="https://s1.ax1x.com/2020/10/19/0v0lKU.png" alt="0v0lKU.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="15"><a href="https://imgchr.com/i/0v0NP1"><img src="https://s1.ax1x.com/2020/10/19/0v0NP1.png" alt="0v0NP1.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="16"><a href="https://imgchr.com/i/0v05qg"><img src="https://s1.ax1x.com/2020/10/19/0v05qg.png" alt="0v05qg.png" loading="lazy"></a></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第五章 传输层知识点及错题]]></title>
+        <id>https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/</id>
+        <link href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/">
+        </link>
+        <updated>2020-10-18T02:05:03.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>TCP保证可靠且<strong>顺序</strong>交付</li>
+<li>TCP并没有要求网络层必须使用虚电路,TCP不影响网络层提供无连接服务</li>
+<li>UDP接受到有差错的数据就<strong>直接丢弃</strong>,不要选忽略差错</li>
+<li>当一个IP数据报分成了4片,第一次传过去后两片到了(在缓存区),前两片丢失,第二次前两片到了,后两片丢失,那么能否组成原来的IP数据报
+<ol>
+<li>是不可以的,第一次和第二次分片的标识部分变了,无法识别成一个数据报</li>
+</ol>
+</li>
+<li><strong>根据2019年408真题选择38题可知,快速重传的3个冗余ACK并不是指共四个,就是3个</strong></li>
+<li>客户端和服务器端都可以提出释放连接</li>
+<li>TCP滑动窗口中,规定重传分组的数量最多是<strong>等于滑动窗口的大小</strong></li>
+<li>滑动窗口的值太大,会导致传送数据太多,路由器拥挤,造成丢失</li>
+<li>拥塞窗口是<strong>发送端</strong>根据网络拥塞情况确定的窗口值<br>
+10.使用两台主机已经建立TCP连接的端口再建立连接,会建立失败,不影响先建立连接的传输</li>
+</ol>
+<h2 id="已知接收窗口大小问可发送多少">已知接收窗口大小,问可发送多少</h2>
+<ol>
+<li>单位B,切记,别弄成多少TCP报文段了</li>
+<li>注意问的是有没有收到报文段
+<ol>
+<li>未收到报文段,就是接收窗口大小</li>
+<li>收到了,比如接收窗口5000B,发送窗口连着发两个,一个1000B,一个3000B,收到1000B的确认,那么还可以继续发送的:5000B-3000B=2000B</li>
+</ol>
+</li>
+</ol>
+<h2 id="问拥塞窗口大小的或者变形类的问经历多少时间也就是多少ttl本质一样">问拥塞窗口大小的(或者变形类的,问经历多少时间也就是多少TTL本质一样)</h2>
+<h3 id="注意分辨是哪种">注意分辨是哪种</h3>
+<ol>
+<li>题目给的超时<br>
+那么就是慢启动+拥塞避免算法:降到1开始,先慢启动再拥塞避免,注意2倍大于阈值时得取为阈值然后开始使用拥塞避免算法</li>
+<li>题目说收到3个冗余ACK报文<br>
+那么就是快重传+快恢复:降到产生拥塞时的一半开始拥塞避免算法</li>
+</ol>
+<h3 id="注意点">注意点</h3>
+<ol>
+<li>核心点是要知道每次增加(不管翻倍还是增1),都是在一个TTL完成后</li>
+<li>根据1,如果问的是第n次开始传输时大小为多少,那么算的是n-1个TTL后的大小</li>
+<li>如果问拥塞窗口为XXX的时候,经历的时间,本质是一样的</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第五章 传输层]]></title>
+        <id>https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng/</id>
+        <link href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng/">
+        </link>
+        <updated>2020-10-18T01:24:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概述">概述</h2>
+<p><img src="https://s1.ax1x.com/2020/10/18/0OXJRP.png" alt="0OXJRP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OX7z6.png" alt="0OX7z6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OjSJI.png" alt="0OjSJI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OjAeg.png" alt="0OjAeg.png" loading="lazy"></p>
+<h2 id="udp">UDP</h2>
+<p><img src="https://s1.ax1x.com/2020/10/18/0OjLpq.png" alt="0OjLpq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OvUEQ.png" alt="0OvUEQ.png" loading="lazy"><br>
+源端口可以没有(如果不希望对方回信),全0<br>
+<img src="https://s1.ax1x.com/2020/10/18/0Ozxnf.png" alt="0Ozxnf.png" loading="lazy"><br>
+二进制反码就是最高位如果进位,则将进位的1移到最低位,再求和</p>
+<pre><code>1100
+1011
+_____
+0111
+0001(进的位到最低位再求和)
+_____
+1000
+</code></pre>
+<p><strong>最后几部分求和的结果再取反才是校验和</strong></p>
+<h2 id="tcp">TCP</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/18/0XJOoT.png" alt="0XJOoT.png" loading="lazy"></figure>
+<h3 id="格式">格式:</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0XYFw6.png" alt="0XYFw6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XYu6A.png" alt="0XYu6A.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XY8k8.png" alt="0XY8k8.png" loading="lazy"></p>
+<h3 id="tcp连接管理">TCP连接管理</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0XaN5V.png" alt="0XaN5V.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XaoqA.png" alt="0XaoqA.png" loading="lazy"></p>
+<h3 id="tcp连接释放">TCP连接释放</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/18/0Xd6yQ.png" alt="0Xd6yQ.png" loading="lazy"></figure>
+<h3 id="tcp可靠传输">TCP可靠传输</h3>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/18/0XBvYq.png" alt="0XBvYq.png" loading="lazy"></figure>
+<h3 id="tcp流量控制">TCP流量控制</h3>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/18/0XskJ1.png" alt="0XskJ1.png" loading="lazy"></figure>
+<h3 id="tcp拥塞控制">TCP拥塞控制</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0X6YVg.png" alt="0X6YVg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0X67ZD.png" alt="0X67ZD.png" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第四章 网络层知识点及错题整理]]></title>
         <id>https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/</id>
@@ -21,6 +205,53 @@
 <li>网络中发生了拥塞根据是随着通信子网负载的增加,吞吐量反而降低</li>
 <li>网络的异构性是指传输介质,数据编码方式,链路控制协议及不同的数据单元格式和转发机制,这些都是在数据链路层和物理层</li>
 <li>MTU不是帧长度,而是帧的数据部分1500那个</li>
+<li>UDP是传输层的</li>
+<li>RARP(Reverse Address Resolution Protocol ):逆地址解析协议</li>
+<li>与分片和重组无关的是总长度,标识需要判断是否为一个分片</li>
+<li>把IP网络划分成子网,这样做的好处是减少广播域的大小</li>
+<li>DF=1,分组长度超过MTU时丢弃该分组,<strong>且向源主机报告</strong></li>
+<li>子网划分,CIDR,NAT都只能缓解IPv4地址耗尽的危机,提高利用率,治本的还是使用IPv6</li>
+<li>CIDR的作用是把小的网络汇聚成大的超网</li>
+<li>一道比较好的题</li>
+</ol>
+<blockquote>
+<p><img src="https://s1.ax1x.com/2020/10/16/0b9Dl6.png" alt="0b9Dl6.png" loading="lazy"><br>
+224说明到前27位,第四个字节借了3位用作子网,可以划分8个<br>
+000|00001    1<br>
+000|11110    30:202.3.1.1~202.3.1.30为第一个,全1和全0都不可以分配<br>
+001|00001    33<br>
+001|11110    62:33~62第二个,可以看到ACD都是在这个范围内<br>
+010|00001    65 //B属于这个段<br>
+..........</p>
+</blockquote>
+<ol start="13">
+<li>NAT添加表项需要管理员配置,因此来了一个新的分组,找不到表项,就会丢弃不转发</li>
+<li>2019真题<img src="https://s1.ax1x.com/2020/10/17/0q7pv9.png" alt="0q7pv9.png" loading="lazy"><img src="https://s1.ax1x.com/2020/10/17/0q7mgH.png" alt="0q7mgH.png" loading="lazy"></li>
+<li>OSPF划分区域使得交换的信息减少了</li>
+<li>RIP中,距离值为16表示该网络不可达</li>
+<li>所谓路由收敛是指当路由环境变化之后,各路由器调整自己的路由表以适应网络拓扑结构的变化,最终达到稳定状态(也就是路由表与网络拓扑状态保持一致)
+<ol>
+<li>收敛越快,路由器就能越快适应网络拓扑结构的变化</li>
+</ol>
+</li>
+<li>keepalive是BGP的报文
+<ol>
+<li>Open</li>
+<li>Update</li>
+<li>Keepalive</li>
+<li>Notification</li>
+</ol>
+</li>
+<li>hello是OSPF的报文,用来发现和维持邻站的可达性</li>
+<li>多个单播仿真组播时
+<ol>
+<li>需要的带宽多于组播,但是组播的带宽小于多个组播之和</li>
+<li>时延很大,处理一个组播分组的时延很小</li>
+</ol>
+</li>
+<li>移动IP移到外网时,既不能直接接收数据,也不能发送,都要本地代理转到外部代理</li>
+<li>添加路由表项的题目,如果看到要到所有子网,一定要想着合并路由(超网)</li>
+<li></li>
 </ol>
 ]]></content>
     </entry>
@@ -66,6 +297,43 @@ ICMP差错报告报文就是IP数据报的数据部分<br>
 <img src="https://s1.ax1x.com/2020/10/16/0H0mLt.png" alt="0H0mLt.png" loading="lazy"><br>
 最后两种不再使用了<br>
 <img src="https://s1.ax1x.com/2020/10/16/0H0tLq.png" alt="0H0tLq.png" loading="lazy"></p>
+<h2 id="ipv6">IPv6</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0qHjl4.png" alt="0qHjl4.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0qHUJO.png" alt="0qHUJO.png" loading="lazy"></p>
+<h2 id="rip">RIP</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0LVOyj.png" alt="0LVOyj.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LVBe1.png" alt="0LVBe1.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LVOyj.png" alt="0LVOyj.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LM03V.png" alt="0LM03V.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LMDjU.png" alt="0LMDjU.png" loading="lazy"></p>
+<h2 id="ospfopen-shortest-path-first">OSPF(Open Shortest Path First)</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0LlYYn.png" alt="0LlYYn.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0Llcf1.png" alt="0Llcf1.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L3MVg.png" alt="0L3MVg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L3Jx0.png" alt="0L3Jx0.png" loading="lazy"></p>
+<h2 id="bgpborder-gateway-protocol">BGP(Border Gateway Protocol)</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0L3cM6.png" alt="0L3cM6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L8Hh9.png" alt="0L8Hh9.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LwET0.png" alt="0LwET0.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LwYtK.png" alt="0LwYtK.png" loading="lazy"></p>
+<h2 id="ip组播多播">IP组播(多播)</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0LDyA1.png" alt="0LDyA1.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L4But.png" alt="0L4But.png" loading="lazy"></p>
+<h2 id="igmp与组播路由算法">IGMP与组播路由算法</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0L4YND.png" alt="0L4YND.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L4c4g.png" alt="0L4c4g.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0L47UU.png" alt="0L47UU.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LItld.png" alt="0LItld.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LIclj.png" alt="0LIclj.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LIh7V.png" alt="0LIh7V.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LIohF.png" alt="0LIohF.png" loading="lazy"></p>
+<h2 id="移动ip">移动IP</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0O9Dr6.png" alt="0O9Dr6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0LIohF.png" alt="0LIohF.png" loading="lazy"></p>
+<h2 id="网络层设备">网络层设备</h2>
+<p><img src="https://s1.ax1x.com/2020/10/17/0OFq00.png" alt="0OFq00.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0OkzUf.png" alt="0OkzUf.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/17/0OFsld.png" alt="0OFsld.png" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -362,295 +630,6 @@ k进制码元<br>
 <img src="https://s1.ax1x.com/2020/10/09/0rwYqS.png" alt="0rwYqS.png" loading="lazy"></p>
 <h2 id="物理层部分总结">物理层部分总结</h2>
 <figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2020/10/09/0rBH4H.png" alt="0rBH4H.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[英语翻译笔记]]></title>
-        <id>https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/</id>
-        <link href="https://songdlut.github.io/post/ying-yu-fan-yi-bi-ji/">
-        </link>
-        <updated>2020-10-08T01:22:04.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-一些单词的误译">1 一些单词的误译</h2>
-<p>town:是城镇,而不是乡下</p>
-<h2 id="2-常见的短语">2 常见的短语</h2>
-<p>think about:一般开头作为祈使句时,想带读者进入虚拟场景,翻译成<strong>试想</strong><br>
-twist and turn:曲曲弯弯,迂回曲折<br>
-know...like the back of one's hand:对...十分熟悉,<strong>了如指掌</strong><br>
-well-travelled:经常旅行的,去过很多地方的(指人),频繁经过的<br>
-come to:偏口语化的表达,翻译时弱化或省去</p>
-<h2 id="3-一些转折的连词">3 一些转折的,连词</h2>
-<p>afterwards:以后,后来<br>
-after all:毕竟,终究</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 第一章 题目整理]]></title>
-        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/</id>
-        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ti-mu-zheng-li/">
-        </link>
-        <updated>2020-10-07T13:08:36.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-概念部分">1 概念部分</h2>
-<ul>
-<li>局域网接入广域网是通过路由器实现的</li>
-<li>附加信息开销大事分组交换网络的缺点</li>
-<li>计算机网络的拓扑结构主要取决于它的<strong>通信子网</strong></li>
-<li>城域网采用的技术与局域网相似,只是大一些</li>
-<li>局域网和广域网的差异:
-<ul>
-<li>覆盖范围不同</li>
-<li>使用的协议不同,局域网只要下两层就行,没有路由器</li>
-<li>采用的技术不同:局域网:广播技术,广域网:交换技术</li>
-<li><strong>没有特地强调通信容量的差别</strong></li>
-</ul>
-</li>
-<li>计算机网络中的资源一定要选全,硬件软件都要包含</li>
-<li>计算机网络中可以没有数据库管理系统</li>
-</ul>
-<h2 id="2-参考模型部分">2 参考模型部分</h2>
-<ol>
-<li><strong>定义功能执行的方法</strong>不是对网络模型进行分层的目标
-<ol>
-<li>注意:具体内部细节实现的都不属于体系结构中</li>
-</ol>
-</li>
-<li>因特网采用的核心技术是<strong>TCP/IP</strong></li>
-<li>集线器应用在物理层</li>
-<li>(☆)噪声使得传输链路上的一个0变成1,或1变0这样的差错<strong>发生在物理层</strong>,<strong>纠正在数据链路层</strong></li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计算机网络 第一章 计算机网络体系结构]]></title>
-        <id>https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/</id>
-        <link href="https://songdlut.github.io/post/ji-suan-ji-wang-luo-di-yi-zhang-ji-suan-ji-wang-luo-ti-xi-jie-gou/">
-        </link>
-        <updated>2020-10-07T06:41:52.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/10/07/0aIHKA.png" alt="0aIHKA.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/07/0dSf9s.png" alt="0dSf9s.png" loading="lazy"></p>
-<h2 id="1-计算机网络概述">1 计算机网络概述</h2>
-<h3 id="1-计算机网络的概念">1 计算机网络的概念</h3>
-<p><img src="https://s1.ax1x.com/2020/10/07/0aINBq.png" alt="0aINBq.png" loading="lazy"><br>
-ISP:因特网服务提供商<br>
-<img src="https://s1.ax1x.com/2020/10/07/0aIfUK.png" alt="0aIfUK.png" loading="lazy"></p>
-<h3 id="2-组成功能分类">2 组成,功能,分类</h3>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/07/0aqyvD.png" alt="0aqyvD.png" loading="lazy"></figure>
-<ul>
-<li>终端,服务器,工作站,共享的打印机等设备以及相关软件都属于资源子网</li>
-<li>网卡,线缆,路由器,网桥等都是通信子网</li>
-</ul>
-<h3 id="3-计算机网络的标准化工作及相关组织">3 计算机网络的标准化工作及相关组织</h3>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/07/0a7FhT.png" alt="0a7FhT.png" loading="lazy"></figure>
-<h3 id="4-性能指标">4 性能指标</h3>
-<ol>
-<li>
-<p>速率<br>
-<img src="https://s1.ax1x.com/2020/10/07/0a7I8U.png" alt="0a7I8U.png" loading="lazy"><br>
-注意:换算比例</p>
-</li>
-<li>
-<p>带宽</p>
-</li>
-<li>
-<p>吞吐量</p>
-</li>
-<li>
-<p>时延</p>
-<ol>
-<li>发送时延</li>
-<li>传播时延</li>
-<li>处理时延</li>
-<li>排队时延</li>
-</ol>
-</li>
-<li>
-<p>时延带宽积<br>
-以比特为单位的链路长度</p>
-</li>
-<li>
-<p>往返时延RTT<br>
-2*传播时延+题目给的其他的</p>
-</li>
-<li>
-<p>信道利用率<br>
-<img src="https://s1.ax1x.com/2020/10/07/0dCUNF.png" alt="0dCUNF.png" loading="lazy"></p>
-</li>
-</ol>
-<h2 id="2-osi七层模型tcpip模型">2 OSI七层模型,TCP/IP模型</h2>
-<h3 id="osi">OSI</h3>
-<h4 id="1-应用层">1 应用层</h4>
-<ol>
-<li>用户与网络的界面,所有能和用户交互产生网络流量的程序</li>
-<li>协议:SMTP,FTP,HTTP</li>
-</ol>
-<h4 id="2-表示层">2 表示层</h4>
-<ol>
-<li>主要处理在两个通信系统中交换信息的表示方式</li>
-<li>功能:
-<ol>
-<li>数据格式转化:01010001=&gt;XXXX</li>
-<li>数据加解密</li>
-<li>数据压缩和恢复</li>
-</ol>
-</li>
-<li>主要协议:JPEG,ASCII</li>
-</ol>
-<h4 id="3-会话层">3 会话层</h4>
-<ol>
-<li>向表示层实体/用户进程提供建立连接并在连接上有序地传输数据</li>
-<li>功能:
-<ol>
-<li>建立,管理,终止会话</li>
-<li>使用校验点使会话在通信失效时从校验点继续恢复通信,实现数据同步</li>
-</ol>
-</li>
-<li>协议:ADSP,ASP</li>
-</ol>
-<h4 id="4-传输层">4 传输层</h4>
-<ol>
-<li>负责主机中两个<strong>进程间的</strong>通信,即实现端到端的通信.传输单位是报文段或用户数据段.</li>
-<li>功能:
-<ol>
-<li>可靠传播,不可靠传播</li>
-<li>差错控制</li>
-<li>流量控制(速度时都匹配)</li>
-<li>复用分用
-<ol>
-<li>多个应用层进程同时使用传输层的服务</li>
-<li>传输层把收到的信息分别给应用层的相应进程</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>协议:TCP,UDP</li>
-</ol>
-<h4 id="5-网络层">5 网络层</h4>
-<ol>
-<li>主要任务是把<strong>分组</strong>从源端传到目的端,为分组交换网上的主机提供通信服务,传输单位是数据报</li>
-<li>功能:
-<ol>
-<li>路由选择(最佳路径)</li>
-<li>流量控制</li>
-<li>差错控制</li>
-<li>拥塞控制:拥塞状态:所有结点都来不及接受分组,而要丢弃大量分组的话,网络就处于拥塞状态</li>
-</ol>
-</li>
-<li>协议:IP,IPX,ICMP,IGMP,ARP,PARP,OSPF</li>
-</ol>
-<h4 id="6-数据链路层">6 数据链路层</h4>
-<ol>
-<li>主要把网络层的数据报组装成帧</li>
-<li>功能:
-<ol>
-<li>成帧(定义帧的开始和结束)</li>
-<li>差错控制:帧错+位错</li>
-<li>流量控制</li>
-<li>访问(接入)控制:控制对信道的访问(广播式的网络中)</li>
-</ol>
-</li>
-<li>协议:HDLC,SDLC,PPP,STP</li>
-</ol>
-<h4 id="7-物理层">7 物理层</h4>
-<ol>
-<li>在物理媒体上实现比特流的<strong>透明传输</strong>,传输单位是比特
-<ol>
-<li>透明传输:指不管所传数据是什么样的比特组合,都应当能在链路上传送</li>
-</ol>
-</li>
-<li>功能:
-<ol>
-<li>定义接口特性</li>
-<li>定义传输模式:单工,双工,半双工</li>
-<li>定义传输速率</li>
-<li>比特同步</li>
-<li>比特编码</li>
-</ol>
-</li>
-<li>协议:Rj45,802.3</li>
-<li>DCE/DTE[https://blog.csdn.net/kunkliu/article/details/79807673]</li>
-</ol>
-<h3 id="tcpip">TCP/IP</h3>
-<h4 id="概念">概念</h4>
-<h4 id="与osi相同">与OSI相同</h4>
-<ol>
-<li>都分层</li>
-<li>都基于独立的协议栈的概念</li>
-<li>可以实现异构网络互联</li>
-</ol>
-<h4 id="与osi差异">与OSI差异</h4>
-<ol>
-<li>OSI定义了:协议,接口,服务</li>
-<li>OSI先出现,参考模型先于协议发明,不偏向特定协议</li>
-<li>TCP/IP设计之初就考虑到异构网互联问题,将IP作为重要层次</li>
-<li><img src="https://s1.ax1x.com/2020/10/08/0wTjje.png" alt="0wTjje.png" loading="lazy"></li>
-</ol>
-<h3 id="五层参考模型">五层参考模型</h3>
-<p><img src="https://s1.ax1x.com/2020/10/08/0w7AgS.png" alt="0w7AgS.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/08/0w7W5t.png" alt="0w7W5t.png" loading="lazy"></p>
-<h2 id="总结">总结</h2>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/08/0wHHSK.png" alt="0wHHSK.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第三章 内存管理之虚拟内存管理]]></title>
-        <id>https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/</id>
-        <link href="https://songdlut.github.io/post/di-san-zhang-nei-cun-guan-li-zhi-xu-ni-nei-cun-guan-li/">
-        </link>
-        <updated>2020-10-03T11:01:45.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-基本概念">1 基本概念</h2>
-<h3 id="总览">总览</h3>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/03/0329rn.png" alt="0329rn.png" loading="lazy"></figure>
-<h2 id="传统存储管理的特征">传统存储管理的特征</h2>
-<ol>
-<li>一次性</li>
-<li>驻留性</li>
-</ol>
-<h3 id="局部性原理">局部性原理</h3>
-<ol>
-<li>时间局部性原理</li>
-<li>空间局部性原理</li>
-</ol>
-<h3 id="虚拟存储器的定义和特征">虚拟存储器的定义和特征</h3>
-<ol>
-<li>多次性</li>
-<li>对换性</li>
-<li>虚拟性</li>
-</ol>
-<h3 id="虚拟存储技术的实现">虚拟存储技术的实现</h3>
-<p>需要的功能:请求调页(段)功能,页面置换功能</p>
-<ol>
-<li>请求分页存储管理</li>
-<li>请求分段存储管理</li>
-<li>请求段页式存储管理<br>
-注意前面传统的都叫<strong>基本XXXX</strong><br>
-需要的支持:</li>
-<li>一定容量的内存和外存</li>
-<li>页表机制(或段表机制),作为主要数据结构</li>
-<li>中断机制</li>
-<li>地址变换机构</li>
-</ol>
-<h2 id="2-请求分页管理方式">2 请求分页管理方式</h2>
-<h3 id="1-页表机制">1 页表机制</h3>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/03/035VG6.png" alt="035VG6.png" loading="lazy"></figure>
-<h3 id="2-缺页中断机构">2 缺页中断机构</h3>
-<p><img src="https://s1.ax1x.com/2020/10/03/03omHH.png" alt="03omHH.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/03/08pP1g.png" alt="08pP1g.png" loading="lazy"></p>
-<h3 id="3-地址变换机构">3 地址变换机构</h3>
-<p><img src="https://s1.ax1x.com/2020/10/03/08pmNV.png" alt="08pmNV.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/03/08pYAx.png" alt="08pYAx.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/03/08pHU0.png" alt="08pHU0.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/03/089A2D.png" alt="089A2D.png" loading="lazy"><br>
-注意:调页后还是再次查快表</p>
-<h3 id="4-小结">4 小结</h3>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/03/08Cot0.png" alt="08Cot0.png" loading="lazy"></figure>
-<h2 id="3-页面置换算法">3 页面置换算法</h2>
-<h3 id="1-最佳opt置换算法">1 最佳(OPT)置换算法</h3>
-<h3 id="2-先进先出fifo页面置换算法">2 先进先出(FIFO)页面置换算法</h3>
-<h3 id="3-最近最久未使用lru置换算法">3 最近最久未使用(LRU)置换算法</h3>
-<h3 id="时钟clock置换算法">时钟(CLOCK)置换算法</h3>
-<h2 id="4-页面分配策略">4 页面分配策略</h2>
-<h2 id="5-抖动">5 抖动</h2>
-<h2 id="6-工作集">6 工作集</h2>
-<h2 id="7-地址翻译">7 地址翻译</h2>
 ]]></content>
     </entry>
 </feed>

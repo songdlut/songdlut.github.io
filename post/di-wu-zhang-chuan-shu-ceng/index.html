@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第二章 进程线程概念部分错题及重要知识点 | 宋宇航的博客</title>
+<title>第五章 传输层 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1603089587164">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="第二章 进程线程概念部分错题及重要知识点" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="第五章 传输层" />
+  <meta name="keywords" content="计算机网络" />
 </head>
 
 <body>
@@ -261,8 +261,18 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E9%80%89%E6%8B%A9%E9%A2%98">选择题</a></li>
-<li><a href="#%E7%AE%80%E7%AD%94%E9%A2%98">简答题</a></li>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a></li>
+<li><a href="#udp">UDP</a></li>
+<li><a href="#tcp">TCP</a>
+<ul>
+<li><a href="#%E6%A0%BC%E5%BC%8F">格式:</a></li>
+<li><a href="#tcp%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86">TCP连接管理</a></li>
+<li><a href="#tcp%E8%BF%9E%E6%8E%A5%E9%87%8A%E6%94%BE">TCP连接释放</a></li>
+<li><a href="#tcp%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93">TCP可靠传输</a></li>
+<li><a href="#tcp%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6">TCP流量控制</a></li>
+<li><a href="#tcp%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6">TCP拥塞控制</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -530,8 +540,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/">
-      第二章 进程线程概念部分错题及重要知识点
+    <a class="post-title-link" href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng/">
+      第五章 传输层
     </a>
   </h1>
   <div class="post-meta">
@@ -539,23 +549,36 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-07-11</span>
+      <span>2020-10-18</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/">
+        <span>计算机网络</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>14<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3995<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>112<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/" data-flag-title="第二章 进程线程概念部分错题及重要知识点" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-wu-zhang-chuan-shu-ceng/" data-flag-title="第五章 传输层" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -564,206 +587,44 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="选择题">选择题</h2>
-<ul>
-<li>线程<strong>没有</strong>自己独立的地址空间,同一进程的多个线程共享其地址空间</li>
-<li>线程包含CPU现场,是处理机调度的基本单位,可以独立执行程序</li>
-<li>进程和程序的根本区别是<strong>静态和动态特点</strong>k</li>
-<li>优先级分静态和动态两种</li>
-<li>在单处理器中,任何时刻都只有一个进程处于运行态是<strong>错的</strong>
-<ul>
-<li>系统死锁全部是阻塞态或者无进程</li>
-</ul>
-</li>
-<li>在进程的整个生命周期中,系统总是通过其PCB来对进程进行控制;
-<ul>
-<li>系统是根据PCB而非其他任何因素来感知进程存在的</li>
-<li>PCB是进程存在的唯一标志;</li>
-<li>PCB常驻内存</li>
-</ul>
-</li>
-<li>单处理机系统,n个进程,处于就绪队列的最多n-1个,还有一个肯定在运行;处于阻塞态的最多n个</li>
-<li>并发进程失去封闭性是指并发进程共享变量,其执行结果与速度有关
-<ul>
-<li>程序的封闭性是指进程执行的结果只取决于进程本身,不受外界影响</li>
-<li>也就是,进程在执行的过程中不管是不停顿的执行还是走走停停,进程的执行速度都不会改变他的执行结果</li>
-<li>但是,在失去封闭性后,不同的速度下执行的结果不同</li>
-</ul>
-</li>
-<li>进程之间可能是相关的,也可能是封闭的</li>
-<li>进程是作为除CPU之外的系统资源的分配单位
-<ul>
-<li>这里注意题目中一般可能<strong>不特地强调除CPU之外</strong>,除非特地考查这个概念,不然默认是对的</li>
-<li>特地强调了引入线程后,还说是资源调度和分配的基本单位就是错的</li>
-</ul>
-</li>
-<li>多对一模型中,一个线程阻塞,整个进程都阻塞</li>
-<li>对进程进行定义时,如果带有静态的概念就是错的
-<ul>
-<li>例如说进程是多道程序环境下的完整程序就是错的</li>
-</ul>
-</li>
-<li>C语言编写的程序在使用内存时一般分为3段:正文段(即代码和赋值数据段),数据堆段,数据栈段
-<ul>
-<li>二进制代码和常量(#define 标识符 常量)在正文段
-<ul>
-<li>全局赋值变量</li>
-<li>常量</li>
-</ul>
-</li>
-<li>动态分配的存储区在数据堆段
-<ul>
-<li>动态内存分配</li>
-<li>new,malloc</li>
-</ul>
-</li>
-<li>临时使用的变量在数据栈段
-<ul>
-<li>未赋值的局部变量</li>
-<li>实参传递</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>//main.cpp
-int a = 0; //全局初始化区
-int a = 0; //全局初始化区
-char *p1; //全局未初始化区
-main() {
-    int b; //栈
-    char s[] = &quot;abc&quot;; //栈
-    char *p2; //栈
-    char *p3 = &quot;123456&quot;; //123456\0在常量区，p3在栈上。
-    static int c = 0; //全局（静态）初始化区
-    p1 = (char *)malloc(10);
-    p2 = (char *)malloc(20);
-    //分配得来得10和20字节的区域就在堆区。
-    strcpy(p1, &quot;123456&quot;); //123456\0放在常量区，编译器可能会将它与p3所指向的&quot;123456&quot;优化成一个地方。
-}
+              <h2 id="概述">概述</h2>
+<p><img src="https://s1.ax1x.com/2020/10/18/0OXJRP.png" alt="0OXJRP.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OX7z6.png" alt="0OX7z6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OjSJI.png" alt="0OjSJI.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OjAeg.png" alt="0OjAeg.png" loading="lazy"></p>
+<h2 id="udp">UDP</h2>
+<p><img src="https://s1.ax1x.com/2020/10/18/0OjLpq.png" alt="0OjLpq.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0OvUEQ.png" alt="0OvUEQ.png" loading="lazy"><br>
+源端口可以没有(如果不希望对方回信),全0<br>
+<img src="https://s1.ax1x.com/2020/10/18/0Ozxnf.png" alt="0Ozxnf.png" loading="lazy"><br>
+二进制反码就是最高位如果进位,则将进位的1移到最低位,再求和</p>
+<pre><code>1100
+1011
+_____
+0111
+0001(进的位到最低位再求和)
+_____
+1000
 </code></pre>
-<ul>
-<li>系统动态DLL库中的系统线程,被不同的进程调用时,任然是相同的线程</li>
-<li>进程创建需要占用系统内存来存放PCB数据结构,所以一个系统能够创建的进程数量是有限的,最大数目取决于内存的大小</li>
-<li>阻塞态和挂起态的区别
-<ul>
-<li>阻塞态任然处于五个转化状态中,而挂起态一般直接被操作系统在调度时忽略了,除非恢复</li>
-</ul>
-</li>
-</ul>
-<pre><code>     操作系统中睡眠、阻塞、挂起的区别形象解释：
-
-     首先这些术语都是对于线程来说的。对线程的控制就好比你控制了一个雇工为你干活。你对雇工的控制是通过编程来实现的。
-     挂起线程的意思就是你对主动对雇工说：“你睡觉去吧，用着你的时候我主动去叫你，然后接着干活&quot;。
-     使线程睡眠的意思就是你主动对雇工说：“你睡觉去吧，某时某刻过来报到，然后接着干活”。
-     线程阻塞的意思就是，你突然发现，你的雇工不知道在什么时候没经过你允许，自己睡觉呢，但是你不能怪雇工，肯定你这个雇主没注意，本来你让雇工扫地，结果扫帚被偷了或被邻居家借去了，你又没让雇工继续干别的活，他就只好睡觉了。至于扫帚回来后，雇工会不会知道，会不会继续干活，你不用担心，雇工一旦发现扫帚回来了，他就会自己去干活的。因为雇工受过良好的培训。这个培训机构就是操作系统。
-</code></pre>
-<ul>
-<li>一般默认进程创建完成后就进入就绪队列,除非特地考查资源未分配全进入阻塞态</li>
-<li>就绪队列不空时,处理器的效率是不变的,和就绪进程数量无关,因为只要有在就绪队列里,就可以一直执行</li>
-<li>对进程的管理和控制使用<strong>原语</strong></li>
-<li>I.用户登录成功后，系统要为此创建一个用户管理的进程，包括用户桌面、环境等。所有用户进程都会在该进程下创建和管理。Ⅱ.设备分配是通过在系统中设置相应的数据结构实现的，不需要创建进程，这是操作系统中/O核心子系统的内容。班.启动程序执行是引起创建进程的典型事件。</li>
-<li>进程中的线程共享进程内的全部资源，但进程中某线程的栈指针对其他线程是透明的，不能与其他线程共享。</li>
-<li>进程可以在时间片用完时降低优先级以让其他的进程被调度进入执行状态,不应该在就绪态转为运行态时降低优先级</li>
-<li>当一个进程被唤醒时，这个进程就进入了就绪态，等待进程调度而占有CPU运行。
-<ul>
-<li>进程被唤醒在某种情形下优先级可以增大，但一般不会变为最大，而由固定的算法来计算。</li>
-<li>也不会在唤醒后位于就绪队列的队首，就绪队列是按照一定的规则赋予其位置的，如先来先服务，或者高优先级优先，或者短进程优先等，更不能直接占有处理器运行(存在疑问)。</li>
-</ul>
-</li>
-<li>进程间的通信主要有管道、消息传递、共享内存、文件映射和套接字等。数据库不能用于进程间通信。</li>
-<li>进程可以创建进程或线程，线程也可以创建线程，但线程不能创建进程。</li>
-<li>管道实际上是一种固定大小的缓冲区，管道对于管道两端的进程而言，就是一个文件，但它不是普通的文件，它不属于某种文件系统，而是自立门户、单独构成的一种文件系统，并且只存在于内存中。
-<ul>
-<li>它类似于通信中半双工信道的进程通信机制，一个管道可以实现双向的数据传输，而同一时刻只能最多有一个方向的传输，不能两个方向同时进行。</li>
-<li>管道的容量大小通常为内存上的一页，它的大小并不受磁盘容量大小的限制。</li>
-<li>当管道满时，进程在写管道会被阻塞，而当管道空时，进程在读管道会被阻塞</li>
-<li>一个管道只能有一个读进程或一个写进程对其操作是错的
-<ul>
-<li>有些说是可以有多个读进程</li>
-</ul>
-</li>
-<li>filedes[0]用于读出数据，读取时必须关闭写入端，即close(filedes[1]);<br>
-filedes[1]用于写入数据，写入时必须关闭读取端，即close(filedes[0])。</li>
-</ul>
-</li>
-</ul>
-<pre><code>int main(void)
-{
-    int n;
-    int fd[2];
-    pid_t pid;
-    char line[MAXLINE];
-   
-    if(pipe(fd)  0){                 /* 先建立管道得到一对文件描述符 */
-        exit(0);
-    }
-
-    if((pid = fork())  0)            /* 父进程把文件描述符复制给子进程 */
-        exit(1);
-    else if(pid &gt; 0){                /* 父进程写 */
-        close(fd[0]);                /* 关闭读描述符 */
-        write(fd[1], &quot;\nhello world\n&quot;, 14);
-    }
-    else{                            /* 子进程读 */
-        close(fd[1]);                /* 关闭写端 */
-        n = read(fd[0], line, MAXLINE);
-        write(STDOUT_FILENO, line, n);
-    }
-
-    exit(0);
-}
-</code></pre>
-<ul>
-<li>某进程退出临界区时,之前申请临界区资源而不得进入阻塞态的进程会被唤醒</li>
-<li>用户级线程间的切换效率比内核级的高</li>
-</ul>
-<h2 id="简答题">简答题</h2>
-<ol>
-<li>举例说明进程和程序间可以形成一对一,一对多,多对一,多对多关系
-<ul>
-<li>分析<br>
-从进程的概念、进程与程序之间的关系来考虑问题的解答。进程是程序的执行过程，进程代表执行中的程序，因此进程与程序的差别就隐含在“执行”之中。程序是静态的指令集合，进程是程序的动态执行过程。静态的程序除占用磁盘空间外，不需要其他系统资源，只有执行中的进程才需要分配内存、CPU等系统资源。<br>
-进程的定义说明了两点：<br>
-1）进程与程序相关，进程包含了程序。程序是进程的核心内容，没有程序就没有进程。<br>
-2）进程不仅仅是程序，还包含程序在执行过程中使用的全部资源。没有资源，程序就无法执行，因此进程是程序执行的载体。<br>
-运行一个程序时，操作系统首先要创建一个进程，为进程分配内存等资源，然后加入进程队列中执行。对单个进程在某个时刻而言，一个进程只能执行一个程序，进程与程序之间是一对一的关系。但对整个系统中的进程集合及进程的生命周期而言，进程与程序之间可以形成一对一、多对一、一对多、多对多的关系。</li>
-<li>解答：<br>
-执行一条命令或运行一个应用程序时，进程和程序之间形成一对一的关系。进程在执行过程中可以加载执行不同的应用程序，从而形成一对多的关系；以不同的参数或数据多次执行同一个应用程序时，形成多对一的关系；并发地执行不同的应用程序时，形成多对多的关系。</li>
-</ul>
-</li>
-<li>父进程创建子进程和主程序调用子程序的区别
-<blockquote>
-<p>父进程创建子进程后，父进程与子进程同时执行（并发）。主程序调用子程序后，主程序暂停在调用点，子程序开始执行，直到子程序返回，主程序才开始执行</p>
-</blockquote>
-</li>
-<li>为啥进程间通信必须借助操作系统的内核功能
-<blockquote>
-<p>在操作系统中，进程是竞争和分配计算机系统资源的基本单位。每个进程都有自己的独立地址空间。为了保证多个进程能够彼此互不干扰地共享物理内存，操作系统利用硬件地址机制对进程的地址空间进行了严格的保护，限制每个进程只能访问自己的地址空间。<br>
-解答：<br>
-每个进程有自己独立的地址空间。在操作系统和硬件的地址保护机制下，进程无法访问其他进程的地址空间，所以必须借助于操作系统的系统调用函数实现进程之间的通信。进程通信的主要方式有：<br>
-1）共享内存区。通过系统调用创建共享内存区。多个进程可以（通过系统调用）连接同一个共享内存区，通过访问共享内存区实现进程之间的数据交换。使用共享内存区时需要利用信号量解决同步互斥问题。<br>
-2）消息传递。通过发送/接收消息，系统调用实现进程之间的通信。当进程发送消息时，系统将消息从用户缓冲区复制到内核中的消息缓冲区，然后将消息缓冲区挂入消息队列。进程发送的消息保持在消息队列中，直到被另一进程接收。当进程接收消息时，系统从消息队列中解挂消息缓冲区，将消息从内核的消息缓冲区中复制到用户缓冲区，然后释放消息缓冲区。<br>
-3）管道系统。管道是先进先出（FIFO）的信息流，允许多个进程向管道写入数据，允许多个进程从管道读出数据。在读/写过程中，操作系统保证数据的写入顺序和读出顺序是一致的。进程通过读/写管道文件或管道设备实现彼此之间的通信。<br>
-4）共享文件。利用操作系统提供的文件共享功能实现进程之间的通信。这时，也需要信号量来解决文件共享操作中的同步和互斥问题。</p>
-</blockquote>
-</li>
-<li>啥是多线程,多线程和多任务的区别
-<blockquote>
-<p>多线程是指在一个程序中可以定义多个线程并同时运行它们，每个线程可以执行不同的任务。多线程与多任务的区别：多任务是针对操作系统而言的，代表操作系统可以同时执行的程序个数；多线程是针对一个程序而言的，代表一个程序可以同时执行的线程个数，而每个线程可以完成不同的任务。</p>
-</blockquote>
-</li>
-<li>五题
-<blockquote>
-<p>1）为支持多进程的并发执行，系统为每个进程建立了一个数据结构：进程控制块（PCB），用于进程的管理和控制。PCB中记录了有关进程的一些描述信息和控制信息，包括进程标识符、进程当前的状态、优先级、进程放弃CPU时的现场信息，以及指示组成进程的程序和数据在存储器中存放位置的信息、资源使用信息、进程各种队列的连接指针和反映进程之间的隶属关系的信息等。<br>
-2）在进程的整个生命周期中，会经历多种状态。进程控制的主要职能是对系统中所有进程实施有效的管理，它具有创建新进程、撤销已有进程、实现进程的状态转换等功能。在操作系统内核中，有一组程序专门用于完成对进程的控制，这些原语至少需要包括创建新进程原语、阻塞进程原语、唤醒进程原语、终止进程原语等操作。系统服务对用户开放，即用户可以通过相应的接口来使用它们。<br>
-3）进程创建原语：从PCB集合中申请一个空白的PCB，将调用者参数（如进程外部标识符、初始CPU状态、进程优先数、初始内存及申请资源清单等）添入该PCB，设置记账数据。<br>
-置新进程为“就绪”态。<br>
-终止进程原语：用于终止完成的进程，回收其所占资源。包括消去其资源描述块，消去进程的PCB。阻塞原语：将进程从运行态变为阻塞态。进程被插入等待事件的队列，同时修改PCB中相应的表项，如进程状态和等待队列指针等。<br>
-唤醒原语：将进程从阻塞态变为就绪态。进程从阻塞队列中移出，插入就绪队列，等待调度，同时修改PCB中相应的表项，如进程状态等。</p>
-</blockquote>
-</li>
-</ol>
+<p><strong>最后几部分求和的结果再取反才是校验和</strong></p>
+<h2 id="tcp">TCP</h2>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/10/18/0XJOoT.png" alt="0XJOoT.png" loading="lazy"></figure>
+<h3 id="格式">格式:</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0XYFw6.png" alt="0XYFw6.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XYu6A.png" alt="0XYu6A.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XY8k8.png" alt="0XY8k8.png" loading="lazy"></p>
+<h3 id="tcp连接管理">TCP连接管理</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0XaN5V.png" alt="0XaN5V.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0XaoqA.png" alt="0XaoqA.png" loading="lazy"></p>
+<h3 id="tcp连接释放">TCP连接释放</h3>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/10/18/0Xd6yQ.png" alt="0Xd6yQ.png" loading="lazy"></figure>
+<h3 id="tcp可靠传输">TCP可靠传输</h3>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/10/18/0XBvYq.png" alt="0XBvYq.png" loading="lazy"></figure>
+<h3 id="tcp流量控制">TCP流量控制</h3>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/18/0XskJ1.png" alt="0XskJ1.png" loading="lazy"></figure>
+<h3 id="tcp拥塞控制">TCP拥塞控制</h3>
+<p><img src="https://s1.ax1x.com/2020/10/18/0X6YVg.png" alt="0X6YVg.png" loading="lazy"><br>
+<img src="https://s1.ax1x.com/2020/10/18/0X67ZD.png" alt="0X67ZD.png" loading="lazy"></p>
 
             </div>
             
@@ -776,7 +637,7 @@ filedes[1]用于写入数据，写入时必须关闭读取端，即close(filedes
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/" title="第二章 进程线程概念部分错题及重要知识点">https://songdlut.github.io/post/di-er-zhang-jin-cheng-guan-li-cuo-ti-ji-chong-yao-zhi-shi-dian/</a>
+      <a href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng/" title="第五章 传输层">https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -785,19 +646,21 @@ filedes[1]用于写入数据，写入时必须关闭读取端，即close(filedes
   </ul>
   <div class="tags">
     
+      <a href="https://songdlut.github.io/tag/7ZIEMCdYP/"># 计算机网络</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="链表操作" href="https://songdlut.github.io/post/lian-biao-cao-zuo/">链表操作</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="链表操作" href="https://songdlut.github.io/post/lian-biao-cao-zuo/">上一篇</a>
+        <a class="nav-pc-next" title="第五章 传输层知识点及错题" href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/">第五章 传输层知识点及错题</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第五章 传输层知识点及错题" href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="进程的概念相关知识点" href="https://songdlut.github.io/post/jin-cheng-de-gai-nian-xiang-guan-zhi-shi-dian/">进程的概念相关知识点</a>
-        <a class="nav-mobile-next" title="进程的概念相关知识点" href="https://songdlut.github.io/post/jin-cheng-de-gai-nian-xiang-guan-zhi-shi-dian/">下一篇</a>
+        <a class="nav-pc-next" title="第四章 网络层知识点及错题整理" href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/">第四章 网络层知识点及错题整理</a>
+        <a class="nav-mobile-next" title="第四章 网络层知识点及错题整理" href="https://songdlut.github.io/post/di-si-zhang-wang-luo-ceng-zhi-shi-dian-ji-cuo-ti-zheng-li/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
