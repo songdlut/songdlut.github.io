@@ -9,7 +9,7 @@
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
 <title>关于堆栈的讲解 | 宋宇航的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1603089587164">
+<link rel="shortcut icon" href="/favicon.ico?v=1603758813895">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,7 +202,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">49</span>
+        <span class="site-item-stat-count">56</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1715,6 +1715,525 @@ void main() {
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-qi-zhang-cha-zhao-de-cuo-ti-ji-zhi-shi-dian/"" data-c="
+          &lt;h2 id=&#34;判定树&#34;&gt;判定树&lt;/h2&gt;
+&lt;p&gt;向下取整,则每次右子树比左子树多1或0个&lt;br&gt;
+反之,就是左比右多1或0&lt;/p&gt;
+">第七章 查找的错题及知识点</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/tu-de-cuo-ti-ji-zhi-shi-dian/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;Dijkstra算法除了不适合求带负权值的,其他都可以&lt;/li&gt;
+&lt;li&gt;最短路径一定是简单路径
+&lt;ol&gt;
+&lt;li&gt;顶点不重复出现的是简单路径&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Floyd算法的,当最短路径修改后,path&lt;sub&gt;k-1&lt;/sub&gt;不一定是path&lt;sub&gt;k&lt;/sub&gt;的子集&lt;/li&gt;
+&lt;li&gt;可以判断一个有向图是否有环的:DFS,拓扑排序,求关键路径&lt;/li&gt;
+&lt;li&gt;拓扑排序并不要求是否连通,因此若一个有向图的顶点不能排在一个拓扑序列中,则可判定该有向图&lt;strong&gt;含有顶点数目大于1的强连通分量&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;一个有向图具有&lt;strong&gt;有序&lt;/strong&gt;的拓扑排序序列,则它的邻接矩阵必&lt;strong&gt;三角&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;若&lt;strong&gt;没有有序&lt;/strong&gt;,则为一般&lt;/li&gt;
+&lt;li&gt;如果邻接矩阵是三角,则必定有拓扑序列,即有环&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;最小生成树的边不一定比未选的边小&lt;a href=&#34;https://imgchr.com/i/BeX9TU&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/25/BeX9TU.png&#34; alt=&#34;BeX9TU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DAG的拓扑序列唯一并不能唯一确定该图&lt;a href=&#34;https://imgchr.com/i/BeXn0K&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/25/BeXn0K.png&#34; alt=&#34;BeXn0K.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;求关键路径是以拓扑排序为基础的&lt;/li&gt;
+&lt;li&gt;破圈法是正确的&lt;a href=&#34;https://imgchr.com/i/Bex3p4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/25/Bex3p4.png&#34; alt=&#34;Bex3p4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">图的错题及知识点</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/cao-zuo-xi-tong-di-wu-zhang-cuo-ti-ji-zhi-shi-dian-zheng-li/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;共享设备是指在一段时间内允许多个进程同时访问的设备,并不是同一时刻&lt;/li&gt;
+&lt;li&gt;设备控制器通常需要提供&lt;strong&gt;控制寄存器,状态寄存器,控制命令&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;没有I/O地址寄存器这种东西&lt;/li&gt;
+&lt;li&gt;中断寄存器在CPU内&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字节多路通道&lt;/strong&gt;用作连接大量的低速或中速I/O设备&lt;/li&gt;
+&lt;li&gt;设备分配一般不考虑设备的及时性,需要考虑的有:
+&lt;ol&gt;
+&lt;li&gt;设备的固有属性&lt;/li&gt;
+&lt;li&gt;设备独立性&lt;/li&gt;
+&lt;li&gt;安全性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;设备的绝对号:区分设备的代号&lt;/li&gt;
+&lt;li&gt;通道控制器控制设备控制器,设备控制器控制设备工作&lt;/li&gt;
+&lt;li&gt;首先获得硬件信息的是中断处理程序,它处于最底层&lt;/li&gt;
+&lt;li&gt;将系统调用参数翻译成设备操作命令的工作由&lt;strong&gt;设备无关的操作系统软件实现&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;用户层软件向上提供了库函数,实际使用了系统调用来实现库函数&lt;/li&gt;
+&lt;li&gt;设备独立软件向上提供了系统调用,也就是他实现了系统调用,故而参数啥的都是在它里面翻译&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;若I/O所花费的时间比CPU处理时间短的多,则缓冲区几乎无效&lt;/li&gt;
+&lt;li&gt;磁盘到缓冲区时间:T1;缓冲区到用用户区:T2;CPU处理:T3
+&lt;ol&gt;
+&lt;li&gt;单缓冲:max(T1,T3)+T2&lt;/li&gt;
+&lt;li&gt;双缓冲:max(T1,T2+T3)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;缓冲区管理首先要考虑的是&lt;strong&gt;实现进程访问缓冲区的互斥&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;提高单机资源利用率的关键技术是多道程序设计技术&lt;/li&gt;
+&lt;li&gt;SPOOLing系统由预输入程序,井管理程序,缓输出技术构成&lt;/li&gt;
+&lt;/ol&gt;
+">操作系统 第五章 错题及知识点整理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/cao-zuo-xi-tong-di-wu-zhang-io-she-bei-guan-li/"" data-c="
+          &lt;h2 id=&#34;io管理概述&#34;&gt;I/O管理概述&lt;/h2&gt;
+&lt;h3 id=&#34;io设备&#34;&gt;I/O设备&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkInjs&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkInjs.png&#34; alt=&#34;BkInjs.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;分类&#34;&gt;分类&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkI84U&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkI84U.png&#34; alt=&#34;BkI84U.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkIdD1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkIdD1.md.png&#34; alt=&#34;BkIdD1.md.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkIBE6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkIBE6.png&#34; alt=&#34;BkIBE6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkIgvd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkIgvd.png&#34; alt=&#34;BkIgvd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;io控制器&#34;&gt;I/O控制器&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkoPxJ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkoPxJ.png&#34; alt=&#34;BkoPxJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkoBss&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkoBss.png&#34; alt=&#34;BkoBss.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkogiT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkogiT.png&#34; alt=&#34;BkogiT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkoXSe&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkoXSe.png&#34; alt=&#34;BkoXSe.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bkovyd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkovyd.png&#34; alt=&#34;Bkovyd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;io控制方式&#34;&gt;I/O控制方式&lt;/h3&gt;
+&lt;h4 id=&#34;程序直接控制方式轮询&#34;&gt;程序直接控制方式(轮询)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkLlQS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkLlQS.png&#34; alt=&#34;BkLlQS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;数据准备好,放到数据寄存器才会修改状态寄存器,CPU一查到就读取数据&lt;/strong&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkL7TA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkL7TA.png&#34; alt=&#34;BkL7TA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;为什么会往存储器里放?&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BkOSmQ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkOSmQ.png&#34; alt=&#34;BkOSmQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkOZXF&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkOZXF.png&#34; alt=&#34;BkOZXF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;中断驱动方式&#34;&gt;中断驱动方式&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkON0H&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkON0H.png&#34; alt=&#34;BkON0H.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;##注意:##每次中断只能读入一个字的数据&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BkOqHJ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkOqHJ.png&#34; alt=&#34;BkOqHJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;dma方式direct-memory-access直接存储器存取&#34;&gt;DMA方式(Direct Memory Access:直接存储器存取)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkXDa9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkXDa9.png&#34; alt=&#34;BkXDa9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;dma寄存器&#34;&gt;DMA寄存器&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;16&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bkj9Gq&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkj9Gq.png&#34; alt=&#34;Bkj9Gq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;DMA控制器也是一次读一个字然后放到内存中的,存够一批&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;17&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BkxHR1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkxHR1.png&#34; alt=&#34;BkxHR1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;读入的块或者在内存存放的块必须是连续的(因为它要求是一批连续的),如果想要读非连续的或者非连续的存放必须要多个I/O指令,一次是不行的&lt;/li&gt;
+&lt;li&gt;一个DMA控制器只对应一台设备与内存传递数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;通道控制方式&#34;&gt;通道控制方式&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;18&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bkz1yV&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkz1yV.png&#34; alt=&#34;Bkz1yV.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;通道执行的指令很单一,且和CPU共享内存&lt;/li&gt;
+&lt;li&gt;通道程序相当于任务清单,由一系列通道指令构成&lt;/li&gt;
+&lt;li&gt;一个通道控制多个I/O控制器,一个I/O控制器控制多个I/O设备,也就是一个通道可以控制多台设备与内存交换数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;19&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bkz6Te&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkz6Te.png&#34; alt=&#34;Bkz6Te.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;20&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bkz2Yd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkz2Yd.png&#34; alt=&#34;Bkz2Yd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;io系统层次&#34;&gt;I/O系统层次&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;21&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BAmEI1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAmEI1.png&#34; alt=&#34;BAmEI1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;用户层io软件&#34;&gt;用户层I/O软件&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;22&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BAm8II&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAm8II.png&#34; alt=&#34;BAm8II.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;设备独立性软件&#34;&gt;设备独立性软件&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;向上层提供统一的调用接口(如write/read系统调用)&lt;/li&gt;
+&lt;li&gt;设备保护&lt;/li&gt;
+&lt;li&gt;差错处理&lt;/li&gt;
+&lt;li&gt;设备分配与回收&lt;/li&gt;
+&lt;li&gt;数据缓冲区管理&lt;/li&gt;
+&lt;li&gt;建立逻辑设备名到物理设备名的映射关系,根据设备类型调用相应的设备驱动程序&lt;br&gt;
+&lt;strong&gt;设备独立性也叫设备无关性&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BAmXOe&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAmXOe.png&#34; alt=&#34;BAmXOe.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+类似于单级目录和两级目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;设备驱动程序&#34;&gt;设备驱动程序&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BAn5jS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAn5jS.png&#34; alt=&#34;BAn5jS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+驱动程序一般以一个独立进程的方式存在&lt;/p&gt;
+&lt;h4 id=&#34;中断处理程序&#34;&gt;中断处理程序&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;23&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BAumuD&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAumuD.png&#34; alt=&#34;BAumuD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;硬件设备&#34;&gt;硬件设备&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;电子部件(设备控制器/适配器)&lt;/li&gt;
+&lt;li&gt;机械部件(本身)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;小结-2&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;24&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BAuJv8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BAuJv8.png&#34; alt=&#34;BAuJv8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;io核心子系统&#34;&gt;I/O核心子系统&lt;/h2&gt;
+&lt;h3 id=&#34;io调度与设备保护&#34;&gt;I/O调度与设备保护&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;25&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BA0eHA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BA0eHA.png&#34; alt=&#34;BA0eHA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;26&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BA03jg&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BA03jg.png&#34; alt=&#34;BA03jg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;spooling技术假脱机技术&#34;&gt;SPOOLing技术(假脱机技术)&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;27&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BECYLt&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BECYLt.png&#34; alt=&#34;BECYLt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BABF5q&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BABF5q.png&#34; alt=&#34;BABF5q.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BE93D0&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BE93D0.png&#34; alt=&#34;BE93D0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BE9t5F&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BE9t5F.png&#34; alt=&#34;BE9t5F.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BE9S4e&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BE9S4e.png&#34; alt=&#34;BE9S4e.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BE9DDx&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BE9DDx.png&#34; alt=&#34;BE9DDx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;利用spooling技术将独占设备改造成共享式设备&#34;&gt;利用SPOOLing技术将独占设备改造成共享式设备&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;33&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEC9aT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEC9aT.png&#34; alt=&#34;BEC9aT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;34&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BECnZ6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BECnZ6.png&#34; alt=&#34;BECnZ6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;35&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEC3zd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEC3zd.png&#34; alt=&#34;BEC3zd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;设备的分配与回收&#34;&gt;设备的分配与回收&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;36&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEEpZR&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEEpZR.png&#34; alt=&#34;BEEpZR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;37&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BECISJ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BECISJ.png&#34; alt=&#34;BECISJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;38&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEC7O1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEC7O1.png&#34; alt=&#34;BEC7O1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;设备分配的数据结构&#34;&gt;设备分配的数据结构&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BEkbge&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEkbge.png&#34; alt=&#34;BEkbge.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEAZEq&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEAZEq.png&#34; alt=&#34;BEAZEq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEAuCT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEAuCT.png&#34; alt=&#34;BEAuCT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEAQv4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEAQv4.png&#34; alt=&#34;BEAQv4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;分配过程&#34;&gt;分配过程&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BEAa8O&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEAa8O.png&#34; alt=&#34;BEAa8O.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEADrd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEADrd.png&#34; alt=&#34;BEADrd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEArqA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEArqA.png&#34; alt=&#34;BEArqA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+##改进##&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEA7aq&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEA7aq.png&#34; alt=&#34;BEA7aq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEALGT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEALGT.png&#34; alt=&#34;BEALGT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;高速缓存与缓冲区&#34;&gt;高速缓存与缓冲区&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;39&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEEq0A&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEEq0A.png&#34; alt=&#34;BEEq0A.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;40&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEEzp8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEEzp8.png&#34; alt=&#34;BEEzp8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;单缓冲区&#34;&gt;单缓冲区&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;41&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEV2jg&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEV2jg.png&#34; alt=&#34;BEV2jg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;解题技巧:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BEZd2T&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEZd2T.png&#34; alt=&#34;BEZd2T.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BEZTZd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEZTZd.png&#34; alt=&#34;BEZTZd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;44&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEepZj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEepZj.png&#34; alt=&#34;BEepZj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;双缓冲区&#34;&gt;双缓冲区&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BEelJx&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEelJx.png&#34; alt=&#34;BEelJx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BEegmQ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEegmQ.png&#34; alt=&#34;BEegmQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;结论:采用双缓冲策略,处理一个数据块的平均耗时为Max(T,C+M)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;区别&#34;&gt;区别&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BEmEtI&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEmEtI.png&#34; alt=&#34;BEmEtI.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BEmMng&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEmMng.png&#34; alt=&#34;BEmMng.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;循环缓冲区&#34;&gt;循环缓冲区&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;47&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEms41&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEms41.png&#34; alt=&#34;BEms41.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;缓冲池&#34;&gt;缓冲池&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;48&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEnkKU&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEnkKU.png&#34; alt=&#34;BEnkKU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结-3&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;49&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BEnuP1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BEnuP1.png&#34; alt=&#34;BEnuP1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+">操作系统 第五章 I/O设备管理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/cao-zuo-xi-tong-di-si-zhang-wen-jian-guan-li-cuo-ti-ji-zhi-shi-dian-zheng-li/"" data-c="
+          &lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;OS引入文件系统的目的是&lt;strong&gt;实现对文件的按名存取&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;文件的逻辑结构是为了方便&lt;strong&gt;用户&lt;/strong&gt;而设计的
+&lt;ol&gt;
+&lt;li&gt;即逻辑结构是取决于用户的&lt;/li&gt;
+&lt;li&gt;物理结构是取决于存储介质特性,操作系统管理方式的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;关于索引文件
+&lt;ol&gt;
+&lt;li&gt;索引文件=索引表+逻辑文件(实际存储的记录数据)&lt;/li&gt;
+&lt;li&gt;每条记录在索引表中对应的索引项是唯一的&lt;/li&gt;
+&lt;li&gt;索引表中的索引项只含每条记录的长度和在逻辑文件中的位置&lt;/li&gt;
+&lt;li&gt;建立索引提高了存储代价&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;读文件不在内存中也是产生缺页中断&lt;/li&gt;
+&lt;li&gt;在open之后的操作用的都是文件描述符,并不需要文件名&lt;/li&gt;
+&lt;li&gt;文件目录项(也就是FCB是不包括文件控制块(即FCB)的物理地址的&lt;/li&gt;
+&lt;li&gt;UNIX操作系统中,文件的索引结构放在索引结点中&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BCMTxg&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/BCMTxg.png&#34; alt=&#34;BCMTxg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;符号链接的时候,引用计数值是直接复制原文件的&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/BCQUSS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/BCQUSS.png&#34; alt=&#34;BCQUSS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;系统级安全管理包括登录和注册&lt;/li&gt;
+&lt;li&gt;访问控制机制必须由系统实现,加密如由系统实现,则不易扩展&lt;/li&gt;
+&lt;li&gt;对一个文件的访问,常由&lt;strong&gt;用户访问权限和文件属性&lt;/strong&gt;共同限制&lt;/li&gt;
+&lt;li&gt;访问控制列表:规定了每个用户名及其所允许的访问类型(规定了权限)&lt;/li&gt;
+&lt;li&gt;FCB包含基本信息,存取控制信息,使用信息
+&lt;ol&gt;
+&lt;li&gt;存取控制信息就是文件的存取权限,所谓权限也就是哪种用户可以对文件干什么(读,写,删等)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;防止文件受损用的是&lt;strong&gt;备份的方法&lt;/strong&gt;来保护,&lt;strong&gt;存取控制矩阵&lt;/strong&gt;是用于多用户之间的存取权限保护&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关于为什么m个用户,n个类型的访问权限的情况下,描述文件权限的位数至少是 mn&lt;/strong&gt;:
+&lt;ol&gt;
+&lt;li&gt;这个是对文件权限的描述,也就是他&lt;strong&gt;同时&lt;/strong&gt;代表了哪些人可以干啥,比如11110111101011(瞎写的)代表了用户a有1,2,3权限,b......&lt;/li&gt;
+&lt;li&gt;为啥不是logm+logn:11代表a,10代表b之类的,因为这样你一个描述,不知道谁可以干什么,只知道某一个人可以干啥,我一个用户访问这个文件,看到权限描述的是某个人能干啥,就不知道我可以干啥&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;一个文件放在磁带上连续存储,放在磁盘上非连续存储&lt;/li&gt;
+&lt;li&gt;用户优先级与是否具有访问权限是无关的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OS还可通过FAT(文件分配表)来对文件存储空间管理,切记切记&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;目录的顺序检索完成后,得到的是逻辑地址&lt;/li&gt;
+&lt;li&gt;绝大多数OS以簇为单位进行空间分配&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgchr.com/i/Bkg2GR&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/Bkg2GR.png&#34; alt=&#34;Bkg2GR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://imgchr.com/i/BkgRR1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/23/BkgRR1.png&#34; alt=&#34;BkgRR1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">操作系统 第四章 文件管理错题及知识点整理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-si-zhang-wen-jian-guan-li/"" data-c="
+          &lt;h2 id=&#34;1-文件系统基础&#34;&gt;1 文件系统基础&lt;/h2&gt;
+&lt;h3 id=&#34;文件的概念&#34;&gt;文件的概念&lt;/h3&gt;
+&lt;p&gt;文件是以计算机硬盘为载体的存储在计算机上的信息集合&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据项&lt;/li&gt;
+&lt;li&gt;记录&lt;/li&gt;
+&lt;li&gt;文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;文件的属性&#34;&gt;文件的属性&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bpa2M6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/Bpa2M6.png&#34; alt=&#34;Bpa2M6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BpaxoQ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BpaxoQ.png&#34; alt=&#34;BpaxoQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;文件的基本操作&#34;&gt;文件的基本操作&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFDWp8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFDWp8.png&#34; alt=&#34;BFDWp8.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFr6u4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFr6u4.png&#34; alt=&#34;BFr6u4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;打开文件&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFrtBj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFrtBj.png&#34; alt=&#34;BFrtBj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;创建文件&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFDjcF&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFDjcF.png&#34; alt=&#34;BFDjcF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;写文件&lt;/li&gt;
+&lt;li&gt;读文件&lt;/li&gt;
+&lt;li&gt;文件重定位(文件寻址)&lt;/li&gt;
+&lt;li&gt;删除文件&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFrVje&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFrVje.png&#34; alt=&#34;BFrVje.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;截断文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;文件的打开与关闭&#34;&gt;文件的打开与关闭&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;打开并不是我们平常操作的那样打开(如点开一个txt文件),而是将文件的信息从外存添加到内存的打开文件表的一个表目中,我们平常所说的打开其实还经历了读取这一步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文件的逻辑结构&#34;&gt;文件的逻辑结构&lt;/h3&gt;
+&lt;h4 id=&#34;顺序文件&#34;&gt;顺序文件&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BpD8gA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BpD8gA.png&#34; alt=&#34;BpD8gA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;又分为定长和可变长&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BpDD3j&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BpDD3j.png&#34; alt=&#34;BpDD3j.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BprYRJ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BprYRJ.png&#34; alt=&#34;BprYRJ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bpshc9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/Bpshc9.png&#34; alt=&#34;Bpshc9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;链式存储怎样都无法实现随机存取(无论是定长还是非定长)&lt;/li&gt;
+&lt;li&gt;定长文件如果顺序存储是可以随机存取的&lt;/li&gt;
+&lt;li&gt;如果采用串结构,无法快速找到某关键字对应的记录,但是如果是顺序结构,可以根据关键字快速找到对应记录(折半查找)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;索引文件&#34;&gt;索引文件&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BpcdpD&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BpcdpD.png&#34; alt=&#34;BpcdpD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;索引顺序文件&#34;&gt;索引顺序文件&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9U8QP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9U8QP.png&#34; alt=&#34;B9U8QP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;还是嫌多就多级的&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/B9UTOK&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9UTOK.png&#34; alt=&#34;B9UTOK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+不是浪费了很多空间么?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这里说顺序文件就是指物理上顺序的文件&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;直接文件或散列文件hash-file&#34;&gt;直接文件或散列文件(Hash File)&lt;/h4&gt;
+&lt;h3 id=&#34;文件目录&#34;&gt;文件目录&lt;/h3&gt;
+&lt;h4 id=&#34;文件控制块&#34;&gt;文件控制块&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9arhd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9arhd.png&#34; alt=&#34;B9arhd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9d93R&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9d93R.png&#34; alt=&#34;B9d93R.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;单级文件目录&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/B9dNCj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9dNCj.png&#34; alt=&#34;B9dNCj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两级&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/B9dDbT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9dDbT.png&#34; alt=&#34;B9dDbT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多级&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/B9dbPH&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9dbPH.png&#34; alt=&#34;B9dbPH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9djMt&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9djMt.png&#34; alt=&#34;B9djMt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;缺点:树形目录不便于实现文件的共享(易考查)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;无环图目录结构&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/B9wyOP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9wyOP.png&#34; alt=&#34;B9wyOP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注意文件共享和拷贝的区别:&lt;/strong&gt;&lt;br&gt;
+文件的拷贝,就是副本了,并不会指向同一个,一个修改了,另一个不会修改&lt;br&gt;
+文件的共享,一个用户修改了,另一个看到的也改了,但是一个人删除了,只是这个用户的指向文件的共享链删除,另一个用户还是能看到这个文件(硬链接)&lt;/p&gt;
+&lt;h4 id=&#34;索引结点fcb的改进&#34;&gt;索引结点(FCB的改进)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9rfH0&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9rfH0.png&#34; alt=&#34;B9rfH0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9s1rn&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9s1rn.png&#34; alt=&#34;B9s1rn.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;文件的共享&#34;&gt;文件的共享&lt;/h4&gt;
+&lt;p&gt;硬链接:基于文件索引结点的共享方式&lt;br&gt;
+软链接:利用符号链实现文件共享&lt;br&gt;
+区别:&lt;br&gt;
+硬链接,某个删除源文件后,另一个用户还可以看到,并不会真的删掉,只是要删除用户的不再指向这个索引结点&lt;br&gt;
+软链接,文件拥有者删除源文件后,就真删了,就像windows下的快捷方式,如果源文件删了,快捷方式就失效了.缺点是删了之后,又创建了一个文件名一样的文件,那么软链接的那个就会访问这个,导致出错&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFgMSx&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFgMSx.png&#34; alt=&#34;BFgMSx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;文件保护&#34;&gt;文件保护&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFcAIA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFcAIA.png&#34; alt=&#34;BFcAIA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;16&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/B9s2GD&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/21/B9s2GD.png&#34; alt=&#34;B9s2GD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;文件系统的实现&#34;&gt;文件系统的实现&lt;/h2&gt;
+&lt;h3 id=&#34;文件系统层次结构&#34;&gt;文件系统层次结构&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;17&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BF6vP1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BF6vP1.png&#34; alt=&#34;BF6vP1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;文件分配方式&#34;&gt;文件分配方式&lt;/h3&gt;
+&lt;h4 id=&#34;连续分配&#34;&gt;连续分配&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;优点:&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BimW3F&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BimW3F.png&#34; alt=&#34;BimW3F.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;18&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BimIBR&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BimIBR.png&#34; alt=&#34;BimIBR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;缺点:&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BimXge&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BimXge.png&#34; alt=&#34;BimXge.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;19&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BimzDA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BimzDA.png&#34; alt=&#34;BimzDA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;总结:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;20&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bin9Et&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bin9Et.png&#34; alt=&#34;Bin9Et.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;链接分配&#34;&gt;链接分配&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;考试中只说链接分配是指隐式链接&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;隐式链接&#34;&gt;隐式链接&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;21&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BinYr9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BinYr9.png&#34; alt=&#34;BinYr9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;22&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bin6rd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bin6rd.png&#34; alt=&#34;Bin6rd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;显式链接&#34;&gt;显式链接&lt;/h5&gt;
+&lt;p&gt;文件分配表(FAT):整个磁盘只有一个&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;23&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiuQeA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiuQeA.png&#34; alt=&#34;BiuQeA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;24&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Biu8FP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Biu8FP.png&#34; alt=&#34;Biu8FP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;索引分配&#34;&gt;索引分配&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;25&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiuhwR&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiuhwR.png&#34; alt=&#34;BiuhwR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;26&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiKE0s&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiKE0s.png&#34; alt=&#34;BiKE0s.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;链接方案&#34;&gt;链接方案&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;27&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiKIBj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiKIBj.png&#34; alt=&#34;BiKIBj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;多层索引&#34;&gt;多层索引&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BiM328&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiM328.png&#34; alt=&#34;BiM328.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;求最大文件,访问几次&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;混合索引&#34;&gt;混合索引&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BiM6r4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiM6r4.png&#34; alt=&#34;BiM6r4.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+直接地址读两次,一级读三次,二级读四次&lt;/p&gt;
+&lt;h5 id=&#34;小结-2&#34;&gt;小结&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;28&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiMRaR&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiMRaR.png&#34; alt=&#34;BiMRaR.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结-3&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;29&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiMhPx&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiMhPx.png&#34; alt=&#34;BiMhPx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;文件存储空间管理&#34;&gt;文件存储空间管理&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;30&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bi8V74&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bi8V74.png&#34; alt=&#34;Bi8V74.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;存储空间的划分与初始化&#34;&gt;存储空间的划分与初始化&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;31&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bi8rDS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bi8rDS.png&#34; alt=&#34;Bi8rDS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;空闲表法&#34;&gt;空闲表法&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;32&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bi8b59&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bi8b59.png&#34; alt=&#34;Bi8b59.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;空闲链表法&#34;&gt;空闲链表法&lt;/h4&gt;
+&lt;p&gt;盘块:就是物理块,一块一块的&lt;br&gt;
+盘区:相邻的空闲盘块组成一个区&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BiG4JA&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiG4JA.png&#34; alt=&#34;BiG4JA.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;空闲盘块链&#34;&gt;空闲盘块链&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;33&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiJ8FH&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiJ8FH.png&#34; alt=&#34;BiJ8FH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;空闲盘区链&#34;&gt;空闲盘区链&lt;/h5&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;34&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiJTh9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiJTh9.png&#34; alt=&#34;BiJTh9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;位示图法&#34;&gt;位示图法&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;35&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BiY7VS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BiY7VS.png&#34; alt=&#34;BiY7VS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;36&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BitSbT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BitSbT.png&#34; alt=&#34;BitSbT.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;成组链接法&#34;&gt;成组链接法&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;37&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bi4MG9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bi4MG9.png&#34; alt=&#34;Bi4MG9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/smartab/article/details/81285353&#34;&gt;csdn这篇讲的不错&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;逻辑结构vs物理结构&#34;&gt;逻辑结构VS物理结构&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;38&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/Bi3q6f&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/Bi3q6f.png&#34; alt=&#34;Bi3q6f.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;磁盘组织与管理&#34;&gt;磁盘组织与管理&lt;/h2&gt;
+&lt;h3 id=&#34;磁盘结构&#34;&gt;磁盘结构&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;39&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BF2EgP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BF2EgP.png&#34; alt=&#34;BF2EgP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;40&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BF2sv6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BF2sv6.png&#34; alt=&#34;BF2sv6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;41&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BF2X5j&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BF2X5j.png&#34; alt=&#34;BF2X5j.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;42&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFRPqU&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFRPqU.png&#34; alt=&#34;BFRPqU.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;注意可换盘磁盘和固定盘磁盘&lt;/p&gt;
+&lt;p&gt;小结:&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFR3IH&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFR3IH.png&#34; alt=&#34;BFR3IH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;磁盘调度算法&#34;&gt;磁盘调度算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;43&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFHQ1g&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFHQ1g.png&#34; alt=&#34;BFHQ1g.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;fcfs&#34;&gt;FCFS&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;44&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFbPU0&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFbPU0.png&#34; alt=&#34;BFbPU0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;sstf虽短寻找时间优先算法&#34;&gt;SSTF(虽短寻找时间优先算法)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;45&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFbMUx&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFbMUx.png&#34; alt=&#34;BFbMUx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;扫描scan算法电梯调度算法&#34;&gt;扫描(SCAN)算法(电梯调度算法)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;46&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFqUlF&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFqUlF.png&#34; alt=&#34;BFqUlF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;look调度算法&#34;&gt;LOOK调度算法&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;47&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFLVB9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFLVB9.png&#34; alt=&#34;BFLVB9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;循环扫描算法c-scan&#34;&gt;循环扫描算法(C-SCAN)&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;48&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFLjgO&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFLjgO.png&#34; alt=&#34;BFLjgO.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;c-look算法&#34;&gt;C-LOOK算法&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;49&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFLHER&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFLHER.png&#34; alt=&#34;BFLHER.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结-4&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;50&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFOPUI&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFOPUI.png&#34; alt=&#34;BFOPUI.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;如果题目只说scan就是look&lt;br&gt;
+只说c-scan就是c-look&lt;br&gt;
+不用到头再返回&lt;/p&gt;
+&lt;h4 id=&#34;减少延迟时间&#34;&gt;减少延迟时间&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;51&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFOrRK&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFOrRK.png&#34; alt=&#34;BFOrRK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/BFXOXD&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFXOXD.png&#34; alt=&#34;BFXOXD.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFj8uF&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFj8uF.png&#34; alt=&#34;BFj8uF.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转两圈可能是因为一圈会有遗漏的&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BFvGxf&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFvGxf.png&#34; alt=&#34;BFvGxf.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+和交替编号一样,错位命名也是为了防止转过头,稍微有点儿时间准备&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;52&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFvszV&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFvszV.png&#34; alt=&#34;BFvszV.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;磁盘管理&#34;&gt;磁盘管理&lt;/h3&gt;
+&lt;h4 id=&#34;磁盘初始化&#34;&gt;磁盘初始化&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;53&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFvzWt&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFvzWt.png&#34; alt=&#34;BFvzWt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;引导块&#34;&gt;引导块&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;54&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFx21P&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFx21P.png&#34; alt=&#34;BFx21P.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;坏块&#34;&gt;坏块&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;55&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFxokj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFxokj.png&#34; alt=&#34;BFxokj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;小结-5&#34;&gt;小结&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;56&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/BFxq10&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/22/BFxq10.png&#34; alt=&#34;BFxq10.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+">第四章 文件管理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/xu-ni-nei-cun-ji-zhu-de-cuo-ti-ji-zhi-shi-dian/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;虚拟存储技术是&lt;strong&gt;补充内存逻辑空间的技术&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;虚拟存储特征
+&lt;ol&gt;
+&lt;li&gt;虚拟性&lt;/li&gt;
+&lt;li&gt;多次性&lt;/li&gt;
+&lt;li&gt;离散型&lt;/li&gt;
+&lt;li&gt;对换性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;虽然实际中虚拟存储器的最大容量是内存和外村之和,&lt;strong&gt;但是问的话还是取决于计算机的地质结构,如地址寄存器n位则最大容量是2&lt;/strong&gt;&lt;sup&gt;n&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;导致LRU算法实现起来耗费高的原因:&lt;strong&gt;需要对所有的页排序&lt;/strong&gt;,并不是需要硬件特殊支持&lt;/li&gt;
+&lt;li&gt;页表项中的合法位信息显示本页面是否在内存中,即决定了是否会发生页面故障&lt;/li&gt;
+&lt;li&gt;产生内存抖动的主要原因是&lt;strong&gt;页面置换算法不合理&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;注意区别
+&lt;ol&gt;
+&lt;li&gt;不要求将作业&lt;strong&gt;同时全部&lt;/strong&gt;装入内存的连续区域是虚拟内存要求的&lt;/li&gt;
+&lt;li&gt;不要求将作业装入内存的连续区域是离散式存储管理要求的(包括页式存储管理)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;虚拟存储机制需要请求机制的支持,然后才是基于页或段,都可以&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快表用于地址变换,就是为了查找物理地址更快&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;无论用什么算法缺页次数都不会少于页号的个数(不同的)&lt;/li&gt;
+&lt;li&gt;采用FIFO页面置换,当可供分配的页帧数增加时,缺页中断次数可能增加也可能减少
+&lt;ol&gt;
+&lt;li&gt;Belady异常:增加的&lt;/li&gt;
+&lt;li&gt;序列为123123,两个页帧时,6次缺页中断,3个页帧时,3次,这个是减少的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;和页面中断一样意思的术语&#34;&gt;和页面中断一样意思的术语&lt;/h2&gt;
+&lt;p&gt;页面失效的次数:要包括前面空的时候往上放的页面的个数&lt;br&gt;
+页面置换的次数:不包括前面空的时候放的,仅计算需要换出再换入的个数&lt;/p&gt;
+&lt;h2 id=&#34;关于访问时间的超级重要&#34;&gt;关于访问时间的(超级重要)&lt;/h2&gt;
+&lt;p&gt;缺页中断之后,会更新页表,但不会更新快表,它会向先前一样,先访问快表(因为没更新所有还是无法命中),然后再次访问内存的页表,这个时候不会再缺页了,然后就更新快表项,因此王道上的那个流程图是没问题的&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/BSjVpQ&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/20/BSjVpQ.png&#34; alt=&#34;BSjVpQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+">虚拟内存技术的错题及知识点</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng-cuo-ti-ji-zhi-shi-dian/"" data-c="
           &lt;ol&gt;
 &lt;li&gt;域名和IP地址,MAC地址,主机&lt;strong&gt;都不是&lt;/strong&gt;一一对应关系&lt;/li&gt;
@@ -2573,12 +3092,60 @@ ISP:因特网服务提供商&lt;br&gt;
 &lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/03/08Cot0.png&#34; alt=&#34;08Cot0.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;3-页面置换算法&#34;&gt;3 页面置换算法&lt;/h2&gt;
 &lt;h3 id=&#34;1-最佳opt置换算法&#34;&gt;1 最佳(OPT)置换算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0x9DdP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0x9DdP.png&#34; alt=&#34;0x9DdP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0x96JS&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0x96JS.png&#34; alt=&#34;0x96JS.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;2-先进先出fifo页面置换算法&#34;&gt;2 先进先出(FIFO)页面置换算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xCQSg&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xCQSg.png&#34; alt=&#34;0xCQSg.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;Belady异常:&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/0xC2tK&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xC2tK.png&#34; alt=&#34;0xC2tK.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-最近最久未使用lru置换算法&#34;&gt;3 最近最久未使用(LRU)置换算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xPSns&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xPSns.png&#34; alt=&#34;0xPSns.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;算法的实现需要专门的硬件支持,性能好但是开销大,实现困难,性能是最接近最佳置换算法的&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;时钟clock置换算法&#34;&gt;时钟(CLOCK)置换算法&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xeCf1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xeCf1.png&#34; alt=&#34;0xeCf1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;优化的clock&#34;&gt;优化的CLOCK&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xuAXV&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xuAXV.png&#34; alt=&#34;0xuAXV.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;自己的理解:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(访问位,修改位):总是优先淘汰访问位是0的,修改位也是0的,也就是最近既未访问的也没有修改的&lt;br&gt;
+优先淘汰未访问的显而易见,为何淘汰未修改的呢?&lt;br&gt;
+因为修改过的淘汰了得往磁盘里写,产生I/O的开销,当然尽可能的先不淘汰它,如果你没修改丢了就丢了,也不用特地往磁盘写&lt;br&gt;
+所以过程就是:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;扫描第一遍,淘汰(0,0)的,没有就继续第二遍,不用修改&lt;/li&gt;
+&lt;li&gt;第一遍失败扫第二遍,淘汰(0,1)的(00没有,肯定没办法了,往磁盘写就往磁盘写吧,也得先淘汰最近没访问的).就这都还没的话(这时候肯定剩  (1,1)/(1,0) 这两种)就把扫过的访问位都改成0,下把肯定有(0,0)/(0,1)了&lt;/li&gt;
+&lt;li&gt;第三遍肯定还是上来优先是(0,0)的,没有就说明只剩(0,1)了&lt;/li&gt;
+&lt;li&gt;第四遍淘汰(0,1)的,这必然有了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;也就是为了淘汰(0,0)的时候,啥也不用修改,为了淘汰(0,1)的时候,边扫边改访问位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;五种算法的比较&#34;&gt;五种算法的比较&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xQDj1&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xQDj1.png&#34; alt=&#34;0xQDj1.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;4-页面分配策略&#34;&gt;4 页面分配策略&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xh2aq&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xh2aq.png&#34; alt=&#34;0xh2aq.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0x4ItP&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0x4ItP.png&#34; alt=&#34;0x4ItP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;可变分配局部置换和可变分配全局置换的区别:&lt;br&gt;
+局部的:物理块不够的时候,是从进程自己内部的物理块换出外存&lt;br&gt;
+全局:不够的时候随便挑一个不一定是自己的进程里的换,也可能是拿别人的&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/0x51nH&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0x51nH.png&#34; alt=&#34;0x51nH.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;调入页面的时机&#34;&gt;调入页面的时机&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xIebj&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xIebj.png&#34; alt=&#34;0xIebj.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;何处调入页面&#34;&gt;何处调入页面&lt;/h3&gt;
+&lt;h4 id=&#34;对换区足够&#34;&gt;对换区足够&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xIvWV&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xIvWV.png&#34; alt=&#34;0xIvWV.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;对换区不够&#34;&gt;对换区不够&lt;/h4&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xoVW6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xoVW6.png&#34; alt=&#34;0xoVW6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;unix&#34;&gt;UNIX&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgchr.com/i/0xILon&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xILon.png&#34; alt=&#34;0xILon.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgchr.com/i/0xINZ9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xINZ9.png&#34; alt=&#34;0xINZ9.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;5-抖动&#34;&gt;5 抖动&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;16&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0x73xf&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0x73xf.png&#34; alt=&#34;0x73xf.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;6-工作集&#34;&gt;6 工作集&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;17&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xzl7V&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xzl7V.png&#34; alt=&#34;0xzl7V.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;18&#34;&gt;&lt;a href=&#34;https://imgchr.com/i/0xzfBt&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/19/0xzfBt.png&#34; alt=&#34;0xzfBt.png&#34; loading=&#34;lazy&#34;&gt;&lt;/a&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;7-地址翻译&#34;&gt;7 地址翻译&lt;/h2&gt;
 ">第三章 内存管理之虚拟内存管理</a>
       </div>
@@ -2634,7 +3201,51 @@ ISP:因特网服务提供商&lt;br&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/"" data-c="
-          &lt;p&gt;tropical:热带的&lt;br&gt;
+          &lt;h2 id=&#34;超高频&#34;&gt;超高频&lt;/h2&gt;
+&lt;p&gt;overwhelmingly:压倒性地,不可抵抗地&lt;br&gt;
+recession&lt;br&gt;
+prospect:前景,可能性,机会,希望&lt;br&gt;
+exclude:排除在外的&lt;br&gt;
+deny:否认&lt;br&gt;
+statistically:统计地&lt;br&gt;
+strikingly:惹人注目地&lt;br&gt;
+descent:体面的&lt;br&gt;
+engagement:&lt;strong&gt;参与度&lt;/strong&gt;订婚;订婚期间;(尤指正式的或与工作有关的)约定，约会，预约;战斗;交战&lt;br&gt;
+disengage:脱离,不再感兴趣&lt;br&gt;
+legacy:遗产&lt;br&gt;
+ethos:精神特质,理念&lt;br&gt;
+decline:抗拒&lt;br&gt;
+squeeze:v.挤压;捏;(从某物中)榨出，挤出，拧出;(使)挤入;挤过;塞入n.挤压;捏;榨出的液体;小量挤出的汁;挤;塞&lt;br&gt;
+supervise:监督&lt;br&gt;
+exquisitely:精致地&lt;br&gt;
+bid:努力,企图,争取&lt;/p&gt;
+&lt;h2 id=&#34;倒序17年开始&#34;&gt;倒序17年开始&lt;/h2&gt;
+&lt;p&gt;be wired to:天生就会&lt;br&gt;
+tablet:平板电脑&lt;br&gt;
+maximal:最大的,最高的&lt;br&gt;
+bleed-over:渗透,渗开&lt;br&gt;
+staff:为...配备工作人员&lt;br&gt;
+set off:启程出发&lt;br&gt;
+pledge:发誓,保证&lt;br&gt;
+lever:撬动&lt;br&gt;
+fit:健壮的&lt;br&gt;
+retrospection:回想,反思&lt;br&gt;
+in the run-up to sth:重要事件前夕&lt;br&gt;
+as to sth:关于&lt;br&gt;
+shine:干的出色,出类拔萃&lt;br&gt;
+bidder:投标人:Olympic~:奥运申办者&lt;br&gt;
+dual:双重的&lt;br&gt;
+intimidating:令人胆怯的&lt;br&gt;
+puffed-out:气喘吁吁的,生气不接下气的&lt;br&gt;
+stress on A over B:强调A胜过B&lt;br&gt;
+time trial:计时赛&lt;br&gt;
+first timer:第一次参赛的&lt;br&gt;
+grassroots:pl.基层民众,草根&lt;br&gt;
+successive:连续的&lt;br&gt;
+wordyL冗长的&lt;br&gt;
+preside over:主持,掌管&lt;/p&gt;
+&lt;h2 id=&#34;10年开始的&#34;&gt;10年开始的&lt;/h2&gt;
+&lt;p&gt;tropical:热带的&lt;br&gt;
 soap habbit:用肥皂洗手的习惯;&lt;strong&gt;类似的组合词学会结合上下文翻译&lt;/strong&gt;&lt;br&gt;
 wipe:抹,擦&lt;br&gt;
 counter:柜台&lt;br&gt;
@@ -3188,15 +3799,6 @@ lengthy:长时间的,冗长的&lt;br&gt;
 tricky:狡猾的&lt;br&gt;
 the demands of sth:困难的/烦人的/累人的事&lt;br&gt;
 counterbalance:使平衡,抵消&lt;/p&gt;
-&lt;h2 id=&#34;超高频&#34;&gt;超高频&lt;/h2&gt;
-&lt;p&gt;overwhelmingly:压倒性地,不可抵抗地&lt;br&gt;
-recession&lt;br&gt;
-prospect:前景,可能性,机会,希望&lt;br&gt;
-exclude:排除在外的&lt;br&gt;
-deny:否认&lt;br&gt;
-statistically:统计地&lt;br&gt;
-strikingly:惹人注目地&lt;br&gt;
-descent:体面的&lt;/p&gt;
 ">做题词汇积累</a>
       </div>
       
@@ -3757,10 +4359,9 @@ void DFS(Graph G,int v,int &amp;amp;flag)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;2-dijkstra算法&#34;&gt;2 DijKstra算法&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;不适用于带有负权值的图&lt;/p&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/21/wqe4bQ.png&#34; alt=&#34;wqe4bQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;/li&gt;
+&lt;li&gt;不适用于带有负权值的图&lt;/li&gt;
+&lt;li&gt;时间复杂度O(|V|²)&lt;br&gt;
+&lt;img src=&#34;https://s1.ax1x.com/2020/09/21/wqe4bQ.png&#34; alt=&#34;wqe4bQ.png&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;3-floyd算法&#34;&gt;3 Floyd算法&lt;/h3&gt;
 &lt;p&gt;若 A&lt;sup&gt;(k-1)&lt;/sup&gt;[i] [j]&amp;gt; A&lt;sup&gt;(k-1)&lt;/sup&gt;[i] [k]+ A&lt;sup&gt;(k-1)&lt;/sup&gt;[k] [j]&lt;/p&gt;
@@ -3783,11 +4384,11 @@ void DFS(Graph G,int v,int &amp;amp;flag)
 &lt;p&gt;时间复杂度:O(|V|³)&lt;/p&gt;
 &lt;p&gt;空间复杂度:O(|V|²)&lt;/p&gt;
 &lt;p&gt;可以用于负权值的图,但是&lt;strong&gt;不可以用于&lt;/strong&gt;带负权值的回路&lt;/p&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjiWfx.png&#34; alt=&#34;wjiWfx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjiWfx.png&#34; alt=&#34;wjiWfx.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;4-总结&#34;&gt;4 总结&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjFwEd.png&#34; alt=&#34;wjFwEd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjFwEd.png&#34; alt=&#34;wjFwEd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;5-有向无环图dagdirected-acyclic-graph描述表达式&#34;&gt;5 有向无环图(DAG:Directed Acyclic Graph)描述表达式&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjmgWd.png&#34; alt=&#34;wjmgWd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wjmgWd.png&#34; alt=&#34;wjmgWd.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;6-拓扑排序&#34;&gt;6 拓扑排序&lt;/h3&gt;
 &lt;h4 id=&#34;1aov网activity-on-vertex-network用顶点表示活动的网&#34;&gt;1.AOV网(Activity On Vertex Network):用顶点表示活动的网&lt;/h4&gt;
 &lt;h4 id=&#34;2-拓扑排序代码实现&#34;&gt;2. 拓扑排序代码实现&lt;/h4&gt;
@@ -3830,7 +4431,7 @@ void DFS(Graph G,int v,int &amp;amp;flag)
 &lt;p&gt;倒过来,找出度为0的,用临界矩阵或逆邻接表&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;DFS&lt;/p&gt;
+&lt;p&gt;DFS(不咋对,别看了)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;不带判断环的只要在DFS的最后打印顶点就行&lt;/li&gt;
 &lt;li&gt;带判断的&lt;/li&gt;
@@ -3877,11 +4478,11 @@ void DFS(Graph G,int v,int &amp;amp;flag)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/25/0CkpHP.png&#34; alt=&#34;0CkpHP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/25/0CkpHP.png&#34; alt=&#34;0CkpHP.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;7-关键路径&#34;&gt;7 关键路径&lt;/h3&gt;
 &lt;h3 id=&#34;1-aoe网&#34;&gt;1 AOE网&lt;/h3&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvft0J.png&#34; alt=&#34;wvft0J.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvfBp6.png&#34; alt=&#34;wvfBp6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvft0J.png&#34; alt=&#34;wvft0J.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/09/23/wvfBp6.png&#34; alt=&#34;wvfBp6.png&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 "> 图的应用</a>
       </div>
       
