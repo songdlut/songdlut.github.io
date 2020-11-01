@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-10-29T00:47:46.874Z</updated>
+    <updated>2020-11-01T12:21:57.889Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://songdlut.github.io/images/avatar.png</logo>
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[B树]]></title>
+        <id>https://songdlut.github.io/post/b-shu/</id>
+        <link href="https://songdlut.github.io/post/b-shu/">
+        </link>
+        <updated>2020-11-01T07:12:43.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>struct node{
+    ElementType keys[m-1];
+    struct node* child[m];
+    int num;//关键字数量
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/Bwd1qx"><img src="https://s1.ax1x.com/2020/11/01/Bwd1qx.png" alt="Bwd1qx.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="2"><a href="https://imgchr.com/i/BwxJ7d"><img src="https://s1.ax1x.com/2020/11/01/BwxJ7d.png" alt="BwxJ7d.png" loading="lazy"></a></figure>
+<ol>
+<li>插入元素引起分裂,不一定会长高,只要他父结点还可以容纳</li>
+<li>说一个树是5阶的,并不要求里面一定得有个有4个关键字的结点,切记</li>
+<li>B+树支持顺序查找,B树不支持,但两个都支持随机查找</li>
+<li>都可以用于文件索引和数据库索引,但B+更适合,因为读写磁盘效率更高</li>
+<li></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第七章 查找的错题及知识点]]></title>
         <id>https://songdlut.github.io/post/di-qi-zhang-cha-zhao-de-cuo-ti-ji-zhi-shi-dian/</id>
@@ -638,54 +661,6 @@ HTTP:HyperText Transfer Protocol</p>
 <figure data-type="image" tabindex="14"><a href="https://imgchr.com/i/0v0lKU"><img src="https://s1.ax1x.com/2020/10/19/0v0lKU.png" alt="0v0lKU.png" loading="lazy"></a></figure>
 <figure data-type="image" tabindex="15"><a href="https://imgchr.com/i/0v0NP1"><img src="https://s1.ax1x.com/2020/10/19/0v0NP1.png" alt="0v0NP1.png" loading="lazy"></a></figure>
 <figure data-type="image" tabindex="16"><a href="https://imgchr.com/i/0v05qg"><img src="https://s1.ax1x.com/2020/10/19/0v05qg.png" alt="0v05qg.png" loading="lazy"></a></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第五章 传输层知识点及错题]]></title>
-        <id>https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/</id>
-        <link href="https://songdlut.github.io/post/di-wu-zhang-chuan-shu-ceng-zhi-shi-dian-ji-cuo-ti/">
-        </link>
-        <updated>2020-10-18T02:05:03.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>TCP保证可靠且<strong>顺序</strong>交付</li>
-<li>TCP并没有要求网络层必须使用虚电路,TCP不影响网络层提供无连接服务</li>
-<li>UDP接受到有差错的数据就<strong>直接丢弃</strong>,不要选忽略差错</li>
-<li>当一个IP数据报分成了4片,第一次传过去后两片到了(在缓存区),前两片丢失,第二次前两片到了,后两片丢失,那么能否组成原来的IP数据报
-<ol>
-<li>是不可以的,第一次和第二次分片的标识部分变了,无法识别成一个数据报</li>
-</ol>
-</li>
-<li><strong>根据2019年408真题选择38题可知,快速重传的3个冗余ACK并不是指共四个,就是3个</strong></li>
-<li>客户端和服务器端都可以提出释放连接</li>
-<li>TCP滑动窗口中,规定重传分组的数量最多是<strong>等于滑动窗口的大小</strong></li>
-<li>滑动窗口的值太大,会导致传送数据太多,路由器拥挤,造成丢失</li>
-<li>拥塞窗口是<strong>发送端</strong>根据网络拥塞情况确定的窗口值<br>
-10.使用两台主机已经建立TCP连接的端口再建立连接,会建立失败,不影响先建立连接的传输</li>
-</ol>
-<h2 id="已知接收窗口大小问可发送多少">已知接收窗口大小,问可发送多少</h2>
-<ol>
-<li>单位B,切记,别弄成多少TCP报文段了</li>
-<li>注意问的是有没有收到报文段
-<ol>
-<li>未收到报文段,就是接收窗口大小</li>
-<li>收到了,比如接收窗口5000B,发送窗口连着发两个,一个1000B,一个3000B,收到1000B的确认,那么还可以继续发送的:5000B-3000B=2000B</li>
-</ol>
-</li>
-</ol>
-<h2 id="问拥塞窗口大小的或者变形类的问经历多少时间也就是多少ttl本质一样">问拥塞窗口大小的(或者变形类的,问经历多少时间也就是多少TTL本质一样)</h2>
-<h3 id="注意分辨是哪种">注意分辨是哪种</h3>
-<ol>
-<li>题目给的超时<br>
-那么就是慢启动+拥塞避免算法:降到1开始,先慢启动再拥塞避免,注意2倍大于阈值时得取为阈值然后开始使用拥塞避免算法</li>
-<li>题目说收到3个冗余ACK报文<br>
-那么就是快重传+快恢复:降到产生拥塞时的一半开始拥塞避免算法</li>
-</ol>
-<h3 id="注意点">注意点</h3>
-<ol>
-<li>核心点是要知道每次增加(不管翻倍还是增1),都是在一个TTL完成后</li>
-<li>根据1,如果问的是第n次开始传输时大小为多少,那么算的是n-1个TTL后的大小</li>
-<li>如果问拥塞窗口为XXX的时候,经历的时间,本质是一样的</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
