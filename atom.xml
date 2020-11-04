@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://songdlut.github.io</id>
     <title>宋宇航的博客</title>
-    <updated>2020-11-01T12:21:57.889Z</updated>
+    <updated>2020-11-04T13:38:00.614Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://songdlut.github.io"/>
     <link rel="self" href="https://songdlut.github.io/atom.xml"/>
@@ -11,7 +11,68 @@
     <icon>https://songdlut.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 宋宇航的博客</rights>
     <entry>
-        <title type="html"><![CDATA[B树]]></title>
+        <title type="html"><![CDATA[政治知识点 思修部分]]></title>
+        <id>https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-si-xiu-bu-fen/</id>
+        <link href="https://songdlut.github.io/post/zheng-zhi-zhi-shi-dian-si-xiu-bu-fen/">
+        </link>
+        <updated>2020-11-04T07:12:31.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>爱国主义不是永恒的
+<ul>
+<li>会随着国家的概念的消亡而消亡</li>
+</ul>
+</li>
+<li>爱社会主义不能算作爱国主义的内涵
+<ul>
+<li>内涵就那四个:大好河山,骨肉同胞,灿烂文化,自己的国家</li>
+</ul>
+</li>
+<li>要把国家安全,荣誉,利益放在高于一切的地位</li>
+<li>文化是培养民族心理,民族个性,民族精神的摇篮</li>
+<li>凡事说到啥理论根本特性的时候一般都是人民性,因为我们都是基于马克思主义原理的,其最鲜明的特点就是人民性</li>
+<li>在整个上层建筑中,政治上层建筑</li>
+<li>社会主义核心价值观把涉及国家,社会,公民的价值要求融为一体,社会主义核心价值体系没有</li>
+<li>社会主义核心价值观体现了社会主义意识形态的本质要求</li>
+<li>社会主义核心价值观<strong>没有普适性</strong>
+<ul>
+<li>先进性:</li>
+<li>人民性:根本特性</li>
+<li>真实性:不要看到提到人民就是人民性,关键在于看有没有说到不是用来做摆设的</li>
+</ul>
+</li>
+<li>家庭美德的基本规范<strong>没有同甘共苦</strong></li>
+<li>道德的产生归源于社会经济关系</li>
+<li>道德<strong>在本质上是知行合一的</strong></li>
+<li>在阶级社会中,道德是调节阶级矛盾和对立阶级之间开展阶级斗争的重要工具
+<ul>
+<li>占统治地位的是统治阶级的道德</li>
+</ul>
+</li>
+<li>革命道德的灵魂是坚持社会主义,共产主义理想和信念的不屈不挠的精神
+<ul>
+<li>红线是为人民服务</li>
+<li><strong>推进新时代公民道德建设的出发点和落脚点是培养担当民族复兴大任的时代新人</strong></li>
+<li>在社会主义道德建设中具有基础性作用的是<strong>个人品德</strong></li>
+</ul>
+</li>
+<li>注意:道德一经产生就<strong>具有相对独立性</strong></li>
+<li>社会主义道德
+<ul>
+<li>核心:为人民服务</li>
+<li>原则:集体主义</li>
+<li>重点:诚实守信</li>
+<li>基本要求:社会主义荣辱观</li>
+</ul>
+</li>
+<li>有序的公共生活<strong>不是推动社会发展额重要动力</strong></li>
+<li>只有实现中华民族的伟大复兴的中国梦,家庭梦才能成真</li>
+<li>恋爱的道德规范没有尊重对方爹妈</li>
+<li></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[B树和散列表]]></title>
         <id>https://songdlut.github.io/post/b-shu/</id>
         <link href="https://songdlut.github.io/post/b-shu/">
         </link>
@@ -29,8 +90,10 @@
 <li>说一个树是5阶的,并不要求里面一定得有个有4个关键字的结点,切记</li>
 <li>B+树支持顺序查找,B树不支持,但两个都支持随机查找</li>
 <li>都可以用于文件索引和数据库索引,但B+更适合,因为读写磁盘效率更高</li>
-<li></li>
 </ol>
+<figure data-type="image" tabindex="3"><a href="https://imgchr.com/i/BD7NRS"><img src="https://s1.ax1x.com/2020/11/02/BD7NRS.png" alt="BD7NRS.png" loading="lazy"></a></figure>
+<p>**注意:**线性探测查找失败不是按照表的元素个数啥的求,比如模7,就看0~6上的元素,即使后面还有,也不算了,就算前面的,0开始,到空为算,看几个,然后1开始到空为算...但是到后面如果一直连着超过了6,也是得算上个数,直到空<br>
+另外,空算一次</p>
 ]]></content>
     </entry>
     <entry>
@@ -608,59 +671,6 @@
 </ol>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第六章 应用层]]></title>
-        <id>https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng/</id>
-        <link href="https://songdlut.github.io/post/di-liu-zhang-ying-yong-ceng/">
-        </link>
-        <updated>2020-10-18T12:59:30.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="网络模型">网络模型</h2>
-<p><img src="https://s1.ax1x.com/2020/10/18/0jJaAf.png" alt="0jJaAf.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/10/18/0jYlV0.png" alt="0jYlV0.png" loading="lazy"></p>
-<h2 id="dns">DNS</h2>
-<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/0jt8eI"><img src="https://s1.ax1x.com/2020/10/18/0jt8eI.png" alt="0jt8eI.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="2"><a href="https://imgchr.com/i/0jNk9S"><img src="https://s1.ax1x.com/2020/10/18/0jNk9S.png" alt="0jNk9S.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="3"><a href="https://imgchr.com/i/0jN4C8"><img src="https://s1.ax1x.com/2020/10/18/0jN4C8.png" alt="0jN4C8.png" loading="lazy"></a></figure>
-<h2 id="ftp">FTP</h2>
-<p>FTP:File Transfer Protocol<br>
-TFTP:Trivial File Transfer Protocol,简单文件传输协议</p>
-<figure data-type="image" tabindex="4"><a href="https://imgchr.com/i/0vn759"><img src="https://s1.ax1x.com/2020/10/19/0vn759.png" alt="0vn759.png" loading="lazy"></a></figure>
-<p><a href="https://imgchr.com/i/0vuOij"><img src="https://s1.ax1x.com/2020/10/19/0vuOij.png" alt="0vuOij.png" loading="lazy"></a><br>
-主动:建立连接后,S主动告诉C是20端口发送数据<br>
-被动:建立连接后,C问S,S告诉一个端口号<br>
-<a href="https://imgchr.com/i/0vKPwF"><img src="https://s1.ax1x.com/2020/10/19/0vKPwF.png" alt="0vKPwF.png" loading="lazy"></a></p>
-<h2 id="电子邮件">电子邮件</h2>
-<figure data-type="image" tabindex="5"><a href="https://imgchr.com/i/0v1GE8"><img src="https://s1.ax1x.com/2020/10/19/0v1GE8.png" alt="0v1GE8.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="6"><a href="https://imgchr.com/i/0v1p9J"><img src="https://s1.ax1x.com/2020/10/19/0v1p9J.png" alt="0v1p9J.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="7"><a href="https://imgchr.com/i/0v1ags"><img src="https://s1.ax1x.com/2020/10/19/0v1ags.png" alt="0v1ags.png" loading="lazy"></a></figure>
-<h3 id="smtpsimple-mail-transfer-protocol">SMTP:Simple Mail Transfer Protocol</h3>
-<figure data-type="image" tabindex="8"><a href="https://imgchr.com/i/0v3rQA"><img src="https://s1.ax1x.com/2020/10/19/0v3rQA.png" alt="0v3rQA.png" loading="lazy"></a></figure>
-<blockquote>
-<p>** 注意**<br>
-端口587只应用于提交（即，邮件客户端到邮件服务器）<br>
-端口25只应用于中继（即，邮件服务器到邮件服务器通信</p>
-</blockquote>
-<figure data-type="image" tabindex="9"><a href="https://imgchr.com/i/0v3IQs"><img src="https://s1.ax1x.com/2020/10/19/0v3IQs.png" alt="0v3IQs.png" loading="lazy"></a></figure>
-<h3 id="pop3post-office-protocol">POP3:Post Office Protocol</h3>
-<figure data-type="image" tabindex="10"><a href="https://imgchr.com/i/0v8SyR"><img src="https://s1.ax1x.com/2020/10/19/0v8SyR.png" alt="0v8SyR.png" loading="lazy"></a></figure>
-<h3 id="imapinternet-message-access-protocol因特网报文存取协议">IMAP:Internet Message Access Protocol(因特网报文存取协议)</h3>
-<figure data-type="image" tabindex="11"><a href="https://imgchr.com/i/0v8eld"><img src="https://s1.ax1x.com/2020/10/19/0v8eld.png" alt="0v8eld.png" loading="lazy"></a></figure>
-<h3 id="基于万维网的电子邮件">基于万维网的电子邮件</h3>
-<p><a href="https://imgchr.com/i/0v8amq"><img src="https://s1.ax1x.com/2020/10/19/0v8amq.png" alt="0v8amq.png" loading="lazy"></a><br>
-只有中继地时候才用SMTP,其余的是http协议</p>
-<h2 id="万维网wwwworld-wide-web">万维网(www):World Wide Web</h2>
-<p><a href="https://imgchr.com/i/0vGe4U"><img src="https://s1.ax1x.com/2020/10/19/0vGe4U.png" alt="0vGe4U.png" loading="lazy"></a><br>
-URL:Uniform Resource Locator:统一资源定位符<br>
-HTML:HyperText Makeup Language:超文本标记语言<br>
-HTTP:HyperText Transfer Protocol</p>
-<h3 id="http">HTTP</h3>
-<figure data-type="image" tabindex="12"><a href="https://imgchr.com/i/0v098P"><img src="https://s1.ax1x.com/2020/10/19/0v098P.png" alt="0v098P.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="13"><a href="https://imgchr.com/i/0v0ZUs"><img src="https://s1.ax1x.com/2020/10/19/0v0ZUs.png" alt="0v0ZUs.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="14"><a href="https://imgchr.com/i/0v0lKU"><img src="https://s1.ax1x.com/2020/10/19/0v0lKU.png" alt="0v0lKU.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="15"><a href="https://imgchr.com/i/0v0NP1"><img src="https://s1.ax1x.com/2020/10/19/0v0NP1.png" alt="0v0NP1.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="16"><a href="https://imgchr.com/i/0v05qg"><img src="https://s1.ax1x.com/2020/10/19/0v05qg.png" alt="0v05qg.png" loading="lazy"></a></figure>
 ]]></content>
     </entry>
 </feed>
