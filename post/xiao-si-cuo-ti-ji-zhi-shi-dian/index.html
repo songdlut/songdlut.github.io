@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="学习博客">
 <meta name="theme-color" content="#000">
-<title>第三章 内存管理概念部分 | 宋宇航的博客</title>
+<title>肖四错题及知识点 | 宋宇航的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1608730772296">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="第三章 内存管理概念部分" />
-  <meta name="keywords" content="操作系统" />
+  <meta name="description" content="肖四错题及知识点" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -261,49 +261,7 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#1-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E8%A6%81%E6%B1%82">1 基本原理和要求</a>
-<ul>
-<li><a href="#1-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%8A%9F%E8%83%BD">1 内存管理的功能</a></li>
-<li><a href="#2-%E7%A8%8B%E5%BA%8F%E8%A3%85%E5%85%A5%E5%92%8C%E9%93%BE%E6%8E%A5">2 程序装入和链接</a></li>
-<li><a href="#3-%E8%A3%85%E5%85%A5%E5%86%85%E5%AD%98%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F">3 装入内存的三种方式</a></li>
-<li><a href="#4-%E5%85%B3%E4%BA%8E%E9%93%BE%E6%8E%A5%E5%92%8C%E8%A3%85%E5%85%A5%E7%9A%84%E7%90%86%E8%A7%A3">4 关于链接和装入的理解(☆)</a></li>
-</ul>
-</li>
-<li><a href="#2-%E8%A6%86%E7%9B%96%E5%92%8C%E4%BA%A4%E6%8D%A2">2 覆盖和交换</a></li>
-<li><a href="#3-%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">3 连续分配管理方式</a>
-<ul>
-<li><a href="#1-%E5%8D%95%E4%B8%80%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D">1 单一连续分配</a></li>
-<li><a href="#2-%E5%9B%BA%E5%AE%9A%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D">2 固定分区分配</a></li>
-<li><a href="#3-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D">3 动态分区分配</a>
-<ul>
-<li><a href="#%E5%86%85%E9%83%A8%E7%A2%8E%E7%89%87%E5%A4%96%E9%83%A8%E7%A2%8E%E7%89%87">内部碎片,外部碎片</a></li>
-<li><a href="#1-%E4%BD%BF%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">1 使用的数据结构</a></li>
-<li><a href="#2-%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6">2 分配与回收</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95">动态分区分配算法</a></li>
-</ul>
-</li>
-<li><a href="#4-%E9%9D%9E%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">4 非连续分配管理方式</a>
-<ul>
-<li><a href="#1-%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">1 基本分页存储管理方式</a>
-<ul>
-<li><a href="#1-%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%9F%A5%E8%AF%86%E7%82%B9">1 分页存储知识点:</a></li>
-<li><a href="#2-%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84">2 基本地址变换机构</a></li>
-<li><a href="#3-%E5%85%B7%E6%9C%89%E5%9D%97%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84">3 具有块表的地址变换机构</a></li>
-<li><a href="#4-%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8">4 两级页表</a></li>
-</ul>
-</li>
-<li><a href="#2-%E5%9F%BA%E6%9C%AC%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86">2 基本分段存储管理</a>
-<ul>
-<li><a href="#1-%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84">1 逻辑地址结构</a></li>
-<li><a href="#2-%E8%A1%A8%E9%A1%B9%E7%BB%93%E6%9E%84">2 表项结构</a></li>
-<li><a href="#3-%E5%AF%BB%E5%9D%80%E8%BF%87%E7%A8%8B">3 寻址过程</a></li>
-</ul>
-</li>
-<li><a href="#3-%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F">3 段页式管理方式</a></li>
-</ul>
-</li>
+<li><a href="#%E8%82%96%E5%9B%9B%E7%9A%84%E4%B8%80">肖四的一</a></li>
 </ul>
 </li>
 </ul>
@@ -571,8 +529,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/">
-      第三章 内存管理概念部分
+    <a class="post-title-link" href="https://songdlut.github.io/post/xiao-si-cuo-ti-ji-zhi-shi-dian/">
+      肖四错题及知识点
     </a>
   </h1>
   <div class="post-meta">
@@ -580,36 +538,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-09-26</span>
+      <span>2020-12-17</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/">
-        <span>操作系统</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>5<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1423<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>620<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/nei-cun-guan-li-gai-nian-bu-fen/" data-flag-title="第三章 内存管理概念部分" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/xiao-si-cuo-ti-ji-zhi-shi-dian/" data-flag-title="肖四错题及知识点" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -618,160 +563,58 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="1-基本原理和要求">1 基本原理和要求</h2>
-<h3 id="1-内存管理的功能">1 内存管理的功能</h3>
+              <h2 id="肖四的一">肖四的一</h2>
 <ol>
-<li>内存空间的分配与回收</li>
-<li>地址转换</li>
-<li>内存空间的扩充</li>
-<li>存储保护<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PHSu4.png" alt="0PHSu4.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0P7j3T.png" alt="0P7j3T.png" loading="lazy"></li>
-</ol>
-<h3 id="2-程序装入和链接">2 程序装入和链接</h3>
+<li>劳动是价值的唯一源泉,不是社会财富的唯一源泉</li>
+<li>可能和不可能是不能转换的</li>
+<li>评价标准归根到底是<strong>主体</strong>的需要</li>
+<li>帝国主义实质:垄断资本凭借垄断地位获取高额垄断利润</li>
+<li>垄断并不能消除竞争反而加剧</li>
+<li>发展中的矛盾和问题集中体现在发展质量上</li>
+<li>海南自由贸易港:要把制度集成创新摆在突出位置</li>
+<li>脱贫攻坚:
 <ol>
-<li>静态链接</li>
-<li>装入时动态链接</li>
-<li>运行时动态链接</li>
-</ol>
-<h3 id="3-装入内存的三种方式">3 装入内存的三种方式</h3>
-<ol>
-<li>绝对装入
-<ul>
-<li>编译时,编译程序产生绝对地址的目标代码,</li>
-<li>只适用于单道程序环境</li>
-<li>绝对地址可在编译或汇编时给出,也可由程序员直接赋予</li>
-<li>通常情况下,程序中采用的是符号地址,然后再转换为绝对地址</li>
-</ul>
-</li>
-<li>可重定位装入
-<ul>
-<li>指令中使用的地址,数据的地址都是相对于起始地址的逻辑地址</li>
-<li>装入时才重新定位,将逻辑地址转换为物理地址(地址变换是在装入时一次完成的)</li>
-<li>一个作业装入内存时必须分配完所有的内存空间,若果不足,就不能装入</li>
-<li>在运行期间不能移动,也不可再申请新的内存</li>
-</ul>
-</li>
-<li>动态运行时装入
-<ul>
-<li>编译链接后的装入模块的地址都是从0开始的</li>
-<li>装入模块装入内存后不会立刻把逻辑地址转换为物理地址,而是把逻辑地址转换为物理地址的过程推迟到程序真正运行时</li>
-<li>需要重定位寄存器,存放装入模块存放的起始地址</li>
-<li>允许程序在内存中移动</li>
-</ul>
-</li>
-</ol>
-<h3 id="4-关于链接和装入的理解">4 关于链接和装入的理解(☆)</h3>
-<p>不是说上面的链接和装入是一一对应的,静态链接不是说就非得和静态装入(绝对装入)是一块儿的,绝对装入现在都不用了,但是静态链接我们还是用的就可以说明这一问题.<br>
-链接是针对程序在磁盘中的,比如静态链接的程序是用到的模块已经固定好啥样了,就像这样<br>
-<img src="https://s1.ax1x.com/2020/09/26/0P2zTS.png" alt="0P2zTS.png" loading="lazy"><br>
-然后怎么装入就看哪种方式,现在的应该都是动态装入<br>
-静态装入:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PWWVK.png" alt="0PWWVK.png" loading="lazy"><br>
-假设有一个没有错误(err.o),使用动态装入:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PWqqP.png" alt="0PWqqP.png" loading="lazy"><br>
-如果动态链接:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PoVgg.png" alt="0PoVgg.png" loading="lazy"><br>
-装入后:<br>
-<img src="https://s1.ax1x.com/2020/09/26/0Po3CT.png" alt="0Po3CT.png" loading="lazy"><br>
-装入是怎样将链接好后的程序装入到内存里,当然也可能是没有链接好,但是编译通过了(毕竟动态链接)<br>
-<img src="https://s1.ax1x.com/2020/09/26/0PTcWT.png" alt="0PTcWT.png" loading="lazy"></p>
-<h2 id="2-覆盖和交换">2 覆盖和交换</h2>
-<p>覆盖与交换技术是在多道程序环境下用来扩充内存的两种方法<br>
-<img src="https://s1.ax1x.com/2020/09/26/0POkee.png" alt="0POkee.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0PLbsU.png" alt="0PLbsU.png" loading="lazy"></p>
-<h2 id="3-连续分配管理方式">3 连续分配管理方式</h2>
-<p>连续分配:系统为用户进程分配的必须是一个连续的内存空间</p>
-<h3 id="1-单一连续分配">1 单一连续分配</h3>
-<p>一般无需内存保护<br>
-优点:简单,无外部碎片,可采用覆盖技术,不需要额外的技术支持<br>
-缺点:只适用于单用户,单任务,有内部碎片,利用率低</p>
-<h3 id="2-固定分区分配">2 固定分区分配</h3>
-<p>分类:</p>
-<ol>
-<li>分区大小相等</li>
-<li>分区大小不等<br>
-优点:可用于多道程序的最简单的存储分配,无外部碎片<br>
-缺点:不能实现多进程共享一个主存区,所以利用率低,存在内部碎片(当程序小于固定分区大小,也占用一个完整的内存分区,这样分区内部就存在空间浪费,这种现象称为内部碎片);程序可能太大而放不进任意一个分区中,此时用户不得不使用覆盖技术来使用内存空间</li>
-</ol>
-<h3 id="3-动态分区分配">3 动态分区分配</h3>
-<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/09/26/0it6pD.png" alt="0it6pD.png" loading="lazy"></figure>
-<h4 id="内部碎片外部碎片">内部碎片,外部碎片</h4>
-<p>动态分配没有内部碎片<br>
-<img src="https://s1.ax1x.com/2020/09/26/0ikxxg.png" alt="0ikxxg.png" loading="lazy"><br>
-当剩余的内存空间可以满足某进程,但是由于是不连续的碎片,可以采用紧凑(拼凑Compaction)技术来解决</p>
-<h4 id="1-使用的数据结构">1 使用的数据结构</h4>
-<ol>
-<li>空闲分区表</li>
-<li>空闲分区链<br>
-<img src="https://s1.ax1x.com/2020/09/26/0iFZkV.png" alt="0iFZkV.png" loading="lazy"></li>
-</ol>
-<h4 id="2-分配与回收">2 分配与回收</h4>
-<ol>
-<li>分配
-<ol>
-<li>如果那一块未满就更新一下</li>
-<li>如果恰好那一块一样大,就删除表项或结点</li>
+<li>根本:坚持党的领导,强化组织保证</li>
+<li>要义:坚持精准方略,提高脱贫实效</li>
+<li>保障:坚持加大投入,强化资金支持</li>
+<li>合力:坚持社会动员,凝聚各方力量</li>
+<li>要领:坚持从严要求,促进真抓实干</li>
+<li>基础:坚持群众主体,激发内生动力</li>
 </ol>
 </li>
-<li>回收
+<li>全面依法治国的着力点:解决法治领域突出问题</li>
+<li>瓦窑堡都和抗日统一战线有关</li>
+<li>1937.2,致电国民党五届三中全会,提出停止内战一致对外等五项</li>
+<li>洛川:抗日救国十大纲领,全民族抗战</li>
+<li>1939.7,共产党:三大口号</li>
+<li>&lt;&lt;反对本本主义&gt;&gt;:表现了毛泽东开辟新道路,创造新理论的革命首创精神</li>
+<li>针对人民内部的矛盾
 <ol>
-<li>回收区前面有就俩合并,后面有也是,如果前后都有,就三个都合并</li>
-<li>前后都没,插入一个表项</li>
+<li>政治思想领域:实行团结-批评-团结的方针</li>
+<li>物质利益分配:实行统筹兼顾,适当安排</li>
+<li>科学文化:百花齐放百家争鸣</li>
+<li>共产党和民主党派:长期共存,互相监督</li>
 </ol>
 </li>
-<li>适合重定位装入方式,因为连续,且可以移动</li>
-</ol>
-<h3 id="动态分区分配算法">动态分区分配算法</h3>
-<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/09/26/0iaEY6.png" alt="0iaEY6.png" loading="lazy"></figure>
-<h2 id="4-非连续分配管理方式">4 非连续分配管理方式</h2>
-<h3 id="1-基本分页存储管理方式">1 基本分页存储管理方式</h3>
-<h4 id="1-分页存储知识点">1 分页存储知识点:</h4>
-<p><img src="https://s1.ax1x.com/2020/09/26/0iIUiV.png" alt="0iIUiV.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4neI.png" alt="0i4neI.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i48Sg.png" alt="0i48Sg.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4Nmn.png" alt="0i4Nmn.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4BfU.png" alt="0i4BfU.png" loading="lazy"><br>
-<img src="https://s1.ax1x.com/2020/09/26/0i4fk6.png" alt="0i4fk6.png" loading="lazy"></p>
-<h4 id="2-基本地址变换机构">2 基本地址变换机构</h4>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/09/28/0A4sr4.png" alt="0A4sr4.png" loading="lazy"></figure>
-<h4 id="3-具有块表的地址变换机构">3 具有块表的地址变换机构</h4>
+<li>十四五期间经济社会发展的主题:推动高质量发展
 <ol>
-<li>进程切换时,快表被清楚</li>
-<li>查询未命中,访问两次内存,查询命中访问一次</li>
-<li>快慢表同时注意以下:<br>
-<img src="https://s1.ax1x.com/2020/09/28/0A73He.png" alt="0A73He.png" loading="lazy"></li>
-<li>局部性原理<br>
-<img src="https://s1.ax1x.com/2020/09/28/0A7oE4.png" alt="0A7oE4.png" loading="lazy"></li>
-<li>总结<br>
-<img src="https://s1.ax1x.com/2020/09/28/0AHkxP.png" alt="0AHkxP.png" loading="lazy"></li>
-</ol>
-<h4 id="4-两级页表">4 两级页表</h4>
-<ol>
-<li>单级页表的问题
-<ol>
-<li>页表必须连续分配,当页表过大时,需要占用过多的连续页框</li>
-<li>没有必要让整个页表常驻内存,进程在一段时间内的运行可能只访问几个特定的页面</li>
+<li>主线:深化供给侧结构性改革</li>
+<li>根本目的:满足.....</li>
 </ol>
 </li>
-<li>访问次数(没有块表机构):
+<li>习近平总书记的主张
 <ol>
-<li>n级页表,访问n+1次内存,如只有一个页表,则先访问页表,得到块号再访问内存单元(这个别忘了),如果2级则访问顶级页表一次,找到下一级页表所在的块号,访问该块号得到二级页表,找到要访问的内存块号,最后访问内存单元</li>
+<li>需要什么样的联合国:主持公道,厉行法治,促进合作,聚焦行动</li>
+<li>二十国集团第十五次第一阶段会议:坚持多边主义,开放包容,互利合作,与时俱进</li>
+<li>亚太经合组织第二十七次非正会议:坚持开放包容,创新增长,互联互通,合作共赢</li>
+<li>第三届巴黎和平论坛:团结互助,共抗疫情.....</li>
 </ol>
 </li>
-<li>一个页表最多只能占用一个页面,两级不够就继续分</li>
-<li>总结<br>
-<img src="https://s1.ax1x.com/2020/09/30/0uzIaQ.png" alt="0uzIaQ.png" loading="lazy"></li>
+<li>使用价值是价值的物质承担着,价值寓于使用价值之中</li>
+<li>价值是交换价值的基础,交换价值是价值的表现形式</li>
+<li>只要资本主义存在,经济危机就不能避免</li>
+<li></li>
 </ol>
-<h3 id="2-基本分段存储管理">2 基本分段存储管理</h3>
-<h4 id="1-逻辑地址结构">1 逻辑地址结构</h4>
-<p>段号 段内偏移量</p>
-<h4 id="2-表项结构">2 表项结构</h4>
-<p>段号 段长 本段在主存的始址</p>
-<h4 id="3-寻址过程">3 寻址过程</h4>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/10/02/0lZdBQ.png" alt="0lZdBQ.png" loading="lazy"></figure>
-<h3 id="3-段页式管理方式">3 段页式管理方式</h3>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/09/30/0uzIaQ.png" alt="0uzIaQ.png" loading="lazy"></figure>
 
             </div>
             
@@ -784,7 +627,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/" title="第三章 内存管理概念部分">https://songdlut.github.io/post/nei-cun-guan-li-gai-nian-bu-fen/</a>
+      <a href="https://songdlut.github.io/post/xiao-si-cuo-ti-ji-zhi-shi-dian/" title="肖四错题及知识点">https://songdlut.github.io/post/xiao-si-cuo-ti-ji-zhi-shi-dian/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -793,21 +636,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://songdlut.github.io/tag/fjEgJjCUR/"># 操作系统</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="做题词汇积累" href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/">做题词汇积累</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="做题词汇积累" href="https://songdlut.github.io/post/zuo-ti-ci-hui-ji-lei/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">死锁部分的题目</a>
-        <a class="nav-mobile-next" title="死锁部分的题目" href="https://songdlut.github.io/post/si-suo-bu-fen-de-ti-mu/">下一篇</a>
+        <a class="nav-pc-next" title="肖八错题及知识点整理" href="https://songdlut.github.io/post/xiao-ba-cuo-ti-ji-zhi-shi-dian-zheng-li/">肖八错题及知识点整理</a>
+        <a class="nav-mobile-next" title="肖八错题及知识点整理" href="https://songdlut.github.io/post/xiao-ba-cuo-ti-ji-zhi-shi-dian-zheng-li/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
