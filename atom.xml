@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://songdlut.github.io</id>
+    <title>宋宇航的博客</title>
+    <updated>2023-02-16T17:07:23.598Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://songdlut.github.io"/>
+    <link rel="self" href="https://songdlut.github.io/atom.xml"/>
+    <subtitle>学习博客</subtitle>
+    <logo>https://songdlut.github.io/images/avatar.png</logo>
+    <icon>https://songdlut.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, 宋宇航的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[论文大纲]]></title>
+        <id>https://songdlut.github.io/post/lun-wen-da-gang/</id>
+        <link href="https://songdlut.github.io/post/lun-wen-da-gang/">
+        </link>
+        <updated>2023-02-16T16:52:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="中文摘要">中文摘要</h1>
+<h1 id="英文摘要">英文摘要</h1>
+<h1 id="第一章-引言">第一章 引言</h1>
+<h2 id="11-项目背景">1.1 项目背景</h2>
+<h2 id="12-国内外实物取材于自定义纹理画图技术研究现状">1.2 国内外实物取材于自定义纹理画图技术研究现状</h2>
+<h2 id="13-论文主要工作和组织结构">1.3 论文主要工作和组织结构</h2>
+<h1 id="第二章项目开发技术概述">第二章项目开发技术概述</h1>
+<h2 id="21-面向过程与对象cc">2.1 面向过程与对象（C/C++）</h2>
+<h2 id="22-qt技术">2.2 QT技术</h2>
+<h2 id="23-图像处理">2.3 图像处理</h2>
+<h3 id="231-图像旋转技术">2.3.1 图像旋转技术</h3>
+<h3 id="232-jpeg图像处理">2.3.2 JPEG图像处理</h3>
+<h2 id="24-涉及的硬件部分">2.4 涉及的硬件部分</h2>
+<h3 id="2-41-主控stm32f4单片机">2. 4.1 主控STM32F4单片机</h3>
+<h3 id="242-ov2640-摄像头模块">2.4.2 ov2640 摄像头模块</h3>
+<h3 id="243-蓝牙模块按键模块">2.4.3 蓝牙模块，按键模块</h3>
+<h1 id="第三章-需求分析与概要设计">第三章 需求分析与概要设计</h1>
+<h2 id="31-项目整体概述">3.1 项目整体概述</h2>
+<h2 id="32-项目需求分析">3.2 项目需求分析</h2>
+<h3 id="321-用例图及用例描述">3.2.1 用例图及用例描述</h3>
+<h3 id="322-系统顺序图">3.2.2 系统顺序图</h3>
+<h3 id="323-非功能性需求描述">3.2.3 非功能性需求描述</h3>
+<h2 id="33-项目的系统概要设计">3.3 项目的系统概要设计</h2>
+<h3 id="331-体系结构逻辑视图">3.3.1 体系结构逻辑视图</h3>
+<h3 id="332-系统模块设计概述">3.3.2 系统模块设计概述</h3>
+<h3 id="332-系统概念类图">3.3.2 系统概念类图</h3>
+<h3 id="333-iobrush画笔硬件连接图">3.3.3 IOBrush画笔硬件连接图</h3>
+<h1 id="第四章-实物取材画笔io-brush项目的详细设计与实现">第四章 实物取材画笔I/O Brush项目的详细设计与实现</h1>
+<h2 id="41-项目主要模块概述">4.1 项目主要模块概述</h2>
+<h3 id="411-画笔硬件模块42-45">4.1.1 画笔硬件模块（4.2-4.5）</h3>
+<h3 id="412-绘画软件模块46-410">4.1.2 绘画软件模块（4.6-4.10）</h3>
+<h2 id="42-图像采集模块设计">4.2 图像采集模块设计</h2>
+<h3 id="421-模块概述">4.2.1 模块概述</h3>
+<h3 id="422-电路连接与配置">4.2.2 电路连接与配置</h3>
+<p>（硬件模块的连接端口与初始化配置）</p>
+<h3 id="423-接口规范">4.2.3 接口规范</h3>
+<p>C语言实现，面向过程的设计方法</p>
+<h2 id="43-按键与逻辑控制模块设计">4.3 按键与逻辑控制模块设计</h2>
+<h3 id="431-模块概述">4.3.1 模块概述</h3>
+<h3 id="432-电路连接与配置">4.3.2 电路连接与配置</h3>
+<h3 id="433-接口规范">4.3.3 接口规范</h3>
+<h2 id="44-图像传输模块设计">4.4 图像传输模块设计</h2>
+<h3 id="441-模块概述">4.4.1 模块概述</h3>
+<h3 id="442-电路连接与配置">4.4.2 电路连接与配置</h3>
+<h3 id="443-接口规范">4.4.3 接口规范</h3>
+<h2 id="45-图像接收与处理模块">4.5 图像接收与处理模块</h2>
+<h3 id="461模块概述">4.6.1模块概述</h3>
+<p>python实现</p>
+<h3 id="462模块类图">4.6.2模块类图</h3>
+<h3 id="463接口规范">4.6.3接口规范</h3>
+<h2 id="46-paletteui模块详细设计">4.6 paletteUI模块详细设计</h2>
+<h3 id="461模块概述-2">4.6.1模块概述</h3>
+<h3 id="462模块类图-2">4.6.2模块类图</h3>
+<h3 id="463接口规范-2">4.6.3接口规范</h3>
+<h2 id="47-painter模块详细设计">4.7 painter模块详细设计</h2>
+<h3 id="471模块概述">4.7.1模块概述</h3>
+<h3 id="472模块类图">4.7.2模块类图</h3>
+<h3 id="473接口规范">4.7.3接口规范</h3>
+<h2 id="48-palettecontroller模块详细设计">4.8 paletteController模块详细设计</h2>
+<h3 id="481模块概述">4.8.1模块概述</h3>
+<h3 id="482模块类图">4.8.2模块类图</h3>
+<h3 id="483接口规范">4.8.3接口规范</h3>
+<h2 id="49-imgsaver模块详细设计">4.9 imgSaver模块详细设计</h2>
+<h3 id="491模块概述">4.9.1模块概述</h3>
+<h3 id="492模块类图">4.9.2模块类图</h3>
+<h3 id="493接口规范">4.9.3接口规范</h3>
+<h2 id="410-io-brush项目模块的实现">4.10 I/O Brush项目模块的实现</h2>
+<h3 id="4101-painter模块的实现">4.10.1 painter模块的实现</h3>
+<h3 id="4102-palettecontroller模块的实现">4.10.2 paletteController模块的实现</h3>
+<h3 id="4103-paletteui模块的实现">4.10.3 paletteUI模块的实现</h3>
+<h2 id="411-项目运行效果截图">4.11 项目运行效果截图</h2>
+<h2 id="412-本章小结">4.12 本章小结</h2>
+<h1 id="第五章-测试与部署">第五章 测试与部署</h1>
+<h2 id="51-单元测试">5.1 单元测试</h2>
+<h3 id="511-图像采集功能测试">5.1.1 图像采集功能测试</h3>
+<h3 id="512-按键与逻辑控制测试">5.1.2 按键与逻辑控制测试</h3>
+<h3 id="513-图像传输测试">5.1.3 图像传输测试</h3>
+<h3 id="514-图像接收测试">5.1.4 图像接收测试</h3>
+<h3 id="515-视频接收测试">5.1.5 视频接收测试</h3>
+<h3 id="516-painter模块测试">5.1.6 painter模块测试</h3>
+<h3 id="517-palette模块测试">5.1.7 palette模块测试</h3>
+<h3 id="518-imgsaver模块测试">5.1.8 imgSaver模块测试</h3>
+<h2 id="52-集成测试">5.2 集成测试</h2>
+<h2 id="53-打包与部署">5.3 打包与部署</h2>
+<p>python实现的部分打包成windows可执行程序，与QT部分合并部署</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬件模块]]></title>
+        <id>https://songdlut.github.io/post/ying-jian-mo-kuai/</id>
+        <link href="https://songdlut.github.io/post/ying-jian-mo-kuai/">
+        </link>
+        <updated>2022-12-09T10:39:10.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>STM32F103C4T6<br>
+<img src="https://songdlut.github.io/post-images/1670587108161.png" alt="" loading="lazy"></li>
+<li>摄像头模组ov7670模块<br>
+<img src="https://songdlut.github.io/post-images/1670587338973.png" alt="" loading="lazy"></li>
+<li>DC电源模块<br>
+<img src="https://songdlut.github.io/post-images/1670587349667.png" alt="" loading="lazy"></li>
+<li>E10白炽灯模块<br>
+<img src="https://songdlut.github.io/post-images/1670587355051.png" alt="" loading="lazy"></li>
+<li>HC-05蓝牙模块<br>
+<img src="https://songdlut.github.io/post-images/1670587364100.png" alt="" loading="lazy"></li>
+<li>带帽按键模块<br>
+<img src="https://songdlut.github.io/post-images/1670587370344.png" alt="" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关联容器迭代器]]></title>
+        <id>https://songdlut.github.io/post/guan-lian-rong-qi-die-dai-qi/</id>
+        <link href="https://songdlut.github.io/post/guan-lian-rong-qi-die-dai-qi/">
+        </link>
+        <updated>2022-04-15T03:13:34.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[虚函数，纯虚函数]]></title>
+        <id>https://songdlut.github.io/post/xu-han-shu-chun-xu-han-shu/</id>
+        <link href="https://songdlut.github.io/post/xu-han-shu-chun-xu-han-shu/">
+        </link>
+        <updated>2022-04-03T12:27:27.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概念">概念</h2>
+<p>non-virtual function：不建议重写<br>
+virtual function：建议重写<br>
+pure-virtual function：子类一定要重写</p>
+<h2 id="注意点">注意点</h2>
+<p>基类中的虚函数不能只要声明没有定义，哪怕加个{}空函数体都行，不然编译不能通过，或者定义成纯虚函数（=0）<br>
+会报错：undefined reference to `vtable for</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[类模板，函数模板]]></title>
+        <id>https://songdlut.github.io/post/lei-mo-ban-han-shu-mo-ban/</id>
+        <link href="https://songdlut.github.io/post/lei-mo-ban-han-shu-mo-ban/">
+        </link>
+        <updated>2022-03-31T12:24:08.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1">1</h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于new和delete]]></title>
+        <id>https://songdlut.github.io/post/guan-yu-new-he-delete/</id>
+        <link href="https://songdlut.github.io/post/guan-yu-new-he-delete/">
+        </link>
+        <updated>2022-03-31T10:35:56.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-new的过程">1 new的过程</h2>
+<p>先分配memory，再调用ctor（构造函数）</p>
+<pre><code class="language-c++">Complex* pc = new Complex(1, 2);
+//编译器转化为：
+
+Complex *pc;
+void* mem = operator new( sizeof (Complex) );//operator new内部调用malloc
+pc = static_cast&lt;Complex*&gt;(mem);
+pc-&gt;Comlex::Complex(1, 2);
+</code></pre>
+<figure data-type="image" tabindex="1"><a href="https://imgtu.com/i/qfEkG9"><img src="https://s1.ax1x.com/2022/03/31/qfEkG9.png" alt="qfEkG9.png" loading="lazy"></a></figure>
+<h2 id="2-delete过程">2 delete过程</h2>
+<p>先调用析构，再释放内存</p>
+<pre><code class="language-c++">Complex* pc =  new Complex(1, 2);
+...
+delete pc;
+
+//编译器转化为：
+Complex::~Complex(pc); //析构函数
+operator delete(pc); //释放内存，内部是调用free(pc)
+</code></pre>
+<figure data-type="image" tabindex="2"><a href="https://imgtu.com/i/qfEer6"><img src="https://s1.ax1x.com/2022/03/31/qfEer6.png" alt="qfEer6.png" loading="lazy"></a></figure>
+<h2 id="3-new和deletenew数组和delete-p">3 new和delete，new数组和delete [] p</h2>
+<p>new数组要搭配delete [] p使用，因为一个delete调用一次析构，如果不用[]会导致另外几个对象的成员变量没有释放，造成内存泄露;虽然complex可以不用，但是还是得养成好习惯</p>
+<pre><code class="language-c++">String* p = new String[3];
+....
+delete p;//只调用了一次析构，另外两个的char* 成员就没有释放掉，造成内存泄露
+//应该是
+delete [] p;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[浅拷贝和深拷贝]]></title>
+        <id>https://songdlut.github.io/post/qian-kao-bei-he-shen-kao-bei/</id>
+        <link href="https://songdlut.github.io/post/qian-kao-bei-he-shen-kao-bei/">
+        </link>
+        <updated>2022-03-30T07:50:09.000Z</updated>
+        <content type="html"><![CDATA[<p>成员变量有指针的，编译器自带的拷贝构造或赋值，是浅拷贝，会使俩对象指向同一个地方，</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[操作符重载*]]></title>
+        <id>https://songdlut.github.io/post/cao-zuo-fu-chong-zai/</id>
+        <link href="https://songdlut.github.io/post/cao-zuo-fu-chong-zai/">
+        </link>
+        <updated>2022-03-30T02:21:18.000Z</updated>
+        <content type="html"><![CDATA[<p>11</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于返回值能不能用引用]]></title>
+        <id>https://songdlut.github.io/post/guan-yu-fan-hui-zhi-neng-bu-neng-yong-yin-yong/</id>
+        <link href="https://songdlut.github.io/post/guan-yu-fan-hui-zhi-neng-bu-neng-yong-yin-yong/">
+        </link>
+        <updated>2022-03-30T02:18:32.000Z</updated>
+        <content type="html"><![CDATA[<p>不能用的情况：在函数内创建的对象，然后将它用引用返回是不行的，因为函数执行完后，这个对象会被销毁，它的引用就没有意义可。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于构造函数]]></title>
+        <id>https://songdlut.github.io/post/guan-yu-gou-zao-han-shu/</id>
+        <link href="https://songdlut.github.io/post/guan-yu-gou-zao-han-shu/">
+        </link>
+        <updated>2022-03-30T00:48:16.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="构造函数参数问题">构造函数参数问题</h2>
+<p>如下情况是不允许的</p>
+<pre><code class="language-c++">class complex {
+    public:
+        complex (double r = 0, double i = 0) : re(r), im (i) { }
+        complex () : re(r), im (i) { }
+    private:
+        double re, img;
+};
+{
+    complex c1;
+    complex c2 ();
+}
+</code></pre>
+<p>因为第一个构造函数已经指定了默认的值，所以调用构造函数没有给参数时，编译器不知道应该调用第一个还是第二个。</p>
+<p>扩充一下：<br>
+假如有n个成员变量，一个构造函数有个n个参数，有一个设了默认值（=x），还有一个有n-1个参数（无论有没有给初值），现在定义一个类对象，参数给了n-1个，那么是无法通过的，因为不知道该调用第一个还是第二个构造函数</p>
+<pre><code class="language-c++">class A {
+    public:
+        A (int a1, int a2, int a3, ..... , int an-2, int an-1, int an = 0) : ........ { }
+        A (int a1, int a2, int a3, ..... , int an-2, int an-1) : ........ { }
+    private:
+        int a1,a2,a3.......,an;
+}
+int main()
+{
+    A a(a1,a2,a3.......,an-1);//不行
+}
+</code></pre>
+<h2 id="构造函数位置问题">构造函数位置问题</h2>
+<p>一般都放在public里，但是也有放在private里，比如<strong>单例模式</strong></p>
+<pre><code class="language-c++">class A {
+    public:
+        static A&amp; getInstance ()；
+        setup () { ...}
+    private:
+        A ();
+        A (const A&amp; rhs);
+        ...
+};
+A&amp; A::getInstance()
+{
+    static A a;
+    return a;
+}
+</code></pre>
+<h2 id="拷贝构造函数的参数为什么不能是值传递必须是引用传递">拷贝构造函数的参数为什么不能是值传递，必须是引用传递</h2>
+<p>如果把拷贝构造函数的参数设置为值传递，那么参数肯定就是本类的一个object，采用值传递，在形参和实参相结合的时候，是要调用本类的拷贝构造函数,那么就陷入死循环了，一直调</p>
+<h2 id="必须在初始化列表初始化的情况">必须在初始化列表初始化的情况</h2>
+<ol>
+<li>需要初始化的数据成员是对象的情况(这里包含了继承情况下，通过显示调用父类的构造函数对父类数据成员进行初始化)；</li>
+<li>需要初始化const修饰的类成员或初始化引用成员数据；</li>
+<li>子类初始化父类的私有成员；</li>
+</ol>
+]]></content>
+    </entry>
+</feed>
